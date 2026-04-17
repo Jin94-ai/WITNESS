@@ -63,9 +63,9 @@ class SlowState(BaseModel):
         default=0.0, ge=0.0, le=10.0,
         description="도덕적 상처. 자신의 신념/가치에 반하는 행동 후 누적.",
     )
-    breach_count: int = Field(
-        default=0, ge=0,
-        description="관계적/도덕적 위반 횟수. 비가역적 카운터. (부인, 배신, 약속 파기 등)",
+    breach_count: float = Field(
+        default=0.0, ge=0.0,
+        description="관계적/도덕적 위반 누적. (부인, 배신, 약속 파기 등)",
     )
     event_trauma: float = Field(
         default=0.0, ge=0.0, le=10.0,
