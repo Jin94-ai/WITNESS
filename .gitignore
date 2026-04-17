@@ -68,3 +68,12 @@ api-keys.json
 # 빌드
 dist/
 build/
+
+# Witness 생성 파일
+*.db
+*.sqlite
+.coverage
+data/*.jsonl
+data/*.npz
+output/
+.claude/scheduled_tasks.lock
