@@ -63,6 +63,14 @@
 
 ---
 
+## 추가 완료 (자율 루프 최종)
+
+- [x] mypy 17→0 errors
+- [x] conftest.py 공유 fixture
+- [x] POM 기반 pyABC: fear=7.3, love=6.2, hope=7.0
+- [x] checkpoint 97%, temporal 100%, 전체 89%
+- [x] 213 tests, ruff+mypy clean, 11 git commits
+
 ## 진행 중 / 미완료
 
 - [ ] 렌더링 파이프라인 (비전 A) -- 방향 논의 필요
