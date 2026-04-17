@@ -1,38 +1,122 @@
 # Witness
 
-> 역사적 인물의 생애를 시뮬레이션으로 수천 번 돌리고, 결과 분포를 관측한다.
-> "이 사람의 삶에서, 무엇이 갈라지는 순간이었는가?"
+> Agent-based, hazard-driven, ensemble historical simulator.
+>
+> Run a person's life thousands of times. Observe the distribution.
+> Ask: **"What was the moment that made the difference?"**
 
 ---
 
-## 방법론
+## What it does
 
-**Agent-based, hazard-driven, ensemble historical simulator**
+Witness simulates a historical figure's life as a stochastic process. Events don't happen at fixed times -- they emerge probabilistically from the agent's internal state and environmental pressure. Run it thousands of times with varied parameters, and observe which paths emerge, which conditions produce which outcomes, and where the bifurcation points are.
 
-- 이벤트가 고정 시점이 아니라 상태 기반 위험도(hazard)로 확률적 발생
-- 수천 회 앙상블 실행, 결과 분포 관측
-- 역사적 경로(ground truth)와 대조하여 시뮬레이션 검증 (Hindcasting)
-- 파라미터 공간 지형도, 경로 클러스터링, 분기점 탐지
+**First subject**: Peter (last 50 days of Jesus).
+**Second subject**: Van Gogh (Arles period, Gauguin's visit).
 
-## 첫 인물: 베드로
-
-예수의 마지막 50일. 성경 기록을 ground truth로 사용.
-
-## 기술 스택
-
-Python 3.11+ / Pydantic / pytest / SALib / UMAP / HDBSCAN
-
-## 시작하기
+## Quick start
 
 ```bash
-python -m venv venv && source venv/bin/activate
+python -m venv venv && source venv/bin/activate  # or .\venv\Scripts\activate on Windows
 pip install -r requirements.txt
+
+# Peter demo (100 runs)
+python main.py
+
+# Van Gogh (50 runs)
+python main.py --person vangogh --runs 50
+
+# Run all tests
 pytest
 ```
 
-## 프로젝트 문서
+## How it works
 
-| 문서 | 설명 |
-|------|------|
-| [DESIGN.md](DESIGN.md) | 설계도 (아키텍처, 방법론) |
-| [CLAUDE.md](CLAUDE.md) | AI 행동 강령 |
+### Hazard-driven events
+
+Events don't fire at `tick == 152`. Instead:
+```
+hazard = f(fear, fatigue, surveillance, crowd_pressure, ...)
+P(event) = 1 - exp(-hazard * dt)
+```
+
+Same person, same initial conditions, different seed → different event timing → different life path.
+
+### Fast/slow state
+
+- **Fast state** (emotions): fear, hope, grief, confusion, love. Homeostasis pulls toward baseline.
+- **Slow state** (scars): moral_injury, breach_count, event_trauma, identity_shift. Irreversible accumulation.
+
+### Pattern-Oriented Modeling (POM)
+
+Instead of matching one metric (deny3 rate), we match 7 patterns simultaneously:
+- no_flee, sword_drawn, triple_denial, grief_peak, moral_injury, identity_damage, eventual_hope
+
+Result: current rules pass 38.6%, fear-only passes 1.2%, uniform passes 0%. POM separates rule families 32x.
+
+### Environment
+
+Surveillance, crowd pressure, threat level affect both hazard firing and action decisions. Direction is consistent: higher pressure → more crisis behavior.
+
+## Validated findings
+
+| Finding | Evidence |
+|---------|----------|
+| Current rule structure is uniquely valid | pyABC Model Selection: 100% (Peter), 84% (Van Gogh) |
+| POM separates rule families 32x | 38.6% vs 1.2% vs 0% |
+| Interaction structure depends on variable set | shapiq: 3-var vs 5-var results differ completely |
+| Environment → crisis direction consistent | surveillance sweep: deny3 88%→95% |
+| Flee rate is environment-independent | 29% stable across all conditions |
+| Parameter Recovery | PASS (true params in recovered box) |
+
+## Project structure
+
+```
+engine/                    # Universal engine (person-agnostic)
+  core/                    # AgentState, HazardEngine, EnvironmentState
+  rules/                   # Physical, emotional, social, temporal rules
+  simulation/              # Runner, batch, analysis, POM, PRIM, calibration
+  io/                      # Loader, trajectory dataset
+
+content/                   # Biography packs (person-specific data only)
+  peter/                   # 10 hazard events, 7 checkpoints, FaithJourneyState
+  vangogh/                 # 5 hazard events, 4 checkpoints, CreativeDriveState
+
+tests/                     # 213 tests, 89% coverage
+docs/                      # ODD Protocol, session prompts
+```
+
+## Tech stack
+
+Python 3.11+ / Pydantic / pytest / SALib / UMAP / sklearn HDBSCAN / shapiq / pyABC / EMA Workbench / XGBoost / matplotlib
+
+## Analysis tools included
+
+| Tool | Purpose |
+|------|---------|
+| POM | Multi-pattern validation filter |
+| PRIM (EMA Workbench) | Scenario discovery -- parameter boxes |
+| pyABC Model Selection | Compare competing rule structures |
+| shapiq | Shapley interaction decomposition |
+| Sobol / Morris (SALib) | Global sensitivity analysis |
+| UMAP + HDBSCAN | Path clustering |
+| Decision Tree | Bifurcation surface extraction |
+
+## Adding a new person
+
+1. Create `content/[name]/` with:
+   - `initial_state.json` -- starting parameters
+   - `hazard_events.json` -- events with hazard functions
+   - `checkpoints.json` -- ground truth observations
+   - `domain_[name].py` -- domain-specific state (extends DomainState)
+   - `pom_scorecard.py` -- validation patterns
+
+2. Register domain type in your script:
+   ```python
+   from engine.io.loader import register_domain_type
+   register_domain_type("your_domain", YourDomainState)
+   ```
+
+3. Run: `python main.py --person [name]`
+
+No engine code modification needed. Verified with dummy "artist" person + real Van Gogh.

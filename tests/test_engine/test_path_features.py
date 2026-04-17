@@ -1,6 +1,5 @@
 """Path feature 추출 테스트 (trajectory.py dataset_to_path_features)."""
 
-import json
 import random
 from pathlib import Path
 
