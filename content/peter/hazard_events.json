@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "description": "베드로 생애 50일 - Hazard 기반 이벤트. v0.3.1 state_multiplier 증폭.",
+    "max_tick": 500
+  },
+  "hazard_events": [
+    {
+      "event_id": "temple_tension",
+      "description": "성전에서의 긴장 고조",
+      "hazard": {
+        "base_rate": 0.01,
+        "factors": [
+          {"field_path": "emotions.hope", "weight": 0.15, "transform": "linear"},
+          {"field_path": "emotions.confusion", "weight": 0.1, "transform": "linear"}
+        ],
+        "max_hazard": 0.3
+      },
+      "anchor_window": [5, 60],
+      "deadline_tick": 60,
+      "effects_on_fire": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 2.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.hope", "operation": "add", "value": 1.0}
+      ],
+      "action_options_on_fire": []
+    },
+    {
+      "event_id": "last_supper",
+      "description": "최후의 만찬",
+      "hazard": {
+        "base_rate": 0.02,
+        "factors": [
+          {"field_path": "emotions.fear", "weight": 0.15, "transform": "linear"}
+        ],
+        "max_hazard": 0.4
+      },
+      "anchor_window": [80, 150],
+      "deadline_tick": 150,
+      "effects_on_fire": [
+        {"field_path": "emotions.love", "operation": "add", "value": 2.5},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.0},
+        {"field_path": "physical.hunger", "operation": "set", "value": 0.0}
+      ],
+      "action_options_on_fire": []
+    },
+    {
+      "event_id": "gethsemane",
+      "description": "겟세마네 기도. 극한 피로.",
+      "hazard": {
+        "base_rate": 0.015,
+        "factors": [
+          {"field_path": "physical.fatigue", "weight": 0.2, "transform": "linear"},
+          {"field_path": "emotions.fear", "weight": 0.15, "transform": "linear"}
+        ],
+        "max_hazard": 0.4
+      },
+      "anchor_window": [100, 200],
+      "deadline_tick": 200,
+      "effects_on_fire": [
+        {"field_path": "physical.fatigue", "operation": "set", "value": 9.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.5},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 2.0}
+      ],
+      "action_options_on_fire": [
+        {
+          "action_id": "stay_awake",
+          "description": "깨어 기도함",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "physical.fatigue", "factor_type": "inverse", "params": {"scale": 0.4}},
+            {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.3}}
+          ]},
+          "effects": [{"field_path": "physical.fatigue", "operation": "add", "value": 0.5}]
+        },
+        {
+          "action_id": "fall_asleep",
+          "description": "피로에 잠듦",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "physical.fatigue", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.3}}
+          ]},
+          "effects": [{"field_path": "physical.fatigue", "operation": "add", "value": -0.5}]
+        }
+      ]
+    },
+    {
+      "event_id": "arrest",
+      "description": "체포",
+      "hazard": {
+        "base_rate": 0.005,
+        "factors": [
+          {"field_path": "emotions.fear", "weight": 0.15, "transform": "linear"},
+          {"field_path": "physical.fatigue", "weight": 0.1, "transform": "linear"},
+          {"field_path": "emotions.confusion", "weight": 0.1, "transform": "linear"}
+        ],
+        "max_hazard": 0.3
+      },
+      "preconditions": [
+        {"field_path": "physical.fatigue", "operator": "gte", "value": 5.0}
+      ],
+      "anchor_window": [120, 250],
+      "deadline_tick": 250,
+      "effects_on_fire": [
+        {"field_path": "emotions.fear", "operation": "set", "value": 8.5},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 3.0},
+        {"field_path": "physical.location", "operation": "set", "value": "arrest_scene"},
+        {"field_path": "env.surveillance", "operation": "add", "value": 5.0},
+        {"field_path": "env.threat_level", "operation": "add", "value": 5.0},
+        {"field_path": "env.crowd_pressure", "operation": "add", "value": 4.0},
+        {"field_path": "env.isolation_degree", "operation": "add", "value": 4.0}
+      ],
+      "action_options_on_fire": [
+        {
+          "action_id": "draw_sword",
+          "description": "칼을 뽑아 저항함",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.2}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.fear", "operation": "add", "value": 1.0},
+            {"field_path": "physical.location", "operation": "set", "value": "following"}
+          ]
+        },
+        {
+          "action_id": "flee",
+          "description": "도주",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.love", "factor_type": "inverse", "params": {"scale": 0.3}}
+          ]},
+          "effects": [
+            {"field_path": "physical.location", "operation": "set", "value": "fled"},
+            {"field_path": "slow_state.trust_scar", "operation": "add", "value": 1.5},
+            {"field_path": "slow_state.identity_shift", "operation": "add", "value": -0.5}
+          ]
+        },
+        {
+          "action_id": "follow_at_distance",
+          "description": "멀리서 따라감",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.4}},
+            {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.3}}
+          ]},
+          "effects": [
+            {"field_path": "physical.location", "operation": "set", "value": "following"}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "denial_challenge",
+      "description": "누군가 베드로를 알아봄",
+      "hazard": {
+        "base_rate": 0.03,
+        "factors": [
+          {"field_path": "emotions.fear", "weight": 0.3, "transform": "linear"},
+          {"field_path": "physical.fatigue", "weight": 0.15, "transform": "linear"},
+          {"field_path": "emotions.confusion", "weight": 0.1, "transform": "linear"},
+          {"field_path": "surveillance", "weight": 0.25, "transform": "linear", "source": "environment"},
+          {"field_path": "crowd_pressure", "weight": 0.2, "transform": "linear", "source": "environment"}
+        ],
+        "max_hazard": 0.7
+      },
+      "preconditions": [
+        {"field_path": "physical.location", "operator": "in", "value": ["following", "courtyard", "arrest_scene"]}
+      ],
+      "anchor_window": [130, 280],
+      "max_fires": 3,
+      "cooldown": 2,
+      "effects_on_fire": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0}
+      ],
+      "action_options_on_fire": [
+        {
+          "action_id": "deny",
+          "description": "부인",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.4}},
+            {"field_path": "physical.fatigue", "factor_type": "linear", "params": {"scale": 0.2}},
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.2}},
+            {"field_path": "emotions.love", "factor_type": "inverse", "params": {"scale": 0.2}},
+            {"field_path": "surveillance", "factor_type": "linear", "params": {"scale": 0.4}, "source": "environment"},
+            {"field_path": "crowd_pressure", "factor_type": "linear", "params": {"scale": 0.3}, "source": "environment"}
+          ]},
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "add", "value": 2.5},
+            {"field_path": "emotions.fear", "operation": "add", "value": 0.5},
+            {"field_path": "physical.location", "operation": "set", "value": "courtyard"},
+            {"field_path": "domain_state.communal_role", "operation": "set", "value": "failed"},
+            {"field_path": "slow_state.moral_injury", "operation": "add", "value": 2.0},
+            {"field_path": "slow_state.breach_count", "operation": "add", "value": 1.0},
+            {"field_path": "slow_state.identity_shift", "operation": "add", "value": -1.0}
+          ]
+        },
+        {
+          "action_id": "confess",
+          "description": "고백",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.5}},
+            {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.3}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.fear", "operation": "add", "value": 3.0}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "rooster_moment",
+      "description": "수탉이 울고, 예수와 눈이 마주침. 부인의 무게가 한꺼번에 쏟아짐.",
+      "hazard": {
+        "base_rate": 0.01,
+        "factors": [
+          {"field_path": "emotions.grief", "weight": 0.3, "transform": "linear"},
+          {"field_path": "slow_state.breach_count", "weight": 0.5, "transform": "threshold", "threshold": 1.0}
+        ],
+        "max_hazard": 0.5
+      },
+      "preconditions": [
+        {"field_path": "slow_state.breach_count", "operator": "gte", "value": 1}
+      ],
+      "anchor_window": [135, 290],
+      "deadline_tick": null,
+      "max_fires": 1,
+      "effects_on_fire": [
+        {"field_path": "emotions.grief", "operation": "set", "value": 10.0},
+        {"field_path": "emotions.hope", "operation": "set", "value": 0.5},
+        {"field_path": "emotions.confusion", "operation": "set", "value": 8.0},
+        {"field_path": "env.isolation_degree", "operation": "add", "value": 3.0}
+      ],
+      "action_options_on_fire": []
+    },
+    {
+      "event_id": "personal_appearance",
+      "description": "부활 후 개인적 출현. 회복의 시작.",
+      "hazard": {
+        "base_rate": 0.005,
+        "factors": [
+          {"field_path": "emotions.grief", "weight": 0.2, "transform": "linear"},
+          {"field_path": "emotions.hope", "weight": 0.15, "transform": "inverse"}
+        ],
+        "max_hazard": 0.3
+      },
+      "anchor_window": [260, 350],
+      "deadline_tick": 350,
+      "effects_on_fire": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 4.0},
+        {"field_path": "emotions.grief", "operation": "add", "value": -2.0},
+        {"field_path": "emotions.love", "operation": "add", "value": 3.0},
+        {"field_path": "env.isolation_degree", "operation": "add", "value": -3.0}
+      ],
+      "action_options_on_fire": []
+    },
+    {
+      "event_id": "crucifixion_news",
+      "description": "십자가 소식",
+      "hazard": {
+        "base_rate": 0.02,
+        "factors": [
+          {"field_path": "emotions.grief", "weight": 0.15, "transform": "linear"}
+        ],
+        "max_hazard": 0.4
+      },
+      "anchor_window": [180, 280],
+      "deadline_tick": 280,
+      "effects_on_fire": [
+        {"field_path": "emotions.grief", "operation": "set", "value": 10.0},
+        {"field_path": "emotions.hope", "operation": "set", "value": 0.5},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 2.0},
+        {"field_path": "physical.location", "operation": "set", "value": "hiding"}
+      ],
+      "action_options_on_fire": []
+    },
+    {
+      "event_id": "empty_tomb",
+      "description": "빈 무덤 소식",
+      "hazard": {
+        "base_rate": 0.015,
+        "factors": [
+          {"field_path": "emotions.grief", "weight": 0.1, "transform": "linear"},
+          {"field_path": "emotions.hope", "weight": 0.1, "transform": "inverse"}
+        ],
+        "max_hazard": 0.3
+      },
+      "anchor_window": [230, 320],
+      "deadline_tick": 320,
+      "effects_on_fire": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.hope", "operation": "add", "value": 3.0}
+      ],
+      "action_options_on_fire": [
+        {
+          "action_id": "run_to_tomb",
+          "description": "무덤으로 달려감",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.3}},
+            {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.3}}
+          ]},
+          "effects": [
+            {"field_path": "physical.location", "operation": "set", "value": "tomb"},
+            {"field_path": "emotions.hope", "operation": "add", "value": 1.0}
+          ]
+        },
+        {
+          "action_id": "stay_hiding",
+          "description": "숨어 있음",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.3}},
+            {"field_path": "slow_state.moral_injury", "factor_type": "linear", "params": {"scale": 0.3}}
+          ]},
+          "effects": []
+        }
+      ]
+    },
+    {
+      "event_id": "tiberias_encounter",
+      "description": "디베랴 호수",
+      "hazard": {
+        "base_rate": 0.01,
+        "factors": [
+          {"field_path": "emotions.love", "weight": 0.15, "transform": "linear"},
+          {"field_path": "emotions.hope", "weight": 0.1, "transform": "linear"}
+        ],
+        "max_hazard": 0.3
+      },
+      "anchor_window": [320, 420],
+      "deadline_tick": 420,
+      "effects_on_fire": [
+        {"field_path": "emotions.love", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.grief", "operation": "add", "value": 2.0},
+        {"field_path": "physical.location", "operation": "set", "value": "tiberias"}
+      ],
+      "action_options_on_fire": [
+        {
+          "action_id": "jump_into_sea",
+          "description": "바다에 뛰어듦",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.3}},
+            {"field_path": "slow_state.moral_injury", "factor_type": "linear", "params": {"scale": 0.2}}
+          ]},
+          "effects": [{"field_path": "emotions.love", "operation": "add", "value": 2.0}]
+        },
+        {
+          "action_id": "stay_on_boat",
+          "description": "배에 머묾",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.4}},
+            {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.3}},
+            {"field_path": "slow_state.trust_scar", "factor_type": "linear", "params": {"scale": 0.3}}
+          ]},
+          "effects": []
+        }
+      ]
+    }
+  ]
+}

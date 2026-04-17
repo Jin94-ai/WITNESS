@@ -1,0 +1,12 @@
+pydantic>=2.0
+numpy
+pandas
+scipy
+scikit-learn
+SALib
+umap-learn
+pyabc
+matplotlib
+xgboost
+shapiq
+ema-workbench

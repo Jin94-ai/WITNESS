@@ -1,0 +1,70 @@
+# ============================================
+# 베드로 시뮬레이터 .gitignore
+# ============================================
+
+# Claude Code
+CLAUDE.local.md
+.claude-cache/
+.claude-temp/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.eggs/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 환경 변수
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 테스트 & 커버리지
+coverage/
+htmlcov/
+*.lcov
+
+# 로그 & 임시
+logs/
+*.log
+tmp/
+temp/
+
+# 보안
+*.pem
+*.key
+credentials.json
+secrets.json
+*.secrets
+.secrets/
+api-keys.json
+
+# 실험 코드 (Probe 완료 후 삭제하지만 만약을 위해)
+# experiments/ 는 커밋 가능 (Probe 진행 중일 수 있음)
+
+# 빌드
+dist/
+build/

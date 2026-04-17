@@ -1,0 +1,68 @@
+{
+  "checkpoints": [
+    {
+      "checkpoint_id": "cp_08_sword",
+      "tick": 153,
+      "description": "체포 시 베드로가 칼을 뽑음 (요 18:10)",
+      "conditions": [
+        {"condition_type": "action_taken", "params": {"action_id": "draw_sword", "at_tick_range": [150, 156]}}
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "cp_08_follow",
+      "tick": 155,
+      "description": "체포 후 멀리서 따라감 (눅 22:54)",
+      "conditions": [
+        {"condition_type": "action_taken", "params": {"action_id": "follow_at_distance", "at_tick_range": [150, 160]}}
+      ],
+      "weight": 1.5
+    },
+    {
+      "checkpoint_id": "cp_09_denial_3",
+      "tick": 172,
+      "description": "베드로가 3회 부인 (마 26:69-75)",
+      "conditions": [
+        {"condition_type": "action_taken", "params": {"action_id": "deny", "min_count": 3, "at_tick_range": [160, 175]}}
+      ],
+      "weight": 2.0
+    },
+    {
+      "checkpoint_id": "cp_10_grief",
+      "tick": 175,
+      "description": "부인 후 심히 울음 — grief가 극대 (마 26:75)",
+      "conditions": [
+        {"condition_type": "state_range", "params": {"field_path": "emotions.grief", "min": 8.0}}
+      ],
+      "weight": 1.5
+    },
+    {
+      "checkpoint_id": "cp_12_run_to_tomb",
+      "tick": 227,
+      "description": "빈 무덤 소식에 달려감 (눅 24:12)",
+      "conditions": [
+        {"condition_type": "action_taken", "params": {"action_id": "run_to_tomb", "at_tick_range": [220, 235]}}
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "cp_15_jump",
+      "tick": 357,
+      "description": "디베랴에서 바다에 뛰어듦 (요 21:7)",
+      "conditions": [
+        {"condition_type": "action_taken", "params": {"action_id": "jump_into_sea", "at_tick_range": [353, 362]}}
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "cp_15_restoration",
+      "tick": 360,
+      "description": "디베랴 회복 후 love > grief",
+      "conditions": [
+        {"condition_type": "state_range", "params": {"field_path": "emotions.love", "min": 7.0}},
+        {"condition_type": "state_range", "params": {"field_path": "emotions.grief", "max": 5.0}}
+      ],
+      "weight": 2.0
+    }
+  ]
+}

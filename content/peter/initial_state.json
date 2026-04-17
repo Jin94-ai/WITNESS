@@ -1,0 +1,36 @@
+{
+  "agent_id": "peter",
+  "tick": 0,
+  "physical": {
+    "fatigue": 3.0,
+    "hunger": 2.0,
+    "health": 8.0,
+    "location": "bethany"
+  },
+  "emotions": {
+    "fear": 2.0,
+    "hope": 7.0,
+    "grief": 1.0,
+    "confusion": 3.0,
+    "love": 7.0
+  },
+  "relationships": {
+    "jesus": {"target_id": "jesus", "trust": 8.0, "love": 8.0, "awe": 7.0, "understanding": 4.0},
+    "john": {"target_id": "john", "trust": 7.0, "love": 6.0, "awe": 2.0, "understanding": 5.0},
+    "judas": {"target_id": "judas", "trust": 5.0, "love": 4.0, "awe": 1.0, "understanding": 3.0},
+    "disciples": {"target_id": "disciples", "trust": 6.0, "love": 5.0, "awe": 1.0, "understanding": 4.0}
+  },
+  "domain_state": {
+    "type": "faith_journey",
+    "jesus_understanding": "messiah_political",
+    "obedience_maturity": 5.0,
+    "fear_layers": {
+      "type": "fear_profile",
+      "natural": 3.0,
+      "social": 4.0,
+      "existential": 2.0
+    },
+    "communal_role": "inner_circle",
+    "repentance_history": []
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "description": "반 고흐 아르 시기 (~15주, 1888.10~12). 고갱 도착~귀 자해.",
+    "max_tick": 150,
+    "tick_unit": "roughly_1_day"
+  },
+  "hazard_events": [
+    {
+      "event_id": "gauguin_arrival",
+      "description": "고갱이 아르에 도착. 기대와 긴장.",
+      "hazard": {
+        "base_rate": 0.05,
+        "factors": [
+          {"field_path": "emotions.hope", "weight": 0.2, "transform": "linear"}
+        ],
+        "max_hazard": 0.4
+      },
+      "anchor_window": [1, 20],
+      "deadline_tick": 20,
+      "effects_on_fire": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.5},
+        {"field_path": "env.crowd_pressure", "operation": "add", "value": 2.0}
+      ],
+      "action_options_on_fire": []
+    },
+    {
+      "event_id": "artistic_disagreement",
+      "description": "고갱과의 예술적 견해 충돌. 들라크루아 vs 앵그르.",
+      "hazard": {
+        "base_rate": 0.03,
+        "factors": [
+          {"field_path": "emotions.confusion", "weight": 0.3, "transform": "linear"},
+          {"field_path": "crowd_pressure", "weight": 0.15, "transform": "linear", "source": "environment"}
+        ],
+        "max_hazard": 0.5
+      },
+      "anchor_window": [15, 100],
+      "max_fires": 5,
+      "cooldown": 5,
+      "effects_on_fire": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0},
+        {"field_path": "env.threat_level", "operation": "add", "value": 1.0}
+      ],
+      "action_options_on_fire": [
+        {
+          "action_id": "assert_own_style",
+          "description": "자기 양식을 주장함",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.3}},
+            {"field_path": "emotions.confusion", "factor_type": "inverse", "params": {"scale": 0.2}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.hope", "operation": "add", "value": 0.5},
+            {"field_path": "domain_state.artistic_confidence", "operation": "add", "value": 0.5}
+          ]
+        },
+        {
+          "action_id": "defer_to_gauguin",
+          "description": "고갱의 방식에 따름",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.4}},
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.3}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.confusion", "operation": "add", "value": 1.0},
+            {"field_path": "domain_state.artistic_confidence", "operation": "add", "value": -1.0},
+            {"field_path": "slow_state.identity_shift", "operation": "add", "value": -0.5}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "creative_burst",
+      "description": "창작 폭발. 짧은 시간에 여러 작품 완성.",
+      "hazard": {
+        "base_rate": 0.02,
+        "factors": [
+          {"field_path": "emotions.hope", "weight": 0.3, "transform": "linear"},
+          {"field_path": "emotions.love", "weight": 0.2, "transform": "linear"}
+        ],
+        "max_hazard": 0.4
+      },
+      "anchor_window": [10, 80],
+      "max_fires": 3,
+      "cooldown": 10,
+      "effects_on_fire": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 2.0},
+        {"field_path": "physical.fatigue", "operation": "add", "value": 2.0},
+        {"field_path": "domain_state.works_completed", "operation": "add", "value": 3.0}
+      ],
+      "action_options_on_fire": []
+    },
+    {
+      "event_id": "gauguin_departure_threat",
+      "description": "고갱이 떠나겠다고 위협. 관계 위기.",
+      "hazard": {
+        "base_rate": 0.01,
+        "factors": [
+          {"field_path": "emotions.fear", "weight": 0.3, "transform": "linear"},
+          {"field_path": "emotions.grief", "weight": 0.2, "transform": "linear"},
+          {"field_path": "threat_level", "weight": 0.25, "transform": "linear", "source": "environment"}
+        ],
+        "max_hazard": 0.4
+      },
+      "anchor_window": [50, 130],
+      "deadline_tick": 130,
+      "effects_on_fire": [
+        {"field_path": "emotions.fear", "operation": "set", "value": 8.0},
+        {"field_path": "emotions.grief", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.hope", "operation": "add", "value": -3.0},
+        {"field_path": "env.isolation_degree", "operation": "add", "value": 4.0}
+      ],
+      "action_options_on_fire": [
+        {
+          "action_id": "beg_to_stay",
+          "description": "고갱에게 머물러달라고 간청",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.4}},
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.3}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "add", "value": 1.0}
+          ]
+        },
+        {
+          "action_id": "accept_departure",
+          "description": "떠남을 수용",
+          "weight_formula": {"base_weight": 0.2, "state_multipliers": [
+            {"field_path": "emotions.hope", "factor_type": "inverse", "params": {"scale": 0.3}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "add", "value": 2.0},
+            {"field_path": "env.isolation_degree", "operation": "add", "value": 2.0}
+          ]
+        },
+        {
+          "action_id": "self_harm",
+          "description": "자해 (귀 자르기)",
+          "weight_formula": {"base_weight": 0.1, "state_multipliers": [
+            {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.5}},
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.4}},
+            {"field_path": "emotions.hope", "factor_type": "inverse", "params": {"scale": 0.5}},
+            {"field_path": "isolation_degree", "factor_type": "linear", "params": {"scale": 0.3}, "source": "environment"}
+          ]},
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "set", "value": 10.0},
+            {"field_path": "physical.health", "operation": "add", "value": -3.0},
+            {"field_path": "domain_state.phase", "operation": "set", "value": "crisis"},
+            {"field_path": "slow_state.moral_injury", "operation": "add", "value": 3.0},
+            {"field_path": "slow_state.identity_shift", "operation": "add", "value": -2.0},
+            {"field_path": "slow_state.event_trauma", "operation": "add", "value": 3.0}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "theo_letter",
+      "description": "테오의 편지. 경제적/정서적 지원.",
+      "hazard": {
+        "base_rate": 0.04,
+        "factors": [
+          {"field_path": "emotions.grief", "weight": 0.15, "transform": "linear"}
+        ],
+        "max_hazard": 0.3
+      },
+      "anchor_window": [5, 145],
+      "max_fires": 10,
+      "cooldown": 8,
+      "effects_on_fire": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.love", "operation": "add", "value": 1.0},
+        {"field_path": "env.isolation_degree", "operation": "add", "value": -1.0}
+      ],
+      "action_options_on_fire": []
+    }
+  ]
+}

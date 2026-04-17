@@ -1,0 +1,461 @@
+{
+  "meta": {
+    "agent_id": "peter",
+    "total_ticks": 500,
+    "tick_unit": "roughly_2_hours",
+    "description": "수난주간 + 부활 40일, 17개 정경 사건"
+  },
+  "events": [
+    {
+      "event_id": "scene_01_jerusalem_entry",
+      "tick": 5,
+      "event_type": "canonical",
+      "description": "예루살렘 입성. 군중이 호산나를 외침",
+      "source_ref": "마 21, 막 11, 눅 19",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.0},
+        {"field_path": "physical.location", "operation": "set", "value": "jerusalem"}
+      ],
+      "action_options": [
+        {
+          "action_id": "join_crowd",
+          "description": "군중과 함께 열광적으로 동참",
+          "weight_formula": {"base_weight": 0.6, "state_multipliers": [
+            {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.05}}
+          ]},
+          "effects": [{"field_path": "emotions.hope", "operation": "add", "value": 1.0}]
+        },
+        {
+          "action_id": "watch_quietly",
+          "description": "예수의 표정을 주시하며 조용히 따라감",
+          "weight_formula": {"base_weight": 0.4, "state_multipliers": [
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.05}}
+          ]},
+          "effects": [{"field_path": "emotions.confusion", "operation": "add", "value": 0.5}]
+        }
+      ]
+    },
+    {
+      "event_id": "scene_02_temple_cleansing",
+      "tick": 15,
+      "event_type": "canonical",
+      "description": "성전 정화. 예수가 상인들의 상을 뒤엎음",
+      "source_ref": "마 21:12-13",
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0},
+        {"field_path": "relationships.jesus.awe", "operation": "add", "value": 2.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_03_olivet_discourse",
+      "tick": 35,
+      "event_type": "canonical",
+      "description": "감람산 종말 담화",
+      "source_ref": "마 24, 막 13",
+      "effects": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 2.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_04_passover_preparation",
+      "tick": 105,
+      "event_type": "canonical",
+      "description": "유월절 준비",
+      "source_ref": "눅 22:7-13",
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0},
+        {"field_path": "physical.fatigue", "operation": "add", "value": 1.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_05_foot_washing",
+      "tick": 117,
+      "event_type": "canonical",
+      "description": "발씻음. 예수가 제자들의 발을 씻김",
+      "source_ref": "요 13:1-17",
+      "effects": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 2.0},
+        {"field_path": "relationships.jesus.awe", "operation": "add", "value": 1.5}
+      ],
+      "action_options": [
+        {
+          "action_id": "resist_washing",
+          "description": "발씻음을 거부함",
+          "weight_formula": {"base_weight": 0.5, "state_multipliers": [
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.06}}
+          ]},
+          "effects": [{"field_path": "emotions.confusion", "operation": "add", "value": 1.0}]
+        },
+        {
+          "action_id": "accept_washing",
+          "description": "순종하여 발씻음을 받음",
+          "weight_formula": {"base_weight": 0.5, "state_multipliers": [
+            {"field_path": "relationships.jesus.trust", "factor_type": "linear", "params": {"scale": 0.05}}
+          ]},
+          "effects": [
+            {"field_path": "relationships.jesus.trust", "operation": "add", "value": 1.0},
+            {"field_path": "emotions.love", "operation": "add", "value": 1.0}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "scene_06_last_supper",
+      "tick": 125,
+      "event_type": "canonical",
+      "description": "최후의 만찬. 새 언약",
+      "source_ref": "마 26:17-30, 요 13",
+      "effects": [
+        {"field_path": "emotions.love", "operation": "add", "value": 2.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0},
+        {"field_path": "physical.hunger", "operation": "set", "value": 0.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_07_gethsemane",
+      "tick": 143,
+      "event_type": "canonical",
+      "description": "겟세마네 기도. 예수가 기도하는 동안 제자들이 잠듦",
+      "source_ref": "마 26:36-46",
+      "effects": [
+        {"field_path": "physical.fatigue", "operation": "set", "value": 9.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.5}
+      ],
+      "action_options": [
+        {
+          "action_id": "stay_awake",
+          "description": "깨어 기도함",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "physical.fatigue", "factor_type": "inverse", "params": {"scale": 0.08}}
+          ]},
+          "effects": [{"field_path": "physical.fatigue", "operation": "add", "value": 1.0}]
+        },
+        {
+          "action_id": "fall_asleep",
+          "description": "피로에 잠듦",
+          "weight_formula": {"base_weight": 0.4, "state_multipliers": [
+            {"field_path": "physical.fatigue", "factor_type": "linear", "params": {"scale": 0.08}}
+          ]},
+          "effects": [{"field_path": "physical.fatigue", "operation": "add", "value": -1.0}]
+        }
+      ]
+    },
+    {
+      "event_id": "scene_08_arrest",
+      "tick": 152,
+      "event_type": "canonical",
+      "description": "체포. 유다의 배반, 무리가 예수를 체포",
+      "source_ref": "마 26:47-56, 요 18:1-11",
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "set", "value": 8.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 2.0},
+        {"field_path": "relationships.judas.trust", "operation": "set", "value": 0.0}
+      ],
+      "action_options": [
+        {
+          "action_id": "draw_sword",
+          "description": "칼을 뽑아 저항함 (말고의 귀)",
+          "weight_formula": {"base_weight": 0.4, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.04}},
+            {"field_path": "relationships.jesus.love", "factor_type": "linear", "params": {"scale": 0.05}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.fear", "operation": "add", "value": 1.0}
+          ]
+        },
+        {
+          "action_id": "flee",
+          "description": "도주",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.07}},
+            {"field_path": "relationships.jesus.trust", "factor_type": "inverse", "params": {"scale": 0.04}}
+          ]},
+          "effects": [
+            {"field_path": "physical.location", "operation": "set", "value": "fled"}
+          ]
+        },
+        {
+          "action_id": "follow_at_distance",
+          "description": "멀리서 따라감",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "relationships.jesus.love", "factor_type": "linear", "params": {"scale": 0.05}},
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.03}}
+          ]},
+          "effects": [
+            {"field_path": "physical.location", "operation": "set", "value": "following"}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "scene_09_denial_1",
+      "tick": 163,
+      "event_type": "canonical",
+      "description": "대제사장 집 마당. 여종이 베드로를 알아봄 (1차 부인)",
+      "source_ref": "마 26:69-70",
+      "preconditions": [
+        {"field_path": "physical.location", "operator": "in", "value": ["following", "courtyard"]}
+      ],
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.0},
+        {"field_path": "physical.location", "operation": "set", "value": "courtyard"}
+      ],
+      "action_options": [
+        {
+          "action_id": "deny",
+          "description": "부인: 나는 그를 모른다",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.08}},
+            {"field_path": "physical.fatigue", "factor_type": "linear", "params": {"scale": 0.05}},
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.04}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "add", "value": 1.0},
+            {"field_path": "emotions.fear", "operation": "add", "value": 0.5}
+          ]
+        },
+        {
+          "action_id": "confess",
+          "description": "고백: 나는 그의 제자다",
+          "weight_formula": {"base_weight": 0.5, "state_multipliers": [
+            {"field_path": "relationships.jesus.trust", "factor_type": "linear", "params": {"scale": 0.06}},
+            {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.08}},
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.04}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.fear", "operation": "add", "value": 3.0}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "scene_09_denial_2",
+      "tick": 166,
+      "event_type": "canonical",
+      "description": "두 번째 사람이 알아봄 (2차 부인)",
+      "source_ref": "마 26:71-72",
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5}
+      ],
+      "action_options": [
+        {
+          "action_id": "deny",
+          "description": "맹세하며 부인",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.09}},
+            {"field_path": "physical.fatigue", "factor_type": "linear", "params": {"scale": 0.05}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "add", "value": 1.5}
+          ]
+        },
+        {
+          "action_id": "confess",
+          "description": "고백",
+          "weight_formula": {"base_weight": 0.4, "state_multipliers": [
+            {"field_path": "relationships.jesus.trust", "factor_type": "linear", "params": {"scale": 0.05}},
+            {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.09}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.fear", "operation": "add", "value": 3.0}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "scene_09_denial_3",
+      "tick": 170,
+      "event_type": "canonical",
+      "description": "세 번째 추궁. 저주하며 부인 (3차 부인)",
+      "source_ref": "마 26:73-74",
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.0}
+      ],
+      "action_options": [
+        {
+          "action_id": "deny",
+          "description": "저주하며 부인: 나는 그 사람을 알지 못한다",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.1}},
+            {"field_path": "physical.fatigue", "factor_type": "linear", "params": {"scale": 0.06}},
+            {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.05}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "set", "value": 9.5}
+          ]
+        },
+        {
+          "action_id": "confess",
+          "description": "고백",
+          "weight_formula": {"base_weight": 0.4, "state_multipliers": [
+            {"field_path": "relationships.jesus.trust", "factor_type": "linear", "params": {"scale": 0.05}},
+            {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.1}}
+          ]},
+          "effects": [
+            {"field_path": "emotions.fear", "operation": "add", "value": 4.0}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "scene_10_rooster",
+      "tick": 172,
+      "event_type": "canonical",
+      "description": "수탉이 울음. 예수의 눈과 마주침",
+      "source_ref": "눅 22:61-62",
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "set", "value": 10.0},
+        {"field_path": "emotions.hope", "operation": "set", "value": 1.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 2.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_11_crucifixion_absence",
+      "tick": 190,
+      "event_type": "canonical",
+      "description": "십자가. 베드로는 부재. 고립 상태",
+      "source_ref": "",
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "set", "value": 10.0},
+        {"field_path": "emotions.hope", "operation": "set", "value": 0.5},
+        {"field_path": "physical.location", "operation": "set", "value": "hiding"}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_12_empty_tomb",
+      "tick": 225,
+      "event_type": "canonical",
+      "description": "빈 무덤 소식. 달려감",
+      "source_ref": "눅 24:12, 요 20:3-10",
+      "effects": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.hope", "operation": "add", "value": 2.0}
+      ],
+      "action_options": [
+        {
+          "action_id": "run_to_tomb",
+          "description": "무덤으로 달려감",
+          "weight_formula": {"base_weight": 0.7, "state_multipliers": [
+            {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.05}}
+          ]},
+          "effects": [{"field_path": "physical.location", "operation": "set", "value": "tomb"}]
+        },
+        {
+          "action_id": "stay_hiding",
+          "description": "숨어 있음",
+          "weight_formula": {"base_weight": 0.3, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.06}}
+          ]},
+          "effects": []
+        }
+      ]
+    },
+    {
+      "event_id": "scene_13_emmaus_jerusalem",
+      "tick": 237,
+      "event_type": "canonical",
+      "description": "엠마오 이후 예루살렘. 부활하신 예수를 만남",
+      "source_ref": "눅 24:33-49",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 4.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": -2.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": -1.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_14_thomas_appearance",
+      "tick": 285,
+      "event_type": "canonical",
+      "description": "도마를 위한 출현",
+      "source_ref": "요 20:24-29",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 2.0},
+        {"field_path": "relationships.jesus.understanding", "operation": "add", "value": 2.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_15_tiberias",
+      "tick": 355,
+      "event_type": "canonical",
+      "description": "디베랴 호수. 153마리 물고기. 회복의 장면",
+      "source_ref": "요 21",
+      "effects": [
+        {"field_path": "emotions.love", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.grief", "operation": "add", "value": 2.0},
+        {"field_path": "physical.location", "operation": "set", "value": "tiberias"}
+      ],
+      "action_options": [
+        {
+          "action_id": "jump_into_sea",
+          "description": "주님을 알아보고 바다에 뛰어듦",
+          "weight_formula": {"base_weight": 0.6, "state_multipliers": [
+            {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.06}},
+            {"field_path": "relationships.jesus.love", "factor_type": "linear", "params": {"scale": 0.04}}
+          ]},
+          "effects": [{"field_path": "emotions.love", "operation": "add", "value": 2.0}]
+        },
+        {
+          "action_id": "stay_on_boat",
+          "description": "배에 머물러 있음",
+          "weight_formula": {"base_weight": 0.4, "state_multipliers": [
+            {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.05}},
+            {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.04}}
+          ]},
+          "effects": []
+        }
+      ]
+    },
+    {
+      "event_id": "scene_16_forty_days",
+      "tick": 430,
+      "event_type": "canonical",
+      "description": "40일간의 가르침",
+      "source_ref": "행 1:3",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 2.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": -2.0},
+        {"field_path": "relationships.jesus.understanding", "operation": "add", "value": 2.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "scene_17_ascension",
+      "tick": 495,
+      "event_type": "canonical",
+      "description": "승천",
+      "source_ref": "행 1:9-11",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.grief", "operation": "add", "value": 1.0},
+        {"field_path": "relationships.jesus.awe", "operation": "add", "value": 3.0}
+      ],
+      "action_options": []
+    }
+  ],
+  "interventions": [
+    {
+      "event_id": "intervention_restoration",
+      "tick": 358,
+      "scripture_ref": "요 21:15-17",
+      "description": "네가 나를 사랑하느냐 x 3. 내 양을 먹이라.",
+      "state_overrides": {
+        "emotions.grief": 3.0,
+        "emotions.love": 9.0,
+        "emotions.hope": 8.0,
+        "domain_state.communal_role": "shepherd",
+        "domain_state.jesus_understanding": "sending_lord"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(cd:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(python*)",
+      "Bash(pip*)",
+      "Bash(uv*)",
+      "Bash(ruff*)",
+      "Bash(mypy*)",
+      "Bash(pytest*)",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(rm -rf /*)",
+      "Bash(sudo rm*)",
+      "Bash(sudo:*)",
+      "Bash(chmod 777*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)"
+    ]
+  },
+  "env": {
+    "MAX_THINKING_TOKENS": "10000",
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "false"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd=$(echo $CLAUDE_TOOL_INPUT | python3 -c \"import sys,json; d=json.load(sys.stdin); print(d.get('command',''))\" 2>/dev/null || echo ''); if echo $cmd | grep -qE 'rm -rf /|rm -rf \\*'; then echo 'BLOCKED: rm -rf 금지. 특정 경로를 명시하세요.'; exit 2; fi; if echo $cmd | grep -qE '^sudo '; then echo 'BLOCKED: sudo 금지.'; exit 2; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(echo $CLAUDE_TOOL_INPUT | python3 -c \"import sys,json; d=json.load(sys.stdin); print(d.get('file_path',''))\" 2>/dev/null || echo ''); if echo $file | grep -q '.py$' && [ -f \"$file\" ]; then result=$(ruff check \"$file\" 2>&1); if [ $? -ne 0 ]; then echo \"[RUFF] $file\"; echo \"$result\" | head -20; fi; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(echo $CLAUDE_TOOL_INPUT | python3 -c \"import sys,json; d=json.load(sys.stdin); print(d.get('file_path',''))\" 2>/dev/null || echo ''); if echo $file | grep -q '.py$' && [ -f \"$file\" ]; then result=$(mypy \"$file\" --no-error-summary 2>&1 | head -10); if [ $? -ne 0 ]; then echo \"[MYPY] $file\"; echo \"$result\"; fi; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git diff --stat 2>/dev/null | tail -3"
+          }
+        ]
+      }
+    ]
+  }
+}

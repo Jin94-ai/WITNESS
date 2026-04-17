@@ -1,0 +1,29 @@
+{
+  "agent_id": "vangogh",
+  "tick": 0,
+  "physical": {
+    "fatigue": 4.0,
+    "hunger": 3.0,
+    "health": 5.0,
+    "location": "arles_yellow_house"
+  },
+  "emotions": {
+    "fear": 3.0,
+    "hope": 6.0,
+    "grief": 3.0,
+    "confusion": 4.0,
+    "love": 5.0
+  },
+  "relationships": {
+    "theo": {"target_id": "theo", "trust": 9.0, "love": 9.0, "awe": 1.0, "understanding": 7.0},
+    "gauguin": {"target_id": "gauguin", "trust": 5.0, "love": 4.0, "awe": 6.0, "understanding": 3.0}
+  },
+  "domain_state": {
+    "type": "creative_drive",
+    "creative_energy": 8.0,
+    "artistic_confidence": 5.0,
+    "phase": "peak_output",
+    "works_completed": 0,
+    "palette_boldness": 7.0
+  }
+}

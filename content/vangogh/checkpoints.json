@@ -1,0 +1,40 @@
+{
+  "checkpoints": [
+    {
+      "checkpoint_id": "cp_creative_burst",
+      "tick": 50,
+      "description": "아르 초기 창작 폭발기 (해바라기 연작 등)",
+      "conditions": [
+        {"condition_type": "state_range", "params": {"field_path": "emotions.hope", "min": 5.0}}
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "cp_gauguin_conflict",
+      "tick": 100,
+      "description": "고갱과의 갈등 심화",
+      "conditions": [
+        {"condition_type": "state_range", "params": {"field_path": "emotions.confusion", "min": 5.0}}
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "cp_ear_incident",
+      "tick": 140,
+      "description": "귀 자해 사건 (1888.12.23)",
+      "conditions": [
+        {"condition_type": "action_taken", "params": {"action_id": "self_harm"}}
+      ],
+      "weight": 2.0
+    },
+    {
+      "checkpoint_id": "cp_grief_peak",
+      "tick": 145,
+      "description": "사건 후 극한 슬픔",
+      "conditions": [
+        {"condition_type": "state_range", "params": {"field_path": "emotions.grief", "min": 8.0}}
+      ],
+      "weight": 1.5
+    }
+  ]
+}
