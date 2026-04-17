@@ -101,17 +101,17 @@ class HazardPrecondition(BaseModel):
         if actual is None:
             return False
         if self.operator == "gt":
-            return actual > self.value
+            return bool(actual > self.value)
         if self.operator == "lt":
-            return actual < self.value
+            return bool(actual < self.value)
         if self.operator == "gte":
-            return actual >= self.value
+            return bool(actual >= self.value)
         if self.operator == "lte":
-            return actual <= self.value
+            return bool(actual <= self.value)
         if self.operator == "eq":
-            return actual == self.value
+            return bool(actual == self.value)
         if self.operator == "in":
-            return actual in self.value
+            return bool(actual in self.value)
         return False
 
 

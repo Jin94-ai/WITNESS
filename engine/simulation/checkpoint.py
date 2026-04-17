@@ -172,6 +172,9 @@ def _check_state_comparison(
     if val_a is None or val_b is None:
         return False, f"field not found: {field_a} or {field_b}"
 
+    if not isinstance(val_a, (int, float)) or not isinstance(val_b, (int, float)):
+        return False, f"non-numeric comparison: {field_a}={val_a}, {field_b}={val_b}"
+
     if operator == "gt":
         passed = val_a > val_b
     elif operator == "lt":

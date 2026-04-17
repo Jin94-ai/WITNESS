@@ -77,7 +77,7 @@ def calibrate_parameters(
         """관측값과 시뮬레이션 요약 통계의 거리."""
         match_diff = abs(x["mean_match_rate"] - y["mean_match_rate"])
         action_diff = abs(x["mean_action_count"] - y["mean_action_count"]) / max(target_action_count, 1.0)
-        return match_diff + action_diff
+        return float(match_diff + action_diff)
 
     observation = {
         "mean_match_rate": target_match_rate,

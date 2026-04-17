@@ -120,7 +120,7 @@ def _series_stats(values: list[float]) -> dict[str, float]:
 
 def _find_event_tick(record: dict, event_id: str) -> int:
     """이벤트 발동 tick을 찾는다. 없으면 -1."""
-    return record.get("fired_events", {}).get(event_id, -1)
+    return int(record.get("fired_events", {}).get(event_id, -1))
 
 
 def _state_at_tick(series: list[dict], target_tick: int, field: str) -> float:
@@ -128,7 +128,7 @@ def _state_at_tick(series: list[dict], target_tick: int, field: str) -> float:
     if not series:
         return 0.0
     best = min(series, key=lambda s: abs(s["tick"] - target_tick))
-    return best.get(field, 0.0)
+    return float(best.get(field, 0.0))
 
 
 def _state_window(series: list[dict], start: int, end: int, field: str) -> list[float]:
