@@ -175,3 +175,67 @@ class TestRuleEngine:
         agent = _agent()
         result = engine.apply_all(agent, _ctx())
         assert result == agent
+
+
+class TestSlowStateRule:
+    def test_extreme_fear_adds_trauma(self):
+        """극한 공포 시 event_trauma 누적."""
+        from engine.rules.temporal import SlowStateRule
+        agent = _agent(emotions=EmotionalState(fear=9.0))
+        ctx = _ctx(events=[ExternalEvent(event_id="threat", tick=0)])
+        result = SlowStateRule().apply(agent, ctx)
+        assert result.slow_state.event_trauma > 0
+
+    def test_extreme_grief_adds_trauma(self):
+        """극한 슬픔 시 event_trauma 누적."""
+        from engine.rules.temporal import SlowStateRule
+        agent = _agent(emotions=EmotionalState(grief=9.0))
+        result = SlowStateRule().apply(agent, _ctx())
+        assert result.slow_state.event_trauma > 0
+
+    def test_high_hope_positive_identity(self):
+        """높은 희망 시 identity_shift 양수 이동."""
+        from engine.rules.temporal import SlowStateRule
+        agent = _agent(emotions=EmotionalState(hope=8.0))
+        result = SlowStateRule().apply(agent, _ctx())
+        assert result.slow_state.identity_shift > 0
+
+    def test_high_fear_low_hope_negative_identity(self):
+        """공포 높고 희망 낮으면 identity 음수."""
+        from engine.rules.temporal import SlowStateRule
+        agent = _agent(emotions=EmotionalState(fear=8.0, hope=2.0))
+        result = SlowStateRule().apply(agent, _ctx())
+        assert result.slow_state.identity_shift < 0
+
+    def test_no_change_when_normal(self):
+        """정상 범위에서는 변화 없음."""
+        from engine.rules.temporal import SlowStateRule
+        agent = _agent(emotions=EmotionalState(fear=4.0, grief=3.0, hope=5.0))
+        result = SlowStateRule().apply(agent, _ctx())
+        assert result.slow_state.event_trauma == 0
+        assert result.slow_state.identity_shift == 0
+
+
+class TestHighStressConsequenceRule:
+    def test_high_stress_adds_injury(self):
+        """grief+fear 동시 높으면 moral_injury 누적."""
+        from engine.rules.temporal import HighStressConsequenceRule
+        agent = _agent(emotions=EmotionalState(grief=7.0, fear=7.0))
+        ctx = _ctx(events=[ExternalEvent(event_id="crisis", tick=0)])
+        result = HighStressConsequenceRule().apply(agent, ctx)
+        assert result.slow_state.moral_injury > 0
+
+    def test_no_injury_below_threshold(self):
+        """임계 이하면 변화 없음."""
+        from engine.rules.temporal import HighStressConsequenceRule
+        agent = _agent(emotions=EmotionalState(grief=3.0, fear=3.0))
+        ctx = _ctx(events=[ExternalEvent(event_id="normal", tick=0)])
+        result = HighStressConsequenceRule().apply(agent, ctx)
+        assert result.slow_state.moral_injury == 0
+
+    def test_no_injury_without_events(self):
+        """이벤트 없으면 변화 없음."""
+        from engine.rules.temporal import HighStressConsequenceRule
+        agent = _agent(emotions=EmotionalState(grief=9.0, fear=9.0))
+        result = HighStressConsequenceRule().apply(agent, _ctx())
+        assert result.slow_state.moral_injury == 0

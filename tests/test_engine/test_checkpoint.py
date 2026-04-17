@@ -164,3 +164,96 @@ class TestComputeMatchRate:
 
     def test_empty(self):
         assert compute_match_rate([], []) == 0.0
+
+
+class TestStateComparison:
+    """state_comparison 조건 테스트."""
+
+    def test_gt_comparison(self):
+        cp = Checkpoint(
+            checkpoint_id="test",
+            tick=100,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="state_comparison",
+                    params={"field_a": "emotions.love", "field_b": "emotions.fear", "operator": "gt"},
+                )
+            ],
+        )
+        history = {100: _state(tick=100, love=8.0, fear=3.0)}
+        assert evaluate_checkpoint(cp, history, []).passed
+
+    def test_lt_comparison(self):
+        cp = Checkpoint(
+            checkpoint_id="test",
+            tick=100,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="state_comparison",
+                    params={"field_a": "emotions.fear", "field_b": "emotions.love", "operator": "lt"},
+                )
+            ],
+        )
+        history = {100: _state(tick=100, fear=2.0, love=7.0)}
+        assert evaluate_checkpoint(cp, history, []).passed
+
+    def test_eq_comparison(self):
+        cp = Checkpoint(
+            checkpoint_id="test",
+            tick=100,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="state_comparison",
+                    params={"field_a": "emotions.fear", "field_b": "emotions.hope", "operator": "eq"},
+                )
+            ],
+        )
+        history = {100: _state(tick=100, fear=5.0, hope=5.0)}
+        assert evaluate_checkpoint(cp, history, []).passed
+
+    def test_missing_field(self):
+        cp = Checkpoint(
+            checkpoint_id="test",
+            tick=100,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="state_comparison",
+                    params={"field_a": "nonexistent", "field_b": "emotions.fear"},
+                )
+            ],
+        )
+        history = {100: _state(tick=100)}
+        assert not evaluate_checkpoint(cp, history, []).passed
+
+    def test_no_state(self):
+        cp = Checkpoint(
+            checkpoint_id="test",
+            tick=100,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="state_comparison",
+                    params={"field_a": "emotions.fear", "field_b": "emotions.love"},
+                )
+            ],
+        )
+        assert not evaluate_checkpoint(cp, {}, []).passed
+
+
+class TestActionTakenEdgeCases:
+    def test_no_tick_range(self):
+        """tick_range 없으면 모든 tick에서 카운트."""
+        cp = Checkpoint(
+            checkpoint_id="test",
+            tick=200,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="action_taken",
+                    params={"action_id": "deny", "min_count": 2},
+                )
+            ],
+        )
+        actions = [
+            ActionRecord(tick=50, event_id="e1", chosen_action="deny"),
+            ActionRecord(tick=300, event_id="e2", chosen_action="deny"),
+        ]
+        assert evaluate_checkpoint(cp, {}, actions).passed
