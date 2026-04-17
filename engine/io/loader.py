@@ -14,7 +14,6 @@ from engine.core.event import CanonicalIntervention, ExternalEvent
 from engine.core.hazard import HazardEvent
 from engine.core.state import AgentState, DomainState
 
-
 # DomainState 타입 레지스트리
 _domain_registry: dict[str, type[DomainState]] = {}
 

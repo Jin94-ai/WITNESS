@@ -37,7 +37,7 @@ def _full_rule_engine() -> RuleEngine:
 
 def _load_full_config() -> SimulationConfig:
     state = load_agent_state(CONTENT_DIR / "initial_state.json")
-    events_data = json.loads((CONTENT_DIR / "canonical_events.json").read_text(encoding="utf-8"))
+    json.loads((CONTENT_DIR / "canonical_events.json").read_text(encoding="utf-8"))
     events = load_events(CONTENT_DIR / "canonical_events.json")
     interventions = load_interventions(CONTENT_DIR / "canonical_events.json")
     return SimulationConfig(

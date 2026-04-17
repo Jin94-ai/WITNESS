@@ -1,7 +1,6 @@
 """Hazard-driven runner 통합 테스트 (slow state, resolution 포함)."""
 
-from engine.core.event import CanonicalIntervention
-from engine.core.hazard import HazardEvent, HazardFunction, HazardFactor
+from engine.core.hazard import HazardEvent, HazardFunction
 from engine.core.state import AgentState, EmotionalState, PhysicalState
 from engine.core.world import SimulationConfig
 from engine.rules.base import RuleEngine

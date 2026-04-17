@@ -15,7 +15,7 @@ from engine.rules.emotional import ConfusionRule, FearResponseRule, GriefRule, H
 from engine.rules.physical import FatigueRule, HealthRule, HungerRule
 from engine.rules.social import GroupIsolationRule, RelationshipDecayRule
 from engine.rules.temporal import CircadianRule, HomeostasisRule
-from engine.simulation.analysis import AggregateStats, compute_aggregate, parameter_sensitivity
+from engine.simulation.analysis import compute_aggregate, parameter_sensitivity
 from engine.simulation.batch import run_batch
 from engine.simulation.checkpoint import Checkpoint
 
@@ -76,13 +76,13 @@ class TestHindcast:
         results = run_batch(config, _full_rule_engine(), n_runs=100, checkpoints=checkpoints)
         stats = compute_aggregate(results)
 
-        print(f"\n=== Hindcasting Results ===")
+        print("\n=== Hindcasting Results ===")
         print(f"Mean match rate: {stats.mean_match_rate:.1%}")
         print(f"Std: {stats.std_match_rate:.1%}")
-        print(f"Checkpoint pass rates:")
+        print("Checkpoint pass rates:")
         for cp_id, rate in sorted(stats.checkpoint_pass_rates.items()):
             print(f"  {cp_id}: {rate:.0%}")
-        print(f"Action frequencies:")
+        print("Action frequencies:")
         for event_id, actions in sorted(stats.action_frequency.items()):
             print(f"  {event_id}: {actions}")
 
@@ -120,7 +120,7 @@ class TestHindcast:
             checkpoints=checkpoints,
         )
 
-        print(f"\n=== Fear Sensitivity ===")
+        print("\n=== Fear Sensitivity ===")
         for val, stats in sorted(sensitivity.items()):
             print(f"  fear={val:.0f}: match_rate={stats.mean_match_rate:.1%}")
 

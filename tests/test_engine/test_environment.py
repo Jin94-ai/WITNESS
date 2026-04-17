@@ -1,7 +1,7 @@
 """EnvironmentState 통합 테스트."""
 
 from engine.core.environment import EnvironmentState
-from engine.core.hazard import HazardEngine, HazardEvent, HazardFactor, HazardFunction
+from engine.core.hazard import HazardEvent, HazardFactor, HazardFunction
 from engine.core.state import AgentState, EmotionalState
 from engine.core.world import SimulationConfig
 from engine.rules.base import RuleEngine

@@ -5,7 +5,6 @@ python main.py 로 실행하면 핵심 관측 결과를 출력한다.
 
 import io
 import json
-import os
 import random
 import sys
 from pathlib import Path
@@ -33,7 +32,6 @@ from engine.rules.temporal import (
     HomeostasisRule,
     SlowStateRule,
 )
-from engine.simulation.batch import run_batch
 from engine.simulation.checkpoint import Checkpoint
 from engine.simulation.runner import SimulationRunner
 

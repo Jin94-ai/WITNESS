@@ -11,7 +11,6 @@ from pydantic import Field
 
 from engine.core.state import DomainState
 
-
 CreativePhase = Literal[
     "seeking",        # 방향 탐색
     "developing",     # 양식 발전 중

@@ -4,8 +4,8 @@ import random
 
 from engine.core.event import (
     ActionOption,
-    ExternalEvent,
     CanonicalIntervention,
+    ExternalEvent,
     Precondition,
     WeightFormula,
 )

@@ -64,7 +64,7 @@ class TestClusterTrajectories:
 
         cluster_result = cluster_trajectories(matrix, min_cluster_size=3)
 
-        print(f"\n=== Clustering (50 runs) ===")
+        print("\n=== Clustering (50 runs) ===")
         print(f"N clusters: {cluster_result['n_clusters']}")
         print(f"Noise ratio: {cluster_result['noise_ratio']:.1%}")
 
@@ -88,7 +88,7 @@ class TestMorrisSensitivity:
             checkpoints=_checkpoints(),
         )
 
-        print(f"\n=== Morris Sensitivity ===")
+        print("\n=== Morris Sensitivity ===")
         for name, mu in result["mu_star"].items():
             print(f"  {name}: mu*={mu:.3f}, sigma={result['sigma'][name]:.3f}")
 
@@ -108,7 +108,7 @@ class TestBifurcation:
             checkpoints=_checkpoints(),
         )
 
-        print(f"\n=== Bifurcation Detection (fear) ===")
+        print("\n=== Bifurcation Detection (fear) ===")
         for i, val in enumerate(result["param_values"]):
             print(f"  fear={val:.0f}: mean={result['means'][i]:.2f}, std={result['stds'][i]:.2f}")
         if result["bifurcation_candidates"]:

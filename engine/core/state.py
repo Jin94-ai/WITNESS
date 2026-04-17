@@ -150,7 +150,7 @@ def set_nested_value(state: AgentState, field_path: str, value: float | str) -> 
 
     # 2-depth: "emotions.fear" -> emotions 객체를 복사하며 fear 갱신
     top_field = parts[0]
-    sub_field = ".".join(parts[1:])
+    ".".join(parts[1:])
     top_obj = getattr(state, top_field, None)
 
     if top_obj is None:

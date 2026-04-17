@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from engine.core.event import ExternalEvent, StateEffect, ActionOption, WeightFormula
+from engine.core.event import ActionOption, ExternalEvent, StateEffect, WeightFormula
 from engine.core.state import AgentState, EmotionalState
 from engine.core.world import SimulationConfig
 from engine.io.trajectory import (

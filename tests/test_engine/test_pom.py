@@ -1,10 +1,9 @@
 """POM (Pattern-Oriented Modeling) 테스트."""
 
+from content.peter.pom_scorecard import make_peter_scorecard
 from engine.core.state import AgentState, EmotionalState, SlowState
 from engine.simulation.checkpoint import ActionRecord
-from content.peter.pom_scorecard import make_peter_scorecard
 from engine.simulation.pom import (
-    PatternCriterion,
     evaluate_pom,
     pom_filter,
 )

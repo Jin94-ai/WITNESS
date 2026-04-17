@@ -9,7 +9,6 @@ from engine.io.loader import (
     resolve_domain_state,
 )
 
-
 # FaithJourneyState를 레지스트리에 등록
 register_domain_type("faith_journey", FaithJourneyState)
 

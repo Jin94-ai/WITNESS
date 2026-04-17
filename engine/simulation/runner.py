@@ -10,7 +10,6 @@ Legacy 모드: tick 고정 이벤트 (하위 호환).
 
 from __future__ import annotations
 
-import copy
 import random
 
 from pydantic import BaseModel, Field
@@ -19,12 +18,12 @@ from engine.core.event import (
     ActionOption,
     ExternalEvent,
     StateEffect,
-    WeightFormula,
 )
-from engine.core.hazard import HazardEngine, HazardEvent
+from engine.core.hazard import HazardEngine
 from engine.core.state import AgentState, clamp, set_nested_value
 from engine.core.world import SimulationConfig
 from engine.rules.base import RuleContext, RuleEngine
+from engine.rules.environment import EnvironmentDynamicsRule
 from engine.simulation.checkpoint import (
     ActionRecord,
     Checkpoint,
@@ -32,7 +31,6 @@ from engine.simulation.checkpoint import (
     compute_match_rate,
     evaluate_checkpoint,
 )
-from engine.rules.environment import EnvironmentDynamicsRule
 from engine.simulation.decision import decide_action
 from engine.simulation.event_scheduler import EventScheduler
 from engine.simulation.resolution import ResolutionConfig, ResolutionEngine, ResolutionTier

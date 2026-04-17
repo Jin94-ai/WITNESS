@@ -116,8 +116,8 @@ def sobol_sensitivity(
     Returns:
         {"S1": {param: value}, "ST": {param: value}, "param_names": [...]}
     """
-    from SALib.sample import saltelli
     from SALib.analyze import sobol
+    from SALib.sample import saltelli
 
     param_names = list(param_ranges.keys())
     bounds = [list(param_ranges[p]) for p in param_names]
@@ -172,8 +172,8 @@ def morris_sensitivity(
     Returns:
         {"mu_star": {param: value}, "sigma": {param: value}}
     """
-    from SALib.sample import morris as morris_sample
     from SALib.analyze import morris as morris_analyze
+    from SALib.sample import morris as morris_sample
 
     param_names = list(param_ranges.keys())
     bounds = [list(param_ranges[p]) for p in param_names]

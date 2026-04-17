@@ -13,7 +13,6 @@ import math
 from engine.core.state import AgentState, clamp
 from engine.rules.base import RuleContext
 
-
 # 감정별 회복 속도. grief는 느리고, fear는 빠르다.
 _RECOVERY_RATES: dict[str, float] = {
     "fear": 0.006,       # 공포는 비교적 빨리 감소

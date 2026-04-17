@@ -7,7 +7,6 @@
 """
 
 import json
-from collections import Counter
 from pathlib import Path
 
 from content.peter.domain_faith import FaithJourneyState
@@ -102,13 +101,13 @@ class TestHazardHindcast:
         results = run_batch(config, _rule_engine(), n_runs=100, checkpoints=checkpoints)
         stats = compute_aggregate(results)
 
-        print(f"\n=== Hazard-Driven Hindcasting (100 runs) ===")
+        print("\n=== Hazard-Driven Hindcasting (100 runs) ===")
         print(f"Mean match rate: {stats.mean_match_rate:.1%}")
         print(f"Std: {stats.std_match_rate:.1%}")
-        print(f"\nCheckpoint pass rates:")
+        print("\nCheckpoint pass rates:")
         for cp_id, rate in sorted(stats.checkpoint_pass_rates.items()):
             print(f"  {cp_id}: {rate:.0%}")
-        print(f"\nAction frequencies:")
+        print("\nAction frequencies:")
         for event_id, actions in sorted(stats.action_frequency.items()):
             print(f"  {event_id}: {actions}")
 
@@ -121,7 +120,7 @@ class TestHazardHindcast:
                     all_fired[eid] = []
                 all_fired[eid].append(fe["tick"])
 
-        print(f"\nEvent firing tick distributions:")
+        print("\nEvent firing tick distributions:")
         for eid, ticks in sorted(all_fired.items()):
             if ticks:
                 print(f"  {eid}: min={min(ticks)}, max={max(ticks)}, "

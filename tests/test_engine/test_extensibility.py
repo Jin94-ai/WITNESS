@@ -4,23 +4,20 @@ engine/ 코드 수정 없이 더미 인물("artist")로 전체 파이프라인�
 베드로 콘텐츠를 참조하지 않고, 순수하게 engine/ API만으로 구성.
 """
 
-import random
 
 from engine.core.environment import EnvironmentState
+from engine.core.event import CanonicalIntervention
 from engine.core.hazard import (
-    HazardEngine,
     HazardEvent,
     HazardFactor,
     HazardFunction,
-    HazardPrecondition,
 )
-from engine.core.event import CanonicalIntervention
 from engine.core.state import AgentState, DomainState, EmotionalState, PhysicalState, Relationship
 from engine.core.world import SimulationConfig
 from engine.rules.base import RuleEngine
-from engine.rules.emotional import FearResponseRule, HopeRule, GriefRule, ConfusionRule, LoveRule
+from engine.rules.emotional import ConfusionRule, FearResponseRule, GriefRule, HopeRule, LoveRule
 from engine.rules.physical import FatigueRule
-from engine.rules.temporal import HomeostasisRule, SlowStateRule, CircadianRule
+from engine.rules.temporal import CircadianRule, HomeostasisRule, SlowStateRule
 from engine.simulation.checkpoint import Checkpoint, CheckpointCondition
 from engine.simulation.runner import SimulationRunner
 
@@ -214,7 +211,9 @@ class TestExtensibility:
         engine = _artist_engine()
 
         calm_events = sum(len(SimulationRunner(config_calm, engine).run_single(seed=i).fired_events) for i in range(30))
-        hostile_events = sum(len(SimulationRunner(config_hostile, engine).run_single(seed=i).fired_events) for i in range(30))
+        hostile_events = sum(
+            len(SimulationRunner(config_hostile, engine).run_single(seed=i).fired_events) for i in range(30)
+        )
 
         # 환경이 다르면 이벤트 수가 다를 수 있음 (patron_support에 환경 factor 있음)
         # 적어도 돌아가야 함
