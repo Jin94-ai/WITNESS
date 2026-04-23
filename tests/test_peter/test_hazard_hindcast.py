@@ -9,6 +9,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from content.peter.domain_faith import FaithJourneyState
 from engine.core.world import SimulationConfig
 from engine.io.loader import (
@@ -66,6 +68,7 @@ def _load_checkpoints() -> list[Checkpoint]:
     return [Checkpoint.model_validate(cp) for cp in data["checkpoints"]]
 
 
+@pytest.mark.slow
 class TestHazardHindcast:
     def test_hazard_mode_500_tick_completes(self):
         """Hazard-driven 500 tick 시뮬레이션이 에러 없이 완주."""

@@ -1,0 +1,19 @@
+{
+  "config_id": "jerusalem_ad30_taxation_v1",
+  "initial_state": {
+    "collection_intensity": 0.3,
+    "tax_collector_activity": 0.4,
+    "collection_cycle_day": 30
+  },
+  "dynamics": {
+    "pilate_pressure_to_intensity_gain": 0.5,
+    "intensity_decay_per_day": 0.02,
+    "intensity_to_zealot_militancy_gain": 0.4,
+    "intensity_to_crowd_frustration_gain": 0.15
+  },
+  "bounds": {
+    "intensity_floor": 0.0, "intensity_ceiling": 1.0,
+    "activity_floor": 0.0, "activity_ceiling": 1.0
+  },
+  "notes": "Phase 5D.2 Roman Taxation — driven by Pilate's political_pressure; drives zealot militancy."
+}

@@ -1,0 +1,42 @@
+{
+  "agent_id": "peter",
+  "feature_dim": 12,
+  "feature_schema": [
+    "emotions.fear",
+    "emotions.hope",
+    "emotions.grief",
+    "emotions.confusion",
+    "emotions.love",
+    "physical.fatigue",
+    "physical.hunger",
+    "physical.health",
+    "slow_state.moral_injury",
+    "slow_state.identity_shift",
+    "slow_state.event_trauma",
+    "slow_state.trust_scar"
+  ],
+  "action_vocab": [
+    "accept_washing",
+    "assert_loyalty",
+    "confess",
+    "deny",
+    "discuss_with_disciples",
+    "draw_sword",
+    "fall_asleep",
+    "flee",
+    "follow_at_distance",
+    "follow_closely",
+    "join_crowd",
+    "jump_into_sea",
+    "pray",
+    "resist_washing",
+    "run_to_tomb",
+    "stay_awake",
+    "stay_hiding",
+    "stay_on_boat",
+    "watch_quietly",
+    "weep",
+    "withdraw_in_fear"
+  ],
+  "n_samples": 5040
+}

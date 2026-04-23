@@ -56,12 +56,17 @@ class FaithJourneyState(DomainState):
 
     jesus_understanding과 communal_role은 비선형 전환 가능.
     부인 사건에서 inner_circle -> failed로 되돌아갈 수 있다.
+
+    v1.2 Phase-linked life architecture:
+    - jesus_understanding: None 허용 (소명 phase 시작 시 예수를 아직 모름).
+      default는 기존 "messiah_political" 유지 — backward compat.
+    - communal_role: None 허용 (어부, 아직 제자 아님).
     """
 
     type: str = Field(default="faith_journey", init=False)
-    jesus_understanding: JesusUnderstanding = Field(
+    jesus_understanding: JesusUnderstanding | None = Field(
         default="messiah_political",
-        description="예수 이해의 단계",
+        description="예수 이해의 단계. None = 아직 예수를 모름 (소명 이전).",
     )
     obedience_maturity: float = Field(
         default=5.0, ge=0.0, le=10.0, description="순종 성숙도"
@@ -69,8 +74,9 @@ class FaithJourneyState(DomainState):
     fear_layers: FearProfile = Field(
         default_factory=FearProfile, description="두려움의 층위"
     )
-    communal_role: CommunalRole = Field(
-        default="inner_circle", description="공동체 내 역할"
+    communal_role: CommunalRole | None = Field(
+        default="inner_circle",
+        description="공동체 내 역할. None = 아직 제자 공동체 소속 아님.",
     )
     repentance_history: list[RepentanceCycle] = Field(
         default_factory=list, description="회개 순환 기록"

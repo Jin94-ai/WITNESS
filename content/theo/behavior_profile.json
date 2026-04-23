@@ -1,0 +1,58 @@
+{
+  "agent_id": "theo",
+  "actions": [
+    {
+      "action_id": "send_money",
+      "description": "재정 지원",
+      "visible_signal": "파리의 테오가 송금을 보냈다.",
+      "observable_from": ["theo", "vangogh"],
+      "weight_formula": {
+        "base_weight": 2.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.belief_in_art", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "domain_state.financial_strain", "factor_type": "inverse", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 0.3, "target_agent_id": "vangogh"}
+      ],
+      "cooldown": 10
+    },
+    {
+      "action_id": "write_encouragement",
+      "description": "격려 편지",
+      "visible_signal": "파리에서 테오의 격려 편지가 도착했다.",
+      "observable_from": ["theo", "vangogh"],
+      "weight_formula": {
+        "base_weight": 2.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.concern_for_brother", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 0.2, "target_agent_id": "vangogh"},
+        {"field_path": "domain_state.artistic_confidence", "operation": "add", "value": 0.15, "target_agent_id": "vangogh"}
+      ]
+    },
+    {
+      "action_id": "express_worry",
+      "description": "걱정을 표현",
+      "visible_signal": "테오의 편지에 근심 어린 말이 배어 있었다.",
+      "observable_from": ["theo", "vangogh"],
+      "preconditions": [
+        {"field_path": "domain_state.concern_for_brother", "operator": "gte", "value": 7.0}
+      ],
+      "weight_formula": {
+        "base_weight": 1.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.concern_for_brother", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "add", "value": 0.3, "target_agent_id": "vangogh"}
+      ]
+    }
+  ],
+  "default_action_id": "write_encouragement"
+}

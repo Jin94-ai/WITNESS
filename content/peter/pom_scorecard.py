@@ -30,7 +30,12 @@ def make_peter_scorecard() -> list[PatternCriterion]:
         return r.final_state.slow_state.moral_injury >= 3.0
 
     def p6_identity_damage(r: SimulationResult) -> bool:
-        return r.final_state.slow_state.identity_shift < -1.0
+        # 정체성 손상은 "Peter가 이 시기에 경험한 것"이므로 peak 기준으로 검증.
+        # 최종 상태는 canonical_intervention(요 21)으로 회복될 수 있으므로
+        # 어느 snapshot에서라도 손상이 있었는지 확인한다.
+        return any(
+            s.slow_state.identity_shift < -1.0 for s in r.state_snapshots.values()
+        )
 
     def p7_eventual_hope(r: SimulationResult) -> bool:
         return r.final_state.emotions.hope >= 3.0

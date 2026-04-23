@@ -1,0 +1,133 @@
+{
+  "world_id": "jerusalem_ad30_spike1a",
+  "total_ticks": 90,
+  "dt_days": 1.0,
+  "rng_seed": 0,
+  "notes": "Spike 1A config: calendar (Layer 1) + crowd_density (Layer 5) only. Day 0 = Nisan 1. Passover = day 13 (Nisan 14). Unleavened Bread = day 14-20. Firstfruits = day 15 (Nisan 16). Shavuot = day 64 (Sivan 6, Lev 23:15-16 counting).",
+  "calendar_config": {
+    "shabbat_anchor_day_index": 14,
+    "passover_amplitude": 10.0,
+    "passover_sigma_pre": 4.5,
+    "passover_sigma_post": 3.0,
+    "shavuot_amplitude": 4.0,
+    "shavuot_sigma_pre": 4.0,
+    "shavuot_sigma_post": 3.0
+  },
+  "crowd_config": {
+    "baseline_density": 1.0,
+    "density_ceiling": 10.0,
+    "tau_days": 3.5,
+    "inflow_weight": 0.30,
+    "sigma_daily": 0.05,
+    "initial_density": 1.0
+  },
+  "economy_config": {
+    "price_floor": 1.0,
+    "price_ceiling": 10.0,
+    "price_tau_days": 5.0,
+    "demand_weight": 0.08,
+    "demand_memory": 0.66,
+    "sigma_daily": 0.03,
+    "initial_price": 1.0
+  },
+  "politics_config": {
+    "alertness_floor": 2.0,
+    "alertness_ceiling": 10.0,
+    "alert_tau_days": 4.0,
+    "crowd_trigger_threshold": 5.0,
+    "threshold_step": 1.5,
+    "pilate_bonus": 0.4,
+    "sigma_daily": 0.05,
+    "initial_alertness": 2.0,
+    "pilate_approach_lead_days": 4,
+    "pilate_approach_stay_days": 10
+  },
+  "factions_config": {
+    "influence_ceiling": 10.0,
+    "factions": {
+      "pharisees": {
+        "initial_influence": 6.0,
+        "initial_militancy": 1.0,
+        "initial_roman_stance": "neutral",
+        "target_influence": 6.0,
+        "tau_influence": 60.0,
+        "growth_rate": 0.0,
+        "sigma_influence": 0.04,
+        "sigma_militancy": 0.02
+      },
+      "sadducees": {
+        "initial_influence": 5.0,
+        "initial_militancy": 0.5,
+        "initial_roman_stance": "cooperative",
+        "target_influence": 5.0,
+        "tau_influence": 60.0,
+        "growth_rate": 0.0,
+        "sigma_influence": 0.03,
+        "sigma_militancy": 0.01
+      },
+      "essenes": {
+        "initial_influence": 1.5,
+        "initial_militancy": 0.5,
+        "initial_roman_stance": "neutral",
+        "target_influence": 1.5,
+        "tau_influence": 90.0,
+        "growth_rate": 0.0,
+        "sigma_influence": 0.02,
+        "sigma_militancy": 0.01
+      },
+      "zealots": {
+        "initial_influence": 2.0,
+        "initial_militancy": 7.0,
+        "initial_roman_stance": "resistant",
+        "target_influence": 2.5,
+        "tau_influence": 40.0,
+        "growth_rate": 0.01,
+        "sigma_influence": 0.06,
+        "sigma_militancy": 0.08
+      },
+      "jesus_movement": {
+        "initial_influence": 1.0,
+        "initial_militancy": 1.0,
+        "initial_roman_stance": "neutral",
+        "target_influence": 3.0,
+        "tau_influence": 30.0,
+        "growth_rate": 0.03,
+        "sigma_influence": 0.05,
+        "sigma_militancy": 0.02
+      },
+      "baptist_remnant": {
+        "initial_influence": 1.0,
+        "initial_militancy": 0.5,
+        "initial_roman_stance": "neutral",
+        "target_influence": 0.2,
+        "tau_influence": 60.0,
+        "growth_rate": 0.0,
+        "sigma_influence": 0.02,
+        "sigma_militancy": 0.01
+      }
+    }
+  },
+  "rumors_config": {
+    "spread_rate_per_day": 0.06,
+    "spread_decay_per_day": 0.03,
+    "credibility_decay_per_day": 0.015,
+    "initial_spread": 0.05,
+    "initial_credibility": 0.8,
+    "max_age_days": 30.0,
+    "max_active_rumors": 40,
+    "seed_content": "agent_emitted_rumor"
+  },
+  "effect_channels": [
+    {"channel_id": "publicity_shock", "aggregation": "max", "default": 0.0},
+    {"channel_id": "authority_threat", "aggregation": "sum", "default": 0.0},
+    {"channel_id": "rumor_seed", "aggregation": "threshold", "threshold": 0.5, "default": 0.0}
+  ],
+  "runaway_limits": {
+    "crowd_density_max_per_day": 3.0,
+    "crowd_density_ceiling": 10.0,
+    "staple_price_max_per_day": 2.5,
+    "staple_price_ceiling": 10.0,
+    "roman_alertness_max_per_day": 3.0,
+    "roman_alertness_ceiling": 10.0
+  }
+}

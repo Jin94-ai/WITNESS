@@ -1,0 +1,41 @@
+{
+  "john": {
+    "agent_id": "john",
+    "theological_understanding": 0.85,
+    "confusion_resistance": 0.8,
+    "political_sensitivity": 0.3,
+    "rumour_trust_bias": 0.6,
+    "action_weights": {
+      "witness": 3.0,
+      "discuss": 1.5,
+      "follow": 1.5,
+      "react_political": 0.5
+    }
+  },
+  "james": {
+    "agent_id": "james",
+    "theological_understanding": 0.55,
+    "confusion_resistance": 0.5,
+    "political_sensitivity": 0.85,
+    "rumour_trust_bias": 0.5,
+    "action_weights": {
+      "witness": 1.2,
+      "discuss": 1.5,
+      "follow": 1.5,
+      "react_political": 2.5
+    }
+  },
+  "thomas": {
+    "agent_id": "thomas",
+    "theological_understanding": 0.65,
+    "confusion_resistance": 0.45,
+    "political_sensitivity": 0.4,
+    "rumour_trust_bias": 0.2,
+    "action_weights": {
+      "witness": 0.8,
+      "discuss": 2.5,
+      "follow": 1.2,
+      "react_political": 0.7
+    }
+  }
+}

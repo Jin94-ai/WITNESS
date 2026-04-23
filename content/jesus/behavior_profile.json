@@ -1,0 +1,76 @@
+{
+  "agent_id": "jesus",
+  "actions": [
+    {
+      "action_id": "teach",
+      "description": "제자들과 군중에게 가르침 (정경 말씀 인용)",
+      "visible_signal": "예수께서 이르시되 심령이 가난한 자는 복이 있나니 천국이 그들의 것임이요 (마태 5:3, 개역개정).",
+      "weight_formula": {
+        "base_weight": 3.0,
+        "state_multipliers": [
+          {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.1}},
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.fatigue", "operation": "add", "value": 0.1}
+      ]
+    },
+    {
+      "action_id": "heal",
+      "description": "병든 자를 치유 (마가복음 1:41 등 개역개정 인용 기반)",
+      "visible_signal": "예수께서 불쌍히 여기사 손을 내밀어 그에게 대시며 이르시되 내가 원하노니 깨끗함을 받으라 하시니 (마가 1:41, 개역개정).",
+      "weight_formula": {
+        "base_weight": 1.5,
+        "state_multipliers": [
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      },
+      "effects": [
+        {"field_path": "physical.fatigue", "operation": "add", "value": 0.3}
+      ]
+    },
+    {
+      "action_id": "confront",
+      "description": "서기관·바리새인을 책망 (마태 23:13 등)",
+      "visible_signal": "화 있을진저 외식하는 서기관들과 바리새인들이여 너희는 천국 문을 사람들 앞에서 닫고 (마태 23:13, 개역개정).",
+      "weight_formula": {
+        "base_weight": 1.0,
+        "state_multipliers": [
+          {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.15}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "add", "value": 0.2}
+      ],
+      "observable_from": ["caiaphas"]
+    },
+    {
+      "action_id": "withdraw",
+      "description": "무리를 피해 한적한 곳으로 물러감 (누가 5:16)",
+      "visible_signal": "예수는 물러가사 한적한 곳에서 기도하시니라 (누가 5:16, 개역개정).",
+      "weight_formula": {
+        "base_weight": 1.0,
+        "state_multipliers": [
+          {"field_path": "physical.fatigue", "factor_type": "linear", "params": {"scale": 0.15}}
+        ]
+      },
+      "effects": [
+        {"field_path": "physical.fatigue", "operation": "add", "value": -0.5},
+        {"field_path": "emotions.hope", "operation": "add", "value": 0.1}
+      ]
+    },
+    {
+      "action_id": "bless",
+      "description": "특정 제자에게 개인적 축복 혹은 말씀 (요한 21:17 베드로에게 '내 양을 먹이라')",
+      "visible_signal": "예수께서 그에게 이르시되 내 양을 먹이라 (요한 21:17, 개역개정).",
+      "weight_formula": {
+        "base_weight": 0.8,
+        "state_multipliers": [
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      }
+    }
+  ],
+  "default_action_id": "withdraw"
+}

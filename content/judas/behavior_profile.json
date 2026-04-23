@@ -1,0 +1,88 @@
+{
+  "agent_id": "judas",
+  "actions": [
+    {
+      "action_id": "follow",
+      "description": "예수를 따름",
+      "visible_signal": "유다가 무리 속에서 조용히 따라왔다.",
+      "weight_formula": {
+        "base_weight": 3.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.loyalty_to_cause", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "domain_state.disillusionment", "factor_type": "inverse", "params": {"scale": 0.1}}
+        ]
+      }
+    },
+    {
+      "action_id": "question",
+      "description": "예수의 방향에 의문을 제기",
+      "visible_signal": "유다가 고개를 저으며 무언가를 중얼거렸다.",
+      "weight_formula": {
+        "base_weight": 1.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.disillusionment", "factor_type": "linear", "params": {"scale": 0.2}},
+          {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      }
+    },
+    {
+      "action_id": "withdraw",
+      "description": "집단에서 거리를 둠",
+      "visible_signal": "유다가 또 말없이 무리에서 떨어져 앉았다.",
+      "weight_formula": {
+        "base_weight": 0.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.disillusionment", "factor_type": "linear", "params": {"scale": 0.3}},
+          {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.disillusionment", "operation": "add", "value": 0.3},
+        {"field_path": "domain_state.greed", "operation": "add", "value": 0.1}
+      ]
+    },
+    {
+      "action_id": "inform_authorities",
+      "description": "당국에 정보 전달",
+      "visible_signal": "유다가 밤중에 어디론가 사라졌다.",
+      "observable_from": ["caiaphas"],
+      "preconditions": [
+        {"field_path": "domain_state.disillusionment", "operator": "gte", "value": 6.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.3,
+        "state_multipliers": [
+          {"field_path": "domain_state.disillusionment", "factor_type": "linear", "params": {"scale": 0.4}},
+          {"field_path": "domain_state.greed", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.guilt", "operation": "add", "value": 1.0},
+        {"field_path": "domain_state.greed", "operation": "add", "value": 0.3},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5, "target_agent_id": "peter"}
+      ]
+    },
+    {
+      "action_id": "betray",
+      "description": "체포를 위한 배반 행위",
+      "visible_signal": "유다가 예수에게 다가와 입을 맞추었다.",
+      "observable_from": ["peter", "caiaphas"],
+      "preconditions": [
+        {"field_path": "domain_state.disillusionment", "operator": "gte", "value": 8.0},
+        {"field_path": "domain_state.greed", "operator": "gte", "value": 5.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.1,
+        "state_multipliers": [
+          {"field_path": "domain_state.disillusionment", "factor_type": "linear", "params": {"scale": 0.5}},
+          {"field_path": "domain_state.greed", "factor_type": "linear", "params": {"scale": 0.3}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.guilt", "operation": "add", "value": 3.0},
+        {"field_path": "slow_state.moral_injury", "operation": "add", "value": 3.0}
+      ]
+    }
+  ],
+  "default_action_id": "follow"
+}

@@ -1,0 +1,42 @@
+{
+  "agent_id": "peter",
+  "tick": 0,
+  "physical": {
+    "fatigue": 6.0,
+    "hunger": 3.0,
+    "health": 8.0,
+    "location": "gennesaret_shore"
+  },
+  "emotions": {
+    "fear": 1.0,
+    "hope": 4.0,
+    "grief": 0.0,
+    "confusion": 2.0,
+    "love": 3.0,
+    "awe": 0.0
+  },
+  "relationships": {
+    "andrew": {"target_id": "andrew", "trust": 8.0, "love": 8.0, "awe": 0.0, "understanding": 7.0, "note": "형제이자 동업자"},
+    "james": {"target_id": "james", "trust": 6.0, "love": 5.0, "awe": 0.0, "understanding": 5.0, "note": "세베대의 아들, 동업자"},
+    "john": {"target_id": "john", "trust": 6.0, "love": 5.0, "awe": 0.0, "understanding": 5.0, "note": "세베대의 아들, 동업자"}
+  },
+  "domain_state": {
+    "type": "faith_journey",
+    "jesus_understanding": null,
+    "_note_jesus_understanding": "소명 이전 — 예수를 아직 '선생님' 정도로도 개인적으로 알지 못함",
+    "obedience_maturity": 0.0,
+    "fear_layers": {
+      "type": "fear_profile",
+      "natural": 3.0,
+      "social": 2.0,
+      "existential": 1.0
+    },
+    "communal_role": null,
+    "_note_communal_role": "어부, 아직 제자 공동체 소속 아님",
+    "repentance_history": []
+  },
+  "_meta": {
+    "phase_context": "01_calling start",
+    "historical_note": "Luke 5:1 배경. 밤새 허탕, 그물 손질 중. 예수를 무리 중 한 명으로 처음 인지하는 상태."
+  }
+}

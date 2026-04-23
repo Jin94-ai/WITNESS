@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import math
 import random
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -62,6 +62,15 @@ class HazardFunction(BaseModel):
 
     base_rate: float = Field(
         default=0.0, ge=0.0, description="기본 발생률 (상태 무관 부분)"
+    )
+    base_rate_unit: Literal["per_tick", "per_hour"] = Field(
+        default="per_tick",
+        description=(
+            "base_rate와 factors 합산 hazard의 시간 단위. "
+            "'per_tick' (기본): dt=1.0 — 기존 v0.5~v0.7 legacy calibration 호환. "
+            "'per_hour': caller가 dt=tick_scale_hours를 전달해야 (v1.2 phase-linked "
+            "scenario에서 장기 아크 실시간 기준 rate 해석)."
+        ),
     )
     factors: list[HazardFactor] = Field(
         default_factory=list, description="상태/환경 기반 인자 목록"
@@ -198,12 +207,18 @@ class HazardEngine:
         dt: float = 1.0,
         max_fires_per_tick: int = 2,
         environment: Any = None,
+        tick_scale_hours: float | None = None,
     ) -> list[HazardEvent]:
         """이 tick에서 발동하는 이벤트 목록을 반환한다.
 
         Competing risks: eligible 이벤트들의 hazard를 계산하고,
         가장 높은 hazard부터 발동을 시도한다. max_fires_per_tick으로
         한 tick에 너무 많은 이벤트가 터지는 것을 방지 (bounded stochasticity).
+
+        v1.2: per-event `base_rate_unit` 해석.
+        - 'per_tick': `dt` 그대로 사용 (legacy, default).
+        - 'per_hour': `tick_scale_hours`가 주어지면 그것을 dt로 사용,
+          아니면 `dt` fallback.
 
         Returns:
             발동된 HazardEvent 목록. 빈 리스트일 수 있음.
@@ -232,7 +247,12 @@ class HazardEngine:
         for event in eligible:
             if len(fired) >= max_fires_per_tick:
                 break
-            prob = event.hazard.firing_probability(state, dt, environment)
+            # per-event dt 해석
+            if event.hazard.base_rate_unit == "per_hour" and tick_scale_hours is not None:
+                effective_dt = tick_scale_hours
+            else:
+                effective_dt = dt
+            prob = event.hazard.firing_probability(state, effective_dt, environment)
             if rng.random() < prob:
                 event.record_fire(tick)
                 fired.append(event)

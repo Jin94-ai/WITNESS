@@ -191,3 +191,21 @@ class TestSetNestedValue:
         agent = AgentState(agent_id="test")
         result = set_nested_value(agent, "nonexistent.deep.path", 5.0)
         assert result.agent_id == "test"  # 에러 없이 원본 반환
+
+    def test_basemodel_deep_path_returns_state(self):
+        """BaseModel 필드에 3+ depth 접근 → fallback (line 219)."""
+        agent = AgentState(agent_id="test")
+        # emotions는 BaseModel. emotions.fear.something은 유효하지 않음
+        result = set_nested_value(agent, "emotions.fear.subfield", 5.0)
+        # 에러 없이 원본 유사 반환
+        assert result.agent_id == "test"
+
+    def test_dict_key_missing_returns_state(self):
+        """dict 필드에 없는 key → fallback (line 232)."""
+        agent = AgentState(
+            agent_id="test",
+            relationships={"jesus": Relationship(target_id="jesus", trust=5.0)},
+        )
+        result = set_nested_value(agent, "relationships.unknown.trust", 9.0)
+        # unknown이 relationships에 없으므로 원본 반환
+        assert result.relationships == agent.relationships

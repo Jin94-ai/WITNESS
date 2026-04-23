@@ -118,12 +118,10 @@ class SlowStateRule:
                 + self.extreme_event_trauma * 0.1
             )
 
-        # identity_shift: hope와 fear의 차이에 따라 미세하게 이동
-        if state.emotions.hope > 7.0:
-            updates["identity_shift"] = clamp(
-                slow.identity_shift + 0.01, -10.0, 10.0
-            )
-        elif state.emotions.fear > 7.0 and state.emotions.hope < 3.0:
+        # identity_shift는 slow state이므로 비가역적이어야 한다.
+        # 음수 방향으로만 누적 (정체성 손상). 회복은 canonical_intervention을 통해서만.
+        # (이전 버전에서 hope>7 -> 자동 +0.01 증가는 설계 원칙 위반이었음)
+        if state.emotions.fear > 7.0 and state.emotions.hope < 3.0:
             updates["identity_shift"] = clamp(
                 slow.identity_shift - 0.01, -10.0, 10.0
             )

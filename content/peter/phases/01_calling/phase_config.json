@@ -1,0 +1,15 @@
+{
+  "phase_id": "01_calling",
+  "description": "Phase 1: 소명 (Luke 5:1-11). 게네사렛 호수 기적 어획 → '사람을 취하리라' → 모든 것을 버려두고 따름",
+  "tick_scale_hours": 2.0,
+  "tick_unit_note": "소명 phase는 사건 밀도가 높으므로 dense 해상도 (2h/tick)",
+  "max_tick": 84,
+  "max_tick_note": "7일 × 12 tick/day (2h/tick) = 84 tick. 소명 직후 초기 동요 + 적응 기간 포함",
+  "tick_offset_from_life_start": 0,
+  "exit_condition": {
+    "triggered_by": "calling_accepted",
+    "max_tick_fallback": 84
+  },
+  "canonical_events_path": "content/peter/phases/01_calling/canonical_events.json",
+  "scripture_refs": ["눅 5:1-11"]
+}

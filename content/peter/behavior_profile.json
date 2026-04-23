@@ -1,0 +1,108 @@
+{
+  "agent_id": "peter",
+  "actions": [
+    {
+      "action_id": "follow_closely",
+      "description": "예수를 가까이에서 따름",
+      "visible_signal": "베드로가 예수 곁을 떠나지 않고 뒤따랐다.",
+      "weight_formula": {
+        "base_weight": 4.0,
+        "state_multipliers": [
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.1}},
+          {"field_path": "domain_state.obedience_maturity", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      }
+    },
+    {
+      "action_id": "pray",
+      "description": "기도",
+      "visible_signal": "베드로가 조용히 기도하는 모습이 보였다.",
+      "weight_formula": {
+        "base_weight": 1.5,
+        "state_multipliers": [
+          {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 0.2},
+        {"field_path": "emotions.fear", "operation": "add", "value": -0.1}
+      ]
+    },
+    {
+      "action_id": "discuss_with_disciples",
+      "description": "다른 제자들과 대화",
+      "visible_signal": "베드로가 다른 제자들과 이야기를 나눴다.",
+      "weight_formula": {
+        "base_weight": 2.0,
+        "state_multipliers": [
+          {"field_path": "emotions.confusion", "factor_type": "linear", "params": {"scale": 0.1}},
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.05}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": -0.15}
+      ]
+    },
+    {
+      "action_id": "assert_loyalty",
+      "description": "충성을 선언 ('주를 위해 죽겠나이다')",
+      "visible_signal": "베드로가 큰 소리로 충성을 맹세했다.",
+      "preconditions": [
+        {"field_path": "emotions.love", "operator": "gte", "value": 6.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.8,
+        "state_multipliers": [
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.2}},
+          {"field_path": "emotions.fear", "factor_type": "inverse", "params": {"scale": 0.15}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 0.3}
+      ],
+      "cooldown": 20
+    },
+    {
+      "action_id": "withdraw_in_fear",
+      "description": "두려움에 물러남",
+      "visible_signal": "베드로가 그림자 속으로 물러났다.",
+      "preconditions": [
+        {"field_path": "emotions.fear", "operator": "gte", "value": 6.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.5,
+        "state_multipliers": [
+          {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.3}},
+          {"field_path": "emotions.love", "factor_type": "inverse", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": -0.5},
+        {"field_path": "slow_state.trust_scar", "operation": "add", "value": 0.2}
+      ]
+    },
+    {
+      "action_id": "weep",
+      "description": "통곡 (부인 후 회한)",
+      "visible_signal": "베드로가 밖으로 나가 심히 통곡했다.",
+      "preconditions": [
+        {"field_path": "slow_state.moral_injury", "operator": "gte", "value": 3.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.3,
+        "state_multipliers": [
+          {"field_path": "slow_state.moral_injury", "factor_type": "linear", "params": {"scale": 0.3}},
+          {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "add", "value": 0.5},
+        {"field_path": "emotions.hope", "operation": "add", "value": 0.1}
+      ],
+      "cooldown": 10
+    }
+  ],
+  "default_action_id": "follow_closely"
+}

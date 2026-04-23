@@ -50,6 +50,23 @@ class TestDecideAction:
         agent = _agent()
         assert decide_action(agent, [], random.Random(42)) is None
 
+    def test_all_options_filtered_by_preconditions(self):
+        """모든 option이 precondition에 실패 → None."""
+        agent = _agent(emotions=EmotionalState(fear=2.0))
+        options = [
+            ActionOption(
+                action_id="a",
+                preconditions=[Precondition(field_path="emotions.fear", operator="gt", value=5.0)],
+                weight_formula=WeightFormula(base_weight=1.0),
+            ),
+            ActionOption(
+                action_id="b",
+                preconditions=[Precondition(field_path="emotions.fear", operator="gt", value=8.0)],
+                weight_formula=WeightFormula(base_weight=1.0),
+            ),
+        ]
+        assert decide_action(agent, options, random.Random(42)) is None
+
     def test_precondition_filtering(self):
         agent = _agent(emotions=EmotionalState(fear=3.0))
         options = [

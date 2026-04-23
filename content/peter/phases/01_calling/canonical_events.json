@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "agent_id": "peter",
+    "phase_id": "01_calling",
+    "total_ticks": 84,
+    "tick_unit": "roughly_2_hours",
+    "description": "Luke 5:1-11 소명. 5개 사건으로 세분."
+  },
+  "events": [
+    {
+      "event_id": "calling_01_teaching_from_boat",
+      "tick": 3,
+      "event_type": "canonical",
+      "description": "예수께서 시몬의 배에 오르사 무리를 가르치심 (눅 5:3)",
+      "source_ref": "눅 5:1-3",
+      "scripture_ref": "눅 5:3",
+      "effects": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 0.5},
+        {"field_path": "emotions.awe", "operation": "add", "value": 1.0}
+      ],
+      "action_options": [
+        {
+          "action_id": "listen_attentively",
+          "description": "가까이서 말씀 경청",
+          "weight_formula": {
+            "base_weight": 0.6,
+            "state_multipliers": [
+              {"field_path": "emotions.awe", "factor_type": "linear", "params": {"scale": 0.1}}
+            ]
+          },
+          "effects": [
+            {"field_path": "emotions.awe", "operation": "add", "value": 0.3}
+          ]
+        },
+        {
+          "action_id": "wash_nets",
+          "description": "그물 손질 계속 (밤새 허탕)",
+          "weight_formula": {"base_weight": 0.4},
+          "effects": [
+            {"field_path": "physical.fatigue", "operation": "add", "value": 0.2}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "calling_02_deep_water_command",
+      "tick": 8,
+      "event_type": "canonical",
+      "description": "'깊은 데로 가서 그물을 내려 고기를 잡으라' — 어부 전문성에 반하는 지시 (눅 5:4)",
+      "source_ref": "눅 5:4",
+      "scripture_ref": "눅 5:4",
+      "effects": [
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.5}
+      ],
+      "action_options": [
+        {
+          "action_id": "obey_reluctantly",
+          "description": "'말씀에 의지하여' 그물을 내림",
+          "weight_formula": {
+            "base_weight": 0.5,
+            "state_multipliers": [
+              {"field_path": "emotions.awe", "factor_type": "linear", "params": {"scale": 0.15}}
+            ]
+          },
+          "effects": [
+            {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 1.0}
+          ]
+        },
+        {
+          "action_id": "protest_fishing_expertise",
+          "description": "밤새 허탕임을 항변",
+          "weight_formula": {"base_weight": 0.5},
+          "effects": [
+            {"field_path": "emotions.confusion", "operation": "add", "value": 0.5}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "calling_03_miraculous_catch",
+      "tick": 14,
+      "event_type": "canonical",
+      "description": "그물이 찢어지고 배 둘이 가라앉을 만큼 고기가 잡힘 — 초자연적 기적 목격 (눅 5:6-7)",
+      "source_ref": "눅 5:6-7",
+      "scripture_ref": "눅 5:6-7",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 5.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.0},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 1.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "calling_04_fall_at_knees",
+      "tick": 20,
+      "event_type": "canonical",
+      "description": "'주여 나를 떠나소서 나는 죄인이로소이다' — 베드로의 두려움+고백 (눅 5:8)",
+      "source_ref": "눅 5:8-9",
+      "scripture_ref": "눅 5:8",
+      "effects": [
+        {"field_path": "slow_state.moral_injury", "operation": "add", "value": 0.5},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.grief", "operation": "add", "value": 0.8}
+      ],
+      "action_options": [
+        {
+          "action_id": "confess_sinfulness",
+          "description": "무릎 꿇고 죄인임을 고백",
+          "weight_formula": {
+            "base_weight": 0.8,
+            "state_multipliers": [
+              {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.15}}
+            ]
+          },
+          "effects": [
+            {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 0.5}
+          ]
+        },
+        {
+          "action_id": "freeze_in_shock",
+          "description": "놀라 그대로 굳어 있음",
+          "weight_formula": {"base_weight": 0.2},
+          "effects": []
+        }
+      ]
+    },
+    {
+      "event_id": "calling_05_call_and_follow",
+      "tick": 30,
+      "event_type": "canonical",
+      "description": "'무서워하지 말라 이제 후로는 네가 사람을 취하리라' — 모든 것을 버려두고 따름 (눅 5:10-11). jesus_understanding: None → teacher (첫 제자 됨).",
+      "source_ref": "눅 5:10-11",
+      "scripture_ref": "눅 5:10",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": -1.5},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 1.5},
+        {"field_path": "domain_state.jesus_understanding", "operation": "set", "value": "teacher"}
+      ],
+      "action_options": [
+        {
+          "action_id": "leave_everything_follow",
+          "description": "배와 그물과 동업자를 두고 예수를 따름",
+          "weight_formula": {
+            "base_weight": 0.7,
+            "state_multipliers": [
+              {"field_path": "emotions.awe", "factor_type": "linear", "params": {"scale": 0.1}},
+              {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.1}}
+            ]
+          },
+          "effects": [
+            {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 1.0}
+          ]
+        },
+        {
+          "action_id": "hesitate_consider_family",
+          "description": "가족과 생계를 고려해 망설임",
+          "weight_formula": {
+            "base_weight": 0.3,
+            "state_multipliers": [
+              {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.1}}
+            ]
+          },
+          "effects": [
+            {"field_path": "emotions.confusion", "operation": "add", "value": 0.5}
+          ]
+        }
+      ]
+    }
+  ]
+}

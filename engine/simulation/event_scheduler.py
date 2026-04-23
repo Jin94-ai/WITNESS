@@ -48,6 +48,16 @@ class EventScheduler:
             self._intervention_idx += 1
         return result
 
+    def inject_event(self, event: ExternalEvent) -> None:
+        """동적으로 이벤트를 주입한다. 트리거 시스템에서 사용."""
+        # 정렬 유지를 위해 적절한 위치에 삽입
+        idx = len(self._events)
+        for i in range(self._event_idx, len(self._events)):
+            if self._events[i].tick > event.tick:
+                idx = i
+                break
+        self._events.insert(idx, event)
+
     def has_remaining(self) -> bool:
         """처리되지 않은 이벤트가 남아있는지 확인한다."""
         return (

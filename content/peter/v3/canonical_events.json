@@ -1,0 +1,95 @@
+{
+  "_doc": "Canonical events schedule for Peter passion week (v3 v2 Layer B).",
+  "_scenario": "peter_passion_week",
+
+  "events": [
+    {
+      "tick": 5,
+      "event_id": "sacred_meal",
+      "description": "최후의 만찬 (마 26:26)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 10,
+      "event_id": "primary_figure_suffering_visible",
+      "description": "겟세마네 기도의 괴로움 (마 26:37-38)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 12,
+      "event_id": "guard_approaches",
+      "description": "무리와 유다의 접근 (마 26:47)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 13,
+      "event_id": "weapon_drawn_nearby",
+      "description": "말고의 귀 사건 (요 18:10)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 14,
+      "event_id": "ally_departure",
+      "description": "제자들 흩어짐 (마 26:56)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 17,
+      "event_id": "public_accusation",
+      "description": "여종의 질문 (마 26:69)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 18,
+      "event_id": "public_accusation",
+      "description": "두 번째 고발 (마 26:71)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 19,
+      "event_id": "public_accusation",
+      "description": "세 번째 고발 (마 26:73)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 20,
+      "event_id": "eye_contact",
+      "description": "예수와 눈 마주침 (눅 22:61)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 25,
+      "event_id": "forgiveness_offered",
+      "description": "빈 무덤 소식 후 (요 20 맥락)",
+      "canonical_level": "B"
+    },
+    {
+      "tick": 28,
+      "event_id": "restoration_moment",
+      "description": "디베랴 회복 (요 21:15-17)",
+      "canonical_level": "A"
+    }
+  ],
+
+  "primitive_defaults": {
+    "location": "jerusalem",
+    "time_of_day": "evening",
+    "crowd_density": 0.3,
+    "ally_proximity": 0.8,
+    "group_cohesion": 0.7,
+    "authority_presence": 0.2,
+    "roman_presence": 0.1,
+    "religious_context": 0.4,
+    "primary_figure_presence": 0.9,
+    "primary_figure_visible": true,
+    "information_gap": 0.5,
+    "decision_stakes": 0.3,
+    "public_visibility": 0.3,
+    "time_pressure": 0.1,
+    "prior_failure_salience": 0.0,
+    "accusation_visibility": 0.0,
+    "volatility": 0.1,
+    "decision_criticality": 0.1,
+    "proximity_of_suffering": 0.0
+  }
+}

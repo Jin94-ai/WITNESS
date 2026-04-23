@@ -117,7 +117,7 @@ def sobol_sensitivity(
         {"S1": {param: value}, "ST": {param: value}, "param_names": [...]}
     """
     from SALib.analyze import sobol
-    from SALib.sample import saltelli
+    from SALib.sample import sobol as sobol_sample
 
     param_names = list(param_ranges.keys())
     bounds = [list(param_ranges[p]) for p in param_names]
@@ -128,7 +128,7 @@ def sobol_sensitivity(
         "bounds": bounds,
     }
 
-    param_values = saltelli.sample(problem, n_samples)
+    param_values = sobol_sample.sample(problem, n_samples)
     Y = np.zeros(param_values.shape[0])
 
     for i, pv in enumerate(param_values):
@@ -149,7 +149,7 @@ def sobol_sensitivity(
     si = sobol.analyze(problem, Y, print_to_console=False)
 
     # SALib 버전에 따라 S1이 스칼라 또는 배열일 수 있음
-    def _extract(arr, j):
+    def _extract(arr: Any, j: int) -> float:
         val = arr[j]
         return float(val) if np.ndim(val) == 0 else float(np.mean(val))
 
@@ -313,4 +313,79 @@ def detect_bifurcation(
         "means": means,
         "stds": stds,
         "bifurcation_candidates": bifurcation_candidates,
+    }
+
+
+# --- 다중 에이전트 집계 ---
+
+def compute_multi_aggregate(
+    results: list[Any],
+) -> dict[str, Any]:
+    """다중 에이전트 배치 결과를 집계한다.
+
+    Args:
+        results: MultiAgentResult 목록
+
+    Returns:
+        {
+            "n_runs": int,
+            "agent_action_frequencies": {agent_id: {action: count}},
+            "trigger_frequencies": {trigger_id: count},
+            "trigger_tick_stats": {trigger_id: {"mean": float, "std": float, "ticks": [...]}},
+            "agent_match_rates": {agent_id: {"mean": float, "std": float, "rates": [...]}},
+        }
+    """
+    n = len(results)
+    if n == 0:
+        return {"n_runs": 0}
+
+    # 에이전트별 행동 빈도
+    agent_actions: dict[str, dict[str, int]] = {}
+    for r in results:
+        for aid, history in r.action_histories.items():
+            if aid not in agent_actions:
+                agent_actions[aid] = Counter()
+            for a in history:
+                agent_actions[aid][a.chosen_action] += 1
+    agent_actions_dict = {k: dict(v) for k, v in agent_actions.items()}
+
+    # 트리거 발동 빈도 + tick 통계
+    trigger_counts: dict[str, int] = Counter()
+    trigger_ticks: dict[str, list[int]] = {}
+    for r in results:
+        seen: set[str] = set()
+        for t in r.fired_triggers:
+            tid = t["trigger_id"]
+            if tid not in seen:
+                trigger_counts[tid] += 1
+                seen.add(tid)
+            if tid not in trigger_ticks:
+                trigger_ticks[tid] = []
+            trigger_ticks[tid].append(t["tick"])
+
+    trigger_tick_stats: dict[str, dict[str, Any]] = {}
+    for tid, ticks in trigger_ticks.items():
+        mean_t = statistics.mean(ticks) if ticks else 0.0
+        std_t = statistics.stdev(ticks) if len(ticks) > 1 else 0.0
+        trigger_tick_stats[tid] = {"mean": mean_t, "std": std_t, "ticks": ticks}
+
+    # 에이전트별 정경 일치율
+    agent_rates: dict[str, dict[str, Any]] = {}
+    for r in results:
+        for aid, rate in r.canonical_match_rates.items():
+            if aid not in agent_rates:
+                agent_rates[aid] = {"rates": []}
+            agent_rates[aid]["rates"].append(rate)
+
+    for aid, data in agent_rates.items():
+        rates = data["rates"]
+        data["mean"] = statistics.mean(rates) if rates else 0.0
+        data["std"] = statistics.stdev(rates) if len(rates) > 1 else 0.0
+
+    return {
+        "n_runs": n,
+        "agent_action_frequencies": agent_actions_dict,
+        "trigger_frequencies": dict(trigger_counts),
+        "trigger_tick_stats": trigger_tick_stats,
+        "agent_match_rates": agent_rates,
     }

@@ -1,0 +1,79 @@
+{
+  "triggers": [
+    {
+      "trigger_id": "arrest_trigger",
+      "description": "유다의 배반 + 가야바의 체포 명령 -> 체포 이벤트 발생",
+      "state_conditions": [
+        {
+          "agent_id": "judas",
+          "field_path": "domain_state.disillusionment",
+          "operator": "gte",
+          "value": 8.0
+        },
+        {
+          "agent_id": "caiaphas",
+          "field_path": "domain_state.threat_assessment",
+          "operator": "gte",
+          "value": 7.0
+        }
+      ],
+      "action_conditions": [
+        {
+          "agent_id": "judas",
+          "action_id": "betray"
+        }
+      ],
+      "event_template_id": "arrest_event",
+      "effects_on_fire": [
+        {"field_path": "emotions.fear", "operation": "set", "value": 8.5, "target_agent_id": "peter"},
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.0, "target_agent_id": "judas"},
+        {"field_path": "domain_state.hostility", "operation": "add", "value": 4.0, "target_agent_id": "crowd"},
+        {"field_path": "domain_state.mob_energy", "operation": "add", "value": 3.0, "target_agent_id": "crowd"}
+      ],
+      "max_fires": 1,
+      "deadline_tick": 400
+    },
+    {
+      "trigger_id": "surveillance_escalation",
+      "description": "유다의 정보 제공 -> 가야바의 위협 평가 상승",
+      "action_conditions": [
+        {
+          "agent_id": "judas",
+          "action_id": "inform_authorities"
+        }
+      ],
+      "event_template_id": "intelligence_received",
+      "effects_on_fire": [
+        {"field_path": "domain_state.threat_assessment", "operation": "add", "value": 1.5, "target_agent_id": "caiaphas"},
+        {"field_path": "domain_state.intelligence_quality", "operation": "add", "value": 2.0, "target_agent_id": "caiaphas"}
+      ],
+      "max_fires": 5,
+      "cooldown": 20
+    },
+    {
+      "trigger_id": "crowd_pressure_spike",
+      "description": "군중의 적대성/의심 급등 -> 베드로에 대한 사회적 압력 증가",
+      "state_conditions": [
+        {
+          "agent_id": "crowd",
+          "field_path": "domain_state.hostility",
+          "operator": "gte",
+          "value": 5.0
+        },
+        {
+          "agent_id": "crowd",
+          "field_path": "domain_state.recognition_risk",
+          "operator": "gte",
+          "value": 5.0
+        }
+      ],
+      "event_template_id": "crowd_pressure_event",
+      "effects_on_fire": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5, "target_agent_id": "peter"},
+        {"field_path": "domain_state.hostility", "operation": "add", "value": 0.5, "target_agent_id": "crowd"}
+      ],
+      "max_fires": 3,
+      "cooldown": 30
+    }
+  ]
+}

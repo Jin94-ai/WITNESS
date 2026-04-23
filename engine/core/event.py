@@ -21,10 +21,22 @@ class Precondition(BaseModel):
         description="비교 연산자"
     )
     value: Any = Field(description="비교 대상 값")
+    source_agent_id: str | None = Field(
+        default=None,
+        description="평가 대상 에이전트 ID. None이면 현재 에이전트.",
+    )
 
-    def evaluate(self, state: AgentState) -> bool:
-        """전제조건이 충족되는지 평가한다."""
-        actual = get_nested_value(state, self.field_path)
+    def evaluate(self, state: AgentState, all_agents: dict[str, AgentState] | None = None) -> bool:
+        """전제조건이 충족되는지 평가한다.
+
+        Args:
+            state: 현재 에이전트 상태 (source_agent_id가 None일 때 사용)
+            all_agents: 모든 에이전트 상태 맵. source_agent_id 지정 시 해당 에이전트에서 값을 읽음.
+        """
+        target_state = state
+        if self.source_agent_id is not None and all_agents is not None:
+            target_state = all_agents.get(self.source_agent_id, state)
+        actual = get_nested_value(target_state, self.field_path)
         if actual is None:
             return False
         if self.operator == "gt":
@@ -48,6 +60,10 @@ class StateEffect(BaseModel):
     field_path: str = Field(description="AgentState의 점 구분 필드 경로")
     operation: Literal["set", "add", "multiply"] = Field(description="연산 종류")
     value: float | str = Field(description="연산 값")
+    target_agent_id: str | None = Field(
+        default=None,
+        description="효과를 적용할 에이전트 ID. None이면 현재 에이전트.",
+    )
 
     def apply(self, state: AgentState) -> AgentState:
         """상태에 효과를 적용한 새 AgentState를 반환한다."""
@@ -120,6 +136,35 @@ class WeightFormula(BaseModel):
         for mult in self.state_multipliers:
             weight *= mult.compute(state, environment)
         return max(weight, 0.001)  # 0 방지
+
+    def compute_weight_breakdown(
+        self,
+        state: AgentState,
+        environment: Any = None,
+    ) -> dict[str, float]:
+        """가중치 구성 요소 breakdown (TRACE_SCHEMA §2.2, v2.0 render-ready).
+
+        V1.0 latent drive model 도입 시 'drive.<axis>' 기여도 추가 가능.
+
+        Returns:
+            {"base": 1.5, "state_mult.emotions.fear": 1.2, ..., "final": 1.44}
+        """
+        breakdown: dict[str, float] = {"base": self.base_weight}
+        weight = self.base_weight
+        for mult in self.state_multipliers:
+            contribution = mult.compute(state, environment)
+            field = getattr(mult, "field_path", None) or "unknown"
+            key = f"state_mult.{field}"
+            # 같은 field가 여러 번 쓰이면 인덱싱
+            if key in breakdown:
+                idx = 1
+                while f"{key}[{idx}]" in breakdown:
+                    idx += 1
+                key = f"{key}[{idx}]"
+            breakdown[key] = contribution
+            weight *= contribution
+        breakdown["final"] = max(weight, 0.001)
+        return breakdown
 
 
 class ActionOption(BaseModel):

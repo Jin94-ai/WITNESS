@@ -1,0 +1,44 @@
+{
+  "phase_from": "04_journey_to_jerusalem",
+  "phase_to": "05_passion",
+  "description": "예루살렘 여정 종료 → 수난주간 phase 시작. 기존 v0.7 500 tick scenario와 통합되는 경계.",
+  "carry_all_slow_state": true,
+  "mappings": [
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "domain_state.obedience_maturity",
+      "target_agent_id": "peter",
+      "target_field_path": "domain_state.obedience_maturity",
+      "note": "3년 사역 누적된 순종 성숙도 — Phase 5 수난 시작 시 높은 상태여야 '충성 맹세 → 실패' 낙차가 극대화"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.awe",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.awe",
+      "note": "3년 기적 목격 + 변화산의 누적된 경외"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.confusion",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.confusion",
+      "note": "수난 예고 3회를 듣고도 이해 못 한 긴장 (Phase 5 도입부에서 심화)"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.fear",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.fear",
+      "note": "예루살렘 접근 시 누적된 불안"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.love",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.love",
+      "note": "'다 버리고 주를 따름' 고백 강화된 사랑"
+    }
+  ],
+  "note_legacy_compat": "MVP에서는 Phase 5 = 기존 500 tick scenario (legacy-phase5 mode). Phase 4 종료 상태가 Phase 5 시작 상태 override하려면 initial_state.json과 handoff 결합이 필요. 현재는 legacy initial_state.json 그대로 사용."
+}

@@ -1,0 +1,26 @@
+{
+  "config_id": "jerusalem_ad30_temple_economy_v1",
+  "initial_state": {
+    "money_changer_fee": 1.0,
+    "sacrifice_animal_price": 2.0,
+    "temple_tax": 0.5,
+    "crowd_frustration": 0.0
+  },
+  "dynamics": {
+    "passover_fee_multiplier": 2.5,
+    "passover_sacrifice_multiplier": 2.0,
+    "passover_crowd_frustration_gain": 0.08,
+    "cleansing_fee_drop_factor": 0.2,
+    "cleansing_sacrifice_drop_factor": 0.3,
+    "decree_fee_adjust_per_unit": 0.4,
+    "decree_sacrifice_adjust_per_unit": 0.5,
+    "frustration_to_jesus_sympathy_gain": 0.12,
+    "frustration_decay_per_day": 0.05
+  },
+  "bounds": {
+    "fee_floor": 0.5, "fee_ceiling": 5.0,
+    "sacrifice_floor": 1.0, "sacrifice_ceiling": 8.0,
+    "crowd_frustration_ceiling": 1.0
+  },
+  "notes": "Phase 5D.1 Temple Economy — drives into cross_economy crowd_frustration channel."
+}

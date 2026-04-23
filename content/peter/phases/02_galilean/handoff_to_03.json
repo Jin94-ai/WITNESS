@@ -1,0 +1,36 @@
+{
+  "phase_from": "02_galilean",
+  "phase_to": "03_confession",
+  "description": "갈릴리 사역 종료 → 가이사랴 빌립보 고백 phase 시작",
+  "carry_all_slow_state": true,
+  "mappings": [
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "domain_state.obedience_maturity",
+      "target_agent_id": "peter",
+      "target_field_path": "domain_state.obedience_maturity",
+      "note": "18개월 사역에서 누적된 순종 성숙도"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.awe",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.awe",
+      "note": "오병이어 + 물 위 걸음 + 사천명 등 반복 기적 목격으로 고조된 경외"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.hope",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.hope",
+      "note": "12 사도직 + 성공적 파송 경험으로 강화된 희망"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.confusion",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.confusion",
+      "note": "바리새인 논쟁 + 2단계 치유 등으로 누적된 지적 긴장 (messiah 정체 이해의 미완성)"
+    }
+  ]
+}

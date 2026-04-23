@@ -1,0 +1,71 @@
+{
+  "agent_id": "caiaphas",
+  "actions": [
+    {
+      "action_id": "observe",
+      "description": "상황을 관망함",
+      "visible_signal": "대제사장 가야바가 성전 뜰에서 상황을 살폈다.",
+      "weight_formula": {
+        "base_weight": 3.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.threat_assessment", "factor_type": "inverse", "params": {"scale": 0.1}}
+        ]
+      }
+    },
+    {
+      "action_id": "order_surveillance",
+      "description": "예수 운동에 대한 감시 강화",
+      "visible_signal": "성전 경비병들이 거리에 늘어났다.",
+      "preconditions": [
+        {"field_path": "domain_state.threat_assessment", "operator": "gte", "value": 4.0}
+      ],
+      "weight_formula": {
+        "base_weight": 1.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.threat_assessment", "factor_type": "linear", "params": {"scale": 0.2}},
+          {"field_path": "domain_state.political_calculation", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.intelligence_quality", "operation": "add", "value": 0.5}
+      ]
+    },
+    {
+      "action_id": "order_arrest",
+      "description": "예수 체포 명령",
+      "visible_signal": "대제사장의 체포 명령이 내려졌다.",
+      "preconditions": [
+        {"field_path": "domain_state.threat_assessment", "operator": "gte", "value": 7.0},
+        {"field_path": "domain_state.intelligence_quality", "operator": "gte", "value": 5.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.2,
+        "state_multipliers": [
+          {"field_path": "domain_state.threat_assessment", "factor_type": "linear", "params": {"scale": 0.5}},
+          {"field_path": "domain_state.pragmatism", "factor_type": "linear", "params": {"scale": 0.3}},
+          {"field_path": "domain_state.intelligence_quality", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      }
+    },
+    {
+      "action_id": "consult_sanhedrin",
+      "description": "산헤드린 회의 소집",
+      "visible_signal": "산헤드린 회의가 급히 소집되었다는 소문이 돌았다.",
+      "observable_from": ["caiaphas", "crowd"],
+      "preconditions": [
+        {"field_path": "domain_state.threat_assessment", "operator": "gte", "value": 5.0}
+      ],
+      "weight_formula": {
+        "base_weight": 1.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.threat_assessment", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "domain_state.religious_authority", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.threat_assessment", "operation": "add", "value": 0.5}
+      ]
+    }
+  ],
+  "default_action_id": "observe"
+}

@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "agent_id": "peter",
+    "phase_id": "02_galilean",
+    "total_ticks": 540,
+    "tick_unit": "roughly_1_day",
+    "description": "갈릴리 사역 약 18개월. 9개 주요 사건 (베드로 관점 중심). 주요 사건은 1-3 tick에 걸쳐 국지적 dense 표현.",
+    "note_dense_representation": "Reviewer 피드백 반영: 24h/tick에서도 오병이어/물 위 걸음 같은 핵심 사건은 연속 tick에 효과를 분할해 dense window 효과 표현."
+  },
+  "events": [
+    {
+      "event_id": "gal_01_healing_mother_in_law",
+      "tick": 14,
+      "event_type": "canonical",
+      "description": "가버나움 회당 이후 베드로 장모의 열병 치유 (막 1:29-31)",
+      "source_ref": "막 1:29-31, 마 8:14-15, 눅 4:38-39",
+      "scripture_ref": "막 1:31",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 2.0},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 0.5}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_02_sermon_on_the_mount",
+      "tick": 45,
+      "event_type": "canonical",
+      "description": "산상수훈 경청 (마 5-7). 팔복, 주기도, 황금률 등",
+      "source_ref": "마 5-7, 눅 6:20-49",
+      "scripture_ref": "마 5:3",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 0.5},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 0.3}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_03_twelve_appointed",
+      "tick": 80,
+      "event_type": "canonical",
+      "description": "12 사도 택정. 베드로가 첫 번째로 호명됨 (막 3:13-19). 공식적 '사도직' 부여",
+      "source_ref": "막 3:13-19, 마 10:1-4, 눅 6:12-16",
+      "scripture_ref": "막 3:14",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 1.0},
+        {"field_path": "emotions.hope", "operation": "add", "value": 1.0},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 1.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_04_first_sending",
+      "tick": 150,
+      "event_type": "canonical",
+      "description": "12명 파송. 둘씩 짝지어 전도 + 축귀 권세 받음 (마 10, 막 6:7-13)",
+      "source_ref": "막 6:7-13, 마 10:1-15",
+      "scripture_ref": "막 6:7",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 0.5},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 0.8}
+      ],
+      "action_options": [
+        {
+          "action_id": "go_with_trust",
+          "description": "두려움 속에도 파송 수용",
+          "weight_formula": {
+            "base_weight": 0.7,
+            "state_multipliers": [
+              {"field_path": "domain_state.obedience_maturity", "factor_type": "linear", "params": {"scale": 0.08}}
+            ]
+          },
+          "effects": [
+            {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 0.5}
+          ]
+        },
+        {
+          "action_id": "hesitate_lack_gifts",
+          "description": "자격 부족 느낌에 망설임",
+          "weight_formula": {"base_weight": 0.3},
+          "effects": [
+            {"field_path": "emotions.confusion", "operation": "add", "value": 0.3}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "gal_05_feeding_5000_storm_approach",
+      "tick": 230,
+      "event_type": "canonical",
+      "description": "오병이어 — 예비 단계. 외딴 곳으로 물러남, 큰 무리 모임 (마 14:13-15)",
+      "source_ref": "마 14:13-15",
+      "scripture_ref": "마 14:14",
+      "effects": [
+        {"field_path": "physical.fatigue", "operation": "add", "value": 1.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 0.5}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_06_feeding_5000_miracle",
+      "tick": 231,
+      "event_type": "canonical",
+      "description": "오병이어 기적. 떡 다섯·생선 둘로 5000 남자를 먹임. 12 바구니 남음 — 창조 권능 직접 목격 (마 14:19-21)",
+      "source_ref": "마 14:19-21, 막 6:41-44, 눅 9:16-17, 요 6:11-13",
+      "scripture_ref": "마 14:19",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 4.0},
+        {"field_path": "emotions.hope", "operation": "add", "value": 2.0},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 0.8}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_07_walking_on_water_storm",
+      "tick": 232,
+      "event_type": "canonical",
+      "description": "물 위 걸음 — 폭풍 속 배. 예수 먼저 배에 보내시고 기도로 남으심 (마 14:22-25)",
+      "source_ref": "마 14:22-25, 막 6:45-48, 요 6:16-19",
+      "scripture_ref": "마 14:24",
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 3.0},
+        {"field_path": "physical.fatigue", "operation": "add", "value": 2.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_08_peter_walks_attempts",
+      "tick": 233,
+      "event_type": "canonical",
+      "description": "베드로 물 위 걸음 시도. '주여 만일 주시어든 나를 명하사 물 위로 오라 하소서' → 몇 걸음 걷다가 바람 보고 의심하여 가라앉음 → '주여 나를 구원하소서' (마 14:28-31)",
+      "source_ref": "마 14:28-31",
+      "scripture_ref": "마 14:30",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 2.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.grief", "operation": "add", "value": 0.8},
+        {"field_path": "slow_state.moral_injury", "operation": "add", "value": 0.3},
+        {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 0.5}
+      ],
+      "action_options": [
+        {
+          "action_id": "step_out_of_boat",
+          "description": "말씀에 의지해 배에서 나옴",
+          "weight_formula": {
+            "base_weight": 0.6,
+            "state_multipliers": [
+              {"field_path": "emotions.awe", "factor_type": "linear", "params": {"scale": 0.1}},
+              {"field_path": "domain_state.obedience_maturity", "factor_type": "linear", "params": {"scale": 0.08}}
+            ]
+          },
+          "effects": [
+            {"field_path": "domain_state.obedience_maturity", "operation": "add", "value": 1.0}
+          ]
+        },
+        {
+          "action_id": "stay_in_boat",
+          "description": "두려움에 배에 머무름",
+          "weight_formula": {
+            "base_weight": 0.4,
+            "state_multipliers": [
+              {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.1}}
+            ]
+          },
+          "effects": [
+            {"field_path": "emotions.grief", "operation": "add", "value": 0.2}
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "gal_09_walking_on_water_rescue",
+      "tick": 234,
+      "event_type": "canonical",
+      "description": "예수 손 내밀어 잡으심 — '믿음이 작은 자여 왜 의심하였느냐' 함께 배에 오르니 바람 그침. 배에 있던 자들 '진실로 하나님의 아들이로소이다' (마 14:31-33)",
+      "source_ref": "마 14:31-33",
+      "scripture_ref": "마 14:33",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 3.0},
+        {"field_path": "emotions.hope", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.fear", "operation": "add", "value": -2.0}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_10_feeding_4000",
+      "tick": 320,
+      "event_type": "canonical",
+      "description": "사천명 먹임 (이방 지역). 일곱 떡과 작은 생선으로 사천 명, 일곱 광주리 남음 (막 8:1-10)",
+      "source_ref": "막 8:1-10, 마 15:32-39",
+      "scripture_ref": "막 8:8",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 0.5}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_11_pharisees_leaven",
+      "tick": 380,
+      "event_type": "canonical",
+      "description": "바리새인의 누룩 가르침. 베드로 등 떡 걱정을 '믿음 없음'으로 책망받음 (마 16:5-12)",
+      "source_ref": "마 16:5-12, 막 8:14-21",
+      "scripture_ref": "마 16:8",
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "add", "value": 0.5},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.0},
+        {"field_path": "slow_state.moral_injury", "operation": "add", "value": 0.2}
+      ],
+      "action_options": []
+    },
+    {
+      "event_id": "gal_12_blind_man_bethsaida",
+      "tick": 450,
+      "event_type": "canonical",
+      "description": "벳새다 소경 치유 (2단계 치유 — 점진적 회복). 베드로는 '봄'의 단계적 성격을 목격 (막 8:22-26)",
+      "source_ref": "막 8:22-26",
+      "scripture_ref": "막 8:25",
+      "effects": [
+        {"field_path": "emotions.awe", "operation": "add", "value": 1.0},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 0.3}
+      ],
+      "action_options": []
+    }
+  ]
+}

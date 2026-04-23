@@ -1,0 +1,89 @@
+{
+  "agent_id": "gauguin",
+  "actions": [
+    {
+      "action_id": "paint_together",
+      "description": "반 고흐와 함께 그림",
+      "visible_signal": "고갱이 빈센트 옆에서 캔버스를 세웠다.",
+      "weight_formula": {
+        "base_weight": 2.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.collaboration_willingness", "factor_type": "linear", "params": {"scale": 0.2}},
+          {"field_path": "domain_state.frustration_with_partner", "factor_type": "inverse", "params": {"scale": 0.15}}
+        ]
+      }
+    },
+    {
+      "action_id": "critique",
+      "description": "반 고흐의 작품을 비판",
+      "visible_signal": "고갱이 빈센트의 붓질을 두고 혀를 찼다.",
+      "weight_formula": {
+        "base_weight": 1.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.artistic_superiority", "factor_type": "linear", "params": {"scale": 0.2}},
+          {"field_path": "domain_state.frustration_with_partner", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.frustration_with_partner", "operation": "add", "value": 0.2},
+        {"field_path": "domain_state.artistic_confidence", "operation": "add", "value": -0.3, "target_agent_id": "vangogh"}
+      ]
+    },
+    {
+      "action_id": "withdraw_to_studio",
+      "description": "혼자 작업하며 거리를 둠",
+      "visible_signal": "고갱이 문을 닫고 혼자 작업실로 들어갔다.",
+      "weight_formula": {
+        "base_weight": 1.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.frustration_with_partner", "factor_type": "linear", "params": {"scale": 0.25}},
+          {"field_path": "domain_state.wanderlust", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.collaboration_willingness", "operation": "add", "value": -0.2},
+        {"field_path": "domain_state.wanderlust", "operation": "add", "value": 0.15}
+      ]
+    },
+    {
+      "action_id": "threaten_departure",
+      "description": "떠나겠다고 위협",
+      "visible_signal": "고갱이 가방을 가리키며 '나는 떠날 거야'라고 말했다.",
+      "preconditions": [
+        {"field_path": "domain_state.frustration_with_partner", "operator": "gte", "value": 6.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.frustration_with_partner", "factor_type": "linear", "params": {"scale": 0.3}},
+          {"field_path": "domain_state.wanderlust", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.0, "target_agent_id": "vangogh"},
+        {"field_path": "domain_state.collaboration_willingness", "operation": "add", "value": -0.5}
+      ]
+    },
+    {
+      "action_id": "depart",
+      "description": "아를을 떠남",
+      "visible_signal": "고갱이 짐을 챙겨 노란 집을 나섰다.",
+      "preconditions": [
+        {"field_path": "domain_state.frustration_with_partner", "operator": "gte", "value": 8.0},
+        {"field_path": "domain_state.collaboration_willingness", "operator": "lte", "value": 2.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.3,
+        "state_multipliers": [
+          {"field_path": "domain_state.wanderlust", "factor_type": "linear", "params": {"scale": 0.4}},
+          {"field_path": "domain_state.frustration_with_partner", "factor_type": "linear", "params": {"scale": 0.3}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "add", "value": 3.0, "target_agent_id": "vangogh"},
+        {"field_path": "emotions.hope", "operation": "add", "value": -2.0, "target_agent_id": "vangogh"}
+      ]
+    }
+  ],
+  "default_action_id": "paint_together"
+}

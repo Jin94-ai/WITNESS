@@ -1,0 +1,14 @@
+{
+  "agent_id": "barabbas",
+  "initial_state": {
+    "imprisonment_status": "imprisoned",
+    "zealot_reputation": 0.7
+  },
+  "canonical_activation_days": [14],
+  "action_weights": {
+    "plot_escape": 1.0,
+    "wait_for_release": 1.0,
+    "rally_zealots_silent": 0.5
+  },
+  "notes": "\uc88b\uc744\uc774\uce58 \uc7ac\ud310 \uc7a5\uba74\uc5d0\uc11c crowd choice \ubcc0\uc218\ub85c \uc791\ub3d9. day_index 14\uc5d0\uc11c\ub9cc \ud65c\uc131\ud654. canonical constraint."
+}

@@ -193,12 +193,17 @@ class TestSlowStateRule:
         result = SlowStateRule().apply(agent, _ctx())
         assert result.slow_state.event_trauma > 0
 
-    def test_high_hope_positive_identity(self):
-        """높은 희망 시 identity_shift 양수 이동."""
+    def test_high_hope_does_not_auto_restore_identity(self):
+        """높은 희망만으로 identity_shift가 자동 회복되지 않는다.
+
+        설계 원칙: slow_state는 비가역 누적이므로 자동 회복은
+        canonical_intervention을 통해서만 가능해야 한다.
+        """
         from engine.rules.temporal import SlowStateRule
         agent = _agent(emotions=EmotionalState(hope=8.0))
         result = SlowStateRule().apply(agent, _ctx())
-        assert result.slow_state.identity_shift > 0
+        # 자동 회복 없음: 변화 없거나 음수 방향만
+        assert result.slow_state.identity_shift <= 0
 
     def test_high_fear_low_hope_negative_identity(self):
         """공포 높고 희망 낮으면 identity 음수."""

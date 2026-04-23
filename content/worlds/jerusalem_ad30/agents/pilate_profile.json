@@ -1,0 +1,41 @@
+{
+  "agent_id": "pilate",
+  "initial_state": {
+    "alertness": 0.3,
+    "political_pressure": 0.4,
+    "wife_dream_influence": 0.0
+  },
+  "world_weights": {
+    "delay_judgment_base": 1.5,
+    "consult_rome_base": 0.8,
+    "wash_hands_base": 0.3,
+    "order_action_base": 1.0,
+    "delay_pressure_threshold": 0.6,
+    "consult_pressure_threshold": 0.7,
+    "order_alertness_threshold": 0.7,
+    "alertness_roman_factor": 2.0,
+    "alertness_consult_factor": 0.5
+  },
+  "influence_paths": {
+    "order_roman_alertness_boost": 1.5,
+    "delay_political_pressure_relief": 0.3,
+    "consult_political_pressure_delay": 0.2,
+    "order_taxation_intensity_pressure": 0.4
+  },
+  "canonical_constraints": [
+    {
+      "canonical_id": "wife_dream",
+      "day_index": 13,
+      "state_effect": {"wife_dream_influence": 0.8},
+      "note": "\ubcf4\ub3c5 \uc544\ub0b4\uc758 \uafc8 (\ub9c8\ud0dc 27:19). \uc720\uc6d4\uc808 \ub2f9\uc77c \ub3d9\uc2dc."
+    },
+    {
+      "canonical_id": "wash_hands",
+      "day_index": 14,
+      "forced_action": "wash_hands",
+      "note": "\ubcf4\ub3c5\uc774 \uc190\uc744 \uc529\uc74c (\ub9c8\ud0dc 27:24, \uac1c\uc5ed\uac1c\uc815)."
+    }
+  ],
+  "factions_direct": ["romans"],
+  "factions_indirect": {"pharisees": "caiaphas", "zealots": "taxation"}
+}

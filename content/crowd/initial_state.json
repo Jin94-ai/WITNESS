@@ -1,0 +1,28 @@
+{
+  "agent_id": "crowd",
+  "tick": 0,
+  "physical": {
+    "fatigue": 1.0,
+    "hunger": 1.0,
+    "health": 8.0,
+    "location": "jerusalem"
+  },
+  "emotions": {
+    "fear": 2.0,
+    "hope": 3.0,
+    "grief": 0.0,
+    "confusion": 3.0,
+    "love": 1.0
+  },
+  "relationships": {
+    "jesus": {"target_id": "jesus", "trust": 2.0, "love": 1.0, "awe": 3.0, "understanding": 1.0},
+    "peter": {"target_id": "peter", "trust": 2.0, "love": 0.0, "awe": 0.0, "understanding": 1.0}
+  },
+  "domain_state": {
+    "type": "crowd_dynamics",
+    "suspicion_level": 3.0,
+    "mob_energy": 2.0,
+    "hostility": 2.0,
+    "recognition_risk": 3.0
+  }
+}

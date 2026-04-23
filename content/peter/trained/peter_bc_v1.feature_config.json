@@ -1,0 +1,26 @@
+{
+  "agent_id": "peter",
+  "feature_dim": 12,
+  "feature_schema": [
+    "emotions.fear",
+    "emotions.hope",
+    "emotions.grief",
+    "emotions.confusion",
+    "emotions.love",
+    "physical.fatigue",
+    "physical.hunger",
+    "physical.health",
+    "slow_state.moral_injury",
+    "slow_state.identity_shift",
+    "slow_state.event_trauma",
+    "slow_state.trust_scar"
+  ],
+  "action_vocab": [
+    "assert_loyalty",
+    "discuss_with_disciples",
+    "follow_closely",
+    "pray",
+    "withdraw_in_fear"
+  ],
+  "n_samples": 108
+}

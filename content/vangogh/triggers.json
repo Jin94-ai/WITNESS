@@ -1,0 +1,80 @@
+{
+  "triggers": [
+    {
+      "trigger_id": "artistic_crisis",
+      "description": "고갱의 비판 누적 + 반 고흐 자신감 하락 -> 창작 위기",
+      "state_conditions": [
+        {
+          "agent_id": "gauguin",
+          "field_path": "domain_state.frustration_with_partner",
+          "operator": "gte",
+          "value": 6.0
+        },
+        {
+          "agent_id": "vangogh",
+          "field_path": "domain_state.artistic_confidence",
+          "operator": "lte",
+          "value": 3.0
+        }
+      ],
+      "event_template_id": "artistic_crisis_event",
+      "effects_on_fire": [
+        {"field_path": "emotions.grief", "operation": "add", "value": 2.0, "target_agent_id": "vangogh"},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.5, "target_agent_id": "vangogh"}
+      ],
+      "max_fires": 3,
+      "cooldown": 20
+    },
+    {
+      "trigger_id": "gauguin_departure",
+      "description": "고갱의 좌절 + 협업 의지 소멸 + 떠남 행동 -> 고갱 떠남",
+      "state_conditions": [
+        {
+          "agent_id": "gauguin",
+          "field_path": "domain_state.frustration_with_partner",
+          "operator": "gte",
+          "value": 8.0
+        },
+        {
+          "agent_id": "gauguin",
+          "field_path": "domain_state.collaboration_willingness",
+          "operator": "lte",
+          "value": 2.0
+        }
+      ],
+      "action_conditions": [
+        {
+          "agent_id": "gauguin",
+          "action_id": "depart"
+        }
+      ],
+      "event_template_id": "departure_event",
+      "effects_on_fire": [
+        {"field_path": "emotions.grief", "operation": "set", "value": 9.0, "target_agent_id": "vangogh"},
+        {"field_path": "emotions.hope", "operation": "set", "value": 1.0, "target_agent_id": "vangogh"},
+        {"field_path": "slow_state.trust_scar", "operation": "add", "value": 3.0, "target_agent_id": "vangogh"}
+      ],
+      "max_fires": 1,
+      "deadline_tick": 120
+    },
+    {
+      "trigger_id": "theo_intervention",
+      "description": "테오의 걱정이 임계에 도달 -> 개입 시도",
+      "state_conditions": [
+        {
+          "agent_id": "theo",
+          "field_path": "domain_state.concern_for_brother",
+          "operator": "gte",
+          "value": 8.0
+        }
+      ],
+      "event_template_id": "theo_intervention_event",
+      "effects_on_fire": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 1.5, "target_agent_id": "vangogh"},
+        {"field_path": "emotions.love", "operation": "add", "value": 1.0, "target_agent_id": "vangogh"}
+      ],
+      "max_fires": 2,
+      "cooldown": 30
+    }
+  ]
+}

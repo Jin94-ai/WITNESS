@@ -37,6 +37,33 @@ class TestLoadScripture:
     def setup_method(self):
         clear_cache()
 
+    def test_full_file_path(self, tmp_path):
+        """chapter별 파일 대신 전체 파일 (john.json 형식)로도 로드."""
+        # scripture.py _BOOK_MAP: "요" → "john"
+        full_file = tmp_path / "john.json"
+        import json
+        full_file.write_text(
+            json.dumps({
+                "verses": [
+                    {"chapter": 3, "verse": 16, "text": "하나님이 세상을 이처럼 사랑하사"},
+                ]
+            }),
+            encoding="utf-8",
+        )
+        text = load_scripture("요 3:16", tmp_path)
+        assert "하나님이" in text
+
+    def test_default_scripture_dir(self):
+        """scripture_dir 미지정 → 기본 경로에서 로드."""
+        # 기본 경로 content/shared/scripture가 존재. 실제 존재하는 절 사용
+        # 존재하지 않으면 ValueError → 테스트 skip
+        try:
+            text = load_scripture("요 21:15")
+            assert isinstance(text, str)
+        except (ValueError, FileNotFoundError):
+            import pytest as _pytest
+            _pytest.skip("default scripture path not present in test env")
+
     def test_single_verse(self):
         """요 21:15 로드."""
         text = load_scripture("요 21:15", SCRIPTURE_DIR)

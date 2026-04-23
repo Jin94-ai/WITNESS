@@ -3,6 +3,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from content.peter.domain_faith import FaithJourneyState
 from engine.core.world import SimulationConfig
 from engine.io.loader import (
@@ -54,6 +56,7 @@ def _checkpoints() -> list[Checkpoint]:
     return [Checkpoint.model_validate(cp) for cp in data["checkpoints"]]
 
 
+@pytest.mark.slow
 class TestClusterTrajectories:
     def test_clustering_runs(self):
         """50회 결과를 클러스터링할 수 있다."""

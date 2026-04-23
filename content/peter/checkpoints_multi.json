@@ -1,0 +1,94 @@
+{
+  "description": "Multi-agent용 이벤트-상대적 체크포인트. tick-bound 대신 이벤트 기준 상대 범위 사용.",
+  "checkpoints": [
+    {
+      "checkpoint_id": "mcp_sword_at_arrest",
+      "tick": 250,
+      "description": "체포 시 칼을 뽑음 (arrest 이벤트 기준 +-5 tick)",
+      "conditions": [
+        {
+          "condition_type": "action_taken",
+          "params": {
+            "action_id": "draw_sword",
+            "relative_to_event": "arrest",
+            "relative_offset": [5, 5]
+          }
+        }
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "mcp_follow_after_arrest",
+      "tick": 250,
+      "description": "체포 후 따라감 (arrest 이벤트 기준 +-5 tick)",
+      "conditions": [
+        {
+          "condition_type": "action_taken",
+          "params": {
+            "action_id": "follow_at_distance",
+            "relative_to_event": "arrest",
+            "relative_offset": [2, 10]
+          }
+        }
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "mcp_deny_3",
+      "tick": 300,
+      "description": "부인 3회 (denial_challenge 이벤트 기준 +-20 tick)",
+      "conditions": [
+        {
+          "condition_type": "action_taken",
+          "params": {
+            "action_id": "deny",
+            "min_count": 3,
+            "relative_to_event": "denial_challenge",
+            "relative_offset": [5, 30]
+          }
+        }
+      ],
+      "weight": 2.0
+    },
+    {
+      "checkpoint_id": "mcp_grief_peak",
+      "tick": 350,
+      "description": "극한 슬픔 (tick 무관, 전체 시뮬레이션 중 어디서든)",
+      "conditions": [
+        {
+          "condition_type": "state_range",
+          "params": {"field_path": "emotions.grief", "min": 8.0}
+        }
+      ],
+      "weight": 1.0
+    },
+    {
+      "checkpoint_id": "mcp_moral_injury",
+      "tick": 400,
+      "description": "도덕적 상처 누적",
+      "conditions": [
+        {
+          "condition_type": "state_range",
+          "params": {"field_path": "slow_state.moral_injury", "min": 3.0}
+        }
+      ],
+      "weight": 1.5
+    },
+    {
+      "checkpoint_id": "mcp_restoration",
+      "tick": 450,
+      "description": "회복 (사랑 높고 슬픔 낮음)",
+      "conditions": [
+        {
+          "condition_type": "state_range",
+          "params": {"field_path": "emotions.love", "min": 7.0}
+        },
+        {
+          "condition_type": "state_range",
+          "params": {"field_path": "emotions.grief", "max": 5.0}
+        }
+      ],
+      "weight": 1.5
+    }
+  ]
+}

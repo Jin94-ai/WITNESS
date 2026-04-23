@@ -1,0 +1,25 @@
+{
+  "phase_id": "02_galilean",
+  "description": "Phase 2: 갈릴리 사역 (~18개월). 소명 직후부터 가이사랴 빌립보 고백 직전까지. 주요 사건: 베드로 장모 치유, 12 사도 택정, 오병이어, 물 위 걸음, 사천명 먹임, 가나안 여인.",
+  "tick_scale_hours": 24.0,
+  "tick_unit_note": "사역 phase는 sparse 1일/tick. 주요 사건은 연속 tick에 효과를 분할해 '국지적 dense' 표현 (reviewer 피드백 반영).",
+  "max_tick": 540,
+  "max_tick_note": "약 18개월 = 540일 × 1일/tick = 540 tick",
+  "tick_offset_from_life_start": 84,
+  "_tick_offset_note": "Phase 1 소명 84 tick 이후 시작",
+  "exit_condition": {
+    "triggered_by": "confession_caesarea_philippi",
+    "max_tick_fallback": 540
+  },
+  "canonical_events_path": "content/peter/phases/02_galilean/canonical_events.json",
+  "scripture_refs": [
+    "마 4:18-22",
+    "막 1:16-20",
+    "막 1:29-31",
+    "마 10:1-4",
+    "막 3:13-19",
+    "마 14:13-21",
+    "마 14:22-33",
+    "막 8:1-10"
+  ]
+}

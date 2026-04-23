@@ -74,3 +74,65 @@ class TestFeatureMatrix:
         assert len(names) == 10
         assert "canonical_match_rate" in names
         assert "final_fear" in names
+
+
+class TestPrivateHelpers:
+    def test_series_stats_empty(self):
+        from engine.io.trajectory import _series_stats
+        s = _series_stats([])
+        assert s == {"mean": 0.0, "max": 0.0, "min": 0.0, "std": 0.0, "auc": 0.0}
+
+    def test_series_stats_values(self):
+        from engine.io.trajectory import _series_stats
+        s = _series_stats([1.0, 2.0, 3.0])
+        assert s["mean"] == 2.0
+        assert s["max"] == 3.0
+        assert s["min"] == 1.0
+        assert s["std"] > 0
+        assert s["auc"] == 6.0
+
+    def test_find_event_tick_found(self):
+        from engine.io.trajectory import _find_event_tick
+        record = {"fired_events": {"arrest": 150}}
+        assert _find_event_tick(record, "arrest") == 150
+
+    def test_find_event_tick_missing(self):
+        from engine.io.trajectory import _find_event_tick
+        record = {"fired_events": {}}
+        assert _find_event_tick(record, "arrest") == -1
+
+    def test_state_at_tick_empty_series(self):
+        from engine.io.trajectory import _state_at_tick
+        assert _state_at_tick([], target_tick=10, field="fear") == 0.0
+
+    def test_state_at_tick_closest(self):
+        from engine.io.trajectory import _state_at_tick
+        series = [
+            {"tick": 5, "fear": 1.0},
+            {"tick": 15, "fear": 3.0},
+            {"tick": 30, "fear": 7.0},
+        ]
+        assert _state_at_tick(series, target_tick=14, field="fear") == 3.0
+        assert _state_at_tick(series, target_tick=25, field="fear") == 7.0
+
+    def test_multi_dataset_to_feature_matrix_empty(self):
+        from engine.io.trajectory import multi_dataset_to_feature_matrix
+        matrix, names = multi_dataset_to_feature_matrix([])
+        assert matrix == [] and names == []
+
+    def test_multi_result_record_emits_match_rate(self):
+        """canonical_match_rates가 있으면 record에 per-agent match_rate 추가."""
+        from types import SimpleNamespace
+
+        from engine.io.trajectory import multi_result_to_record
+        fake = SimpleNamespace(
+            seed=0,
+            final_states={},
+            action_histories={},
+            fired_triggers=[],
+            fired_events=[],
+            canonical_match_rates={"peter": 0.75, "judas": 0.50},
+        )
+        rec = multi_result_to_record(fake)
+        assert rec["peter_match_rate"] == 0.75
+        assert rec["judas_match_rate"] == 0.50

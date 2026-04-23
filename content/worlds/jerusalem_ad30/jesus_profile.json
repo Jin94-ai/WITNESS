@@ -1,0 +1,39 @@
+{
+  "agent_id": "jesus",
+  "world_weights": {
+    "teach_base": 3.0,
+    "heal_base": 1.5,
+    "confront_base": 1.0,
+    "withdraw_base": 1.0,
+    "bless_base": 0.8,
+    "heal_suffering_trigger_threshold": 5.0,
+    "withdraw_crowd_threshold": 0.7,
+    "withdraw_fatigue_threshold": 6.0,
+    "confront_pharisee_colocate_bonus": 2.5,
+    "teach_low_understanding_bonus": 2.0,
+    "disciple_understanding_threshold": 5.0
+  },
+  "influence_paths": {
+    "teach_direct_boost": 0.40,
+    "heal_rumor_intensity": 1.0,
+    "disciple_witness_rumor_intensity": 0.6,
+    "crowd_testimony_rumor_intensity": 0.4
+  },
+  "canonical_constraints": [
+    {
+      "canonical_id": "passover_entry",
+      "day_index": 9,
+      "forced_action": "teach",
+      "forced_location": "temple",
+      "note": "유월절 6일 전 예루살렘 입성 (요한 12:1-11 기반, 5 days buffer 적용)"
+    },
+    {
+      "canonical_id": "temple_cleanse",
+      "day_index": 10,
+      "forced_action": "confront",
+      "forced_location": "temple",
+      "note": "성전 정화 (마가 11:15-19, 개역개정)"
+    }
+  ],
+  "notes": "World-layer adjustments on top of content/jesus/behavior_profile.json. Values tuned conservatively — jesus.influence large but not runaway (ABSOLUTE RULE #3 v1.1). Multi-path emitter design (Phase 5A §4.2.2): teach→direct; heal→rumour; disciple/crowd→rumour. Removing jesus should NOT zero jesus_movement — disciple + crowd rumour paths survive."
+}

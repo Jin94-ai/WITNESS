@@ -363,12 +363,13 @@
       "event_id": "scene_13_emmaus_jerusalem",
       "tick": 237,
       "event_type": "canonical",
-      "description": "엠마오 이후 예루살렘. 부활하신 예수를 만남",
+      "description": "엠마오 이후 예루살렘. 부활하신 예수를 만남. jesus_understanding: messiah_political → risen_lord (부활 목격, 정치적 메시아 기대를 넘어선 이해 전환).",
       "source_ref": "눅 24:33-49",
       "effects": [
         {"field_path": "emotions.hope", "operation": "add", "value": 4.0},
         {"field_path": "emotions.fear", "operation": "add", "value": -2.0},
-        {"field_path": "emotions.confusion", "operation": "add", "value": -1.0}
+        {"field_path": "emotions.confusion", "operation": "add", "value": -1.0},
+        {"field_path": "domain_state.jesus_understanding", "operation": "set", "value": "risen_lord"}
       ],
       "action_options": []
     },
@@ -433,12 +434,13 @@
       "event_id": "scene_17_ascension",
       "tick": 495,
       "event_type": "canonical",
-      "description": "승천",
+      "description": "승천. jesus_understanding: risen_lord → sending_lord (대사명 이후 파송자 이해 확정).",
       "source_ref": "행 1:9-11",
       "effects": [
         {"field_path": "emotions.hope", "operation": "add", "value": 3.0},
         {"field_path": "emotions.grief", "operation": "add", "value": 1.0},
-        {"field_path": "relationships.jesus.awe", "operation": "add", "value": 3.0}
+        {"field_path": "relationships.jesus.awe", "operation": "add", "value": 3.0},
+        {"field_path": "domain_state.jesus_understanding", "operation": "set", "value": "sending_lord"}
       ],
       "action_options": []
     }
@@ -453,6 +455,7 @@
         "emotions.grief": 3.0,
         "emotions.love": 9.0,
         "emotions.hope": 8.0,
+        "slow_state.identity_shift": 2.0,
         "domain_state.communal_role": "shepherd",
         "domain_state.jesus_understanding": "sending_lord"
       }

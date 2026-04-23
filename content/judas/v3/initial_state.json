@@ -1,0 +1,51 @@
+{
+  "_doc": "Judas initial ActiveState (v3 Phase 2 v2). 수난 주간 직전 기준.",
+  "_scenario": "judas_passion_week",
+  "_date": "2026-04-23",
+  "_note": "Judas는 Peter와 공동체 구성 같으나 love/loyalty/trust 저하 + doubt 상승. 배반 전 내적 갈등 상태.",
+
+  "scalar": {
+    "fear": 2.0,
+    "hope": 4.5,
+    "grief": 1.0,
+    "confusion": 5.0,
+    "joy": 3.0,
+    "anger": 3.5,
+    "awe": 5.0,
+    "fatigue": 3.0,
+    "hunger": 2.0,
+    "vitality": 7.0,
+    "doubt": 6.0,
+    "resolve": 4.5,
+    "trauma": 1.0
+  },
+
+  "target_aware": {
+    "love": {
+      "primary_figure": 6.5,
+      "peers": 5.0,
+      "family": 6.0
+    },
+    "loyalty": {
+      "primary_figure": 4.5,
+      "peers": 4.0
+    },
+    "trust": {
+      "primary_figure": 4.0,
+      "peers": 5.0
+    },
+    "belonging": {
+      "twelve_disciples": 5.0,
+      "broader_followers": 3.0
+    },
+    "guilt": {
+      "primary_figure": 1.5,
+      "self": 2.0
+    },
+    "shame": {
+      "crowd": 0.0,
+      "peers": 1.0,
+      "self": 2.0
+    }
+  }
+}

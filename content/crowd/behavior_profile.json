@@ -1,0 +1,73 @@
+{
+  "agent_id": "crowd",
+  "actions": [
+    {
+      "action_id": "mill_about",
+      "description": "주변을 서성임",
+      "visible_signal": "군중이 뜰을 서성거렸다.",
+      "weight_formula": {
+        "base_weight": 3.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.mob_energy", "factor_type": "inverse", "params": {"scale": 0.1}}
+        ]
+      }
+    },
+    {
+      "action_id": "gossip",
+      "description": "소문을 퍼뜨림",
+      "visible_signal": "누군가의 수군거림이 들려왔다.",
+      "weight_formula": {
+        "base_weight": 2.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.suspicion_level", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "domain_state.mob_energy", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.recognition_risk", "operation": "add", "value": 0.2},
+        {"field_path": "domain_state.suspicion_level", "operation": "add", "value": 0.1},
+        {"field_path": "domain_state.hostility", "operation": "add", "value": 0.05}
+      ]
+    },
+    {
+      "action_id": "challenge_stranger",
+      "description": "낯선 사람에게 시비",
+      "visible_signal": "한 사람이 낯선 얼굴에게 날카롭게 물었다.",
+      "preconditions": [
+        {"field_path": "domain_state.suspicion_level", "operator": "gte", "value": 5.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.suspicion_level", "factor_type": "linear", "params": {"scale": 0.25}},
+          {"field_path": "domain_state.hostility", "factor_type": "linear", "params": {"scale": 0.15}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0, "target_agent_id": "peter"},
+        {"field_path": "domain_state.recognition_risk", "operation": "add", "value": 0.5}
+      ]
+    },
+    {
+      "action_id": "point_and_accuse",
+      "description": "베드로를 지목하고 고발",
+      "visible_signal": "누군가가 손가락으로 가리키며 소리쳤다.",
+      "preconditions": [
+        {"field_path": "domain_state.recognition_risk", "operator": "gte", "value": 6.0},
+        {"field_path": "domain_state.hostility", "operator": "gte", "value": 4.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.3,
+        "state_multipliers": [
+          {"field_path": "domain_state.recognition_risk", "factor_type": "linear", "params": {"scale": 0.3}},
+          {"field_path": "domain_state.hostility", "factor_type": "linear", "params": {"scale": 0.2}}
+        ]
+      },
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 2.5, "target_agent_id": "peter"},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.0, "target_agent_id": "peter"}
+      ]
+    }
+  ],
+  "default_action_id": "mill_about"
+}

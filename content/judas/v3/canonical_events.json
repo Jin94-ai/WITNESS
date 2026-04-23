@@ -1,0 +1,90 @@
+{
+  "_doc": "Canonical events schedule for Judas passion week (v3 v2 Layer B).",
+  "_scenario": "judas_passion_week",
+  "_note": "Judas arc: silver agreement → last supper identification → betrayal kiss → remorse → despair. External events sparser than Peter's — much of the drama is internal, giving a stress-test for state transitions under event scarcity.",
+
+  "events": [
+    {
+      "tick": 3,
+      "event_id": "covert_bargain",
+      "description": "대제사장들과의 은 30 합의 (마 26:14-16)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 5,
+      "event_id": "sacred_meal",
+      "description": "최후의 만찬 (마 26:26)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 7,
+      "event_id": "betrayal_witnessed",
+      "description": "예수께서 배반자 지목 (요 13:26)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 8,
+      "event_id": "ally_departure",
+      "description": "유다 만찬을 떠남 (요 13:30)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 12,
+      "event_id": "guard_approaches",
+      "description": "체포대와 함께 겟세마네 접근 (마 26:47)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 13,
+      "event_id": "identification_signal",
+      "description": "입맞춤으로 예수 지목 (마 26:49)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 14,
+      "event_id": "weapon_drawn_nearby",
+      "description": "체포 난투 (요 18:10)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 15,
+      "event_id": "primary_figure_suffering_visible",
+      "description": "예수 결박되어 끌려감 (마 26:57)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 20,
+      "event_id": "remorse_trigger",
+      "description": "유다가 예수 정죄됨을 봄 (마 27:3)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 22,
+      "event_id": "return_token",
+      "description": "은 30 성전에 던짐 (마 27:5)",
+      "canonical_level": "A"
+    }
+  ],
+
+  "primitive_defaults": {
+    "location": "jerusalem",
+    "time_of_day": "evening",
+    "crowd_density": 0.2,
+    "ally_proximity": 0.5,
+    "group_cohesion": 0.4,
+    "authority_presence": 0.5,
+    "roman_presence": 0.1,
+    "religious_context": 0.3,
+    "primary_figure_presence": 0.9,
+    "primary_figure_visible": true,
+    "information_gap": 0.7,
+    "decision_stakes": 0.6,
+    "public_visibility": 0.2,
+    "time_pressure": 0.3,
+    "prior_failure_salience": 0.0,
+    "accusation_visibility": 0.0,
+    "volatility": 0.2,
+    "decision_criticality": 0.4,
+    "proximity_of_suffering": 0.0
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "agent_id": "talleyrand",
+  "_meta": "v1.2 Iter 70 재튜닝. state_multipliers를 강화하여 action이 domain/emotional state에 민감하게 반응 (Iter 69 finding 해소).",
+  "actions": [
+    {
+      "action_id": "maintain_network",
+      "description": "다중 체제 교차 인맥 유지 — 편지, 저녁 모임, 정보 교환",
+      "visible_signal": "Talleyrand는 여러 파당의 인물들과 서신을 주고받았다.",
+      "weight_formula": {
+        "base_weight": 0.5,
+        "state_multipliers": [
+          {"field_path": "domain_state.network_depth", "factor_type": "linear", "params": {"scale": 0.6}},
+          {"field_path": "domain_state.leverage", "factor_type": "linear", "params": {"scale": 0.4}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.network_depth", "operation": "add", "value": 0.05}
+      ]
+    },
+    {
+      "action_id": "serve_current_regime",
+      "description": "현 체제에 실용적으로 봉사 (직위 수행)",
+      "visible_signal": "Talleyrand가 현 체제의 직무를 성실히 수행했다.",
+      "weight_formula": {
+        "base_weight": 0.4,
+        "state_multipliers": [
+          {"field_path": "domain_state.leverage", "factor_type": "linear", "params": {"scale": 0.5}},
+          {"field_path": "domain_state.legitimacy_anchor", "factor_type": "inverse", "params": {"scale": 0.4}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.survival_streak_ticks", "operation": "add", "value": 1.0},
+        {"field_path": "domain_state.moral_fatigue", "operation": "add", "value": 0.01}
+      ]
+    },
+    {
+      "action_id": "covert_negotiation",
+      "description": "다음 체제의 가능성과 은밀히 협상 (외교 루트)",
+      "visible_signal": "Talleyrand가 제3자를 통해 비공식 접촉을 시도했다.",
+      "weight_formula": {
+        "base_weight": 0.4,
+        "state_multipliers": [
+          {"field_path": "domain_state.leverage", "factor_type": "linear", "params": {"scale": 0.6}},
+          {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.5}},
+          {"field_path": "domain_state.moral_fatigue", "factor_type": "linear", "params": {"scale": 0.4}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": 0.1},
+        {"field_path": "domain_state.compromise_count", "operation": "add", "value": 1}
+      ]
+    },
+    {
+      "action_id": "voice_principle",
+      "description": "원칙적 발언 (체제 비판 또는 옹호)",
+      "visible_signal": "Talleyrand가 공개적으로 입장을 표명했다.",
+      "weight_formula": {
+        "base_weight": 0.3,
+        "state_multipliers": [
+          {"field_path": "domain_state.legitimacy_anchor", "factor_type": "linear", "params": {"scale": 0.9}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": -0.1}
+      ]
+    },
+    {
+      "action_id": "strategic_withdrawal",
+      "description": "일시적 은퇴 / 관망 (체제 전환기 대기)",
+      "visible_signal": "Talleyrand가 공직에서 물러나 관망 태세를 취했다.",
+      "weight_formula": {
+        "base_weight": 0.2,
+        "state_multipliers": [
+          {"field_path": "domain_state.moral_fatigue", "factor_type": "linear", "params": {"scale": 0.7}},
+          {"field_path": "emotions.fear", "factor_type": "linear", "params": {"scale": 0.5}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.moral_fatigue", "operation": "add", "value": -0.2}
+      ]
+    },
+    {
+      "action_id": "write_memoirs",
+      "description": "회고록 집필 — 후세 정당화 작업",
+      "visible_signal": "Talleyrand가 회고록 원고를 다듬었다.",
+      "weight_formula": {
+        "base_weight": 0.15,
+        "state_multipliers": [
+          {"field_path": "domain_state.moral_fatigue", "factor_type": "linear", "params": {"scale": 0.8}},
+          {"field_path": "domain_state.compromise_count", "factor_type": "linear", "params": {"scale": 0.15}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": -0.2}
+      ]
+    },
+    {
+      "action_id": "form_salon",
+      "description": "사교 살롱 운영 — 비공식 외교 채널",
+      "visible_signal": "Talleyrand의 살롱에 다양한 정치 인사가 모였다.",
+      "weight_formula": {
+        "base_weight": 0.2,
+        "state_multipliers": [
+          {"field_path": "domain_state.network_depth", "factor_type": "linear", "params": {"scale": 0.7}},
+          {"field_path": "domain_state.reputation_ambiguity", "factor_type": "linear", "params": {"scale": 0.4}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.network_depth", "operation": "add", "value": 0.1}
+      ]
+    },
+    {
+      "action_id": "consult_aristocracy",
+      "description": "구 귀족층 자문 — 정당성 기반 행동",
+      "visible_signal": "Talleyrand가 옛 귀족 가문과 협의했다.",
+      "weight_formula": {
+        "base_weight": 0.15,
+        "state_multipliers": [
+          {"field_path": "domain_state.legitimacy_anchor", "factor_type": "linear", "params": {"scale": 0.9}},
+          {"field_path": "domain_state.network_regime_span", "factor_type": "linear", "params": {"scale": 0.3}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.legitimacy_anchor", "operation": "add", "value": 0.1}
+      ]
+    }
+  ]
+}

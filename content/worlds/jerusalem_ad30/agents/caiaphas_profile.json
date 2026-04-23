@@ -1,0 +1,31 @@
+{
+  "agent_id": "caiaphas",
+  "initial_state": {
+    "sanhedrin_authority": 0.7,
+    "roman_relationship": 0.6,
+    "theological_anxiety": 0.3
+  },
+  "world_weights": {
+    "convene_sanhedrin_base": 1.0,
+    "appeal_to_rome_base": 0.5,
+    "temple_decree_base": 1.2,
+    "confront_movement_base": 0.8,
+    "convene_anxiety_threshold": 0.6,
+    "appeal_jesus_movement_threshold": 4.0,
+    "confront_jesus_movement_threshold": 3.5,
+    "temple_decree_authority_threshold": 0.5
+  },
+  "influence_paths": {
+    "convene_pharisees_boost": 0.5,
+    "convene_sadducees_boost": 0.7,
+    "appeal_pilate_pressure_boost": 0.6,
+    "temple_decree_price_adjust": 0.4,
+    "confront_jesus_movement_penalty": -0.5,
+    "confront_authority_threat": 0.8
+  },
+  "hub_channels": {
+    "pharisees": ["convene_sanhedrin", "confront_movement"],
+    "sadducees": ["convene_sanhedrin", "temple_decree"]
+  },
+  "notes": "Caiaphas hub: pharisees \uacfc sadducees \ub458 \ub2e4 \uc5f0\uacb0. graded proximity \uae30\ucd08 \uad6c\uc870 (pharisees \uc911\uac04, sadducees \uc5f4\ub9d0)."
+}

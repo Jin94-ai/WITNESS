@@ -105,3 +105,13 @@ class TestPOMFilter:
                               grief_peak=9.0, moral_injury=5.0, identity_shift=-2.0, hope=5.0)
         summary = pom_filter([result], scorecard, min_patterns=5)
         assert summary["n_min_pass"] == 1  # sword_drawn 실패해도 6/7 통과
+
+    def test_empty_results(self):
+        """빈 results에도 안전하게 zero-요약 반환 (line 67)."""
+        scorecard = make_peter_scorecard()
+        summary = pom_filter([], scorecard)
+        assert summary["n_total"] == 0
+        assert summary["n_all_pass"] == 0
+        assert summary["all_pass_rate"] == 0.0
+        assert summary["pattern_pass_rates"] == {}
+        assert summary["pass_counts"] == []

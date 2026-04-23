@@ -1,0 +1,7 @@
+{
+  "intervention_id": "lenient_pilate",
+  "description": "Pilate leniency intervention: no Jerusalem presence boost, no pre-feast approach, crowd threshold raised. Expected: roman_alertness decay unchecked, trigger chain (arrest_trigger) frequency 감소.",
+  "pilate_bonus_override": 0.0,
+  "pilate_approach_lead_days_override": 0,
+  "crowd_trigger_threshold_override": 8.0
+}

@@ -1,0 +1,69 @@
+{
+  "agent_id": "vangogh",
+  "actions": [
+    {
+      "action_id": "paint_feverishly",
+      "description": "광적으로 그림을 그림",
+      "visible_signal": "빈센트가 붓을 놓지 않고 밤까지 작업했다.",
+      "weight_formula": {
+        "base_weight": 3.0,
+        "state_multipliers": [
+          {"field_path": "domain_state.creative_energy", "factor_type": "linear", "params": {"scale": 0.2}},
+          {"field_path": "emotions.hope", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.creative_energy", "operation": "add", "value": -0.3},
+        {"field_path": "domain_state.artistic_confidence", "operation": "add", "value": 0.1}
+      ]
+    },
+    {
+      "action_id": "seek_connection",
+      "description": "고갱과 교류를 시도",
+      "visible_signal": "빈센트가 고갱에게 다가가 대화를 청했다.",
+      "weight_formula": {
+        "base_weight": 1.5,
+        "state_multipliers": [
+          {"field_path": "emotions.love", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.1}}
+        ]
+      }
+    },
+    {
+      "action_id": "write_to_theo",
+      "description": "테오에게 편지",
+      "visible_signal": "빈센트가 등불 아래에서 테오에게 편지를 썼다.",
+      "observable_from": ["vangogh", "theo"],
+      "weight_formula": {
+        "base_weight": 1.5,
+        "state_multipliers": [
+          {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.15}},
+          {"field_path": "emotions.hope", "factor_type": "inverse", "params": {"scale": 0.1}}
+        ]
+      },
+      "effects": [
+        {"field_path": "domain_state.concern_for_brother", "operation": "add", "value": 0.2, "target_agent_id": "theo"}
+      ]
+    },
+    {
+      "action_id": "despair",
+      "description": "절망에 빠짐",
+      "visible_signal": "빈센트가 캔버스 앞에서 무너져 앉았다.",
+      "preconditions": [
+        {"field_path": "emotions.grief", "operator": "gte", "value": 7.0}
+      ],
+      "weight_formula": {
+        "base_weight": 0.5,
+        "state_multipliers": [
+          {"field_path": "emotions.grief", "factor_type": "linear", "params": {"scale": 0.3}},
+          {"field_path": "emotions.hope", "factor_type": "inverse", "params": {"scale": 0.2}}
+        ]
+      },
+      "effects": [
+        {"field_path": "slow_state.moral_injury", "operation": "add", "value": 0.5},
+        {"field_path": "domain_state.creative_energy", "operation": "add", "value": -1.0}
+      ]
+    }
+  ],
+  "default_action_id": "paint_feverishly"
+}

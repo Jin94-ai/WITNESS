@@ -7,6 +7,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from content.peter.domain_faith import FaithJourneyState
 from engine.core.world import SimulationConfig
 from engine.io.loader import load_agent_state, load_events, load_interventions, register_domain_type
@@ -58,6 +60,7 @@ def _load_checkpoints() -> list[Checkpoint]:
     return [Checkpoint.model_validate(cp) for cp in data["checkpoints"]]
 
 
+@pytest.mark.slow
 class TestHindcast:
     def test_batch_100_completes(self):
         """100회 배치가 에러 없이 완료된다."""

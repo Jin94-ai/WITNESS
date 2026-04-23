@@ -1,0 +1,27 @@
+{
+  "agent_id": "theo",
+  "tick": 0,
+  "physical": {
+    "fatigue": 2.0,
+    "hunger": 1.0,
+    "health": 8.0,
+    "location": "paris"
+  },
+  "emotions": {
+    "fear": 2.0,
+    "hope": 6.0,
+    "grief": 1.0,
+    "confusion": 2.0,
+    "love": 8.0
+  },
+  "relationships": {
+    "vangogh": {"target_id": "vangogh", "trust": 8.0, "love": 9.0, "awe": 4.0, "understanding": 6.0},
+    "gauguin": {"target_id": "gauguin", "trust": 3.0, "love": 1.0, "awe": 3.0, "understanding": 2.0}
+  },
+  "domain_state": {
+    "type": "patron",
+    "concern_for_brother": 6.0,
+    "financial_strain": 4.0,
+    "belief_in_art": 7.0
+  }
+}

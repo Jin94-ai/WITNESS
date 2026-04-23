@@ -1,0 +1,37 @@
+{
+  "phase_from": "03_confession",
+  "phase_to": "04_journey_to_jerusalem",
+  "description": "고백+변화산 종료 → 예루살렘 여정 phase 시작. 핵심: 베드로의 신학적 이해가 messiah_political → messiah_suffering으로 이동 중 (불완전, 여전히 혼란).",
+  "carry_all_slow_state": true,
+  "mappings": [
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "domain_state.obedience_maturity",
+      "target_agent_id": "peter",
+      "target_field_path": "domain_state.obedience_maturity",
+      "note": "고백 + 변화산 + '말씀 들으라' 음성으로 강화된 순종"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.awe",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.awe",
+      "note": "변화산 영광 목격으로 최고조 경외"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.confusion",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.confusion",
+      "note": "수난 예고를 받아들이지 못한 신학적 긴장 (Phase 4 여정에서 심화)"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.grief",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.grief",
+      "note": "사탄 책망 + 수난 예고로 축적된 슬픔"
+    }
+  ],
+  "note_theological": "베드로의 '반석/사탄' 이중 정체성은 slow_state.identity_shift로 carry — Phase 4 여정에서 간간이 드러남."
+}

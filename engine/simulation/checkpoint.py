@@ -33,12 +33,33 @@ class Checkpoint(BaseModel):
 
 
 class ActionRecord(BaseModel):
-    """시뮬레이션 중 기록된 행동."""
+    """시뮬레이션 중 기록된 행동.
+
+    v1.0+ Trace Schema (TRACE_SCHEMA.md) 확장 필드:
+    - observable_from: 이 행동을 관찰 가능한 다른 agent IDs (목격자 시점 필터)
+    - visible_signal: 외부에서 관찰되는 행동 서술 (v2.0 렌더러 전용)
+
+    두 필드 모두 default이며 기존 코드 backward compatible.
+    """
 
     tick: int = Field(ge=0)
     event_id: str
     chosen_action: str
     weights: dict[str, float] = Field(default_factory=dict)
+    observable_from: list[str] = Field(
+        default_factory=list,
+        description="이 행동을 관찰 가능한 agent IDs (비어있으면 모두에게 관찰 가능)",
+    )
+    visible_signal: str | None = Field(
+        default=None,
+        description="외부에서 관찰되는 행동 서술 (v2.0 렌더러 전용)",
+    )
+    weight_breakdown: dict[str, float] | None = Field(
+        default=None,
+        description="선택된 action의 weight 구성 요소 분해 (TRACE_SCHEMA §2.2). "
+                    "base + state_mult.<field> contributions + final. "
+                    "v1.0 latent drive 도입 시 drive.<axis> 기여 추가 예정.",
+    )
 
 
 class CheckpointResult(BaseModel):
@@ -106,10 +127,29 @@ def _check_action_taken(
     params: dict[str, Any],
     action_history: list[ActionRecord],
 ) -> tuple[bool, str]:
-    """특정 행동이 수행되었는지 확인한다."""
+    """특정 행동이 수행되었는지 확인한다.
+
+    파라미터:
+        action_id: 검사할 행동 ID
+        min_count: 최소 발생 횟수 (기본 1)
+        at_tick_range: [min, max] 절대 tick 범위 (optional)
+        relative_to_event: 기준 이벤트 ID (optional) -- 이벤트 발생 tick 기준으로 상대 범위 계산
+        relative_offset: [before, after] 기준 이벤트 tick 전후 범위 (기본 [0, 10])
+    """
     action_id = params.get("action_id", "")
     min_count = params.get("min_count", 1)
     tick_range = params.get("at_tick_range")
+
+    # 이벤트-상대적 범위: relative_to_event가 있으면 at_tick_range 대신 동적 계산
+    rel_event = params.get("relative_to_event")
+    if rel_event is not None and tick_range is None:
+        offset = params.get("relative_offset", [0, 10])
+        # 기준 이벤트의 tick을 action_history에서 찾기
+        ref_tick = next(
+            (a.tick for a in action_history if a.event_id == rel_event), None
+        )
+        if ref_tick is not None:
+            tick_range = [ref_tick - offset[0], ref_tick + offset[1]]
 
     matching = [
         a for a in action_history

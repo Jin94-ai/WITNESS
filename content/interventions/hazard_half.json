@@ -1,0 +1,5 @@
+{
+  "intervention_id": "hazard_half",
+  "description": "모든 Person Engine hazard rate를 절반으로. Expected: arrest 타이밍 후반으로 이동, trigger count 감소 (비선형 — hazard pipeline과 trigger pipeline의 coupling이 영향 받음).",
+  "hazard_rate_scale": 0.5
+}

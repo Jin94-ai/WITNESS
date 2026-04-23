@@ -1,0 +1,50 @@
+{
+  "_doc": "Peter initial ActiveState (v3 Phase 2 v2). 수난 주간 직전 기준.",
+  "_scenario": "peter_passion_week",
+  "_date": "2026-04-22",
+
+  "scalar": {
+    "fear": 3.0,
+    "hope": 7.0,
+    "grief": 0.5,
+    "confusion": 4.0,
+    "joy": 5.0,
+    "anger": 2.0,
+    "awe": 8.0,
+    "fatigue": 3.0,
+    "hunger": 2.0,
+    "vitality": 8.0,
+    "doubt": 1.5,
+    "resolve": 8.5,
+    "trauma": 0.0
+  },
+
+  "target_aware": {
+    "love": {
+      "primary_figure": 9.5,
+      "peers": 7.0,
+      "family": 7.5
+    },
+    "loyalty": {
+      "primary_figure": 9.8,
+      "peers": 6.5
+    },
+    "trust": {
+      "primary_figure": 9.0,
+      "peers": 7.0
+    },
+    "belonging": {
+      "twelve_disciples": 9.2,
+      "broader_followers": 5.5
+    },
+    "guilt": {
+      "primary_figure": 0.0,
+      "self": 1.0
+    },
+    "shame": {
+      "crowd": 0.0,
+      "peers": 0.0,
+      "self": 0.5
+    }
+  }
+}

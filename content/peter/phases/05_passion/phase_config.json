@@ -1,0 +1,12 @@
+{
+  "phase_id": "05_passion",
+  "description": "Phase 5: 수난주간 + 부활 + 승천 (42일). 예루살렘 입성부터 승천까지. 기존 v0.7 500 tick scenario와 동일 canonical_events 재사용 (linked-life mode에서는 Phase 4 종료 상태가 Peter/Judas 시작 상태로 주입됨).",
+  "tick_scale_hours": 2.0,
+  "tick_unit_note": "legacy v0.7 기준 2h/tick",
+  "max_tick": 500,
+  "tick_offset_from_life_start": 864,
+  "_tick_offset_note": "Phase 1 (84) + Phase 2 (540) + Phase 3 (150) + Phase 4 (90) = 864",
+  "canonical_events_path": "content/peter/canonical_events.json",
+  "_events_reuse_note": "legacy v0.7 시나리오의 canonical_events.json을 재사용. Phase 5만 실행하는 legacy-phase5 모드는 phases=None을 사용; linked-life 모드에서는 Phase 4 handoff로 peter/judas 상태가 override됨.",
+  "scripture_refs_note": "마 21-28, 막 11-16, 눅 19-24, 요 12-21 — 공관복음 수난/부활 narrative. 상세 정경 말씀은 content/shared/scripture/ 에 유지."
+}

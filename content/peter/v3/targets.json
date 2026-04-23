@@ -1,0 +1,16 @@
+{
+  "_doc": "Peter 시나리오 target 매핑 (v3 Rule #18). Generic slot → scenario-specific identity.",
+  "_scenario": "peter_passion_week",
+
+  "target_aliases": {
+    "primary_figure": "jesus",
+    "peers": "other_disciples",
+    "family": "wife_and_mother_in_law",
+    "crowd": "jerusalem_crowd",
+    "self": "peter_himself",
+    "twelve_disciples": "twelve_disciples_group",
+    "broader_followers": "seventy_disciples_group"
+  },
+
+  "_note": "Engine 은 generic slot key 만 사용 (Rule #1). Aliases 는 rendering 또는 content-level 디버깅 용."
+}

@@ -225,6 +225,109 @@ class TestStateComparison:
         history = {100: _state(tick=100)}
         assert not evaluate_checkpoint(cp, history, []).passed
 
+
+class TestEventRelativeCheckpoint:
+    """이벤트-상대적 체크포인트 테스트."""
+
+    def test_relative_to_event_pass(self):
+        """기준 이벤트 tick 기준으로 상대 범위에서 행동을 찾는다."""
+        cp = Checkpoint(
+            checkpoint_id="test_relative",
+            tick=200,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="action_taken",
+                    params={
+                        "action_id": "deny",
+                        "min_count": 2,
+                        "relative_to_event": "arrest",
+                        "relative_offset": [5, 20],
+                    },
+                )
+            ],
+        )
+        # arrest가 tick 180에서 발생, deny가 tick 185, 190에서 발생
+        actions = [
+            ActionRecord(tick=180, event_id="arrest", chosen_action="flee"),
+            ActionRecord(tick=185, event_id="denial", chosen_action="deny"),
+            ActionRecord(tick=190, event_id="denial", chosen_action="deny"),
+        ]
+        result = evaluate_checkpoint(cp, {}, actions)
+        assert result.passed
+
+    def test_relative_to_event_fail_outside_range(self):
+        """기준 이벤트 범위 밖의 행동은 카운트하지 않는다."""
+        cp = Checkpoint(
+            checkpoint_id="test_relative",
+            tick=200,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="action_taken",
+                    params={
+                        "action_id": "deny",
+                        "min_count": 2,
+                        "relative_to_event": "arrest",
+                        "relative_offset": [5, 10],
+                    },
+                )
+            ],
+        )
+        # arrest가 tick 180, deny가 tick 150(범위 밖)과 195(범위 밖)에서 발생
+        actions = [
+            ActionRecord(tick=180, event_id="arrest", chosen_action="flee"),
+            ActionRecord(tick=150, event_id="denial", chosen_action="deny"),
+            ActionRecord(tick=195, event_id="denial", chosen_action="deny"),
+        ]
+        result = evaluate_checkpoint(cp, {}, actions)
+        assert not result.passed
+
+    def test_relative_no_reference_event(self):
+        """기준 이벤트가 없으면 tick_range=None -> 전체 범위에서 검색."""
+        cp = Checkpoint(
+            checkpoint_id="test_relative",
+            tick=200,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="action_taken",
+                    params={
+                        "action_id": "deny",
+                        "min_count": 1,
+                        "relative_to_event": "nonexistent_event",
+                    },
+                )
+            ],
+        )
+        # 기준 이벤트가 없으면 tick_range=None이므로 전체에서 검색
+        actions = [
+            ActionRecord(tick=50, event_id="e1", chosen_action="deny"),
+        ]
+        result = evaluate_checkpoint(cp, {}, actions)
+        assert result.passed
+
+    def test_relative_fallback_to_at_tick_range(self):
+        """at_tick_range가 있으면 relative_to_event보다 우선."""
+        cp = Checkpoint(
+            checkpoint_id="test",
+            tick=200,
+            conditions=[
+                CheckpointCondition(
+                    condition_type="action_taken",
+                    params={
+                        "action_id": "deny",
+                        "at_tick_range": [100, 110],
+                        "relative_to_event": "arrest",
+                    },
+                )
+            ],
+        )
+        # at_tick_range가 있으면 relative_to_event는 무시됨
+        actions = [
+            ActionRecord(tick=180, event_id="arrest", chosen_action="flee"),
+            ActionRecord(tick=105, event_id="e1", chosen_action="deny"),
+        ]
+        result = evaluate_checkpoint(cp, {}, actions)
+        assert result.passed
+
     def test_no_state(self):
         cp = Checkpoint(
             checkpoint_id="test",

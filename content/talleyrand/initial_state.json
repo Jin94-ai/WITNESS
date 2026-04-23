@@ -1,0 +1,42 @@
+{
+  "agent_id": "talleyrand",
+  "tick": 0,
+  "physical": {
+    "fatigue": 3.0,
+    "hunger": 2.0,
+    "health": 7.0,
+    "location": "paris"
+  },
+  "emotions": {
+    "fear": 3.0,
+    "hope": 5.0,
+    "grief": 2.0,
+    "confusion": 4.0,
+    "love": 4.0,
+    "awe": 2.0
+  },
+  "relationships": {},
+  "domain_state": {
+    "type": "diplomacy",
+    "current_regime": "ancien_regime",
+    "alignment_stance": "pragmatic_serve",
+    "survival_streak_ticks": 0.0,
+    "leverage": 6.0,
+    "legitimacy_anchor": 3.5,
+    "reputation_ambiguity": 4.0,
+    "network_depth": 5.0,
+    "network_regime_span": 1,
+    "moral_fatigue": 0.0,
+    "compromise_count": 0
+  },
+  "slow_state": {
+    "moral_injury": 0.0,
+    "event_trauma": 0.0,
+    "identity_shift": 0.0,
+    "trust_scar": 0.0,
+    "breach_count": 0.0
+  },
+  "_meta": {
+    "description": "Talleyrand at ancien régime (pre-1789). Seminary/early political career. Skeleton — v1.2 Iter 54. Era-specific tuning TBD."
+  }
+}

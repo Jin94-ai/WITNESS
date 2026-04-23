@@ -1,0 +1,30 @@
+{
+  "agent_id": "caiaphas",
+  "tick": 0,
+  "physical": {
+    "fatigue": 1.0,
+    "hunger": 1.0,
+    "health": 8.0,
+    "location": "jerusalem_temple"
+  },
+  "emotions": {
+    "fear": 3.0,
+    "hope": 5.0,
+    "grief": 0.0,
+    "confusion": 1.0,
+    "love": 1.0
+  },
+  "relationships": {
+    "jesus": {"target_id": "jesus", "trust": 1.0, "love": 0.0, "awe": 2.0, "understanding": 3.0},
+    "judas": {"target_id": "judas", "trust": 3.0, "love": 0.0, "awe": 0.0, "understanding": 2.0},
+    "rome": {"target_id": "rome", "trust": 3.0, "love": 0.0, "awe": 5.0, "understanding": 6.0}
+  },
+  "domain_state": {
+    "type": "political_calculation",
+    "threat_assessment": 4.0,
+    "political_calculation": 6.0,
+    "religious_authority": 7.0,
+    "pragmatism": 7.0,
+    "intelligence_quality": 3.0
+  }
+}

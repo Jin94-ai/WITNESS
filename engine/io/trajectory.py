@@ -94,6 +94,88 @@ def save_trajectory_dataset(
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
 
+def multi_result_to_record(result: Any) -> dict[str, Any]:
+    """MultiAgentResult를 저장 가능한 flat record로 변환한다.
+
+    에이전트별 행동/상태를 하나의 레코드로 통합.
+    UMAP 클러스터링 파이프라인과 호환.
+    """
+    from collections import Counter
+
+    record: dict[str, Any] = {
+        "seed": result.seed,
+    }
+
+    # 에이전트별 최종 상태
+    for aid, state in result.final_states.items():
+        record[f"{aid}_fear"] = state.emotions.fear
+        record[f"{aid}_hope"] = state.emotions.hope
+        record[f"{aid}_grief"] = state.emotions.grief
+        record[f"{aid}_love"] = state.emotions.love
+        record[f"{aid}_moral_injury"] = state.slow_state.moral_injury
+        record[f"{aid}_identity_shift"] = state.slow_state.identity_shift
+        record[f"{aid}_trust_scar"] = state.slow_state.trust_scar
+
+    # 에이전트별 행동 카운트
+    for aid, history in result.action_histories.items():
+        counts = Counter(a.chosen_action for a in history)
+        for action, count in counts.items():
+            record[f"{aid}_action_{action}"] = count
+
+    # 트리거 이벤트
+    trigger_ticks: dict[str, int] = {}
+    for t in result.fired_triggers:
+        tid = t["trigger_id"]
+        if tid not in trigger_ticks:
+            trigger_ticks[tid] = t["tick"]
+    record["trigger_ticks"] = trigger_ticks
+
+    # Hazard 이벤트
+    record["n_hazard_events"] = len(result.fired_events)
+    record["n_triggers"] = len(result.fired_triggers)
+
+    # 정경 일치율 (있으면)
+    for aid, rate in result.canonical_match_rates.items():
+        record[f"{aid}_match_rate"] = rate
+
+    return record
+
+
+def multi_dataset_to_feature_matrix(
+    records: list[dict[str, Any]],
+    feature_keys: list[str] | None = None,
+) -> tuple[list[list[float]], list[str]]:
+    """multi-agent 레코드 목록을 feature matrix로 변환한다.
+
+    UMAP 클러스터링 파이프라인과 호환.
+
+    Args:
+        records: multi_result_to_record 결과 목록
+        feature_keys: 사용할 feature 키 목록. None이면 자동 탐지.
+
+    Returns:
+        (feature_matrix, feature_names) 튜플
+    """
+    if not records:
+        return [], []
+
+    # 자동 탐지: 모든 레코드에서 숫자형 키 수집
+    if feature_keys is None:
+        all_keys: set[str] = set()
+        for rec in records:
+            for k, v in rec.items():
+                if isinstance(v, (int, float)) and k != "seed":
+                    all_keys.add(k)
+        feature_keys = sorted(all_keys)
+
+    matrix = []
+    for rec in records:
+        row = [float(rec.get(k, 0.0)) for k in feature_keys]
+        matrix.append(row)
+
+    return matrix, feature_keys
+
+
 def load_trajectory_dataset(path: Path) -> list[dict[str, Any]]:
     """JSONL에서 trajectory 데이터셋을 로드한다."""
     records: list[dict[str, Any]] = []

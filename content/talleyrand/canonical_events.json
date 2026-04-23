@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "agent_id": "talleyrand",
+    "scenario_id": "french_regime_transitions",
+    "tick_unit": "one_month",
+    "tick_scale_hours": 720.0,
+    "description": "Talleyrand 1789-1830 career. 6 regime transitions as canonical external events. Each event sets current_regime + resets survival_streak_ticks + shifts leverage/reputation based on historical adaptation.",
+    "historical_base_year": 1789
+  },
+  "events": [
+    {
+      "event_id": "regime_01_revolution_begins",
+      "tick": 1,
+      "year_approx": 1789,
+      "event_type": "canonical",
+      "description": "프랑스 혁명 발발. Ancien régime → Revolution. Talleyrand는 주교였으나 혁명에 빠르게 가담 (교회 재산 국유화 제안).",
+      "source_ref": "Bastille, 1789-07-14; Assembly of Notables",
+      "effects": [
+        {"field_path": "domain_state.current_regime", "operation": "set", "value": "revolution"},
+        {"field_path": "domain_state.survival_streak_ticks", "operation": "set", "value": 0.0},
+        {"field_path": "domain_state.alignment_stance", "operation": "set", "value": "pragmatic_serve"},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": 1.0},
+        {"field_path": "domain_state.compromise_count", "operation": "add", "value": 1},
+        {"field_path": "emotions.confusion", "operation": "add", "value": 1.5}
+      ]
+    },
+    {
+      "event_id": "regime_02_directory",
+      "tick": 72,
+      "year_approx": 1795,
+      "event_type": "canonical",
+      "description": "공포정치 이후 집정내각 Directory. Talleyrand 미국 망명에서 귀환, 외무장관직 획득 (1797).",
+      "source_ref": "Directory, Treaty of Campo Formio period",
+      "effects": [
+        {"field_path": "domain_state.current_regime", "operation": "set", "value": "directory"},
+        {"field_path": "domain_state.survival_streak_ticks", "operation": "set", "value": 0.0},
+        {"field_path": "domain_state.alignment_stance", "operation": "set", "value": "pragmatic_serve"},
+        {"field_path": "domain_state.leverage", "operation": "add", "value": 1.5},
+        {"field_path": "domain_state.network_regime_span", "operation": "add", "value": 1}
+      ]
+    },
+    {
+      "event_id": "regime_03_consulate_18_brumaire",
+      "tick": 120,
+      "year_approx": 1799,
+      "event_type": "canonical",
+      "description": "브뤼메르 18일 쿠데타. Napoleon 권력 장악. Talleyrand 공모 + 새 체제에서 외무장관 유지.",
+      "source_ref": "18 Brumaire coup, 1799-11-09",
+      "effects": [
+        {"field_path": "domain_state.current_regime", "operation": "set", "value": "consulate"},
+        {"field_path": "domain_state.survival_streak_ticks", "operation": "set", "value": 0.0},
+        {"field_path": "domain_state.alignment_stance", "operation": "set", "value": "overt_loyal"},
+        {"field_path": "domain_state.leverage", "operation": "add", "value": 1.0},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": 0.5},
+        {"field_path": "domain_state.compromise_count", "operation": "add", "value": 1},
+        {"field_path": "domain_state.network_regime_span", "operation": "add", "value": 1}
+      ]
+    },
+    {
+      "event_id": "regime_04_empire_proclaimed",
+      "tick": 180,
+      "year_approx": 1804,
+      "event_type": "canonical",
+      "description": "나폴레옹 제국 선포. Talleyrand 여전히 외무장관, 그러나 점차 Napoleon과 거리.",
+      "source_ref": "Napoleon's coronation, 1804-12-02",
+      "effects": [
+        {"field_path": "domain_state.current_regime", "operation": "set", "value": "empire"},
+        {"field_path": "domain_state.survival_streak_ticks", "operation": "set", "value": 0.0},
+        {"field_path": "domain_state.leverage", "operation": "add", "value": 1.5},
+        {"field_path": "domain_state.legitimacy_anchor", "operation": "add", "value": -0.5}
+      ]
+    },
+    {
+      "event_id": "regime_04b_talleyrand_falls_from_favor",
+      "tick": 216,
+      "year_approx": 1807,
+      "event_type": "canonical",
+      "description": "외무장관 사임. Napoleon과 결별. 이후 은밀히 연합군(Austria/Russia)과 협상 (covert_maneuver).",
+      "source_ref": "Talleyrand resignation 1807, Erfurt meeting 1808",
+      "effects": [
+        {"field_path": "domain_state.alignment_stance", "operation": "set", "value": "covert_maneuver"},
+        {"field_path": "domain_state.moral_fatigue", "operation": "add", "value": 1.0},
+        {"field_path": "domain_state.compromise_count", "operation": "add", "value": 1},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": 1.5},
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.0}
+      ]
+    },
+    {
+      "event_id": "regime_05_bourbon_restoration",
+      "tick": 300,
+      "year_approx": 1814,
+      "event_type": "canonical",
+      "description": "나폴레옹 몰락 + 부르봉 복고. Talleyrand 임시정부 수반, 비엔나 회의에서 패전국 프랑스 복권 협상.",
+      "source_ref": "Congress of Vienna 1814-1815",
+      "effects": [
+        {"field_path": "domain_state.current_regime", "operation": "set", "value": "bourbon_restoration"},
+        {"field_path": "domain_state.survival_streak_ticks", "operation": "set", "value": 0.0},
+        {"field_path": "domain_state.alignment_stance", "operation": "set", "value": "overt_loyal"},
+        {"field_path": "domain_state.leverage", "operation": "add", "value": 2.0},
+        {"field_path": "domain_state.network_regime_span", "operation": "add", "value": 1},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": 1.0},
+        {"field_path": "emotions.hope", "operation": "add", "value": 1.5}
+      ]
+    },
+    {
+      "event_id": "interlude_01_hundred_days",
+      "tick": 312,
+      "year_approx": 1815,
+      "event_type": "canonical",
+      "description": "나폴레옹의 100일 복귀. Vienna에 있던 Talleyrand는 위치 유지하며 연합군 협상 지속. 일시적으로 fear 상승 + leverage 하락.",
+      "source_ref": "Hundred Days, 1815-03 to 1815-07",
+      "effects": [
+        {"field_path": "emotions.fear", "operation": "add", "value": 1.5},
+        {"field_path": "domain_state.leverage", "operation": "add", "value": -1.0},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": 0.5}
+      ]
+    },
+    {
+      "event_id": "interlude_02_vienna_settlement",
+      "tick": 318,
+      "year_approx": 1815,
+      "event_type": "canonical",
+      "description": "비엔나 회의 최종 조약 체결. Talleyrand가 legitimist 원칙을 협상력으로 전환하여 프랑스 복권. 외교사적 정점.",
+      "source_ref": "Final Act of Congress of Vienna, 1815-06-09",
+      "effects": [
+        {"field_path": "emotions.hope", "operation": "add", "value": 2.0},
+        {"field_path": "emotions.fear", "operation": "add", "value": -1.5},
+        {"field_path": "domain_state.leverage", "operation": "add", "value": 2.0},
+        {"field_path": "domain_state.legitimacy_anchor", "operation": "add", "value": 1.5},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": -0.5}
+      ]
+    },
+    {
+      "event_id": "interlude_03_napoleon_death",
+      "tick": 384,
+      "year_approx": 1821,
+      "event_type": "canonical",
+      "description": "세인트헬레나의 Napoleon 사망. Talleyrand의 가장 큰 정적 소멸. 회고록 집필 가속. reputation ambiguity 감소 (이제 해명할 대상 없음).",
+      "source_ref": "Napoleon's death, 1821-05-05",
+      "effects": [
+        {"field_path": "emotions.grief", "operation": "add", "value": 0.5},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": -1.0},
+        {"field_path": "domain_state.moral_fatigue", "operation": "add", "value": -0.5}
+      ]
+    },
+    {
+      "event_id": "regime_06_july_monarchy",
+      "tick": 492,
+      "year_approx": 1830,
+      "event_type": "canonical",
+      "description": "7월 혁명, Louis-Philippe 즉위. Talleyrand 영국 대사직 수락 (77세). 5번째 체제 생존.",
+      "source_ref": "July Revolution 1830, London embassy",
+      "effects": [
+        {"field_path": "domain_state.current_regime", "operation": "set", "value": "july_monarchy"},
+        {"field_path": "domain_state.survival_streak_ticks", "operation": "set", "value": 0.0},
+        {"field_path": "domain_state.alignment_stance", "operation": "set", "value": "pragmatic_serve"},
+        {"field_path": "domain_state.network_regime_span", "operation": "add", "value": 1},
+        {"field_path": "domain_state.reputation_ambiguity", "operation": "add", "value": 1.0},
+        {"field_path": "physical.fatigue", "operation": "add", "value": 1.0}
+      ]
+    }
+  ]
+}

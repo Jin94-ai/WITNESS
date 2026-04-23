@@ -1,0 +1,5 @@
+{
+  "intervention_id": "remove_judas",
+  "description": "Judas (inform_authorities + betray agent) 제거 — Spike 3 Phase 3D counterfactual을 Spike 4 intervention framework로 재현. Expected: rumours seeded 대폭 감소, jesus_movement influence 붕괴 (rumour pipeline의 유일 source).",
+  "agent_remove": ["judas"]
+}

@@ -1,0 +1,30 @@
+{
+  "phase_from": "01_calling",
+  "phase_to": "02_galilean",
+  "description": "소명 phase 종료 상태 → 갈릴리 사역 phase 시작 상태 전달 (MVP mock)",
+  "carry_all_slow_state": true,
+  "mappings": [
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "domain_state.obedience_maturity",
+      "target_agent_id": "peter",
+      "target_field_path": "domain_state.obedience_maturity",
+      "note": "소명 phase에서 누적된 순종 성숙도"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.awe",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.awe",
+      "note": "기적 목격으로 고조된 경외감"
+    },
+    {
+      "source_agent_id": "peter",
+      "source_field_path": "emotions.hope",
+      "target_agent_id": "peter",
+      "target_field_path": "emotions.hope",
+      "note": "소명 수락 후 강화된 희망"
+    }
+  ],
+  "note_reviewer_feedback": "ChatGPT 지적: canonical intervention = reparameterization shock, 완전 회복 아님. 이 handoff는 carry-forward만 수행하며 state를 reset하지 않음."
+}

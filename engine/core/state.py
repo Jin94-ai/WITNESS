@@ -20,13 +20,18 @@ class PhysicalState(BaseModel):
 
 
 class EmotionalState(BaseModel):
-    """감정 상태. 각 감정은 0(없음)~10(극대) 범위."""
+    """감정 상태. 각 감정은 0(없음)~10(극대) 범위.
+
+    v1.2 Phase-linked life architecture: `awe` 추가 (소명 phase 기적 목격,
+    변화산 등 경외 중심 사건 모델링). default 0.0 = backward compat.
+    """
 
     fear: float = Field(default=0.0, ge=0.0, le=10.0, description="두려움")
     hope: float = Field(default=5.0, ge=0.0, le=10.0, description="희망")
     grief: float = Field(default=0.0, ge=0.0, le=10.0, description="슬픔")
     confusion: float = Field(default=0.0, ge=0.0, le=10.0, description="혼란")
     love: float = Field(default=5.0, ge=0.0, le=10.0, description="사랑")
+    awe: float = Field(default=0.0, ge=0.0, le=10.0, description="경외 (v1.2)")
 
 
 class Relationship(BaseModel):
@@ -55,7 +60,7 @@ class SlowState(BaseModel):
     사건이 남기는 '상처', '결정 이력', '정체성 변화'를 추적한다.
     fast state(emotions)는 중앙으로 수렴하지만, slow state는 축적된다.
 
-    인물 비종속 네이밍: 베드로의 "부인"이든 반 고흐의 "자해"든
+    인물 비종속 네이밍: 어떤 인물��� 위반 행동이든
     동일한 추상 변수로 표현 가능.
     """
 
@@ -65,7 +70,7 @@ class SlowState(BaseModel):
     )
     breach_count: float = Field(
         default=0.0, ge=0.0,
-        description="관계적/도덕적 위반 누적. (부인, 배신, 약속 파기 등)",
+        description="자기파괴적/위반적 행동 누적. (위반, 자해, 약속 파기, 폭발 등)",
     )
     event_trauma: float = Field(
         default=0.0, ge=0.0, le=10.0,
@@ -81,14 +86,62 @@ class SlowState(BaseModel):
     )
 
 
+class LatentDriveState(BaseModel):
+    """v1.0 Latent Drive Bottleneck 학습 결과 (예약 필드).
+
+    예측 학습된 잠재 drive 축. 3~8차원 권장.
+    이름은 학습 후 해석 (attachment, shame, calling 등).
+
+    v0.x에서는 None 유지 (backward compatible).
+    v1.0 학습 엔진 도입 시 활성화.
+
+    참조: DESIGN_LATENT_DRIVE.md
+    """
+
+    values: list[float] = Field(
+        default_factory=list,
+        description="잠재 drive 벡터 (차원 d = 3~8)",
+    )
+    dim: int = Field(default=0, ge=0, description="latent dim")
+
+
+class AgentBelief(BaseModel):
+    """v1.1 한 agent가 다른 agent에 대해 갖는 추정 (목격자 정체성).
+
+    관측에 기반한 target agent의 상태/drive 추정.
+    Bayesian belief update로 갱신 (v1.1 relational extension).
+
+    v0.x에서는 사용되지 않음 (dict 비어있음).
+    v1.1 도입 시 per-agent observation history가 축적됨.
+
+    참조: TRACE_SCHEMA.md §2.3 belief_update
+    """
+
+    target_id: str = Field(description="추정 대상 에이전트 ID")
+    estimated_state: dict[str, float] = Field(
+        default_factory=dict,
+        description="field_path → estimated value (e.g. 'emotions.fear': 7.0)",
+    )
+    confidence: float = Field(
+        default=0.0, ge=0.0, le=1.0,
+        description="추정 신뢰도 (관측 횟수 기반)",
+    )
+    observation_count: int = Field(
+        default=0, ge=0,
+        description="target agent 행동을 관측한 횟수",
+    )
+
+
 class AgentState(BaseModel):
     """에이전트의 전체 상태 스냅샷.
 
     불변으로 사용한다. 상태 갱신 시 model_copy(update=...)로 새 인스턴스를 생성.
 
-    두 층의 상태:
+    네 층의 상태:
     - fast state (emotions): 항상성으로 중앙 수렴. 현재 감정.
     - slow state: 비가역적 누적. 사건의 흔적.
+    - drive_state (v1.0+): 학습된 latent drive. None이면 symbolic rule only.
+    - beliefs (v1.1+): 타 agent에 대한 추정. Witness 목격자 정체성의 핵심.
     """
 
     agent_id: str = Field(description="에이전트 고유 ID")
@@ -98,6 +151,14 @@ class AgentState(BaseModel):
     slow_state: SlowState = Field(default_factory=SlowState)
     relationships: dict[str, Relationship] = Field(default_factory=dict)
     domain_state: DomainState | None = Field(default=None)
+    drive_state: LatentDriveState | None = Field(
+        default=None,
+        description="v1.0 학습된 latent drive (None = symbolic rule only, backward compat)",
+    )
+    beliefs: dict[str, AgentBelief] = Field(
+        default_factory=dict,
+        description="target_id → AgentBelief (v1.1 relational). v0.x에서는 empty.",
+    )
 
 
 def clamp(value: float, min_val: float = 0.0, max_val: float = 10.0) -> float:
@@ -150,7 +211,6 @@ def set_nested_value(state: AgentState, field_path: str, value: float | str) -> 
 
     # 2-depth: "emotions.fear" -> emotions 객체를 복사하며 fear 갱신
     top_field = parts[0]
-    ".".join(parts[1:])
     top_obj = getattr(state, top_field, None)
 
     if top_obj is None:

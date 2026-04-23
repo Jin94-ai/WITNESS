@@ -1,6 +1,11 @@
 """공유 테스트 fixture.
 
 반복적인 엔진/설정 생성을 fixture로 통합.
+
+Usage:
+    pytest                    # 전체 테스트 (fast + slow)
+    pytest -m "not slow"      # 빠른 테스트만 (~30초)
+    pytest -m slow            # 느린 테스트만
 """
 
 from pathlib import Path

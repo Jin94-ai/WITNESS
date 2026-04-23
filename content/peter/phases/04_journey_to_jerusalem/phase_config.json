@@ -1,0 +1,26 @@
+{
+  "phase_id": "04_journey_to_jerusalem",
+  "description": "Phase 4: 예루살렘 여정 (약 3개월). 변화산 직후부터 예루살렘 입성 직전까지. 수난 예고 반복 + 제자들의 혼란 + 여정 중 가르침.",
+  "tick_scale_hours": 24.0,
+  "tick_unit_note": "여정 phase는 sparse 1일/tick — 핵심 이벤트는 연속 tick dense 표현",
+  "max_tick": 90,
+  "max_tick_note": "약 3개월 = 90일 × 1일/tick",
+  "tick_offset_from_life_start": 774,
+  "_tick_offset_note": "Phase 1 (84) + Phase 2 (540) + Phase 3 (150) = 774",
+  "exit_condition": {
+    "triggered_by": "jerusalem_approach",
+    "max_tick_fallback": 90
+  },
+  "canonical_events_path": "content/peter/phases/04_journey_to_jerusalem/canonical_events.json",
+  "scripture_refs": [
+    "마 18:1-6",
+    "마 18:21-22",
+    "마 19:16-30",
+    "마 20:17-19",
+    "마 20:20-28",
+    "막 9:33-37",
+    "막 10:32-34",
+    "눅 22:3",
+    "요 12:1-11"
+  ]
+}
