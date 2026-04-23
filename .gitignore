@@ -73,7 +73,25 @@ build/
 *.db
 *.sqlite
 .coverage
-data/*.jsonl
-data/*.npz
+coverage.xml
 output/
 .claude/scheduled_tasks.lock
+
+# 대용량 생성 데이터 — reproducible 이므로 repo 미포함
+# (필요 시 scripts/ 로 재생성). ABC snapshots(.db) / trajectory jsonl /
+# numpy array(X.npy etc) 는 전부 실험 생성물.
+# git 구문: data/* 로 내용은 제외, README.md/.gitkeep 만 예외.
+data/*
+!data/README.md
+!data/.gitkeep
+
+# 벤치마크 아티팩트 (소스는 OK, 결과는 제외)
+benchmarks/results/
+*.prof
+
+# Backup / 임시 저장
+*.bak
+*.orig
+
+# 실측 산출물 중 대용량은 제외 (구조/코드만 커밋)
+# 단 docs/person/v3_measurement/*.json 은 유지 (rubric 비교 소스)
