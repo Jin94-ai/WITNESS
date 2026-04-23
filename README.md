@@ -30,7 +30,7 @@ All three use **identical engine code**. Only `content/` differs.
 | **v1.2 (current)** | **Phase-linked continuous life + Talleyrand 3rd scenario + Stage 2 bridge** | **5-phase arc + universality proof + LearnedLinearEncoder** |
 | v2.0 | Narrative Witness renderer (player experience) | Planned |
 
-See `DESIGN.md` for full roadmap; `DESIGN_LATENT_DRIVE.md` for v1.0 architecture.
+See `DESIGN.md` for full roadmap; `docs/specs/DESIGN_LATENT_DRIVE.md` for v1.0 architecture.
 
 ## Quick start
 
@@ -45,17 +45,17 @@ python main.py --multi
 python main.py --multi --person vangogh --runs 50
 
 # v0.7 trace pipeline demo (sim → trace → player view → JSONL → narrative)
-python demo_v07.py --scenario peter
-python demo_v07.py --scenario vangogh --seed 0
+python examples/demo_v07.py --scenario peter
+python examples/demo_v07.py --scenario vangogh --seed 0
 
 # v1.2 phase-linked arc demo (Peter 공생애, absolute-time output)
-python demo_phased.py --seed 0                 # 4-phase (~101 days, 2 agents)
-python demo_phased.py --seed 0 --full-passion  # 5-phase + legacy 500-tick passion (~143 days, 4 agents)
-python demo_phased.py --with-recovery          # opt-in slow state recovery rule
-python demo_phased.py --show-drive --encoder learned  # v1.0 Stage 2 LDA encoder + drive trajectory
+python examples/demo_phased.py --seed 0                 # 4-phase (~101 days, 2 agents)
+python examples/demo_phased.py --seed 0 --full-passion  # 5-phase + legacy 500-tick passion (~143 days, 4 agents)
+python examples/demo_phased.py --with-recovery          # opt-in slow state recovery rule
+python examples/demo_phased.py --show-drive --encoder learned  # v1.0 Stage 2 LDA encoder + drive trajectory
 
 # Legacy comprehensive demo
-python demo.py --quick
+python examples/demo.py --quick
 
 # Single-agent mode (legacy)
 python main.py --person peter
@@ -224,7 +224,7 @@ Peter does not see Judas's `inform_authorities`; Caiaphas does.
 This is how the simulator preserves the witness identity: the player only learns
 what the chosen character could plausibly observe.
 
-Full working example: `python demo_v07.py`
+Full working example: `python examples/demo_v07.py`
 
 ## Adding a new person
 
@@ -256,11 +256,21 @@ Python 3.11+ / Pydantic / pytest / SALib / UMAP / sklearn HDBSCAN / shapiq / pyA
 |------|------|
 | `CLAUDE.md` | Behavior rules (absolute, project identity, conventions) |
 | `DESIGN.md` | v0.7 architecture and roadmap (v1.0 → v2.0) |
-| `DESIGN_LATENT_DRIVE.md` | v1.0 Latent Drive model design |
-| `TRACE_SCHEMA.md` | Trace entry types and player-view filter rules |
-| `ITERATION_CLASSIFICATION.md` | 34 exploratory analyses tiered for paper / archive |
-| `PAPER_OUTLINE_V05.md` | v0.6 paper outline (bullet-level) |
-| `PAPER_DRAFT_V06.md` | v0.6 paper working draft (prose, unreviewed) |
-| `RESEARCH.md` | Research findings summary (consolidated) |
-| `SCENARIO_TEMPLATE.md` | Guide for adding a third scenario |
+| `docs/specs/DESIGN_LATENT_DRIVE.md` | v1.0 Latent Drive model design |
+| `docs/specs/TRACE_SCHEMA.md` | Trace entry types and player-view filter rules |
+| `docs/specs/WITNESS_V3_REDESIGN.md` | v3 Phase 2 v2 redesign + redesign phases |
+| `docs/specs/WITNESS_V3_PHASE2_V2_*.md` | v3 concept variables + Dynamics spec |
+| `docs/specs/WORLD_DESIGN*.md` | v2.0 World Engine design |
+| `docs/specs/WORLD_SPIKE_*.md` + `WITNESS_SPIKE_*.md` | Spike-level specs |
+| `docs/specs/SCENARIO_TEMPLATE.md` | Guide for adding a third scenario |
+| `docs/research/RESEARCH.md` | Research findings summary (consolidated) |
+| `docs/research/ITERATION_CLASSIFICATION.md` | 34 exploratory analyses tiered for paper / archive |
+| `docs/research/PAPER_OUTLINE_V05.md` | v0.6 paper outline (bullet-level) |
+| `docs/research/PAPER_DRAFT_V06.md` | v0.6 paper working draft (prose, unreviewed) |
+| `docs/research/PROJECT_DIRECTION_v2.md` | v2 direction notes |
+| `docs/person/` | v3 session artifacts (per-phase reports) |
+| `docs/world/` | World Engine Spike review docs |
+| `docs/sessions/` | Dated session dumps |
+| `examples/` | Runnable demos (demo.py, demo_v07.py, demo_phased.py) |
 | `progress.md` | Session memory / status board |
+| `lessons.md` | Cross-session learnings |

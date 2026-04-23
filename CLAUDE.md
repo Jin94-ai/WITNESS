@@ -8,7 +8,7 @@
 
 ## ABSOLUTE RULES (절대 원칙)
 
-> **v2.0 World Engine 규칙은 추가로 [WORLD_DESIGN.md](WORLD_DESIGN.md) §8에 명시** (ABSOLUTE RULE #6-#9). Rule #10은 Spike 5 세계 확장 원칙으로 여기서만 기록된다. 특히 #3 **예수 비에이전트화**는 **v1.1 amendment**로 변경됨: 예수는 Agent로 구현하되 정경 말씀은 개역개정 원문 보존. World Engine 작업 시 WORLD_DESIGN.md와 [WORLD_DESIGN_v1.1_amendments.md](WORLD_DESIGN_v1.1_amendments.md) 먼저 읽을 것.
+> **v2.0 World Engine 규칙은 추가로 [docs/specs/WORLD_DESIGN.md](docs/specs/WORLD_DESIGN.md) §8에 명시** (ABSOLUTE RULE #6-#9). Rule #10은 Spike 5 세계 확장 원칙으로 여기서만 기록된다. 특히 #3 **예수 비에이전트화**는 **v1.1 amendment**로 변경됨: 예수는 Agent로 구현하되 정경 말씀은 개역개정 원문 보존. World Engine 작업 시 docs/specs/WORLD_DESIGN.md와 [docs/specs/WORLD_DESIGN_v1.1_amendments.md](docs/specs/WORLD_DESIGN_v1.1_amendments.md) 먼저 읽을 것.
 
 1. **엔진/콘텐츠 분리**: `engine/`에 특정 인물 하드코딩 금지. `content/`에 엔진 로직 금지. (`test_integrity.py`로 자동 검증)
 2. **정경 말씀 보존** (베드로 편): 예수님의 정경 말씀은 개역개정 본문 그대로. 재작성/변형 금지.
@@ -144,11 +144,12 @@ Layer 4: Biography Pack (인물 고유 데이터 + ground truth)
 ### 4. v0.7 로드맵 참조
 새 작업 판단 시 다음 문서 우선순위 참조:
 - `DESIGN.md` — v0.7 로드맵 (v0.6 논문 → v1.0 latent drive → v1.1 relational → v1.2 phase → v2.0 renderer)
-- `DESIGN_LATENT_DRIVE.md` — v1.0 Latent Drive Bottleneck 설계 (Stage 1 완료, Stage 2 skeleton)
-- `TRACE_SCHEMA.md` — §2 entry types, §3 render filter
-- `ITERATION_CLASSIFICATION.md` — 기존 34 iteration의 Tier 분류
+- `docs/specs/DESIGN_LATENT_DRIVE.md` — v1.0 Latent Drive Bottleneck 설계 (Stage 1 완료, Stage 2 skeleton)
+- `docs/specs/TRACE_SCHEMA.md` — §2 entry types, §3 render filter
+- `docs/specs/WITNESS_V3_REDESIGN.md` + `docs/specs/WITNESS_V3_PHASE2_V2_*.md` — v3 현재 spec
+- `docs/research/ITERATION_CLASSIFICATION.md` — 기존 34 iteration의 Tier 분류
 - 4/5차 LLM 리뷰 방향성 — `DESIGN.md §0.5` 및 `CLAUDE.md ABSOLUTE RULE #5`에 통합
-- `PAPER_OUTLINE_V05.md` — v0.6 논문 outline
+- `docs/research/PAPER_OUTLINE_V05.md` — v0.6 논문 outline
 
 ### 5. 금지 사항
 - 내부 일관성만 늘리는 새 통계 분석 (4차 리뷰 이후 중단 원칙)
@@ -242,18 +243,35 @@ Witness/
 │   └── bench_simulation.py      # Peter/VG tick/s + memory 벤치마크
 ├── .github/workflows/
 │   └── ci.yml                   # GitHub Actions (ruff + mypy + pytest fast)
-├── CLAUDE.md                    # 이 파일
+├── CLAUDE.md                    # 이 파일 (에이전트 행동 강령)
 ├── DESIGN.md                    # v0.7 설계도 + 6단계 로드맵
-├── DESIGN_LATENT_DRIVE.md       # v1.0 Latent Drive 설계
-├── TRACE_SCHEMA.md              # v0.7 trace pipeline 규격
-├── ITERATION_CLASSIFICATION.md  # 34 iteration + Tier 5 v0.7 trace 분류
-├── PAPER_OUTLINE_V05.md         # v0.6 논문 outline
-├── PAPER_DRAFT_V06.md           # v0.6 논문 working draft (prose, 비제출)
-├── SCENARIO_TEMPLATE.md         # 3번째 시나리오 추가 가이드
 ├── README.md
-├── demo.py                      # v0.5 기본 실행 예시
-├── demo_v07.py                  # v0.7 trace pipeline 데모 (peter/vangogh)
-└── progress.md                  # 세션 메모리
+├── progress.md                  # 세션 메모리
+├── lessons.md                   # 크로스 세션 학습
+├── docs/
+│   ├── specs/                   # 설계 스펙
+│   │   ├── DESIGN_LATENT_DRIVE.md         # v1.0 Latent Drive 설계
+│   │   ├── TRACE_SCHEMA.md                # v0.7 trace pipeline 규격
+│   │   ├── WITNESS_V3_REDESIGN.md         # v3 재설계
+│   │   ├── WITNESS_V3_PHASE2_V2_*.md      # v3 Phase 2 v2 개념/동역학
+│   │   ├── WORLD_DESIGN*.md               # v2.0 World Engine 설계
+│   │   ├── WORLD_SPIKE_*.md               # Spike 단위 상세
+│   │   ├── WITNESS_SPIKE_6_*.md           # Spike 6 (신경망 전환)
+│   │   └── SCENARIO_TEMPLATE.md           # 3번째 시나리오 추가 가이드
+│   ├── research/                # 연구 궤적
+│   │   ├── RESEARCH.md                    # 발견 요약 (통합)
+│   │   ├── ITERATION_CLASSIFICATION.md    # 34 iteration Tier 분류
+│   │   ├── PAPER_OUTLINE_V05.md           # v0.6 논문 outline
+│   │   ├── PAPER_DRAFT_V06.md             # v0.6 논문 draft
+│   │   └── PROJECT_DIRECTION_v2.md        # v2 방향
+│   ├── person/                  # Peter v3 세션 아티팩트
+│   ├── world/                   # World Engine Spike 리뷰
+│   ├── sessions/                # 일자별 세션 덤프
+│   └── HARNESS.md               # H1-H7 반편향 engineering
+└── examples/                    # Runnable demo entry points
+    ├── demo.py                  # v0.5 기본 실행 예시
+    ├── demo_v07.py              # v0.7 trace pipeline 데모 (peter/vangogh)
+    └── demo_phased.py           # v1.2 phase-linked arc demo
 ```
 
 ---

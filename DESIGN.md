@@ -75,7 +75,7 @@
 - [x] Slow state field-specific recovery (`SlowStateFieldRecoveryRule`, Iter 23, opt-in zero-default).
 - [x] 전체 아크 E2E run (Iter 18, 5 phase + Iter 32 Phase 5 linked-life).
 - [x] Absolute time 기반 분석 메트릭 재정의 (`time_axis.py`, Iter 22).
-- [x] Phase-aware 분석 demo script (`demo_phased.py`, Iter 28).
+- [x] Phase-aware 분석 demo script (`examples/demo_phased.py`, Iter 28).
 - [x] 외부 리뷰어 질문 6개 최종 응답 (`REVIEW_RESPONSE_V1_2.md`, Iter 29).
 - [x] Inhibitor Rule content-level deployment (Iter 31, Judas disillusionment 감쇄 6 tests).
 - [x] Hazard `base_rate_unit` per_hour 옵션 (Iter 27, legacy-safe opt-in).
@@ -97,9 +97,9 @@
 - `engine/simulation/training_samples.py` + `drive_training.py` (Stage 2 skeleton + SampleStatistics diagnostic)
 - `engine/core/latent_drive.py` (4 Protocol + Identity impls)
 - CI workflow (ruff + mypy + pytest + coverage artifact) + benchmark script (Peter 1001 tick/s, VG 1267 tick/s baseline)
-- `demo_v07.py --scenario peter|vangogh` — end-to-end pipeline 데모
+- `examples/demo_v07.py --scenario peter|vangogh` — end-to-end pipeline 데모
 - **847 fast tests / 33 archived / 97%+ coverage** (time_axis / slow_recovery / inhibitor 100%)
-- v0.6 paper working draft (`PAPER_DRAFT_V06.md`, 319 lines, §1–§9 + Appendix A/B/C + References)
+- v0.6 paper working draft (`docs/research/PAPER_DRAFT_V06.md`, 319 lines, §1–§9 + Appendix A/B/C + References)
 
 ### 핵심 설계 원칙 (v1.0+)
 
