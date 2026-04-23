@@ -1,0 +1,28 @@
+Witness baseline comparison + ablation hierarchy
+(n_seeds=10, max_tick=300)
+==============================================================================
+
+condition                    arrest    chain      POM     fear     hope
+-----------------------------------------------------------------------
+[BASELINES vs FULL]
+no_trigger                    1.000    0.000    0.500    9.735    8.930
+exogenous_only                1.000    0.100    0.000    9.834    7.239
+single_agent                  1.000    0.000    0.600    0.835    8.750
+random_behavior               1.000    1.000    0.400    9.527    8.947
+full_system                   1.000    0.900    0.500    9.743    8.930
+
+[ABLATION HIERARCHY]
+-----------------------------------------------------------------------
+level_0_hazard_only           1.000    0.000    0.500    1.566    6.663
+level_1_hazard_trigger        1.000    0.000    0.500    1.566    6.663
+level_2_multi_agent           1.000    1.000    0.600    9.756    7.180
+level_3_with_canonical        1.000    0.900    0.500    9.743    8.930
+level_4_full_system           1.000    0.900    0.500    9.742    8.947
+
+==============================================================================
+VERDICT (Full System vs each baseline, 3 metrics):
+  Full > no_trigger: arrest=True, chain=True, POM=True  [PASS]
+  Full > exogenous_only: arrest=True, chain=True, POM=True  [PASS]
+  Full > single_agent: arrest=True, chain=True, POM=False  [MIXED]
+  Full > random_behavior: arrest=True, chain=False, POM=True  [MIXED]
+

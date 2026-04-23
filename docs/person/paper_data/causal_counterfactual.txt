@@ -1,0 +1,20 @@
+Witness counterfactual causal metric (n_seeds=10, max_tick=300, chain_gap<=30)
+====================================================================================================
+
+condition               can_arr  endo_arr  trig_arr   chain     POM    fear    hope
+-----------------------------------------------------------------------------------
+full_system               1.000     1.000     0.900   0.100   0.500   9.743   8.930
+judas_removed             1.000     1.000     0.000   0.000   0.600   9.850   8.953
+caiaphas_removed          1.000     1.000     0.000   0.000   0.700   9.908   8.904
+trigger_removed           1.000     1.000     0.000   0.000   0.500   9.735   8.930
+random_no_judas           1.000     1.000     0.000   0.000   0.800   9.794   9.162
+
+VERDICTS
+-----------------------------------------------------------------------------------
+  causal_dependency [V3/final]: CAUSAL_PASS  (V3 trigger_arrest: full=0.900 vs judas_removed=0.000)
+  causal_dependency [V2/hazard-incl]: CAUSAL_FAIL  (V2 endo inc hazard: full=1.000 vs judas_removed=1.000 — Judas 제거 시에도 hazard 'arrest' event는 fire되므로 V2는 FAIL 예상)
+  trigger_necessity:   TRIGGER_NECESSARY  (full chain 0.100 vs trigger_removed chain 0.000)
+  random_chain_nature: RANDOM_CHAIN_SPURIOUS  (random+no-judas chain 0.000 vs random-with-judas baseline 0.600)
+
+====================================================================================================
+FINAL: Full system causal structure counterfactually validated? YES

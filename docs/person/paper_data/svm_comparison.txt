@@ -1,0 +1,10 @@
+LDA vs RBF SVM - feasibility of nonlinear Stage 2
+=======================================================
+
+scenario       majority   LDA test   SVM test      gap verdict
+------------------------------------------------------------------------------------------
+peter             0.125      0.177      0.405   +0.228 nonlinear_structure_present_mlp_justified
+vangogh           0.260      0.096      0.497   +0.401 nonlinear_structure_present_mlp_justified
+
+Average SVM - LDA gap: +0.315
+Recommendation: proceed_with_pytorch_mlp

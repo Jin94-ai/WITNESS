@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "experiment": "counterfactual_causal",
+  "n_seeds": 10,
+  "max_tick": 300,
+  "chain_max_gap_tick": 30,
+  "notes": "Counterfactual agent/trigger removal to validate causal structure. Each condition is a single modification from full_system. Measurements use v2 definitions: split arrest (canonical vs endogenous) and chain with gap<=30 tick constraint.",
+  "conditions": {
+    "full_system": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122.4,
+      "causal_chain_rate_gap_constrained": 0.1,
+      "chain_mean_gaps_per_step": [
+        0,
+        14,
+        2
+      ],
+      "pom_all_pass_rate": 0.5,
+      "final_fear_mean": 9.743,
+      "final_hope_mean": 8.93,
+      "trigger_arrest_rate": 0.9
+    },
+    "judas_removed": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122,
+      "causal_chain_rate_gap_constrained": 0.0,
+      "chain_mean_gaps_per_step": null,
+      "pom_all_pass_rate": 0.6,
+      "final_fear_mean": 9.85,
+      "final_hope_mean": 8.953,
+      "trigger_arrest_rate": 0.0
+    },
+    "caiaphas_removed": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122.3,
+      "causal_chain_rate_gap_constrained": 0.0,
+      "chain_mean_gaps_per_step": null,
+      "pom_all_pass_rate": 0.7,
+      "final_fear_mean": 9.908,
+      "final_hope_mean": 8.904,
+      "trigger_arrest_rate": 0.0
+    },
+    "trigger_removed": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122.4,
+      "causal_chain_rate_gap_constrained": 0.0,
+      "chain_mean_gaps_per_step": null,
+      "pom_all_pass_rate": 0.5,
+      "final_fear_mean": 9.735,
+      "final_hope_mean": 8.93,
+      "trigger_arrest_rate": 0.0
+    },
+    "random_no_judas": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122.1,
+      "causal_chain_rate_gap_constrained": 0.0,
+      "chain_mean_gaps_per_step": null,
+      "pom_all_pass_rate": 0.8,
+      "final_fear_mean": 9.794,
+      "final_hope_mean": 9.162,
+      "trigger_arrest_rate": 0.0
+    }
+  },
+  "verdicts": {
+    "causal_dependency": "CAUSAL_PASS",
+    "causal_dependency_v2": "CAUSAL_FAIL",
+    "causal_dependency_v3": "CAUSAL_PASS",
+    "causal_dependency_detail": {
+      "v2_endogenous_arrest_inc_hazard": {
+        "full": 1.0,
+        "judas_removed": 1.0,
+        "note": "V2 endogenous_arrest includes hazard 'arrest' events (Peter-state driven) → Judas removal doesn't shrink."
+      },
+      "v3_trigger_arrest_only": {
+        "full": 0.9,
+        "judas_removed": 0.0,
+        "note": "V3 isolates arrest_trigger whose state_conditions require Judas disillusionment + Caiaphas threat + Judas betray action. Judas removal → trigger cannot fire."
+      },
+      "thresholds": {
+        "v2_full_ge": 0.8,
+        "v2_removed_le": 0.2,
+        "v3_full_ge": 0.5,
+        "v3_removed_le": 0.2
+      }
+    },
+    "trigger_necessity": "TRIGGER_NECESSARY",
+    "trigger_necessity_detail": {
+      "full_chain_rate": 0.1,
+      "trigger_removed_chain_rate": 0.0,
+      "threshold_full_ge": 0.05,
+      "threshold_removed_eq": 0.0
+    },
+    "random_chain_nature": "RANDOM_CHAIN_SPURIOUS",
+    "random_chain_nature_detail": {
+      "random_with_judas_baseline_v2": 0.6,
+      "random_no_judas_chain": 0.0,
+      "judged_spurious_if_less_than": 0.6
+    }
+  },
+  "total_runtime_seconds": 5.18
+}

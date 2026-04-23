@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "experiment": "hazard_scaling",
+  "n_seeds": 10,
+  "max_tick": 300,
+  "chain_max_gap_tick": 30,
+  "factors_applied": [
+    1.0,
+    0.75,
+    0.5,
+    0.25,
+    0.1,
+    0.0
+  ],
+  "notes": "Scale every hazard_event.hazard.base_rate by factor. factor=0.0 → hazards=[]. All other config unchanged (triggers, canonical_events, 4 agents, default profiles).",
+  "factors": {
+    "1.00": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122.4,
+      "causal_chain_rate_gap_constrained": 0.1,
+      "chain_mean_gaps_per_step": [
+        0,
+        14,
+        2
+      ],
+      "pom_all_pass_rate": 0.5,
+      "final_fear_mean": 9.743,
+      "final_hope_mean": 8.93
+    },
+    "0.75": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122,
+      "causal_chain_rate_gap_constrained": 0.3,
+      "chain_mean_gaps_per_step": [
+        3,
+        9.67,
+        1.33
+      ],
+      "pom_all_pass_rate": 0.5,
+      "final_fear_mean": 9.743,
+      "final_hope_mean": 8.929
+    },
+    "0.50": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122,
+      "causal_chain_rate_gap_constrained": 0.3,
+      "chain_mean_gaps_per_step": [
+        3,
+        9.67,
+        1.33
+      ],
+      "pom_all_pass_rate": 0.5,
+      "final_fear_mean": 9.739,
+      "final_hope_mean": 8.923
+    },
+    "0.25": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122,
+      "causal_chain_rate_gap_constrained": 0.3,
+      "chain_mean_gaps_per_step": [
+        3,
+        9.67,
+        1.33
+      ],
+      "pom_all_pass_rate": 0.5,
+      "final_fear_mean": 9.739,
+      "final_hope_mean": 8.923
+    },
+    "0.10": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 122,
+      "causal_chain_rate_gap_constrained": 0.3,
+      "chain_mean_gaps_per_step": [
+        3,
+        9.67,
+        1.33
+      ],
+      "pom_all_pass_rate": 0.5,
+      "final_fear_mean": 9.739,
+      "final_hope_mean": 8.923
+    },
+    "0.00": {
+      "n_runs": 10,
+      "canonical_arrest_rate": 1.0,
+      "canonical_arrest_tick_mean": 152,
+      "endogenous_arrest_rate": 1.0,
+      "endogenous_arrest_tick_mean": 195.6,
+      "causal_chain_rate_gap_constrained": 0.0,
+      "chain_mean_gaps_per_step": null,
+      "pom_all_pass_rate": 0.0,
+      "final_fear_mean": 9.834,
+      "final_hope_mean": 7.25
+    }
+  },
+  "pattern_analysis": {
+    "pattern": "inevitability",
+    "endo_arrest_range": [
+      1.0,
+      1.0
+    ],
+    "spread": 0.0,
+    "monotonic_non_increasing": true,
+    "max_adjacent_delta": 0.0,
+    "collapse_factor": null,
+    "endo_by_factor_descending": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        0.75,
+        1.0
+      ],
+      [
+        0.5,
+        1.0
+      ],
+      [
+        0.25,
+        1.0
+      ],
+      [
+        0.1,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "total_runtime_seconds": 7.28
+}

@@ -1,0 +1,383 @@
+{
+  "intervention_id": "hazard_half",
+  "description": "모든 Person Engine hazard rate를 절반으로. Expected: arrest 타이밍 후반으로 이동, trigger count 감소 (비선형 — hazard pipeline과 trigger pipeline의 coupling이 영향 받음).",
+  "n_seeds": 10,
+  "n_days": 90,
+  "control": {
+    "label": "control",
+    "per_seed": [
+      {
+        "seed": 0,
+        "metrics": {
+          "trigger_count": 212.0,
+          "hazard_count": 73.0,
+          "rumors_seeded": 78.0,
+          "rumor_intensity_max": 12.1138,
+          "jesus_movement_final_influence": 9.7949,
+          "pharisees_final_influence": 6.1327,
+          "peter_final_fear": 9.8776,
+          "peter_fear_crosses_9_day": 11.0,
+          "roman_alertness_auc": 299.0952
+        }
+      },
+      {
+        "seed": 1,
+        "metrics": {
+          "trigger_count": 214.0,
+          "hazard_count": 75.0,
+          "rumors_seeded": 81.0,
+          "rumor_intensity_max": 12.2161,
+          "jesus_movement_final_influence": 9.7839,
+          "pharisees_final_influence": 6.1192,
+          "peter_final_fear": 9.935,
+          "peter_fear_crosses_9_day": 7.0,
+          "roman_alertness_auc": 299.0816
+        }
+      },
+      {
+        "seed": 2,
+        "metrics": {
+          "trigger_count": 206.0,
+          "hazard_count": 75.0,
+          "rumors_seeded": 71.0,
+          "rumor_intensity_max": 12.2398,
+          "jesus_movement_final_influence": 9.9097,
+          "pharisees_final_influence": 6.0472,
+          "peter_final_fear": 9.9307,
+          "peter_fear_crosses_9_day": 6.0,
+          "roman_alertness_auc": 297.649
+        }
+      },
+      {
+        "seed": 3,
+        "metrics": {
+          "trigger_count": 216.0,
+          "hazard_count": 81.0,
+          "rumors_seeded": 78.0,
+          "rumor_intensity_max": 12.2201,
+          "jesus_movement_final_influence": 9.8883,
+          "pharisees_final_influence": 5.7952,
+          "peter_final_fear": 9.9228,
+          "peter_fear_crosses_9_day": 6.0,
+          "roman_alertness_auc": 299.5604
+        }
+      },
+      {
+        "seed": 4,
+        "metrics": {
+          "trigger_count": 219.0,
+          "hazard_count": 79.0,
+          "rumors_seeded": 80.0,
+          "rumor_intensity_max": 12.158,
+          "jesus_movement_final_influence": 9.9161,
+          "pharisees_final_influence": 5.7681,
+          "peter_final_fear": 9.4641,
+          "peter_fear_crosses_9_day": 7.0,
+          "roman_alertness_auc": 298.5293
+        }
+      },
+      {
+        "seed": 5,
+        "metrics": {
+          "trigger_count": 197.0,
+          "hazard_count": 78.0,
+          "rumors_seeded": 72.0,
+          "rumor_intensity_max": 12.223,
+          "jesus_movement_final_influence": 9.6976,
+          "pharisees_final_influence": 6.0982,
+          "peter_final_fear": 9.7912,
+          "peter_fear_crosses_9_day": 8.0,
+          "roman_alertness_auc": 297.9815
+        }
+      },
+      {
+        "seed": 6,
+        "metrics": {
+          "trigger_count": 219.0,
+          "hazard_count": 73.0,
+          "rumors_seeded": 80.0,
+          "rumor_intensity_max": 12.1304,
+          "jesus_movement_final_influence": 9.9205,
+          "pharisees_final_influence": 5.8512,
+          "peter_final_fear": 9.8198,
+          "peter_fear_crosses_9_day": 6.0,
+          "roman_alertness_auc": 297.2293
+        }
+      },
+      {
+        "seed": 7,
+        "metrics": {
+          "trigger_count": 210.0,
+          "hazard_count": 76.0,
+          "rumors_seeded": 78.0,
+          "rumor_intensity_max": 12.1215,
+          "jesus_movement_final_influence": 9.9613,
+          "pharisees_final_influence": 5.8463,
+          "peter_final_fear": 9.8983,
+          "peter_fear_crosses_9_day": 6.0,
+          "roman_alertness_auc": 299.8301
+        }
+      },
+      {
+        "seed": 8,
+        "metrics": {
+          "trigger_count": 215.0,
+          "hazard_count": 79.0,
+          "rumors_seeded": 82.0,
+          "rumor_intensity_max": 12.1139,
+          "jesus_movement_final_influence": 9.9218,
+          "pharisees_final_influence": 5.9736,
+          "peter_final_fear": 9.9166,
+          "peter_fear_crosses_9_day": 7.0,
+          "roman_alertness_auc": 299.748
+        }
+      },
+      {
+        "seed": 9,
+        "metrics": {
+          "trigger_count": 198.0,
+          "hazard_count": 78.0,
+          "rumors_seeded": 73.0,
+          "rumor_intensity_max": 12.2696,
+          "jesus_movement_final_influence": 9.8667,
+          "pharisees_final_influence": 5.6667,
+          "peter_final_fear": 9.4439,
+          "peter_fear_crosses_9_day": 9.0,
+          "roman_alertness_auc": 297.7954
+        }
+      }
+    ],
+    "aggregate": {
+      "trigger_count_mean": 210.6,
+      "hazard_count_mean": 76.7,
+      "rumors_seeded_mean": 77.3,
+      "rumor_intensity_max_mean": 12.1806,
+      "jesus_movement_final_influence_mean": 9.8661,
+      "pharisees_final_influence_mean": 5.9298,
+      "peter_final_fear_mean": 9.8,
+      "peter_fear_crosses_9_day_mean": 7.3,
+      "roman_alertness_auc_mean": 298.65
+    }
+  },
+  "intervention": {
+    "label": "intervention",
+    "per_seed": [
+      {
+        "seed": 0,
+        "metrics": {
+          "trigger_count": 211.0,
+          "hazard_count": 50.0,
+          "rumors_seeded": 77.0,
+          "rumor_intensity_max": 12.1138,
+          "jesus_movement_final_influence": 9.7949,
+          "pharisees_final_influence": 6.1327,
+          "peter_final_fear": 9.8776,
+          "peter_fear_crosses_9_day": 13.0,
+          "roman_alertness_auc": 299.0952
+        }
+      },
+      {
+        "seed": 1,
+        "metrics": {
+          "trigger_count": 219.0,
+          "hazard_count": 54.0,
+          "rumors_seeded": 82.0,
+          "rumor_intensity_max": 12.2161,
+          "jesus_movement_final_influence": 9.7839,
+          "pharisees_final_influence": 6.1192,
+          "peter_final_fear": 9.935,
+          "peter_fear_crosses_9_day": 7.0,
+          "roman_alertness_auc": 299.0816
+        }
+      },
+      {
+        "seed": 2,
+        "metrics": {
+          "trigger_count": 217.0,
+          "hazard_count": 56.0,
+          "rumors_seeded": 75.0,
+          "rumor_intensity_max": 12.2398,
+          "jesus_movement_final_influence": 9.9097,
+          "pharisees_final_influence": 6.0472,
+          "peter_final_fear": 9.9101,
+          "peter_fear_crosses_9_day": 8.0,
+          "roman_alertness_auc": 297.649
+        }
+      },
+      {
+        "seed": 3,
+        "metrics": {
+          "trigger_count": 211.0,
+          "hazard_count": 61.0,
+          "rumors_seeded": 77.0,
+          "rumor_intensity_max": 12.2201,
+          "jesus_movement_final_influence": 9.8883,
+          "pharisees_final_influence": 5.7952,
+          "peter_final_fear": 9.9228,
+          "peter_fear_crosses_9_day": 9.0,
+          "roman_alertness_auc": 299.5604
+        }
+      },
+      {
+        "seed": 4,
+        "metrics": {
+          "trigger_count": 219.0,
+          "hazard_count": 55.0,
+          "rumors_seeded": 80.0,
+          "rumor_intensity_max": 12.158,
+          "jesus_movement_final_influence": 9.9161,
+          "pharisees_final_influence": 5.7681,
+          "peter_final_fear": 9.4641,
+          "peter_fear_crosses_9_day": 10.0,
+          "roman_alertness_auc": 298.5293
+        }
+      },
+      {
+        "seed": 5,
+        "metrics": {
+          "trigger_count": 211.0,
+          "hazard_count": 55.0,
+          "rumors_seeded": 79.0,
+          "rumor_intensity_max": 12.223,
+          "jesus_movement_final_influence": 9.6976,
+          "pharisees_final_influence": 6.0982,
+          "peter_final_fear": 9.7912,
+          "peter_fear_crosses_9_day": 8.0,
+          "roman_alertness_auc": 297.9815
+        }
+      },
+      {
+        "seed": 6,
+        "metrics": {
+          "trigger_count": 218.0,
+          "hazard_count": 60.0,
+          "rumors_seeded": 79.0,
+          "rumor_intensity_max": 12.1304,
+          "jesus_movement_final_influence": 9.9205,
+          "pharisees_final_influence": 5.8512,
+          "peter_final_fear": 9.9277,
+          "peter_fear_crosses_9_day": 8.0,
+          "roman_alertness_auc": 297.2293
+        }
+      },
+      {
+        "seed": 7,
+        "metrics": {
+          "trigger_count": 205.0,
+          "hazard_count": 51.0,
+          "rumors_seeded": 78.0,
+          "rumor_intensity_max": 12.1215,
+          "jesus_movement_final_influence": 9.9613,
+          "pharisees_final_influence": 5.8463,
+          "peter_final_fear": 9.9381,
+          "peter_fear_crosses_9_day": 8.0,
+          "roman_alertness_auc": 299.8301
+        }
+      },
+      {
+        "seed": 8,
+        "metrics": {
+          "trigger_count": 222.0,
+          "hazard_count": 62.0,
+          "rumors_seeded": 84.0,
+          "rumor_intensity_max": 12.1139,
+          "jesus_movement_final_influence": 9.9218,
+          "pharisees_final_influence": 5.9736,
+          "peter_final_fear": 9.9322,
+          "peter_fear_crosses_9_day": 7.0,
+          "roman_alertness_auc": 299.748
+        }
+      },
+      {
+        "seed": 9,
+        "metrics": {
+          "trigger_count": 196.0,
+          "hazard_count": 47.0,
+          "rumors_seeded": 71.0,
+          "rumor_intensity_max": 12.2696,
+          "jesus_movement_final_influence": 9.8667,
+          "pharisees_final_influence": 5.6667,
+          "peter_final_fear": 9.4439,
+          "peter_fear_crosses_9_day": 10.0,
+          "roman_alertness_auc": 297.7954
+        }
+      }
+    ],
+    "aggregate": {
+      "trigger_count_mean": 212.9,
+      "hazard_count_mean": 55.1,
+      "rumors_seeded_mean": 78.2,
+      "rumor_intensity_max_mean": 12.1806,
+      "jesus_movement_final_influence_mean": 9.8661,
+      "pharisees_final_influence_mean": 5.9298,
+      "peter_final_fear_mean": 9.8143,
+      "peter_fear_crosses_9_day_mean": 8.8,
+      "roman_alertness_auc_mean": 298.65
+    }
+  },
+  "comparison": {
+    "trigger_count": {
+      "control_mean": 210.6,
+      "intervention_mean": 212.9,
+      "mean_delta": 2.3,
+      "cohens_d": 0.2906,
+      "permutation_p_value": 0.546
+    },
+    "hazard_count": {
+      "control_mean": 76.7,
+      "intervention_mean": 55.1,
+      "mean_delta": -21.6,
+      "cohens_d": -5.4475,
+      "permutation_p_value": 0.0
+    },
+    "rumors_seeded": {
+      "control_mean": 77.3,
+      "intervention_mean": 78.2,
+      "mean_delta": 0.9,
+      "cohens_d": 0.2388,
+      "permutation_p_value": 0.626
+    },
+    "rumor_intensity_max": {
+      "control_mean": 12.1806,
+      "intervention_mean": 12.1806,
+      "mean_delta": 0.0,
+      "cohens_d": 0.0,
+      "permutation_p_value": 1.0
+    },
+    "jesus_movement_final_influence": {
+      "control_mean": 9.8661,
+      "intervention_mean": 9.8661,
+      "mean_delta": 0.0,
+      "cohens_d": 0.0,
+      "permutation_p_value": 1.0
+    },
+    "pharisees_final_influence": {
+      "control_mean": 5.9298,
+      "intervention_mean": 5.9298,
+      "mean_delta": 0.0,
+      "cohens_d": 0.0,
+      "permutation_p_value": 1.0
+    },
+    "peter_final_fear": {
+      "control_mean": 9.8,
+      "intervention_mean": 9.8143,
+      "mean_delta": 0.0143,
+      "cohens_d": 0.0744,
+      "permutation_p_value": 0.79
+    },
+    "peter_fear_crosses_9_day": {
+      "control_mean": 7.3,
+      "intervention_mean": 8.8,
+      "mean_delta": 1.5,
+      "cohens_d": 0.8684,
+      "permutation_p_value": 0.086
+    },
+    "roman_alertness_auc": {
+      "control_mean": 298.65,
+      "intervention_mean": 298.65,
+      "mean_delta": 0.0,
+      "cohens_d": 0.0,
+      "permutation_p_value": 1.0
+    }
+  }
+}

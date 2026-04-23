@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "notes": "LDA vs RBF-kernel SVM on held-out 30% split. Features = 12-dim state_to_feature_vector (emotions + physical + slow_state). SVM > LDA + 0.05 판단 시 비선형 구조 존재 → PyTorch MLP 도입 정당화. PROJECT_DIRECTION_v2.md §3.3 분기 기준.",
+  "peter": {
+    "scenario": "peter",
+    "n_seeds": 10,
+    "n_samples": 1808,
+    "n_action_classes": 24,
+    "majority_baseline": 0.125,
+    "lda_train_acc": 0.17707509881422925,
+    "lda_test_acc": 0.17679558011049723,
+    "svm_rbf_train_acc": 0.41818181818181815,
+    "svm_rbf_test_acc": 0.40515653775322286,
+    "svm_minus_lda": 0.2284,
+    "verdict": "nonlinear_structure_present_mlp_justified",
+    "runtime_seconds": 1.56
+  },
+  "vangogh": {
+    "scenario": "vangogh",
+    "n_seeds": 10,
+    "n_samples": 972,
+    "n_action_classes": 15,
+    "majority_baseline": 0.2602880658436214,
+    "lda_train_acc": 0.09558823529411764,
+    "lda_test_acc": 0.0958904109589041,
+    "svm_rbf_train_acc": 0.5147058823529411,
+    "svm_rbf_test_acc": 0.4965753424657534,
+    "svm_minus_lda": 0.4007,
+    "verdict": "nonlinear_structure_present_mlp_justified",
+    "runtime_seconds": 0.59
+  },
+  "summary": {
+    "peter_verdict": "nonlinear_structure_present_mlp_justified",
+    "vangogh_verdict": "nonlinear_structure_present_mlp_justified",
+    "average_gap": 0.3145,
+    "recommendation": "proceed_with_pytorch_mlp"
+  }
+}

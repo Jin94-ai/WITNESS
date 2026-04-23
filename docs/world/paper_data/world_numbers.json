@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "generated_at_seconds": 1776782271.3283575,
+  "notes": "World Engine v2.0 numeric snapshot (Spike 1 + Spike 2). Person Engine analog is docs/person/paper_data/paper_numbers.json.",
+  "spike1_world_only": {
+    "n_seeds": 5,
+    "n_days": 90,
+    "per_seed": [
+      {
+        "seed": 0,
+        "max_crowd": 10.0,
+        "max_overflow": 0.7194666909492682,
+        "max_price": 3.882656143428995,
+        "max_alert": 10.0,
+        "passover_crowd": 10.0,
+        "shavuot_crowd": 4.80641444817475,
+        "day_30_crowd": 1.173417496319152,
+        "runaway_ceiling_hits": 4,
+        "factions_final_influence": {
+          "pharisees": 6.164,
+          "sadducees": 4.789,
+          "essenes": 1.245,
+          "zealots": 3.354,
+          "jesus_movement": 3.756,
+          "baptist_remnant": 0.203
+        },
+        "zealot_militancy_initial": 6.951642511555855,
+        "zealot_militancy_max": 9.27348245871428,
+        "zealot_militancy_at_passover": 8.260585631274834,
+        "zealot_militancy_day_30": 8.875989955119136,
+        "militancy_threshold_hits": 12
+      },
+      {
+        "seed": 1,
+        "max_crowd": 10.0,
+        "max_overflow": 0.6352240229862858,
+        "max_price": 3.907615731844128,
+        "max_alert": 10.0,
+        "passover_crowd": 10.0,
+        "shavuot_crowd": 4.959636872802799,
+        "day_30_crowd": 1.0788171440606629,
+        "runaway_ceiling_hits": 5,
+        "factions_final_influence": {
+          "pharisees": 6.171,
+          "sadducees": 5.159,
+          "essenes": 1.462,
+          "zealots": 3.107,
+          "jesus_movement": 3.763,
+          "baptist_remnant": 0.381
+        },
+        "zealot_militancy_initial": 6.894997898451032,
+        "zealot_militancy_max": 9.753676788498977,
+        "zealot_militancy_at_passover": 7.580902159683253,
+        "zealot_militancy_day_30": 8.534678490227796,
+        "militancy_threshold_hits": 12
+      },
+      {
+        "seed": 2,
+        "max_crowd": 10.0,
+        "max_overflow": 0.6217342969414013,
+        "max_price": 3.8752271946484287,
+        "max_alert": 10.0,
+        "passover_crowd": 10.0,
+        "shavuot_crowd": 4.866642223352371,
+        "day_30_crowd": 1.180775155206085,
+        "runaway_ceiling_hits": 5,
+        "factions_final_influence": {
+          "pharisees": 6.194,
+          "sadducees": 5.014,
+          "essenes": 1.33,
+          "zealots": 2.915,
+          "jesus_movement": 3.867,
+          "baptist_remnant": 0.244
+        },
+        "zealot_militancy_initial": 7.0528466566847285,
+        "zealot_militancy_max": 9.130178057957684,
+        "zealot_militancy_at_passover": 7.908023823779751,
+        "zealot_militancy_day_30": 8.309957292327105,
+        "militancy_threshold_hits": 12
+      },
+      {
+        "seed": 3,
+        "max_crowd": 10.0,
+        "max_overflow": 0.5862603936754844,
+        "max_price": 3.944842017462723,
+        "max_alert": 10.0,
+        "passover_crowd": 10.0,
+        "shavuot_crowd": 4.8230064764325515,
+        "day_30_crowd": 1.2312209127775429,
+        "runaway_ceiling_hits": 4,
+        "factions_final_influence": {
+          "pharisees": 5.872,
+          "sadducees": 5.059,
+          "essenes": 1.609,
+          "zealots": 2.893,
+          "jesus_movement": 3.781,
+          "baptist_remnant": 0.586
+        },
+        "zealot_militancy_initial": 6.901514079597396,
+        "zealot_militancy_max": 8.88602893450818,
+        "zealot_militancy_at_passover": 7.593339468272778,
+        "zealot_militancy_day_30": 8.52703094196359,
+        "militancy_threshold_hits": 12
+      },
+      {
+        "seed": 4,
+        "max_crowd": 10.0,
+        "max_overflow": 0.6336942450107763,
+        "max_price": 3.8432190866290847,
+        "max_alert": 10.0,
+        "passover_crowd": 10.0,
+        "shavuot_crowd": 4.8976784569659655,
+        "day_30_crowd": 1.248512047539168,
+        "runaway_ceiling_hits": 5,
+        "factions_final_influence": {
+          "pharisees": 5.937,
+          "sadducees": 5.123,
+          "essenes": 1.343,
+          "zealots": 3.094,
+          "jesus_movement": 3.305,
+          "baptist_remnant": 0.348
+        },
+        "zealot_militancy_initial": 6.965685624990144,
+        "zealot_militancy_max": 9.104958044599282,
+        "zealot_militancy_at_passover": 7.714354675370667,
+        "zealot_militancy_day_30": 8.800311908900197,
+        "militancy_threshold_hits": 12
+      }
+    ],
+    "aggregate": {
+      "max_crowd_mean": 10.0,
+      "max_price_mean": 3.8907120348026716,
+      "max_alert_mean": 10.0,
+      "passover_crowd_mean": 10.0,
+      "shavuot_crowd_mean": 4.870675695545687,
+      "faction_influence_mean": {
+        "baptist_remnant": 0.352,
+        "essenes": 1.398,
+        "jesus_movement": 3.694,
+        "pharisees": 6.068,
+        "sadducees": 5.029,
+        "zealots": 3.073
+      },
+      "zealot_militancy_max_mean": 9.23,
+      "zealot_militancy_passover_mean": 7.811,
+      "militancy_threshold_hits_mean": 12.0
+    }
+  },
+  "spike2_integrated_peter": {
+    "label": "full_agents",
+    "n_seeds": 3,
+    "agent_ids": [
+      "peter",
+      "judas",
+      "caiaphas",
+      "crowd"
+    ],
+    "per_seed": [
+      {
+        "seed": 0,
+        "peter_final_fear": 9.925027345136659,
+        "peter_final_hope": 9.489588039556589,
+        "judas_final_disillusionment": 10.0,
+        "total_triggers": 221,
+        "total_hazard_events": 81,
+        "days_with_effect": 90,
+        "n_days": 90,
+        "rumors_seeded_total": 81,
+        "rumors_expired_total": 50,
+        "rumors_active_final": 31,
+        "rumor_intensity_max": 11.614,
+        "jesus_movement_final_influence": 9.848,
+        "pharisees_final_influence": 6.164
+      },
+      {
+        "seed": 1,
+        "peter_final_fear": 9.887731122470917,
+        "peter_final_hope": 9.69647105521201,
+        "judas_final_disillusionment": 10.0,
+        "total_triggers": 208,
+        "total_hazard_events": 82,
+        "days_with_effect": 90,
+        "n_days": 90,
+        "rumors_seeded_total": 79,
+        "rumors_expired_total": 48,
+        "rumors_active_final": 31,
+        "rumor_intensity_max": 12.308,
+        "jesus_movement_final_influence": 9.936,
+        "pharisees_final_influence": 6.171
+      },
+      {
+        "seed": 2,
+        "peter_final_fear": 9.879001403855852,
+        "peter_final_hope": 9.531083275254515,
+        "judas_final_disillusionment": 10.0,
+        "total_triggers": 207,
+        "total_hazard_events": 79,
+        "days_with_effect": 90,
+        "n_days": 90,
+        "rumors_seeded_total": 71,
+        "rumors_expired_total": 40,
+        "rumors_active_final": 31,
+        "rumor_intensity_max": 12.22,
+        "jesus_movement_final_influence": 9.924,
+        "pharisees_final_influence": 6.194
+      }
+    ],
+    "aggregate": {
+      "peter_fear_mean": 9.897253290487809,
+      "trigger_count_mean": 212.0,
+      "hazard_count_mean": 80.66666666666667,
+      "effect_days_mean": 90.0,
+      "rumors_seeded_mean": 77.0,
+      "rumor_intensity_max_mean": 12.047,
+      "jesus_movement_final_influence_mean": 9.903,
+      "pharisees_final_influence_mean": 6.176
+    }
+  },
+  "spike2_judas_removed": {
+    "label": "judas_removed",
+    "n_seeds": 3,
+    "agent_ids": [
+      "peter",
+      "caiaphas",
+      "crowd"
+    ],
+    "per_seed": [
+      {
+        "seed": 0,
+        "peter_final_fear": 9.6776916196718,
+        "peter_final_hope": 9.926238571428572,
+        "judas_final_disillusionment": null,
+        "total_triggers": 77,
+        "total_hazard_events": 76,
+        "days_with_effect": 90,
+        "n_days": 90,
+        "rumors_seeded_total": 0,
+        "rumors_expired_total": 0,
+        "rumors_active_final": 0,
+        "rumor_intensity_max": 0.0,
+        "jesus_movement_final_influence": 3.756,
+        "pharisees_final_influence": 6.164
+      },
+      {
+        "seed": 1,
+        "peter_final_fear": 9.328430460328379,
+        "peter_final_hope": 9.55791404058039,
+        "judas_final_disillusionment": null,
+        "total_triggers": 76,
+        "total_hazard_events": 79,
+        "days_with_effect": 90,
+        "n_days": 90,
+        "rumors_seeded_total": 0,
+        "rumors_expired_total": 0,
+        "rumors_active_final": 0,
+        "rumor_intensity_max": 0.0,
+        "jesus_movement_final_influence": 3.763,
+        "pharisees_final_influence": 6.171
+      },
+      {
+        "seed": 2,
+        "peter_final_fear": 9.93812,
+        "peter_final_hope": 8.893125113345562,
+        "judas_final_disillusionment": null,
+        "total_triggers": 77,
+        "total_hazard_events": 81,
+        "days_with_effect": 90,
+        "n_days": 90,
+        "rumors_seeded_total": 0,
+        "rumors_expired_total": 0,
+        "rumors_active_final": 0,
+        "rumor_intensity_max": 0.0,
+        "jesus_movement_final_influence": 3.867,
+        "pharisees_final_influence": 6.194
+      }
+    ],
+    "aggregate": {
+      "peter_fear_mean": 9.648080693333393,
+      "trigger_count_mean": 76.66666666666667,
+      "hazard_count_mean": 78.66666666666667,
+      "effect_days_mean": 90.0,
+      "rumors_seeded_mean": 0.0,
+      "rumor_intensity_max_mean": 0.0,
+      "jesus_movement_final_influence_mean": 3.795,
+      "pharisees_final_influence_mean": 6.176
+    }
+  },
+  "total_runtime_seconds": 3.33
+}

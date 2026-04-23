@@ -1,7 +1,7 @@
 [project]
 name = "witness"
-version = "0.4.0"
-description = "Agent-based, hazard-driven, ensemble historical simulator"
+version = "0.5.0"
+description = "Multi-agent, hazard-driven, ensemble historical simulator"
 requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.0",
@@ -29,6 +29,10 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+markers = [
+    "slow: marks tests as slow (run with --run-slow)",
+    "archived: ITERATION_CLASSIFICATION.md Tier 3 — kept for history, not in v0.6 paper narrative. Run with: pytest -m archived",
+]
 
 [tool.ruff]
 target-version = "py311"
@@ -41,4 +45,4 @@ select = ["E", "F", "W", "I"]
 python_version = "3.11"
 warn_return_any = true
 warn_unused_configs = true
-disallow_untyped_defs = false
+disallow_untyped_defs = true

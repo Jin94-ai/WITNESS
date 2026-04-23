@@ -1,0 +1,85 @@
+{
+  "checkpoint": "content/peter/trained/peter_bc_v2.pt",
+  "n_seeds": 10,
+  "max_tick": 200,
+  "total_samples": 307,
+  "voluntary_samples": 257,
+  "event_samples": 50,
+  "overall_match_rate": 0.3941368078175896,
+  "voluntary_match_rate": 0.29961089494163423,
+  "event_match_rate": 0.88,
+  "voluntary_kl_n": 257,
+  "voluntary_kl_mean": 1.3963886588393606,
+  "voluntary_kl_median": 0.39457294965020906,
+  "voluntary_kl_max": 10.594484894782749,
+  "per_class_match": {
+    "follow_closely": {
+      "correct": 63,
+      "total": 160,
+      "rate": 0.39375
+    },
+    "discuss_with_disciples": {
+      "correct": 3,
+      "total": 34,
+      "rate": 0.08823529411764706
+    },
+    "withdraw_in_fear": {
+      "correct": 11,
+      "total": 18,
+      "rate": 0.6111111111111112
+    },
+    "pray": {
+      "correct": 0,
+      "total": 30,
+      "rate": 0.0
+    },
+    "stay_awake": {
+      "correct": 9,
+      "total": 9,
+      "rate": 1.0
+    },
+    "draw_sword": {
+      "correct": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    "deny": {
+      "correct": 29,
+      "total": 30,
+      "rate": 0.9666666666666667
+    },
+    "assert_loyalty": {
+      "correct": 0,
+      "total": 9,
+      "rate": 0.0
+    },
+    "weep": {
+      "correct": 0,
+      "total": 6,
+      "rate": 0.0
+    },
+    "fall_asleep": {
+      "correct": 0,
+      "total": 1,
+      "rate": 0.0
+    },
+    "flee": {
+      "correct": 1,
+      "total": 3,
+      "rate": 0.3333333333333333
+    },
+    "follow_at_distance": {
+      "correct": 0,
+      "total": 2,
+      "rate": 0.0
+    }
+  },
+  "per_action_kl_mean": {
+    "follow_closely": 1.1704600349658265,
+    "discuss_with_disciples": 1.7483772743117538,
+    "withdraw_in_fear": 1.8790577105392667,
+    "pray": 1.5473268450330158,
+    "assert_loyalty": 2.6019291481599214,
+    "weep": 1.4155409877412166
+  }
+}

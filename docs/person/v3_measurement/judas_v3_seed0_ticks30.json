@@ -1,0 +1,235 @@
+{
+  "seed": 0,
+  "n_ticks": 30,
+  "rubric": {
+    "discovery_class": "not_discovery_noise",
+    "character_composite": 0.8785714285714286,
+    "canon_valid": true,
+    "canon_soft_drift": 32.0,
+    "causal_smoothness": 0.9573318965517241,
+    "causal_unexplained_jumps": 0,
+    "novelty_band": "noise"
+  },
+  "trajectory_summary": [
+    {
+      "tick": 1,
+      "action": "discuss_with_disciples",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 2,
+      "action": "pray",
+      "events": [
+        "prayer_invitation"
+      ]
+    },
+    {
+      "tick": 3,
+      "action": "follow_closely",
+      "events": [
+        "covert_bargain",
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 4,
+      "action": "follow_closely",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 5,
+      "action": "pray",
+      "events": [
+        "sacred_meal",
+        "prayer_invitation"
+      ]
+    },
+    {
+      "tick": 6,
+      "action": "follow_closely",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 7,
+      "action": "discuss_with_disciples",
+      "events": [
+        "betrayal_witnessed",
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 8,
+      "action": "follow_closely",
+      "events": [
+        "ally_departure",
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 9,
+      "action": "pray",
+      "events": [
+        "prayer_invitation"
+      ]
+    },
+    {
+      "tick": 10,
+      "action": "pray",
+      "events": [
+        "prayer_invitation"
+      ]
+    },
+    {
+      "tick": 11,
+      "action": "assert_loyalty",
+      "events": [
+        "public_declaration"
+      ]
+    },
+    {
+      "tick": 12,
+      "action": "pray",
+      "events": [
+        "guard_approaches",
+        "prayer_invitation"
+      ]
+    },
+    {
+      "tick": 13,
+      "action": "follow_closely",
+      "events": [
+        "identification_signal",
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 14,
+      "action": "discuss_with_disciples",
+      "events": [
+        "weapon_drawn_nearby",
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 15,
+      "action": "pray",
+      "events": [
+        "primary_figure_suffering_visible",
+        "prayer_invitation"
+      ]
+    },
+    {
+      "tick": 16,
+      "action": "follow_closely",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 17,
+      "action": "assert_loyalty",
+      "events": [
+        "public_declaration"
+      ]
+    },
+    {
+      "tick": 18,
+      "action": "follow_at_distance",
+      "events": [
+        "withdrawal"
+      ]
+    },
+    {
+      "tick": 19,
+      "action": "assert_loyalty",
+      "events": [
+        "public_declaration"
+      ]
+    },
+    {
+      "tick": 20,
+      "action": "assert_loyalty",
+      "events": [
+        "remorse_trigger",
+        "public_declaration"
+      ]
+    },
+    {
+      "tick": 21,
+      "action": "follow_closely",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 22,
+      "action": "discuss_with_disciples",
+      "events": [
+        "return_token",
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 23,
+      "action": "assert_loyalty",
+      "events": [
+        "public_declaration"
+      ]
+    },
+    {
+      "tick": 24,
+      "action": "discuss_with_disciples",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 25,
+      "action": "follow_closely",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 26,
+      "action": "follow_closely",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 27,
+      "action": "follow_closely",
+      "events": [
+        "ally_arrival"
+      ]
+    },
+    {
+      "tick": 28,
+      "action": "pray",
+      "events": [
+        "prayer_invitation"
+      ]
+    },
+    {
+      "tick": 29,
+      "action": "assert_loyalty",
+      "events": [
+        "public_declaration"
+      ]
+    },
+    {
+      "tick": 30,
+      "action": "stay_hiding",
+      "events": [
+        "withdrawal"
+      ]
+    }
+  ]
+}

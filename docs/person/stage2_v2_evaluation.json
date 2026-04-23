@@ -1,0 +1,129 @@
+{
+  "dataset_samples": 6821,
+  "train_samples": 5461,
+  "val_samples": 1360,
+  "action_vocab": [
+    "assert_loyalty",
+    "confess",
+    "deny",
+    "discuss_with_disciples",
+    "draw_sword",
+    "fall_asleep",
+    "flee",
+    "follow_at_distance",
+    "follow_closely",
+    "pray",
+    "run_to_tomb",
+    "stay_awake",
+    "stay_hiding",
+    "weep",
+    "withdraw_in_fear"
+  ],
+  "final_epoch": 38,
+  "train_acc": 0.4220838674235488,
+  "val_acc": 0.4066176414489746,
+  "best_val_acc": 0.4205882251262665,
+  "nll": 1.4917553663253784,
+  "majority_baseline": 0.11764705882352941,
+  "per_class_metrics": {
+    "assert_loyalty": {
+      "support": 127,
+      "precision": 0.20967741935483872,
+      "recall": 0.10236220472440945,
+      "f1": 0.13756613756613756
+    },
+    "confess": {
+      "support": 9,
+      "precision": 0.14285714285714285,
+      "recall": 0.1111111111111111,
+      "f1": 0.125
+    },
+    "deny": {
+      "support": 160,
+      "precision": 0.6215139442231076,
+      "recall": 0.975,
+      "f1": 0.7591240875912408
+    },
+    "discuss_with_disciples": {
+      "support": 160,
+      "precision": 0.14473684210526316,
+      "recall": 0.06875,
+      "f1": 0.09322033898305086
+    },
+    "draw_sword": {
+      "support": 52,
+      "precision": 0.611764705882353,
+      "recall": 1.0,
+      "f1": 0.759124087591241
+    },
+    "fall_asleep": {
+      "support": 33,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "flee": {
+      "support": 31,
+      "precision": 0.9259259259259259,
+      "recall": 0.8064516129032258,
+      "f1": 0.8620689655172414
+    },
+    "follow_at_distance": {
+      "support": 16,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "follow_closely": {
+      "support": 160,
+      "precision": 0.2892561983471074,
+      "recall": 0.21875,
+      "f1": 0.2491103202846975
+    },
+    "pray": {
+      "support": 160,
+      "precision": 0.25,
+      "recall": 0.23125,
+      "f1": 0.24025974025974026
+    },
+    "run_to_tomb": {
+      "support": 14,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "stay_awake": {
+      "support": 66,
+      "precision": 0.5416666666666666,
+      "recall": 0.9848484848484849,
+      "f1": 0.6989247311827957
+    },
+    "stay_hiding": {
+      "support": 85,
+      "precision": 0.75,
+      "recall": 0.8117647058823529,
+      "f1": 0.7796610169491526
+    },
+    "weep": {
+      "support": 127,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "withdraw_in_fear": {
+      "support": 160,
+      "precision": 0.2418478260869565,
+      "recall": 0.55625,
+      "f1": 0.33712121212121215
+    }
+  },
+  "behavior_fidelity": {
+    "n_evaluated": 500,
+    "n_rule_zero": 0,
+    "kl_mean": 3.83121049134326,
+    "kl_median": 1.445078227928089,
+    "kl_std": 4.161312091401674,
+    "kl_min": 0.1589384310192099,
+    "kl_max": 12.968025418102378
+  }
+}
