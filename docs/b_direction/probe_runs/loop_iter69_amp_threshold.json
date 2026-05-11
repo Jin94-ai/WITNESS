@@ -1,0 +1,87 @@
+{
+  "iter": 69,
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "amplitude_threshold": 1.0,
+  "results": {
+    "accusation": {
+      "A_both_on": {
+        "scenario": "accusation",
+        "mean_raw_rev": 3.17,
+        "mean_amp_rev": 2.17,
+        "pass_rate": 0.68,
+        "mean_amplitude": 4.95,
+        "max_amplitude": 10.0,
+        "median_amplitude": 4.21,
+        "amp_stdev": 3.27,
+        "mean_peak_shame": 9.32,
+        "mean_final_shame": 5.96
+      },
+      "C_agent_only": {
+        "scenario": "accusation",
+        "mean_raw_rev": 2.97,
+        "mean_amp_rev": 2.27,
+        "pass_rate": 0.76,
+        "mean_amplitude": 8.58,
+        "max_amplitude": 9.78,
+        "median_amplitude": 9.6,
+        "amp_stdev": 1.97,
+        "mean_peak_shame": 10.0,
+        "mean_final_shame": 8.21
+      }
+    },
+    "scarcity": {
+      "A_both_on": {
+        "scenario": "scarcity",
+        "mean_raw_rev": 3.9,
+        "mean_amp_rev": 2.9,
+        "pass_rate": 0.74,
+        "mean_amplitude": 7.47,
+        "max_amplitude": 9.87,
+        "median_amplitude": 8.31,
+        "amp_stdev": 2.21,
+        "mean_peak_shame": 9.5,
+        "mean_final_shame": 3.28
+      },
+      "C_agent_only": {
+        "scenario": "scarcity",
+        "mean_raw_rev": 5.4,
+        "mean_amp_rev": 4.3,
+        "pass_rate": 0.8,
+        "mean_amplitude": 6.63,
+        "max_amplitude": 9.78,
+        "median_amplitude": 7.21,
+        "amp_stdev": 2.39,
+        "mean_peak_shame": 9.83,
+        "mean_final_shame": 9.47
+      }
+    },
+    "sacred": {
+      "A_both_on": {
+        "scenario": "sacred",
+        "mean_raw_rev": 5.36,
+        "mean_amp_rev": 4.12,
+        "pass_rate": 0.77,
+        "mean_amplitude": 5.83,
+        "max_amplitude": 9.87,
+        "median_amplitude": 5.63,
+        "amp_stdev": 2.62,
+        "mean_peak_shame": 9.17,
+        "mean_final_shame": 2.01
+      },
+      "C_agent_only": {
+        "scenario": "sacred",
+        "mean_raw_rev": 7.08,
+        "mean_amp_rev": 4.92,
+        "pass_rate": 0.69,
+        "mean_amplitude": 3.63,
+        "max_amplitude": 9.69,
+        "median_amplitude": 3.59,
+        "amp_stdev": 2.52,
+        "mean_peak_shame": 8.33,
+        "mean_final_shame": 4.46
+      }
+    }
+  },
+  "verdict": "All conditions pass >=50% amp threshold. Iter 68 cycle counts are substantively real, not jitter."
+}

@@ -1,0 +1,74 @@
+{
+  "iter": 35,
+  "mode": "autonomous_no_repair",
+  "n_seeds": 5,
+  "results_60tk": {
+    "accusation": {
+      "scenario": "accusation",
+      "n_ticks": 60,
+      "active_obs": 30,
+      "flat_count": 20,
+      "rise_fall_count": 15,
+      "monotone_rise_count": 14,
+      "other_count": 1,
+      "rise_fall_fraction": 0.5,
+      "mean_drop": 7.45,
+      "mean_peak": 8.89,
+      "mean_confess_per_seed": 10.2,
+      "mean_forgiveness_per_seed": 10.2,
+      "mean_first_confess_tick": 33
+    },
+    "scarcity": {
+      "scenario": "scarcity",
+      "n_ticks": 60,
+      "active_obs": 20,
+      "flat_count": 40,
+      "rise_fall_count": 19,
+      "monotone_rise_count": 1,
+      "other_count": 0,
+      "rise_fall_fraction": 0.95,
+      "mean_drop": 8.55,
+      "mean_peak": 9.28,
+      "mean_confess_per_seed": 29.4,
+      "mean_forgiveness_per_seed": 29.4,
+      "mean_first_confess_tick": 24.8
+    },
+    "sacred": {
+      "scenario": "sacred",
+      "n_ticks": 60,
+      "active_obs": 25,
+      "flat_count": 15,
+      "rise_fall_count": 22,
+      "monotone_rise_count": 3,
+      "other_count": 0,
+      "rise_fall_fraction": 0.88,
+      "mean_drop": 6.39,
+      "mean_peak": 8.27,
+      "mean_confess_per_seed": 12.4,
+      "mean_forgiveness_per_seed": 12.4,
+      "mean_first_confess_tick": 40.4
+    }
+  },
+  "accusation_100tk": {
+    "scenario": "accusation",
+    "n_ticks": 100,
+    "active_obs": 30,
+    "flat_count": 20,
+    "rise_fall_count": 15,
+    "monotone_rise_count": 15,
+    "other_count": 0,
+    "rise_fall_fraction": 0.5,
+    "mean_drop": 7.18,
+    "mean_peak": 8.93,
+    "mean_confess_per_seed": 16,
+    "mean_forgiveness_per_seed": 16,
+    "mean_first_confess_tick": 33
+  },
+  "verdict": "AUTONOMOUS D-FLOW TRANSFERS -- emergent cascade works across crisis scenarios without external trigger",
+  "scenarios_pass_20pct": 3,
+  "iter32_comparison": {
+    "accusation": 0.552,
+    "scarcity": 0.4,
+    "sacred": 0.08
+  }
+}

@@ -1,0 +1,31 @@
+=== PROBE P_ED_07 (event density: sacred/high-density/early-spacing, v4) ===
+
+[Annotated headline summary]
+  Final summary:    PARTIAL
+  Primary pressure: sacred
+  Miracle count:    5 (high)
+  Spacing:          early (ticks: [10, 20, 40, 70, 100])
+
+  Cohort outcomes:
+    [L3 cohort, 2 agents]:  no shame accumulation
+    [L2 cohort, 1 agents]:  no shame accumulation
+    [L1 cohort, 5 agents]:  partial: peak~1.9 -> final~0.5
+
+  Pressure events + recovery actions:
+    Sacred events:    6 fired (5 miracles, 1 prayer)
+    Accusations:      1 fired
+    Recovery actions: 16 confessions, 13 forgiveness rumors emitted
+    Awe peak:         9.95
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.3 at t=60 -> final 0.2
+    Public suspicion:    negligible (peak < 0.05)
+    Authority vigilance: negligible (peak < 0.05)
+    Top blame target:    spiritual_wanderer (peak 0.26, weak)
+
+============================================================
+
+Agents: A1=wanderer, A2=authority, A3=follower, A4=follower, A5=follower, A6=crowd, A7=crowd, A8=family
+Locations: L1, L2, L3
+
+Event density variant: high-density / early-spacing

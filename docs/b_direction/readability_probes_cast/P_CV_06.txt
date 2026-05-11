@@ -1,0 +1,28 @@
+=== PROBE P_CV_06 (cast variant: scarcity/no_outsider, n=10, v4) ===
+
+[Annotated headline summary]
+  Final summary:    RECOVERY_DOMINATED
+  Primary pressure: scarcity
+  Cast size:        10
+
+  Cohort outcomes:
+    [L2 cohort, 3 agents]:  no shame accumulation
+    [L1 cohort, 4 agents]:  recovery: peak~9.2 -> final~2.8
+    [L3 cohort, 3 agents]:  no shame accumulation
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: merchant)
+    Recovery actions: 176 confessions, 117 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 1.0 at t=21 -> final 0.0
+    Public suspicion:    peak 0.21 -> final 0.00
+    Authority vigilance: peak 0.25 -> final 0.25
+    Top blame target:    fisher_laborer (peak 0.80)
+
+============================================================
+
+Agents: A1=merchant, A2=family, A3=laborer, A4=laborer, A5=laborer, A6=authority, A7=enforcer, A8=enforcer, A9=crowd, A10=crowd
+Locations: L1, L2, L3
+
+Cast variant: no_outsider (n=10)

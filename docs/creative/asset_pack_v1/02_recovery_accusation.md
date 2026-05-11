@@ -1,0 +1,55 @@
+# Asset 02 — Recovery: REC Accusation (P10)
+
+**Probe ID**: P10
+**Scenario**: accusation (한 사람이 제자를 가리킴)
+**Configuration**: original placement, baseline cast
+**Outcome class**: **RECOVERY_DOMINATED** — 비난이 들어왔지만 회복이 우세
+**Why it matters**: *accusation 후 recovery* 가능성을 보여주는 contrast asset. *Sharpness coexistence* (Cycle 4 Patch G) — 회복 명시 + 잔재 명시 한 문장 안에.
+
+---
+
+## Narrative
+
+거리는 평소처럼 흐르지 않았다. 광장과 관청 안마당 사이를 오가는 발걸음이 지나치게 조심스러웠고, 그 조심스러움이 오히려 무언가가 임박했다는 표지였다. 권위의 자리에서 내려오는 시선은 거리 위로 길게 떨어졌다. 그러나 그 자리에 머무를 수만은 없는 일이 곧 일어났다.
+
+한 사람이 제자를 가리켰다. 그것은 작게 시작되었지만, 분명한 손가락질이었다. 주위 사람들의 눈빛이 한 박자 늦게 따라왔다. 비난은 흩어지지 않고 한 방향으로 모였다. 사람들의 눈은 거리의 사람들에게로 향했고, 다른 곳을 보던 사람도 결국 그 방향을 따라 고개를 돌렸다. 드문드문 고백이 새어 나왔다. 듣는 사람도, 말하는 사람도 그 무게에 익숙하지 않았다. 한 사람의 눈이 평소보다 길게 한 자리에 머물렀다. 이 흐름 속에서, 사람들은 각자 다른 자리에서 다른 호흡을 가졌다.
+
+사람들은 흔들렸지만 다시 자리를 잡았다. 고백이 한 사람에서 다음 사람으로 옮겨 갔고, 무거움은 조금씩 줄어들었다. 누가 먼저였는지는 분명하지 않았지만, 그 흐름은 거리 끝까지 닿았다.
+
+거리의 사람들은 흩어진 듯 보였지만, 한 사람이 입을 열자 다른 입들도 따라 열렸다. 이 흐름은 한쪽에서 다른 쪽으로 천천히 번져 갔다.
+
+거리의 결이 다시 평소를 향해 옮겨 가고 있었다.
+
+어느 순간, 무거움이 더 이상 자라지 않았다. 거리는 천천히 다시 숨을 쉬기 시작했다. 비난의 무게는 풀렸지만, 그 무게가 닿았던 어깨에는 옅은 자국이 남았다. 다만 누구도 그 무거움이 정말 사라졌다고 확신하지는 못했다. 다음 날의 아침이 밝았을 때, 거리는 평소의 결로 돌아간 듯 보였지만 어딘가는 달라져 있었다.
+
+거리는 천천히 다시 평소의 모양으로 돌아갔다. 그 흔적이 어딘가에 남았더라도, 사람들의 눈에는 잘 보이지 않았다.
+
+손가락이 향했던 방향의 결은 다음 시각까지 옅게라도 남았다.
+
+---
+
+## 읽는 방법
+
+P6 (asset 01)와 *contrast pair*다.
+
+- **P6 (MIXED scarcity)**: 두 cohort split — 빈민가 회복, 곡물 창고 굳음
+- **P10 (REC accusation)**: 전체 회복 — *고백 → 흐름 → 회복*이 거리 끝까지 닿음
+
+두 narrative 모두 *비난*이 있지만 outcome class는 다르다. 핵심 차이는 *cohort routing*: P10에서는 confession/forgiveness flow가 main cohort까지 도달, P6에서는 두 자리에서 *다른 결*로 갈라짐.
+
+### Sharpness coexistence (Cycle 4 Patch G 효과)
+
+> "비난의 무게는 풀렸지만, 그 무게가 닿았던 어깨에는 옅은 자국이 남았다."
+
+이 한 문장이 *recovery + residue* 동시 표현. 회복 명시 + 잔재 명시 — accusation outcome의 *날카로움이 살아있는 회복*.
+
+External eval (GPT-5.5) Group A (accusation) 분석:
+> "When recovery rumors and confessions circulate through a larger or better-connected group, recovery dominates. ... Mixed outcomes appear when one cohort receives enough recovery signal while another remains capped or stuck."
+
+---
+
+## Caveat
+
+→ `appendix_method_caveat.md` 참조.
+
+같은 accusation pressure가 다른 configuration (cast / placement) 아래에서 SATURATION 또는 MIXED로 갈라질 수 있다. 이는 P_CV_01 (asset 03)에서 직접 비교 가능.

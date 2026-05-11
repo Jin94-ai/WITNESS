@@ -1,0 +1,54 @@
+{
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "awe_threshold": 5.0,
+  "awe_decay": 0.05,
+  "results": {
+    "A_baseline_no_inject": {
+      "label": "A_baseline_no_inject",
+      "rev_all": 3.6,
+      "rev_inj": 3.1,
+      "rev_oth": 3.85,
+      "final_inj": 5.207,
+      "final_oth": 4.85,
+      "awe_final_inj": 3.0,
+      "n_inj_active": 10,
+      "n_oth_active": 20
+    },
+    "B_awe_inject_aux_on_p2a_on": {
+      "label": "B_awe_inject_aux_on_p2a_on",
+      "rev_all": 3.533,
+      "rev_inj": 3.2,
+      "rev_oth": 3.7,
+      "final_inj": 5.739,
+      "final_oth": 5.809,
+      "awe_final_inj": 8.0,
+      "n_inj_active": 10,
+      "n_oth_active": 20
+    },
+    "C_awe_inject_aux_OFF_p2a_on": {
+      "label": "C_awe_inject_aux_OFF_p2a_on",
+      "rev_all": 3.6,
+      "rev_inj": 3.1,
+      "rev_oth": 3.85,
+      "final_inj": 5.207,
+      "final_oth": 4.85,
+      "awe_final_inj": 8.0,
+      "n_inj_active": 10,
+      "n_oth_active": 20
+    },
+    "D_awe_inject_aux_on_p2a_OFF": {
+      "label": "D_awe_inject_aux_on_p2a_OFF",
+      "rev_all": 0,
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "awe_final_inj": 8.0,
+      "n_inj_active": 10,
+      "n_oth_active": 20
+    }
+  },
+  "verdict_d": "NO - aux recovery alone insufficient to produce cycles. Scale-4 stays at 1. Magnitude needs tuning OR Phase 2a dominance still complete.",
+  "scale_4_score": "Score 1 -- still single-loop"
+}

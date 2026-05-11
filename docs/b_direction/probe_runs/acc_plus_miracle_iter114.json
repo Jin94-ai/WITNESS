@@ -1,0 +1,115 @@
+{
+  "n_seeds": 15,
+  "n_ticks": 500,
+  "results": {
+    "V0_pure_acc": {
+      "label": "V0_pure_acc",
+      "miracle_ticks": [],
+      "finals": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "mean": 10.0,
+      "stdev": 0.0,
+      "recovery_rate": "0/15",
+      "recovery_pct": 0.0
+    },
+    "V1_one_miracle": {
+      "label": "V1_one_miracle",
+      "miracle_ticks": [
+        250
+      ],
+      "finals": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        4.51,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "mean": 9.634,
+      "stdev": 1.418,
+      "recovery_rate": "0/15",
+      "recovery_pct": 0.0
+    },
+    "V2_two_miracles": {
+      "label": "V2_two_miracles",
+      "miracle_ticks": [
+        150,
+        350
+      ],
+      "finals": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        7.85,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        7.53,
+        10.0
+      ],
+      "mean": 9.692,
+      "stdev": 0.815,
+      "recovery_rate": "0/15",
+      "recovery_pct": 0.0
+    },
+    "V3_three_miracles": {
+      "label": "V3_three_miracles",
+      "miracle_ticks": [
+        100,
+        250,
+        400
+      ],
+      "finals": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        5.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "mean": 9.667,
+      "stdev": 1.291,
+      "recovery_rate": "0/15",
+      "recovery_pct": 0.0
+    }
+  }
+}

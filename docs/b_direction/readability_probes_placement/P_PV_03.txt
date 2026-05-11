@@ -1,0 +1,26 @@
+=== PROBE P_PV_03 (placement variant: accusation/clustered, v4) ===
+
+[Annotated headline summary]
+  Final summary:    RECOVERY_DOMINATED
+  Primary pressure: accusation
+
+  Cohort outcomes:
+    [L3 cohort, 2 agents]:  partial: peak~10.0 → final~5.0
+    [L1 cohort, 8 agents]:  recovery: peak~10.0 → final~2.5
+
+  Pressure events + recovery actions:
+    Accusations: 2 fired (targets: disciple_follower, outsider)
+    Recovery actions: 116 confessions, 116 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 2.6 at t=17 → final 0.2
+    Public suspicion:    peak 0.63 → final 0.03
+    Authority vigilance: negligible (peak < 0.05)
+    Top blame target:    disciple_follower (peak 1.00)
+
+============================================================
+
+Agents: A1=follower, A2=follower, A3=follower, A4=authority, A5=enforcer, A6=crowd, A7=crowd, A8=crowd, A9=family, A10=outsider
+Locations: L1, L2, L3
+
+Placement variant: clustered

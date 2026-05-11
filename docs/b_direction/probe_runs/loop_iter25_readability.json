@@ -1,0 +1,563 @@
+{
+  "iter": 25,
+  "n_probes": 10,
+  "probes": [
+    {
+      "probe_id": "PRB_CAL03",
+      "scenario_hidden": "calling",
+      "seed": 3,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          2
+        ],
+        [
+          "outsider",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "fisher_laborer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[discuss_with_disciples(16), stay_awake(12), follow_closely(9)] motifs[remain_present(37), withdraw(2)] events[t3:prayer_invitation; t3:visible_withdrawal]",
+        "t06-10": "actions[follow_closely(21), stay_awake(8), discuss_with_disciples(6)] motifs[remain_present(36), withdraw(4)] events[t6:miracle_witnessed; t7:role_transition; t7:role_transition; t8:public_devotion]",
+        "t11-15": "actions[follow_closely(18), stay_awake(11), discuss_with_disciples(10)] motifs[remain_present(40)] events[t12:public_devotion]",
+        "t16-20": "actions[discuss_with_disciples(14), follow_closely(12), stay_awake(8)] motifs[remain_present(40)] events[t16:public_devotion; t17:public_devotion; t17:public_devotion; t18:public_accusation]",
+        "t21-25": "actions[follow_closely(26), discuss_with_disciples(9), stay_awake(3)] motifs[remain_present(40)] events[t21:public_devotion; t23:public_devotion]",
+        "t26-30": "actions[stay_awake(13), follow_closely(12), discuss_with_disciples(8)] motifs[remain_present(37), observe_wait(3)] events[t26:public_devotion; t27:public_devotion; t28:public_devotion; t29:public_devotion]"
+      },
+      "final_state": "shore: phase=idle align=0.00 blame[] shame_climate=0.00 | village_street: phase=idle align=0.00 blame[] shame_climate=0.20"
+    },
+    {
+      "probe_id": "PRB_CAL00",
+      "scenario_hidden": "calling",
+      "seed": 0,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          2
+        ],
+        [
+          "outsider",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "fisher_laborer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[stay_awake(15), follow_closely(13), discuss_with_disciples(10)] motifs[remain_present(38), withdraw(1)] events[t3:prayer_invitation]",
+        "t06-10": "actions[follow_closely(18), discuss_with_disciples(11), stay_awake(8)] motifs[remain_present(39), withdraw(1)] events[t6:miracle_witnessed; t7:role_transition; t7:role_transition; t8:public_devotion]",
+        "t11-15": "actions[follow_closely(20), discuss_with_disciples(7), stay_awake(7)] motifs[remain_present(36), observe_wait(4)] events[t11:public_devotion; t12:public_devotion; t15:public_devotion]",
+        "t16-20": "actions[follow_closely(16), stay_awake(12), discuss_with_disciples(9)] motifs[remain_present(38), observe_wait(2)] events[t18:public_accusation; t18:public_devotion; t20:public_devotion]",
+        "t21-25": "actions[follow_closely(17), stay_awake(13), discuss_with_disciples(8)] motifs[remain_present(39), observe_wait(1)] events[t24:public_devotion]",
+        "t26-30": "actions[follow_closely(16), discuss_with_disciples(14), stay_awake(7)] motifs[remain_present(40)] events[t26:public_devotion; t26:public_devotion; t27:public_devotion]"
+      },
+      "final_state": "shore: phase=idle align=0.00 blame[] shame_climate=0.00 | village_street: phase=idle align=0.00 blame[] shame_climate=0.20"
+    },
+    {
+      "probe_id": "PRB_CAL08",
+      "scenario_hidden": "calling",
+      "seed": 8,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          2
+        ],
+        [
+          "outsider",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "fisher_laborer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(19), discuss_with_disciples(13), stay_awake(7)] motifs[remain_present(39), observe_wait(1)] events[t3:prayer_invitation]",
+        "t06-10": "actions[discuss_with_disciples(14), follow_closely(12), stay_awake(9)] motifs[remain_present(36), observe_wait(2)] events[t6:miracle_witnessed; t7:role_transition; t7:role_transition; t8:public_devotion]",
+        "t11-15": "actions[follow_closely(16), discuss_with_disciples(12), stay_awake(7)] motifs[remain_present(38), observe_wait(2)] events[t11:public_devotion; t13:public_devotion; t14:public_devotion; t15:public_devotion]",
+        "t16-20": "actions[follow_closely(18), discuss_with_disciples(13), pray(6)] motifs[remain_present(40)] events[t16:public_devotion; t17:public_devotion; t18:public_accusation; t18:public_devotion]",
+        "t21-25": "actions[follow_closely(15), stay_awake(9), discuss_with_disciples(9)] motifs[remain_present(37), observe_wait(3)] events[t22:public_devotion; t24:public_devotion; t24:public_devotion; t25:public_devotion]",
+        "t26-30": "actions[follow_closely(17), stay_awake(10), discuss_with_disciples(10)] motifs[remain_present(40)] events[t26:public_devotion; t27:public_devotion; t28:public_devotion]"
+      },
+      "final_state": "shore: phase=idle align=0.05 blame[] shame_climate=0.00 | village_street: phase=idle align=0.00 blame[] shame_climate=0.20"
+    },
+    {
+      "probe_id": "PRB_ACC07",
+      "scenario_hidden": "accusation",
+      "seed": 7,
+      "n_agents": 10,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          3
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "soldier_enforcer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[discuss_with_disciples(17), follow_closely(16), stay_awake(8)] motifs[remain_present(36), observe_wait(6)] events[t3:public_accusation; t3:public_denial; t5:visible_withdrawal]",
+        "t06-10": "actions[stay_awake(10), follow_closely(10), discuss_with_disciples(9)] motifs[remain_present(26), conceal(11)] events[t7:public_accusation; t8:visible_withdrawal; t8:public_denial; t8:public_denial]",
+        "t11-15": "actions[follow_closely(15), deny(15), stay_awake(9)] motifs[remain_present(26), conceal(17)] events[t11:public_denial; t11:visible_withdrawal; t11:public_denial; t12:guard_approaches]",
+        "t16-20": "actions[deny(19), stay_awake(10), discuss_with_disciples(6)] motifs[conceal(24), remain_present(20)] events[t16:public_denial; t16:public_denial; t16:public_denial; t16:public_denial]",
+        "t21-25": "actions[deny(16), follow_closely(8), discuss_with_disciples(7)] motifs[conceal(20), remain_present(18)] events[t21:public_denial; t21:public_denial; t21:public_denial; t22:public_denial]",
+        "t26-30": "actions[deny(17), stay_awake(8), follow_closely(7)] motifs[conceal(21), remain_present(19)] events[t26:public_denial; t26:public_denial; t26:visible_withdrawal; t26:visible_withdrawal]"
+      },
+      "final_state": "priest_courtyard: phase=idle align=0.27 blame[soldier_enforcer:0.35, authority_priest:0.13] shame_climate=0.97 | city_street: phase=lynch_mode align=1.00 blame[crowd_participant:1.00, outsider:0.24] shame_climate=1.00"
+    },
+    {
+      "probe_id": "PRB_ACC19",
+      "scenario_hidden": "accusation",
+      "seed": 19,
+      "n_agents": 10,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          3
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "soldier_enforcer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(22), discuss_with_disciples(11), stay_awake(10)] motifs[remain_present(39), observe_wait(5)] events[t3:public_accusation; t5:public_denial]",
+        "t06-10": "actions[discuss_with_disciples(15), follow_closely(14), stay_awake(7)] motifs[remain_present(32), observe_wait(7)] events[t7:public_accusation; t7:public_denial; t8:visible_withdrawal; t9:visible_withdrawal]",
+        "t11-15": "actions[discuss_with_disciples(12), follow_closely(12), stay_awake(9)] motifs[remain_present(32), conceal(9)] events[t11:public_denial; t11:visible_withdrawal; t12:guard_approaches; t12:public_denial]",
+        "t16-20": "actions[discuss_with_disciples(11), stay_awake(9), follow_closely(9)] motifs[remain_present(29), conceal(10)] events[t16:public_denial; t16:public_denial; t16:visible_withdrawal; t16:visible_withdrawal]",
+        "t21-25": "actions[follow_closely(23), discuss_with_disciples(8), withdraw_in_fear(6)] motifs[remain_present(33), conceal(7)] events[t21:visible_withdrawal; t21:visible_withdrawal; t22:visible_withdrawal; t23:visible_withdrawal]",
+        "t26-30": "actions[follow_closely(18), discuss_with_disciples(8), deny(8)] motifs[remain_present(29), conceal(12)] events[t26:public_denial; t27:public_denial; t27:visible_withdrawal; t28:public_denial]"
+      },
+      "final_state": "priest_courtyard: phase=idle align=0.06 blame[soldier_enforcer:0.12, authority_priest:0.09] shame_climate=1.00 | city_street: phase=idle align=0.08 blame[crowd_participant:0.28] shame_climate=1.00"
+    },
+    {
+      "probe_id": "PRB_ACC04",
+      "scenario_hidden": "accusation",
+      "seed": 4,
+      "n_agents": 10,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          3
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "soldier_enforcer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(13), discuss_with_disciples(13), stay_awake(13)] motifs[remain_present(33), observe_wait(6)] events[t3:public_accusation; t3:public_denial; t4:public_denial; t4:visible_withdrawal]",
+        "t06-10": "actions[discuss_with_disciples(13), follow_closely(12), stay_awake(9)] motifs[remain_present(30), observe_wait(6)] events[t7:public_accusation; t7:public_denial; t8:public_denial; t9:visible_withdrawal]",
+        "t11-15": "actions[follow_closely(14), deny(9), stay_awake(7)] motifs[remain_present(24), conceal(14)] events[t11:public_denial; t12:guard_approaches; t12:public_denial; t12:visible_withdrawal]",
+        "t16-20": "actions[deny(13), follow_closely(10), discuss_with_disciples(9)] motifs[remain_present(20), conceal(19)] events[t16:public_denial; t16:public_denial; t16:public_denial; t16:public_denial]",
+        "t21-25": "actions[follow_closely(11), follow_at_distance(11), deny(8)] motifs[remain_present(19), conceal(18)] events[t21:visible_withdrawal; t22:public_denial; t22:public_denial; t22:public_denial]",
+        "t26-30": "actions[stay_awake(9), deny(9), follow_closely(8)] motifs[remain_present(20), conceal(18)] events[t26:public_denial; t26:visible_withdrawal; t26:visible_withdrawal; t26:public_denial]"
+      },
+      "final_state": "priest_courtyard: phase=idle align=0.12 blame[soldier_enforcer:0.05] shame_climate=0.98 | city_street: phase=lynch_mode align=0.75 blame[crowd_participant:0.96] shame_climate=0.98"
+    },
+    {
+      "probe_id": "PRB_SCA03",
+      "scenario_hidden": "scarcity",
+      "seed": 3,
+      "n_agents": 12,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "fisher_laborer",
+          3
+        ],
+        [
+          "soldier_enforcer",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "merchant",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ],
+        [
+          "elite_strategist",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(18), discuss_with_disciples(16), stay_awake(14)] motifs[remain_present(41), observe_wait(11)] events[t5:public_accusation; t5:public_denial]",
+        "t06-10": "actions[follow_closely(18), stay_awake(15), deny(10)] motifs[remain_present(30), observe_wait(14)] events[t6:public_denial; t6:public_denial; t7:public_denial; t7:public_denial]",
+        "t11-15": "actions[stay_awake(15), follow_closely(12), deny(7)] motifs[remain_present(25), conceal(17)] events[t11:public_denial; t11:public_denial; t12:visible_withdrawal; t13:public_denial]",
+        "t16-20": "actions[discuss_with_disciples(13), follow_closely(13), deny(11)] motifs[remain_present(28), conceal(19)] events[t16:visible_withdrawal; t16:public_denial; t16:visible_withdrawal; t17:public_denial]",
+        "t21-25": "actions[discuss_with_disciples(14), follow_closely(12), stay_awake(10)] motifs[remain_present(24), observe_wait(14)] events[t21:public_denial; t21:public_denial; t22:visible_withdrawal; t22:public_denial]",
+        "t26-30": "actions[discuss_with_disciples(17), follow_closely(12), deny(9)] motifs[remain_present(28), conceal(15)] events[t26:public_denial; t26:public_denial; t26:visible_withdrawal; t26:visible_withdrawal]"
+      },
+      "final_state": "marketplace: phase=lynch_mode align=1.00 blame[fisher_laborer:1.00, soldier_enforcer:0.21] shame_climate=1.00 | poor_quarter: phase=idle align=0.00 blame[] shame_climate=0.00"
+    },
+    {
+      "probe_id": "PRB_SCA17",
+      "scenario_hidden": "scarcity",
+      "seed": 17,
+      "n_agents": 12,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "fisher_laborer",
+          3
+        ],
+        [
+          "soldier_enforcer",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "merchant",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ],
+        [
+          "elite_strategist",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(20), discuss_with_disciples(14), stay_awake(12)] motifs[remain_present(37), observe_wait(11)] events[t5:public_accusation; t5:public_denial; t5:visible_withdrawal]",
+        "t06-10": "actions[follow_closely(17), stay_awake(11), deny(11)] motifs[remain_present(31), conceal(14)] events[t6:public_denial; t6:public_denial; t7:public_denial; t7:public_denial]",
+        "t11-15": "actions[follow_closely(16), stay_awake(12), discuss_with_disciples(9)] motifs[remain_present(28), conceal(16)] events[t11:public_denial; t12:public_denial; t12:visible_withdrawal; t12:visible_withdrawal]",
+        "t16-20": "actions[follow_closely(14), discuss_with_disciples(12), stay_awake(11)] motifs[remain_present(27), conceal(15)] events[t16:visible_withdrawal; t17:public_denial; t17:visible_withdrawal; t17:public_denial]",
+        "t21-25": "actions[discuss_with_disciples(16), stay_awake(11), follow_closely(9)] motifs[remain_present(24), conceal(15)] events[t21:public_denial; t21:public_denial; t21:public_denial; t22:visible_withdrawal]",
+        "t26-30": "actions[follow_closely(14), discuss_with_disciples(11), follow_at_distance(10)] motifs[remain_present(25), observe_wait(14)] events[t26:visible_withdrawal; t27:visible_withdrawal; t27:visible_withdrawal; t28:public_denial]"
+      },
+      "final_state": "marketplace: phase=lynch_mode align=1.00 blame[fisher_laborer:0.80, soldier_enforcer:0.17] shame_climate=0.98 | poor_quarter: phase=idle align=0.00 blame[] shame_climate=0.00"
+    },
+    {
+      "probe_id": "PRB_SAC02",
+      "scenario_hidden": "sacred",
+      "seed": 2,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "spiritual_wanderer",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(12), discuss_with_disciples(12), stay_awake(11)] motifs[remain_present(31), observe_wait(5)] events[t5:prayer_invitation]",
+        "t06-10": "actions[discuss_with_disciples(14), follow_closely(14), stay_awake(7)] motifs[remain_present(34), observe_wait(6)] events[t10:miracle_witnessed]",
+        "t11-15": "actions[discuss_with_disciples(17), follow_closely(13), stay_awake(8)] motifs[remain_present(36), observe_wait(4)] events[]",
+        "t16-20": "actions[stay_awake(12), discuss_with_disciples(11), follow_closely(11)] motifs[remain_present(28), observe_wait(8)] events[t18:public_accusation; t18:public_denial; t19:visible_withdrawal; t19:public_denial]",
+        "t21-25": "actions[follow_closely(14), stay_awake(9), discuss_with_disciples(9)] motifs[remain_present(27), conceal(7)] events[t22:public_denial; t23:public_denial; t23:public_denial; t25:public_denial]",
+        "t26-30": "actions[follow_closely(10), discuss_with_disciples(9), stay_awake(7)] motifs[remain_present(19), conceal(13)] events[t26:public_denial; t27:public_denial; t27:public_denial; t29:visible_withdrawal]"
+      },
+      "final_state": "temple_outer_court: phase=idle align=0.29 blame[disciple_follower:0.25] shame_climate=1.00 | city_street: phase=idle align=0.00 blame[] shame_climate=0.00"
+    },
+    {
+      "probe_id": "PRB_SAC18",
+      "scenario_hidden": "sacred",
+      "seed": 18,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "spiritual_wanderer",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[discuss_with_disciples(18), follow_closely(13), stay_awake(6)] motifs[remain_present(33), observe_wait(6)] events[t5:prayer_invitation]",
+        "t06-10": "actions[follow_closely(19), discuss_with_disciples(12), stay_awake(6)] motifs[remain_present(33), observe_wait(6)] events[t10:miracle_witnessed]",
+        "t11-15": "actions[discuss_with_disciples(16), follow_closely(14), stay_awake(8)] motifs[remain_present(34), observe_wait(6)] events[]",
+        "t16-20": "actions[discuss_with_disciples(15), follow_closely(11), stay_awake(10)] motifs[remain_present(31), observe_wait(7)] events[t17:visible_withdrawal; t18:public_accusation; t20:public_denial]",
+        "t21-25": "actions[follow_closely(14), stay_awake(11), discuss_with_disciples(10)] motifs[remain_present(30), observe_wait(5)] events[t21:public_denial; t23:public_denial; t24:visible_withdrawal; t25:public_denial]",
+        "t26-30": "actions[follow_closely(11), deny(10), stay_awake(9)] motifs[remain_present(22), conceal(12)] events[t26:public_denial; t27:public_denial; t28:public_denial; t28:public_denial]"
+      },
+      "final_state": "temple_outer_court: phase=gathered align=0.43 blame[disciple_follower:0.50, crowd_participant:0.14] shame_climate=1.00 | city_street: phase=idle align=0.00 blame[] shame_climate=0.00"
+    }
+  ],
+  "evaluations": [
+    {
+      "probe_id": "PRB_CAL03",
+      "scenario_hidden": "calling",
+      "seed": 3,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "role transition (identity shift)",
+      "Q2_score": 2,
+      "Q3_relation_shift_score": 2,
+      "Q4_event_accumulation_score": 2,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.4
+    },
+    {
+      "probe_id": "PRB_CAL00",
+      "scenario_hidden": "calling",
+      "seed": 0,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "role transition (identity shift)",
+      "Q2_score": 2,
+      "Q3_relation_shift_score": 2,
+      "Q4_event_accumulation_score": 2,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.4
+    },
+    {
+      "probe_id": "PRB_CAL08",
+      "scenario_hidden": "calling",
+      "seed": 8,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "role transition (identity shift)",
+      "Q2_score": 2,
+      "Q3_relation_shift_score": 2,
+      "Q4_event_accumulation_score": 2,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.4
+    },
+    {
+      "probe_id": "PRB_ACC07",
+      "scenario_hidden": "accusation",
+      "seed": 7,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift_score": 1,
+      "Q4_event_accumulation_score": 3,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.6
+    },
+    {
+      "probe_id": "PRB_ACC19",
+      "scenario_hidden": "accusation",
+      "seed": 19,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "unclear",
+      "Q2_score": 1,
+      "Q3_relation_shift_score": 1,
+      "Q4_event_accumulation_score": 2,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.0
+    },
+    {
+      "probe_id": "PRB_ACC04",
+      "scenario_hidden": "accusation",
+      "seed": 4,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift_score": 1,
+      "Q4_event_accumulation_score": 3,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.6
+    },
+    {
+      "probe_id": "PRB_SCA03",
+      "scenario_hidden": "scarcity",
+      "seed": 3,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift_score": 1,
+      "Q4_event_accumulation_score": 3,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.6
+    },
+    {
+      "probe_id": "PRB_SCA17",
+      "scenario_hidden": "scarcity",
+      "seed": 17,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift_score": 1,
+      "Q4_event_accumulation_score": 3,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.6
+    },
+    {
+      "probe_id": "PRB_SAC02",
+      "scenario_hidden": "sacred",
+      "seed": 2,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "unclear",
+      "Q2_score": 1,
+      "Q3_relation_shift_score": 1,
+      "Q4_event_accumulation_score": 2,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.0
+    },
+    {
+      "probe_id": "PRB_SAC18",
+      "scenario_hidden": "sacred",
+      "seed": 18,
+      "Q1_not_random": 3,
+      "Q2_central_axis": "unclear",
+      "Q2_score": 1,
+      "Q3_relation_shift_score": 1,
+      "Q4_event_accumulation_score": 2,
+      "Q5_arc_curve_score": 3,
+      "mean_score": 2.0
+    }
+  ],
+  "by_scenario": {
+    "calling": {
+      "mean": 2.4,
+      "n": 3
+    },
+    "accusation": {
+      "mean": 2.4,
+      "n": 3
+    },
+    "scarcity": {
+      "mean": 2.6,
+      "n": 2
+    },
+    "sacred": {
+      "mean": 2.0,
+      "n": 2
+    }
+  },
+  "disclaimer": "Self-evaluation by the same agent that generated the probes. Per NEXT_STEPS Step 4, ideal evaluators are Lee or outside readers blind to scenario category. This is a baseline."
+}

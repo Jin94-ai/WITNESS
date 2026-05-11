@@ -241,16 +241,78 @@ Rule #6을 방패로 쓰고 ChatGPT/Gemini 제안을 무시했음.
 
 ---
 
-## 자동 검증 (작성 예정)
+## 패턴 8 — Single-seed conditioning이 sensitivity claim을 왜곡
 
-`scripts/audit_report.py` (H7에 언급) — 보고서 파일을 입력받아 아래 체크:
+**증상**: 단일 seed (보통 seed=0) 결과로 ensemble sensitivity ratio를 보고. "configuration sensitivity 67%" 같은 정량 claim이 실제 cross-seed ensemble과 ±30pp까지 다를 수 있음.
 
-1. 금지어 grep (설계의 승리 / 핵심 원천 / ... 11개)
-2. 필수 섹션 존재 확인 (What could still be wrong / What I did NOT try / Alternate interpretations)
-3. "spec §" / "Rule #" 언급 시 verbatim quote 여부
-4. "Lee 판단" 언급 시 equal-weight options 존재 여부
+### 발견 cycle (LOOP 67-76, 2026-04-28)
 
-실패하면 보고서 제출 금지.
+Branch C 1차 evidence는 36 probes × seed=0으로 구축. 이후 5-seed ensemble re-test:
+
+| 차원 | seed=0 sensitivity | 5-seed ensemble | Δ |
+|---|---:|---:|---:|
+| S5 placement | 67% | 44% | -23pp |
+| S4 cast | 67% | 56% | -11pp |
+| S3 event density | 22% | 44% | **+22pp (증가)** |
+| S2 scarcity depth | 44% | 11% | **-33pp (붕괴)** |
+
+**핵심 교훈**: seed=0이 systematically optimistic이 *아님*. S3는 seed=0이 sensitivity를 *과소평가*했고, S2는 *과대평가*했음. 단일 seed는 두 방향 모두로 편향됨.
+
+또 다른 발견: S2 dimension은 seed=0에서 4번째로 sensitive (44%)였지만 ensemble에서는 가장 *least* sensitive (11%). **단일 seed로 차원 간 상대 순위마저 역전 가능**.
+
+### 자기질문 (수치 보고 직전)
+
+- 이 sensitivity ratio는 single seed인가 ensemble인가?
+- single이면, ensemble re-test 후 ±20-30pp 변동 가능성 있는가?
+- 차원 간 상대 순위 (예: "cast > placement > density")를 single seed로 주장하는가? — 위험.
+
+### 강제 규칙
+
+- **Sensitivity ratio가 headline claim이면 5+ seed ensemble 필수**. single-seed는 illustration으로만.
+- **차원 간 상대 비교는 ensemble으로만**. seed=0 비교는 noise.
+- **seed=0 finding 보고 시 "ensemble re-test 미수행"을 H4 What-I-did-NOT-try 섹션에 명시**. 추후 cross-seed가 finding을 falsify하면 이 caveat이 falsification path 역할.
+
+### 메타 교훈
+
+HARNESS H4 ("What I did NOT try")가 단순 hedge가 아니라 **falsification roadmap**. LOOP 64에서 "seed=0 only"를 caveat으로 명시 → LOOP 73에서 그 caveat을 actual test로 verify → LOOP 76 결과가 finding을 walk back. 9 LOOPs 자가 falsification cycle.
+
+자율 모드에서 H1 + H4 조합으로 self-falsification 가능. Lee feedback 없이도 honest 진행. (lessons.md L13 참조)
+
+---
+
+## 자가감사 8항목 (보고 직전 강제 응답 — H7 통합 체크)
+
+> CLAUDE.md에서 분리 (2026-05-02). 보고서 제출 직전 다음 8개 질문을 **명시적으로 답변** — 답을 보고 본문에 포함하거나 최소 내부 체크. 하나라도 통과 못 하면 보고 보류.
+
+1. **[H1]** 이 수치를 trivial explanation으로 설명할 수 있는가? 그 가능성을 기각했는가?
+2. **[H2]** 실패/한계를 외부 탓으로 돌리기 전, 시도하지 않은 대안을 3개 이상 나열했는가?
+3. **[H3]** 인용한 spec/rule을 verbatim 확인했는가? 조항이 **정말** 이것을 금지하는가?
+4. **[H4]** "What could still be wrong" 섹션을 작성했는가?
+5. **[H5]** Lee의 원래 지시를 verbatim 보존했는가?
+6. **[H6]** 선택지를 equal weight로 제시했는가?
+7. **[H8]** sensitivity ratio가 headline claim이면 5+ seed ensemble로 측정했는가? single-seed는 illustration으로만 사용했는가?
+8. 이 보고서가 **좋은 소식만 전달하고** 있지 않은가? Lee가 **틀리다고 말할 수 있는** 내용을 포함했는가?
+
+---
+
+## 자동 검증 (구현됨, LOOP 80)
+
+`scripts/audit_report.py` — 보고서 파일을 입력받아 아래 체크:
+
+1. **H4 금지어 grep** (설계의 승리 / 핵심 원천 / positive 증거 / 준수 완료 / 살아 움직인다 / 파이프라인 완결 / 품질 달성)
+2. **H4 "작동한다" 단독 사용** 검출 (조건부화 없으면 위반)
+3. **H4 필수 섹션 존재 확인** (What could still be wrong / What I did NOT try / Alternate interpretations)
+4. **H3 "spec §" / "Rule #" 언급 시 verbatim quote 여부**
+5. **H6 "Lee 판단" 언급 시 ≥2 options 존재 여부**
+6. **H7 권장 섹션 확인** (Lee의 원래 지시 / 축소한 지점 / HARNESS 자가감사)
+7. **H8 sensitivity claim 시 ensemble disclosure 필수** (single-seed인 경우 명시)
+
+사용:
+```bash
+python scripts/audit_report.py <report.md>
+```
+
+위반 ≥1이면 exit code 1. 실패하면 보고서 제출 금지.
 
 ---
 

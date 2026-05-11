@@ -1,0 +1,31 @@
+=== PROBE P_ED_02 (event density: sacred/low-density/even-spacing, v4) ===
+
+[Annotated headline summary]
+  Final summary:    PARTIAL
+  Primary pressure: sacred
+  Miracle count:    1 (low)
+  Spacing:          even (ticks: [100])
+
+  Cohort outcomes:
+    [L3 cohort, 2 agents]:  no shame accumulation
+    [L2 cohort, 1 agents]:  no shame accumulation
+    [L1 cohort, 5 agents]:  partial: peak~4.6 -> final~0.2
+
+  Pressure events + recovery actions:
+    Sacred events:    2 fired (1 miracles, 1 prayer)
+    Accusations:      1 fired
+    Recovery actions: 50 confessions, 34 forgiveness rumors emitted
+    Awe peak:         9.75
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.6 at t=50 -> final 0.0
+    Public suspicion:    negligible (peak < 0.05)
+    Authority vigilance: negligible (peak < 0.05)
+    Top blame target:    crowd_participant (peak 0.30, weak)
+
+============================================================
+
+Agents: A1=wanderer, A2=authority, A3=follower, A4=follower, A5=follower, A6=crowd, A7=crowd, A8=family
+Locations: L1, L2, L3
+
+Event density variant: low-density / even-spacing

@@ -1,0 +1,40 @@
+{
+  "iter": 62,
+  "n_seeds": 5,
+  "n_ticks": 60,
+  "conditions": {
+    "A default 1.0": 1.0,
+    "B extreme low 0.1": 0.1,
+    "C extreme high 5.0": 5.0
+  },
+  "results": {
+    "A default 1.0": {
+      "recovery_value": 1.0,
+      "active": 30,
+      "rise_fall": 20,
+      "rise_fall_frac": 0.667,
+      "mean_peak": 9.657,
+      "mean_final": 3.548,
+      "mean_confess_per_seed": 11
+    },
+    "B extreme low 0.1": {
+      "recovery_value": 0.1,
+      "active": 30,
+      "rise_fall": 20,
+      "rise_fall_frac": 0.667,
+      "mean_peak": 9.657,
+      "mean_final": 3.548,
+      "mean_confess_per_seed": 11
+    },
+    "C extreme high 5.0": {
+      "recovery_value": 5.0,
+      "active": 30,
+      "rise_fall": 20,
+      "rise_fall_frac": 0.667,
+      "mean_peak": 9.657,
+      "mean_final": 3.548,
+      "mean_confess_per_seed": 11
+    }
+  },
+  "verdict": "INERT CONFIRMED -- extreme recovery_bias values produce IDENTICAL dynamics to default. recovery_bias has zero runtime coupling in B-direction MicroWorld."
+}

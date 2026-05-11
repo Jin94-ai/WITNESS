@@ -1,8 +1,112 @@
-# Witness 설계도 v1.2
+# Witness 설계도 v1.2 (+ Narrative Mode Refactor v2 — 2026-05-10)
 
+> **v2 개편 (2026-05-09 시작 → 2026-05-10 Genre Adapter MVP 추가)**: 결정론적 시뮬레이션 엔진(뼈대) + ML로 학습된 Narrative Mode 변환기(살)의
+> 이중 구조. 뼈대는 anchor-agnostic universal seed 출력, 살은 회차별 줄거리 코퍼스 학습 기반 변환.
+> Phase 2.75에서 *rule-based Flesh MVP* (Genre Adapter)가 추가되어 ML 진입 전 contract 검증 layer 역할.
+> Plans: [docs/witness_narrative_mode_plan.md](docs/witness_narrative_mode_plan.md) +
+> [docs/WITNESS_NARRATIVE_MODE_VALIDATION_FIX_PLAN.md](docs/WITNESS_NARRATIVE_MODE_VALIDATION_FIX_PLAN.md) +
+> [docs/WITNESS_PHASE_2_75_GENRE_ADAPTER_MVP_PLAN.md](docs/WITNESS_PHASE_2_75_GENRE_ADAPTER_MVP_PLAN.md).
+>
 > 역사적 인물의 생애를 hazard-driven, multi-agent ensemble simulation으로 수천 회 돌리고
 > 결과 분포를 관측하여 "무엇이 갈라지는 순간이었는가"를 발견하는 시스템.
 > **궁극 비전**: 플레이어가 역사적 인물의 삶을 체험하며 목격자가 되는 서사 시뮬레이터.
+
+---
+
+## v2 — Skeleton + Flesh 이중 구조 (2026-05-09 ~ 2026-05-10)
+
+```
+[Skeleton Engine — 결정론적]
+  Layer 1. Engine Core (압력 / 다중 에이전트 / deterministic seed)
+  Layer 2. Universal Human Model (pressure / desire / conflict_axes taxonomy)
+  Layer 3. Story Seed Mining → UniversalStorySeed v1.1 + EvidenceLedger
+
+       ↓ SkeletonOutput contract (FROZEN v1, RFC-0001 v1.1) ↓
+
+[Flesh Engine — 두 갈래]
+  ① Rule-based Flesh MVP (Phase 2.75)
+     Layer 4a. GenreRulebook (parametric — JSON 정의)
+     Layer 4b. GenreAdapter (structure-only 변환)
+     Layer 4c. GenreAudit (forbidden event / dialogue / source imitation)
+     → SkeletonOutput v1.1 → GenreAdaptedOutput v1
+     → 외부 의존 0, ML 진입 전 contract 검증 layer
+
+  ② ML 학습 (Phase 3-5, 미진입)
+     Layer 5a. Narrative Mode Models (Classifier α / Evaluator γ / Transformer β)
+     Layer 5b. Mode Application (학습된 mode → 모드화 출력)
+     → 외부 의존 (LLM API / 데이터 fetch / GPU)
+
+       ↓
+
+[Portfolio Surface]
+  - Universal Skeleton 미리보기 (docs/portfolio/demo/index.html)
+  - Genre Adapter 데모 (docs/portfolio/demo_genre/, demo_genre_japanese/)
+  - Cross-genre 비교 (docs/portfolio/demo_genre_comparison/)
+```
+
+**현재 진행 (2026-05-10)**:
+- **Phase 0** (Contract & Skeleton Cleanup): ✅ DONE — `engine/observer/skeleton_output.py::SkeletonOutput` v1 FROZEN, `engine/observer/universal_story_seed.py` v1.1 (RFC-0001), `engine/anchor/` 분리
+- **Phase 1** (Data Infra): ✅ INFRA — `docs/data/SELECTION_CRITERIA.md` + `scripts/data/synopsis_schema.py`. 실제 fetch는 ToS 검토 후
+- **Phase 2** (Annotation prep): ✅ PREP — `docs/annotation/ANNOTATION_GUIDE.md` v1.1 + `scripts/annotation/prompt_templates.py` (leveled features 0-5 / migrate_deprecated_annotation)
+- **Phase 2.5** (Validation Fix): ✅ DONE — UniversalStorySeed v1.1 + lossless adapter (4-tier pressure fallback) + LifeStoryFlow v1.1 (flow_roles auto-build) + AuditTrail v1.1 + `validate_skeleton_phase3.py` CLI / `is_skeleton_phase3_ready` Python helper / `assemble_skeleton_output(strict_axis=True)`. RFC-0001 + [VALIDATION_REPORT_2026_05_09_FIXES.md](docs/plans/VALIDATION_REPORT_2026_05_09_FIXES.md)
+- **Phase 2.75** (Genre Adapter MVP): ✅ DONE — `engine/observer/genre_rulebook.py` + `genre_adapter.py` + `genre_audit.py` + `content/genres/{korean_morning_melodrama, japanese_quiet_drama}/` rulebooks. 외부 의존 0. [GENRE_ADAPTER_MVP_AUDIT.md](docs/plans/GENRE_ADAPTER_MVP_AUDIT.md): Phase 3 GO 판정.
+- **Phase 2.8** (Genre Adapter Polish): ✅ DONE — structured outline + `genre_lens_ko` + soft `quality_warnings` + `genre_comparison_output_v1` + HTML 정보 위계 개선. 94 신규 genre tests. [GENRE_ADAPTER_POLISH_AUDIT.md](docs/plans/GENRE_ADAPTER_POLISH_AUDIT.md).
+- **Phase 2.9** (Portfolio Finalization): ✅ DONE — `demo_genre_comparison`을 portfolio main 확정 / README 정정 (rule-based 현재 / ML Phase 3 후) / [NARRATIVE_SCHEMA_VERSION_MAP.md](docs/specs/NARRATIVE_SCHEMA_VERSION_MAP.md) / [portfolio/README.md](docs/portfolio/README.md) (Main/Evidence/Appendix) / Phase 3.0 prep 3 docs ([PILOT_PREP](docs/plans/PHASE_3_0_DATA_PILOT_PREP.md) + [SOURCE_REVIEW](docs/plans/DATA_SOURCE_CANDIDATE_REVIEW.md) + [APPROVAL_CHECKLIST](docs/plans/PHASE_3_0_APPROVAL_CHECKLIST.md)) / .gitignore에 `data/external_private/` preempt. [PHASE_2_9_PORTFOLIO_FINALIZATION_PLAN.md](docs/plans/PHASE_2_9_PORTFOLIO_FINALIZATION_PLAN.md).
+- **Phase 3.0 v1.1** (Data Pipeline + LLM Labeler): ✅ Mode A 코드 파이프라인 + templates + fixture e2e (2 titles × 5 ep, 77 quotes, hallucination 0) — *외부 의존 0으로 작성 완료*. 7 신규 스크립트 (normalize / validate_dataset / build_inputs / build_public_safe / validate_outputs / build_feature_matrix / build_reliability_report) + Operating Guide ([PHASE_3_0_PIPELINE_OPERATING_GUIDE.md](docs/plans/PHASE_3_0_PIPELINE_OPERATING_GUIDE.md)). `instructions_ko` 12 feature 정의 inline. 사용자 승인 5+2건 후 운영 시작.
+- **Phase 3.1 prep** (No-ML weighted score, 두 layer baseline): ✅ 모두 학습 0 / fine-tuning 0 / raw text 0:
+  - **seed × profile fit** (`engine/observer/flesh_baseline.py` / flesh_baseline_output_v1): compatibility (50%) + annotation (50%) blend. SkeletonOutput seed가 어떤 장르 flesh와 잘 맞는지. demo: [docs/portfolio/demo_flesh_baseline/index.html](docs/portfolio/demo_flesh_baseline/index.html).
+  - **episode × profile intensity** (`engine/observer/episode_intensity.py` / episode_intensity_v1, Plan §22.2 Target B): annotator 평균 → KEEP feature × profile.feature_weights 선형 결합. 각 *에피소드*가 장르 시그니처에 부합하는 정도. demo HTML 스크립트 `scripts/annotation/build_episode_intensity_demo.py` (title × genre arc bar chart + per-record feature contribution mini-bars).
+  - 5 산출 (build_genre_profiles + run_flesh_baseline + build_flesh_baseline_demo + run_episode_intensity + build_episode_intensity_demo) + 35 tests. 모든 score 설명 가능 (reason_features + feature_contributions breakdown).
+- **Phase 3.05 prep 정직성 보강** (2026-05-11): ✅ Step 1+2 (`flesh_baseline.recommend_seed` *항상* score_breakdown 채움 — rulebook_only도 `axis_match/pressure_overlap/compatibility_score/annotation_score=None/mode`; demo HTML+MD에 "Prep mode (rulebook-only)" banner + fit_label 병기) + Step 3+4 (validator `--strict + --synopsis` 강제 exit 2; hallucination report 3 layer 분리 `valid_files_only_summary`/`all_files_summary`/`invalid_files` — threshold = valid 기준) + Step 5+6 (Operating Guide §9 **Deploy Status Matrix** 5 분류 + 5 architectural docs sync). 모든 prep 산출물 *실제 데이터 기반 추천처럼 보이지 않도록* 정직성 강화. 13 신규 phase3 tests / 2,543 fast.
+- **Rubric directive (Phase 3.05, 29 cycle)** ✅ 2026-05-11. 4-Axis Discovery **Candidate Classifier** ([docs/witness_rubric_design.md](docs/witness_rubric_design.md) + [WITNESS_V3_RUBRIC_DESIGN_REVIEW.md](docs/WITNESS_V3_RUBRIC_DESIGN_REVIEW.md)). 8-step flowchart (hardcoded → canon hard → **causal gate** → context_break → novelty noise → canonical_reproduction → character_consistent_novel_CANDIDATE / canon_compatible_character_DRIFT). 5 critic 모듈 (`engine/rubric/{character,canon,causal,novelty,context_break,scene_response}_critic.py` + `rubric_evaluator.py`). 3 scripts (`scripts/rubric/{run_rubric,trace_to_records,build_ensemble_html}.py`). 14 fixtures + 12+ portfolio reports (8 trajectory variants + alignment + axis-isolated + ensemble HTML). review §2.1/§2.2/§2.3/§2.4/§2.5/§2.6/§3/§5/§H8 모두 entire validation ✅. 124+ rubric tests. Rule #14 (학습 loss 0) + scalar 합산 0 + 모든 threshold `calibration_status="uncalibrated_phase3_placeholder"` 명시. **review §2.5 P1 extended** (cycle 16/20/22): CausalCritic `action_pressure_map` (optional, engine person-agnostic) → `pressure_action_alignment`. **review §5 discrimination empirical** (cycle 23/26): Phase H 재설계 CharacterCritic 3 axis (relation_stability/identity_retention/recovery_plausibility + minimum gate) — anti-signature fixture로 양방향 + axis-isolated N-case로 *각 axis 독립 trigger* 입증. **L84 generic detector** (cycle 28): `report_to_dict()` walker가 `__dict__` + `@property` 모두 walk — 향후 @property aliases 자동 surface.
+- **Phase 3.1 §22.3 Target C — Adaptation Recommendation** ✅ 2026-05-11 cycle 17-19. `engine/observer/adaptation_recommendation.py` (schema `adaptation_recommendation_v1`) + `scripts/narrative/{run_adaptation_recommendation,build_adaptation_recommendation_demo}.py` + portfolio demo `docs/portfolio/demo_adaptation_recommendation/index.html`. Target A의 flat list를 *seed별 grouped + score 내림차순 + top_k*로 재구성. **Plan §24 Step 2 bridge** (cycle 25): `scripts/narrative/apply_top_recommendation.py` — modal genre 자동 선택 + `--genre` override + `apply_genre_adapter.py`에 delegate → SkeletonOutput → recommendation → modal_genre → GenreAdaptedOutput chain 완결. Cross-target invariant (cycle 21): Target A top-1 = Target C 1순위 (동일 `recommend_seed()` 호출).
+- **Phase 3.1 §29 Acceptance verifier** ✅ 2026-05-11 cycle 29-31. `scripts/data/verify_phase3_1_acceptance.py` (9 항목 자동: §29.1 PENDING Phase 3.0 dep / §29.2-8 AUTO / §29.9 HEURISTIC) + `--md-report` flag + Operating Guide §4.6 dedicated section. Phase 3.0 verifier 대칭.
+- **Target B fixture-only portfolio deploy** ✅ 2026-05-11 cycle 40. `docs/portfolio/demo_episode_intensity/index.html` (10 episodes × 2 genres, `tests/fixtures/annotation_public_safe/` 기반). `--fixture-only` flag → prominent "Fictional fixture-only" banner (HTML CSS + MD blockquote + fixture path 노출). Operating Guide §9 deploy 카테고리: **fixture-only**. Phase 3.0 pilot 진입 후 실제 데이터로 교체 path 명시. → **Target A/B/C 모두 portfolio asset 보유** — Phase 3.1 baseline 시연 완결성.
+- **doc-reality automation** (cycle 33-38, 41-42): registry-driven invariant + multi-doc regex link checker. CLAUDE.md / FLESH_BASELINE_DEMO / portfolio README / Operating Guide 4개 doc 모두 자동 검증. 130 internal links across docs/portfolio + docs/plans 0 broken. lessons L86+L87 (doc statements as machine-checkable + registry/regex dual).
+- **Phase 3.0 actual run / Phase 3.1 학습**: ⏳ 사용자 승인 5+2건 대기. APPROVAL_CHECKLIST §2.1 12 step 단계별 절차.
+- **Phase 6** (통합 데모): ✅ PARTIAL — main `index.html`에 skeleton output 미리보기 + universal_seed_renderer + Phase 2.75 portfolio demo
+
+**Contract governance**: SkeletonOutput / UniversalStorySeed / universal taxonomy 변경 시
+[docs/plans/RFC_TEMPLATE.md](docs/plans/RFC_TEMPLATE.md) 따라 RFC 의무 (RFC-0001이 첫 사례). drift guard
+test가 `tests/test_skeleton/test_phase2_prep.py`에서 field 이름 + type annotation + default
+value + frozen 상태 + tuple/list mutability + schema_version까지 즉시 fail.
+
+**Phase 3 Go Gate** (3 layer 강제):
+- 코드: `engine.observer.universal_seed_adapter.is_skeleton_phase3_ready(out) → (bool, errors)`
+- CLI: `python scripts/skeleton/validate_skeleton_phase3.py docs/portfolio/demo/skeleton_output.json` (exit 0/1/2)
+- 쓰기 시점: `assemble_skeleton_output(..., strict_axis=True)` — unknown axis fail-fast
+
+**Genre Adapter governance**: 새 장르 추가 = `content/genres/{genre_id}/rulebook.json` + `audit_blocklist.json` 작성. engine 변경 0. `tests/test_genre/test_rulebook_drift_guard.py`가 모든 장르 rulebook의 schema 강제.
+
+---
+
+---
+
+## ⚠️ Surface 전환 알림 (2026-05-06~)
+
+이 문서는 *engine + simulation 설계*의 정합한 기록으로 유지된다. **현재 portfolio
+메인 산출물은 Narrative Mining Engine 출력** — `Story Thread` + `Narrative Opportunity`
++ HTML 콘솔 — 이다. Visual은 frozen, Text-first Observer Brief는 Narrative Mining의
+*입력 layer*로 통합됐다.
+
+| 항목 | 상태 |
+|---|---|
+| Engine + Observer + Curation 계층 | **active** — 본 문서가 정확한 설계서 |
+| **Narrative Mining Layer (신규 메인, Phase 1-5)** | [engine/observer/moment.py](engine/observer/moment.py) / [thread.py](engine/observer/thread.py) / [narrative_opportunity.py](engine/observer/narrative_opportunity.py) → [docs/portfolio/NARRATIVE_OPPORTUNITIES.md](docs/portfolio/NARRATIVE_OPPORTUNITIES.md) + [console.html](docs/portfolio/narrative_mining_console.html) |
+| Reporting Layer (Phase 11-12, 입력 surface) | [scripts/report/](scripts/report/) → brief + provenance table (narrative mining 입력에도 사용) |
+| Story Output Layer (v1.3 한국어 narrative) | active in code, *non-main-artifact* (story renderer 회귀 금지) |
+| Visual Layer (PSD / PEP / WFO) | **전체 freeze** ([VISUAL_TRACK_FREEZE_DECISION.md](docs/visual/VISUAL_TRACK_FREEZE_DECISION.md)) |
+
+전환 사유:
+1. PEP cutscene playback 27.9% staged-only / WFO Polished Viewer 5초 테스트 fail → visual freeze
+2. 단일 brief는 *후보 감지*에 강하지만 *서사 축적*을 못 보여줌 → Narrative Mining 추가
+3. Audit 방법론(`source_derived` / `source_inferred` / `not_used`)은 visual track에서 발명되어 brief, provenance table, narrative mining의 모든 layer에 transfer
+
+> **현 active plan**: [WITNESS_NARRATIVE_MINING_PLAN.md](docs/WITNESS_NARRATIVE_MINING_PLAN.md)
+> **이전 plan (보존)**: [WITNESS_PROJECT_RESET_AND_TEXT_FIRST_PLAN.md](docs/WITNESS_PROJECT_RESET_AND_TEXT_FIRST_PLAN.md)
+> **Lessons cluster**: L46–L55 (visual track 회고), L56 (narrative mining 도입)
+
+본 문서의 §1–§N 엔진 설계 내용은 무수정으로 보존한다. Visual layer 관련 기획(§11 등)은 *appendix-only*로 읽어야 한다 — 새 산출물 트리거가 아님.
 
 ---
 
@@ -27,11 +131,15 @@
 | v0.5 | Rule-based symbolic simulator + 검증 프레임워크 | 완료 (봉인) |
 | v0.7 | Trace pipeline + player view + drive hooks + content-driven narrative | 완료 |
 | **v1.2 (현재)** | **Phase-linked continuous life architecture (베드로 공생애 3년)** | **5 Phase E2E + phase별 canonical events + absolute time + slow recovery rule** |
+| **Branch C 1차** | **World-layer configuration sensitivity (S2/S3/S4/S5 + cross-seed walkback)** | **완료 — 36 probes + 240 runs, paper §6.9 + Appendix G** |
+| **Story Output MVP** | **annotated probe → 한국어 narrative renderer (3-stage pipeline)** | **완료 — 6/6 PASS, 48 stories, paper §6.10 + Appendix H** |
+| **J-Alpha (Creative IP 1차 증명)** | **같은 anchor 5 seeds → 다른 한국어 이야기 5편 가설 검증** | **부분 성공 — Peter 5/6 PASS, Van Gogh→sacred 1/6 FAIL.** Gate 2 = A (PASS) 응답 → J-Beta 진행 |
+| **J-Beta (Creative IP 확장)** | **Selector queryable library + Scarcity Trilogy + Cross-scenario REC differentiation** | **진행 중 — 5 anchors, scarcity trilogy nonmonotonic IP narrative beat (1/2/3 accusations → SAT/SAT/REC), Gate 1 자율 cycle 1+2+3 완료** |
 | v0.6/v1.0 paper | 논문 마감본 — 34 iteration → 핵심 narrative 축약 + 용어 교정 | 1-2개월 |
 | v1.0 Stage 2 | Predictive Latent Drive Bottleneck — PyTorch encoder 실제 구현 | 3-4개월 |
 | v1.1 | Relational Graph Extension (node drive + edge tension) | 2-3개월 |
 | v1.3 | Weak Preference Inference (classical IRL 아닌 mixture) | 2-3개월 |
-| v2.0 | Narrative Witness Layer (render-ready trace → 1인칭 경험) | 지속 |
+| v2.0 | Narrative Witness Layer (Story Output MVP → 인터랙티브 player view) | 지속 |
 
 ### v1.2 Phase-linked Life Architecture (2026-04-19, GPT+Gemini 리뷰 반영)
 
@@ -98,7 +206,7 @@
 - `engine/core/latent_drive.py` (4 Protocol + Identity impls)
 - CI workflow (ruff + mypy + pytest + coverage artifact) + benchmark script (Peter 1001 tick/s, VG 1267 tick/s baseline)
 - `examples/demo_v07.py --scenario peter|vangogh` — end-to-end pipeline 데모
-- **847 fast tests / 33 archived / 97%+ coverage** (time_axis / slow_recovery / inhibitor 100%)
+- **1845 fast tests / archived / 97%+ coverage** (time_axis / slow_recovery / inhibitor 100%)
 - v0.6 paper working draft (`docs/research/PAPER_DRAFT_V06.md`, 319 lines, §1–§9 + Appendix A/B/C + References)
 
 ### 핵심 설계 원칙 (v1.0+)
@@ -448,7 +556,195 @@ Witness/
 │   ├── checkpoints.json
 │   └── domain_faith.py
 │
-├── tests/ (153개 테스트)
+├── tests/ (1845 fast tests, 0 fail, 2026-04-30 기준 — Observer Layer 212 tests: 130 base + 35 Pipeline + 33 Curation + 14 adapter)
+│
+├── scripts/story/                # Story Output Layer (2026-04-28 NEW)
+│   ├── extract_story_features.py    # annotated probe → JSON
+│   ├── build_narrative_ir.py        # JSON → semantic IR (atoms)
+│   ├── render_story_ko.py           # IR → 한국어 텍스트 (template-guided)
+│   ├── selector.py                  # J-Alpha+J-Beta anchor library (2026-04-30 moved here for Rule #1)
+│   ├── generate_anchor_variations.py
+│   └── generate_trilogy_view.py
+├── engine/observer/              # World Observer Layer (2026-04-30 NEW, v1.3)
+│   ├── snapshot_schema.py        # 4 Pydantic models (Snapshot/World/Group/Agent)
+│   ├── recorder.py               # record_snapshot() + SnapshotStream
+│   ├── core.py                   # Observer (4 lens API: World/Person/Group/Event)
+│   ├── salience.py               # 8 tag types + top-N moments/agents
+│   ├── replay.py                 # ReplayCursor + auto_bookmark + window helpers
+│   └── adapter.py                # MultiAgentResult → Observer (post-hoc)
+├── scripts/observer/             # World Observer scripts (2026-04-30)
+│   ├── observer_report.py        # 11 text format functions
+│   └── compare_views.py          # multi-stream + multi-lens compare
+├── scripts/audit_report.py        # HARNESS H4-H8 자동 검증 + --stories 모드
+├── data/story/                   # Story intermediate JSONs (48 features + 48 IRs)
+├── docs/story/                   # 4 canonical + generated/ (96 .txt)
+├── docs/observer/                # World Observer canonical spec
+│
+├── examples/demo_story.py         # Story 단일 entry point (P9 또는 --highlights)
+├── examples/demo_observer.py      # Observer 단일 entry point (4 modes)
+├── examples/demo_creative.py      # Creative IP track (J-Alpha + J-Beta)
 ├── CLAUDE.md, DESIGN.md, README.md, progress.md
 └── requirements.txt
 ```
+
+---
+
+## 10. World Observer Layer (v1.3, 2026-04-30 NEW)
+
+### 10.1 정의
+
+Person Engine 위에 추가된 *흐르는 세계 관찰 계층*. 시뮬레이션이 생성하는 상태 변화를 tick 단위 snapshot stream으로 구조화하고, 다양한 렌즈 (Person / Group / Event / World) + zoom level + salience detector로 조회 가능하게 함.
+
+핵심 원칙: **관찰기 ≠ 평가기**. story quality 자동 판정 안 함, *탐색 가능성*에 집중.
+
+### 10.2 아키텍처
+
+```
+Pressure/Event Input
+    ↓
+Simulation Engine (existing — SimulationWorld)
+    ↓ MultiAgentResult
+World Snapshot Stream  ← engine/observer/recorder.py 또는 adapter.py
+    ↓
+World Observer Layer
+    ├─ Person View (engine/observer/core.py)
+    ├─ Group View
+    ├─ Event View
+    ├─ World View
+    ├─ Salience Detector (engine/observer/salience.py)
+    ├─ ReplayCursor (engine/observer/replay.py)
+    └─ Multi-stream Compare (scripts/observer/compare_views.py)
+    ↓
+Text Reports (scripts/observer/observer_report.py)
+```
+
+### 10.3 Snapshot Schema
+
+```python
+class Snapshot(BaseModel):
+    tick: int
+    active_events: list[str]
+    world: WorldSnapshot       # crowd_mood / blame / suspicion / authority / scarcity
+    groups: list[GroupSnapshot]  # cohort/location: dominant_mode + tension
+    agents: list[AgentSnapshot]  # light view: fear/hope/shame_self + delta tags
+    salience_hints: list[str]    # 8+ tag types
+```
+
+`AgentSnapshot`은 `engine.core.state.AgentState`의 *light view subset* (fear/hope/shame_self만). caller가 `role_map`으로 generic role tag 제공 (no person hardcoding).
+
+### 10.4 ABSOLUTE Rules 준수
+
+- **Rule #1** (no person hardcoding in engine/): Observer schema는 *generic role tag* (follower/crowd/authority). Caller가 `role_map` 제공.
+- **Rule #6** (engine API preservation): SimulationWorld 무수정. `result_to_observer()` adapter가 외부에서 *post-hoc* 변환.
+
+### 10.5 9 Salience tag types
+
+| Tag | 감지 |
+|---|---|
+| `pressure_spike` | world.scarcity_pressure tick-over-tick delta > 0.2 |
+| `authority_vigilance_spike` | world.authority_vigilance jump |
+| `public_suspicion_jump` | world.public_suspicion jump |
+| `blame_concentration_spike` | world.blame_concentration jump |
+| `cohort_split` | 2+ groups in different dominant_modes |
+| `recovery_turning_point` | group mode shift saturation→recovery |
+| `saturation_lock` | group mode "saturation" 5+ ticks 연속 |
+| `low_activity_tension` | crowd_mood "tense" + active_events 0 |
+| `agent_state_shift` | agent delta non-empty |
+
+### 10.6 MVP scope (Lee directive)
+
+**포함**:
+- Snapshot Recorder (post-hoc + adapter for SimulationWorld)
+- 4 lens (World/Person/Group/Event)
+- Salience top 5 / top unstable agents
+- Jump/Replay/Bookmark
+- Multi-stream comparison (anchor seed level)
+- Text reports (한국어 categorical tag 매핑)
+
+**제외**:
+- Full GUI / live interactive dashboard (text-based MVP)
+- Story quality scoring (관찰기 ≠ 평가기 원칙)
+- Public-facing browser
+- Real-time callback hook (post-hoc 변환만 — 추가 phase 시 directive 필요)
+
+### 10.7 검증
+
+- 212 tests in `tests/test_observer/` (130 base + 35 Pipeline + 33 Curation + 14 adapter)
+- Engine integrity: 0 violations (Rule #1 + Rule #6 준수)
+- Ruff + mypy clean
+
+### 10.8 Demo entry
+
+```bash
+python examples/demo_observer.py            # full demo
+python examples/demo_observer.py --status   # MVP 상태
+python examples/demo_observer.py --views    # 4 lens text
+python examples/demo_observer.py --replay   # ReplayCursor + auto bookmark
+python examples/demo_observer.py --compare  # 3 seeds 측면 비교
+```
+
+### 10.9 Canonical spec
+
+`docs/observer/WORLD_OBSERVER_LAYER_SPEC.md` (12 sections, MVP scope + phase plan).
+
+---
+
+## 11. Visual Observer Layer (v0-v0.1, 2026-04-30 NEW)
+
+### 11.1 정의
+
+도트 기반 visual track. Observer snapshot stream을 도트/zone/timeline으로 시각화하여 *세계 흐름의 직관적 관찰* 제공. Lee directive `docs/archive/lee_directives_2026-04-30/WITNESS_DOT_VISUAL_OBSERVER_ROADMAP_AND_DIRECTIVE.md` §0 verbatim — *"도트 기반 흐르는 세계 관찰 + 줌인/줌아웃 + 이야기 후보 발견"*.
+
+### 11.2 아키텍처 (3 entry points, 역할 분리)
+
+| Entry HTML | 역할 |
+|---|---|
+| **`visual/explorer.html`** | **Broad navigation entry** (v0/v0.1) — anchor selector + view toggle (single/cross) + candidate panel + packet side panel |
+| `visual/dot_observer_replay.html` | **Single-run deep view** (V2) — 200-tick replay + 5 panel + agent dot click + range overlay |
+| `visual/dot_observer_cross_seed.html` | **Cross-seed deep view** — 5 seeds small multiples + per-seed full detail |
+
+기존 deep view 보존 — explorer.html이 *기능 superset*이 아닌 *navigation superset*.
+
+### 11.3 4 단계 누적 검증 (모두 success)
+
+| 단계 | Case |
+|---|---|
+| V0-V1 MVP | A (5+/6) |
+| V2 minimal interaction | A (4/4) |
+| Anchor 2 single-seed | A-2 |
+| Cross-seed | CS-A |
+| Visual Explorer v0 통합 | EX-A |
+
+### 11.4 ABSOLUTE Rules 준수
+
+- Rule #1: visual 코드에 person hardcoding 없음 (anchor_id parameter only)
+- Rule #6: engine/observer/* 무수정
+- 관찰기 ≠ 평가기: visual은 *분류 + 탐색*만, *quality verdict* 안 함
+
+### 11.5 Tech stack
+
+- Vanilla JS + SVG (외부 dependency 0)
+- HTTP server (`python -m http.server`)
+- 데이터: schema v1 (single-run) + cross_seed_v1 (multi-seed)
+
+### 11.6 Demo entry
+
+```bash
+# 데이터 export (1회)
+python scripts/visual/export_dot_observer_data.py
+python scripts/visual/export_dot_observer_data.py \
+    --anchor peter_scarcity_triple --output data/visual/dot_observer_data_triple.json
+python scripts/visual/export_cross_seed_visual_data.py \
+    --anchor peter_scarcity_triple --seeds 0 1 2 3 4 \
+    --output data/visual/dot_observer_cross_seed_triple.json
+
+# HTTP server + 브라우저
+python -m http.server 8000
+# 단일 entry (default):
+http://localhost:8000/visual/explorer.html
+```
+
+### 11.7 Canonical spec
+
+`docs/visual/VISUAL_EXPLORER_V0_1_OPERATING_GUIDE.md` (운영 매뉴얼).
+`docs/visual/VISUAL_TRACK_SYNTHESIS_REVIEW.md` (4 단계 종합).

@@ -1,0 +1,40 @@
+{
+  "iter": 63,
+  "n_seeds": 5,
+  "n_ticks": 60,
+  "results": {
+    "A baseline (archetype values)": {
+      "active": 30,
+      "rise_fall": 15,
+      "rise_fall_frac": 0.5,
+      "mean_peak": 9.369,
+      "mean_final": 4.488,
+      "mean_confess_per_seed": 9.6
+    },
+    "B override all to 1.0 (default)": {
+      "active": 30,
+      "rise_fall": 15,
+      "rise_fall_frac": 0.5,
+      "mean_peak": 9.369,
+      "mean_final": 4.488,
+      "mean_confess_per_seed": 9.6
+    },
+    "C override all to 0.1 (extreme low)": {
+      "active": 30,
+      "rise_fall": 15,
+      "rise_fall_frac": 0.5,
+      "mean_peak": 9.369,
+      "mean_final": 4.488,
+      "mean_confess_per_seed": 9.6
+    },
+    "D override all to 2.0 (extreme high)": {
+      "active": 30,
+      "rise_fall": 15,
+      "rise_fall_frac": 0.5,
+      "mean_peak": 9.369,
+      "mean_final": 4.488,
+      "mean_confess_per_seed": 9.6
+    }
+  },
+  "verdict": "INERT CONFIRMED -- relation_bias values have zero observable effect on dynamics. Bit-identical output across archetype + default + extreme values. Scenario builders' archetype relation_bias tuning is cosmetic."
+}

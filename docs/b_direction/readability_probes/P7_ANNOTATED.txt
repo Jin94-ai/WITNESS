@@ -1,0 +1,62 @@
+=== PROBE P7_ANNOTATED (annotated supplement, v4) ===
+
+[Annotated headline summary]
+  Final summary:    PARTIAL
+  Primary pressure: sacred
+
+  Cohort outcomes:
+    [L3 cohort, 2 agents]:  no shame accumulation
+    [L2 cohort, 1 agents]:  no shame accumulation
+    [L1 cohort, 5 agents]:  partial: peak~10.0 → final~6.9
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: spiritual_wanderer)
+    Recovery actions: 103 confessions, 82 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.6 at t=126 → final 0.4
+    Top blame target:    disciple_follower (peak 0.44)
+    Public suspicion:    peak 0.08 → final 0.03
+    Authority vigilance: negligible (peak < 0.05)
+
+============================================================
+
+Agents: A1=wanderer, A2=authority, A3=follower, A4=follower, A5=follower, A6=crowd, A7=crowd, A8=family
+Locations: L1, L2, L3
+
+--- Event log (grouped by 50-tick windows) ---
+  (showing first 30 of 103 confessions; total in headline)
+  --- Tick 0-49 ---
+  t= 18  accusation against spiritual_wanderer
+  t= 49  confession by A6 (crowd)
+  --- Tick 50-99 ---
+  t= 50  confession by A4 (follower)
+  t= 50  confession by A5 (follower)
+  t= 50  confession by A8 (family)
+  t= 51  confession by A3 (follower)
+  t= 51  confession by A6 (crowd)
+  t= 53  confession by A2 (authority)
+  t= 54  confession by A1 (wanderer)
+  t= 54  confession by A2 (authority)
+  t= 55  confession by A2 (authority)
+  t= 55  confession by A6 (crowd)
+  t= 57  confession by A2 (authority)
+  t= 82  confession by A1 (wanderer)
+  t= 83  confession by A2 (authority)
+  t= 85  confession by A2 (authority)
+  t= 90  confession by A6 (crowd)
+  t= 91  confession by A3 (follower)
+  t= 92  confession by A6 (crowd)
+  t= 92  confession by A8 (family)
+  t= 93  confession by A1 (wanderer)
+  t= 93  confession by A6 (crowd)
+  t= 94  confession by A1 (wanderer)
+  t= 94  confession by A6 (crowd)
+  t= 95  confession by A2 (authority)
+  t= 97  confession by A3 (follower)
+  t= 97  confession by A4 (follower)
+  t= 98  confession by A2 (authority)
+  --- Tick 100-149 ---
+  t=100  confession by A6 (crowd)
+  t=103  confession by A2 (authority)
+  t=125  confession by A6 (crowd)

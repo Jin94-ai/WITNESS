@@ -1,0 +1,56 @@
+{
+  "n_seeds": 15,
+  "n_ticks": 500,
+  "results": {
+    "V0_default_placements": {
+      "label": "V0_default_placements",
+      "all_at_poor_quarter": false,
+      "finals": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "mean": 10.0,
+      "stdev": 0.0,
+      "recovery_rate": "0/15",
+      "recovery_pct": 0.0
+    },
+    "V1_all_poor_quarter": {
+      "label": "V1_all_poor_quarter",
+      "all_at_poor_quarter": true,
+      "finals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "stdev": 0.0,
+      "recovery_rate": "15/15",
+      "recovery_pct": 100.0
+    }
+  }
+}

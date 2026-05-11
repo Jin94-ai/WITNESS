@@ -1,0 +1,28 @@
+=== PROBE P_PV_08 (placement variant: sacred/inverted, v4) ===
+
+[Annotated headline summary]
+  Final summary:    SATURATION_DOMINATED
+  Primary pressure: sacred
+  Failure mode:     shame_cap
+
+  Cohort outcomes:
+    [L3 cohort, 5 agents]:  no shame accumulation
+    [L2 cohort, 1 agents]:  no shame accumulation
+    [L1 cohort, 2 agents]:  saturation: peak~10.0 → final~10.0 (stuck)
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: spiritual_wanderer)
+    Recovery actions: 21 confessions, 19 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.4 at t=173 → final 0.2
+    Public suspicion:    negligible (peak < 0.05)
+    Authority vigilance: negligible (peak < 0.05)
+    Top blame target:    crowd_participant (peak 0.37)
+
+============================================================
+
+Agents: A1=wanderer, A2=authority, A3=follower, A4=follower, A5=follower, A6=crowd, A7=crowd, A8=family
+Locations: L1, L2, L3
+
+Placement variant: inverted

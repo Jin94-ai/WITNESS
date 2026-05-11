@@ -1,0 +1,416 @@
+=== PROBE P8 ===
+
+Agents: A1=follower, A2=follower, A3=follower, A4=authority, A5=enforcer, A6=crowd, A7=crowd, A8=crowd, A9=family, A10=outsider
+Locations: L1, L2
+
+--- Event log (selected ticks) ---
+  t=  3  public_accusation      L1
+  t=  4  public_denial          :A4
+  t=  4  public_denial          :A7
+  t=  7  public_accusation      L2
+  t=  7  public_denial          :A4
+  t=  7  public_denial          :A5
+  t=  8  public_denial          :A5
+  t= 10  public_denial          :A4
+  t= 10  public_denial          :A5
+  t= 11  public_denial          :A4
+  t= 11  public_denial          :A5
+  t= 11  public_denial          :A10
+  t= 12  guard_approaches       upper_room
+  t= 13  public_denial          :A5
+  t= 13  public_denial          :A7
+  t= 14  public_denial          :A5
+  t= 14  public_denial          :A7
+  t= 15  public_denial          :A6
+  t= 15  public_denial          :A7
+  t= 15  public_denial          :A10
+  t= 16  public_denial          :A5
+  t= 16  public_denial          :A6
+  t= 16  public_denial          :A8
+  t= 17  public_denial          :A10
+  t= 18  public_denial          :A6
+  t= 18  public_denial          :A7
+  t= 19  public_denial          :A4
+  t= 19  public_denial          :A5
+  t= 19  public_denial          :A6
+  t= 19  public_denial          :A8
+  t= 20  public_denial          :A4
+  t= 20  public_denial          :A6
+  t= 20  public_denial          :A8
+  t= 20  public_denial          :A10
+  t= 21  public_denial          :A4
+  t= 21  public_denial          :A6
+  t= 21  public_denial          :A8
+  t= 21  public_denial          :A10
+  t= 22  public_denial          :A5
+  t= 22  public_denial          :A7
+  t= 22  public_denial          :A10
+  t= 23  public_denial          :A7
+  t= 23  public_denial          :A10
+  t= 24  public_denial          :A4
+  t= 24  public_denial          :A7
+  t= 24  public_denial          :A10
+  t= 25  public_denial          :A6
+  t= 25  public_denial          :A7
+  t= 25  public_denial          :A8
+  t= 25  public_denial          :A10
+  t= 26  public_denial          :A6
+  t= 27  public_denial          :A7
+  t= 27  public_denial          :A10
+  t= 28  public_denial          :A5
+  t= 28  public_denial          :A7
+  t= 28  public_denial          :A10
+  t= 29  public_denial          :A5
+  t= 29  public_denial          :A7
+  t= 30  public_denial          :A4
+  t= 30  public_denial          :A10
+  t= 31  public_denial          :A4
+  t= 32  public_denial          :A4
+  t= 32  public_denial          :A5
+  t= 32  public_denial          :A7
+  t= 33  public_denial          :A4
+  t= 33  public_confession      :A5
+  t= 33  forgiveness_emitted    :A5
+  t= 33  public_denial          :A7
+  t= 33  public_denial          :A10
+  t= 34  public_denial          :A5
+  t= 34  public_confession      :A6
+  t= 34  forgiveness_emitted    :A6
+  t= 34  public_confession      :A7
+  t= 34  forgiveness_emitted    :A7
+  t= 34  visible_grief          :A8
+  t= 34  public_denial          :A10
+  t= 35  public_confession      :A4
+  t= 35  forgiveness_emitted    :A4
+  t= 35  public_confession      :A8
+  t= 35  forgiveness_emitted    :A8
+  t= 35  public_denial          :A10
+  t= 36  public_confession      :A6
+  t= 36  forgiveness_emitted    :A6
+  t= 36  public_denial          :A7
+  t= 36  public_denial          :A10
+  t= 37  public_denial          :A5
+  t= 38  public_denial          :A4
+  t= 38  public_denial          :A10
+  t= 39  public_denial          :A5
+  t= 39  public_confession      :A7
+  t= 39  forgiveness_emitted    :A7
+  t= 39  public_denial          :A10
+  t= 40  public_denial          :A4
+  t= 40  visible_grief          :A5
+  t= 41  public_denial          :A4
+  t= 41  public_confession      :A6
+  t= 41  forgiveness_emitted    :A6
+  t= 42  public_denial          :A4
+  t= 42  public_confession      :A6
+  t= 42  forgiveness_emitted    :A6
+  t= 43  visible_grief          :A5
+  t= 44  public_denial          :A10
+  t= 45  public_confession      :A5
+  t= 45  forgiveness_emitted    :A5
+  t= 45  visible_grief          :A6
+  t= 46  public_denial          :A10
+  t= 47  visible_grief          :A4
+  t= 48  public_confession      :A4
+  t= 48  forgiveness_emitted    :A4
+  t= 49  public_denial          :A4
+  t= 49  public_confession      :A5
+  t= 49  forgiveness_emitted    :A5
+  t= 49  visible_grief          :A6
+  t= 50  public_denial          :A10
+  t= 51  public_confession      :A5
+  t= 51  forgiveness_emitted    :A5
+  t= 51  visible_grief          :A8
+  t= 51  public_denial          :A10
+  t= 52  public_denial          :A4
+  t= 52  public_confession      :A8
+  t= 52  forgiveness_emitted    :A8
+  t= 52  public_denial          :A10
+  t= 54  public_confession      :A6
+  t= 54  forgiveness_emitted    :A6
+  t= 55  public_confession      :A4
+  t= 55  forgiveness_emitted    :A4
+  t= 55  public_denial          :A10
+  t= 56  public_denial          :A10
+  t= 57  public_denial          :A4
+  t= 57  visible_grief          :A5
+  t= 57  visible_grief          :A6
+  t= 58  visible_grief          :A5
+  t= 58  public_denial          :A10
+  t= 63  public_denial          :A10
+  t= 64  public_denial          :A4
+  t= 64  public_denial          :A10
+  t= 68  public_denial          :A4
+  t= 69  public_denial          :A4
+  t= 70  public_denial          :A4
+  t= 71  public_denial          :A7
+  t= 72  public_denial          :A4
+  t= 72  public_denial          :A10
+  t= 74  public_denial          :A4
+  t= 76  public_denial          :A7
+  t= 78  public_denial          :A4
+  t= 78  public_denial          :A10
+  t= 79  public_denial          :A5
+  t= 79  public_denial          :A10
+  t= 80  public_denial          :A5
+  t= 81  public_denial          :A4
+  t= 82  public_denial          :A4
+  t= 82  public_denial          :A10
+  t= 83  public_denial          :A5
+  t= 84  public_denial          :A4
+  t= 84  public_denial          :A5
+  t= 85  public_denial          :A5
+  t= 86  public_denial          :A4
+  t= 87  public_denial          :A6
+  t= 88  public_denial          :A10
+  t= 89  public_denial          :A5
+  t= 89  public_denial          :A10
+  t= 90  public_denial          :A5
+  t= 90  public_denial          :A6
+  t= 90  public_denial          :A7
+  t= 91  public_denial          :A7
+  t= 91  public_denial          :A10
+  t= 92  public_denial          :A4
+  t= 92  public_denial          :A6
+  t= 92  public_denial          :A7
+  t= 92  public_denial          :A8
+  t= 93  public_denial          :A8
+  t= 94  public_denial          :A5
+  t= 95  public_denial          :A5
+  t= 95  public_denial          :A6
+  t= 95  public_denial          :A8
+  t= 95  public_denial          :A10
+  t= 96  public_denial          :A4
+  t= 96  public_denial          :A6
+  t= 96  public_denial          :A7
+  t= 96  public_denial          :A8
+  t= 97  public_denial          :A5
+  t= 97  public_denial          :A6
+  t= 97  public_denial          :A7
+  t= 97  public_denial          :A8
+  t= 98  public_denial          :A4
+  t= 98  public_denial          :A6
+  t= 99  public_denial          :A7
+  t= 99  public_denial          :A8
+  t=100  public_denial          :A4
+  t=100  public_denial          :A6
+  t=100  public_denial          :A7
+  t=100  public_denial          :A8
+  t=101  public_denial          :A4
+  t=101  public_confession      :A6
+  t=101  forgiveness_emitted    :A6
+  t=102  public_confession      :A5
+  t=102  forgiveness_emitted    :A5
+  t=102  public_confession      :A6
+  t=102  forgiveness_emitted    :A6
+  t=102  public_confession      :A8
+  t=102  forgiveness_emitted    :A8
+  t=103  visible_grief          :A5
+  t=103  public_confession      :A6
+  t=103  forgiveness_emitted    :A6
+  t=103  public_denial          :A7
+  t=103  public_confession      :A8
+  t=103  forgiveness_emitted    :A8
+  t=104  public_confession      :A5
+  t=104  forgiveness_emitted    :A5
+  t=104  public_confession      :A6
+  t=104  forgiveness_emitted    :A6
+  t=104  public_confession      :A7
+  t=104  forgiveness_emitted    :A7
+  t=104  public_denial          :A10
+  t=105  public_denial          :A4
+  t=105  public_confession      :A5
+  t=105  forgiveness_emitted    :A5
+  t=106  public_confession      :A4
+  t=106  forgiveness_emitted    :A4
+  t=107  public_denial          :A4
+  t=107  public_confession      :A5
+  t=107  forgiveness_emitted    :A5
+  t=108  public_denial          :A4
+  t=108  public_denial          :A10
+  t=109  public_denial          :A4
+  t=109  visible_grief          :A6
+  t=110  visible_grief          :A6
+  t=111  public_denial          :A4
+  t=116  public_denial          :A4
+  t=119  public_denial          :A4
+  t=119  public_denial          :A10
+  t=120  public_denial          :A10
+  t=123  public_denial          :A10
+  t=124  public_denial          :A10
+  t=125  public_confession      :A4
+  t=125  forgiveness_emitted    :A4
+  t=126  public_denial          :A10
+  t=127  public_denial          :A4
+  t=128  public_denial          :A10
+  t=131  public_denial          :A10
+  t=132  public_denial          :A10
+  t=133  public_denial          :A7
+  t=134  public_denial          :A4
+  t=135  public_denial          :A10
+  t=136  public_denial          :A10
+  t=138  public_denial          :A10
+  t=140  public_denial          :A10
+  t=141  public_denial          :A4
+  t=144  public_denial          :A10
+  t=145  public_denial          :A10
+  t=147  public_denial          :A4
+  t=147  public_denial          :A10
+  t=148  public_denial          :A5
+  t=148  public_denial          :A7
+  t=148  public_denial          :A10
+  t=149  public_denial          :A6
+  t=150  public_denial          :A6
+  t=150  public_denial          :A8
+  t=151  public_denial          :A4
+  t=151  public_denial          :A5
+  t=151  public_denial          :A7
+  t=152  public_denial          :A5
+  t=152  public_denial          :A8
+  t=153  public_denial          :A8
+  t=153  public_denial          :A10
+  t=154  public_denial          :A4
+  t=154  public_denial          :A10
+  t=155  public_denial          :A7
+  t=155  public_denial          :A8
+  t=156  public_denial          :A4
+  t=156  public_denial          :A5
+  t=156  public_denial          :A6
+  t=156  public_denial          :A7
+  t=156  public_denial          :A10
+  t=157  public_denial          :A6
+  t=157  public_denial          :A7
+  t=157  public_denial          :A8
+  t=158  public_confession      :A7
+  t=158  forgiveness_emitted    :A7
+  t=158  public_denial          :A8
+  t=159  visible_grief          :A6
+  t=159  public_denial          :A8
+  t=160  public_denial          :A4
+  t=160  public_denial          :A5
+  t=160  public_confession      :A7
+  t=160  forgiveness_emitted    :A7
+  t=160  public_confession      :A8
+  t=160  forgiveness_emitted    :A8
+  t=160  public_denial          :A10
+  t=161  public_confession      :A4
+  t=161  forgiveness_emitted    :A4
+  t=161  public_denial          :A5
+  t=161  public_denial          :A7
+  t=163  public_denial          :A4
+  t=163  visible_grief          :A5
+  t=163  public_denial          :A10
+  t=164  public_denial          :A4
+  t=164  public_confession      :A5
+  t=164  forgiveness_emitted    :A5
+  t=165  public_confession      :A6
+  t=165  forgiveness_emitted    :A6
+  t=166  public_denial          :A10
+  t=167  public_denial          :A4
+  t=167  public_denial          :A10
+  t=171  public_denial          :A4
+  t=174  public_denial          :A4
+  t=175  public_denial          :A4
+  t=175  public_denial          :A5
+  t=175  public_denial          :A10
+  t=176  visible_grief          :A6
+  t=179  public_denial          :A5
+  t=179  visible_grief          :A6
+  t=180  public_denial          :A4
+  t=180  public_denial          :A5
+  t=181  public_denial          :A5
+  t=181  public_denial          :A10
+  t=182  public_denial          :A5
+  t=183  public_denial          :A5
+  t=183  public_denial          :A7
+  t=183  public_denial          :A10
+  t=185  public_denial          :A4
+  t=186  public_denial          :A5
+  t=186  public_denial          :A10
+  t=187  public_denial          :A4
+  t=188  public_denial          :A5
+  t=190  public_denial          :A5
+  t=190  public_denial          :A7
+  t=190  public_denial          :A10
+  t=192  public_denial          :A5
+  t=193  public_denial          :A7
+  t=194  public_denial          :A10
+  t=195  visible_grief          :A4
+  t=195  public_denial          :A8
+  t=195  public_denial          :A10
+  t=196  public_confession      :A4
+  t=196  forgiveness_emitted    :A4
+  t=196  public_denial          :A5
+  t=196  public_denial          :A8
+  t=197  visible_grief          :A5
+  t=197  visible_grief          :A7
+  t=198  visible_grief          :A5
+  t=198  visible_grief          :A6
+  t=198  public_denial          :A10
+  t=199  public_denial          :A5
+  t=199  public_confession      :A6
+  t=199  forgiveness_emitted    :A6
+  t=199  public_denial          :A7
+  t=199  public_confession      :A8
+  t=199  forgiveness_emitted    :A8
+  t=200  visible_grief          :A6
+
+--- State snapshot at t=50 ---
+  A1: sha=0.5 fea=0.5 gri=2.2
+  A2: sha=0.5 gri=1.4
+  A3: sha=0.5 gri=2.2
+  A4: sha=3.4 gui=8.3 fea=10.0 gri=1.5
+  A5: sha=0.2 gui=5.0 fea=9.8 gri=2.5
+  A6: gri=2.4
+  A7: gri=1.3
+  A8: gri=1.9
+  A9: sha=0.5 gri=1.5
+  A10: sha=10.0 gui=10.0 fea=10.0 gri=4.7
+  (crowd)
+  L1: shame_climate=0.0 align=0.0
+  L2: shame_climate=0.1 align=0.0 blame[outsider]=0.4
+
+--- State snapshot at t=100 ---
+  A1: sha=0.5 gri=2.6
+  A2: sha=0.5 gri=1.8
+  A3: sha=0.5 gri=3.0
+  A4: sha=9.2 gui=10.0 fea=10.0 gri=1.9
+  A5: sha=9.2 gui=10.0 fea=10.0 gri=3.3
+  A6: sha=4.2 gui=8.0 fea=3.1 gri=2.8
+  A7: sha=4.2 gui=9.0 fea=3.0 gri=1.5
+  A8: sha=4.1 gui=7.0 fea=3.0 gri=2.3
+  A9: sha=0.5 gri=1.9
+  A10: sha=10.0 gui=10.0 fea=10.0 gri=6.2
+  (crowd)
+  L1: shame_climate=1.0 align=0.0 blame[authority_priest]=0.1
+  L2: shame_climate=1.0 align=0.6 blame[crowd_participant]=1.0
+
+--- State snapshot at t=150 ---
+  A1: sha=0.5 gri=3.0
+  A2: sha=0.5 gri=1.8
+  A3: sha=0.5 gri=5.6
+  A4: sha=3.4 gui=9.4 fea=10.0 gri=2.2
+  A5: sha=3.2 gui=1.0 fea=10.0 gri=4.1
+  A6: sha=0.4 gui=2.0 fea=0.2 gri=3.6
+  A7: sha=0.4 gui=2.0 fea=0.2 gri=1.7
+  A8: sha=0.4 gui=1.0 fea=0.2 gri=2.3
+  A9: sha=0.5 gri=2.7
+  A10: sha=10.0 gui=10.0 fea=10.0 gri=7.4
+  (crowd)
+  L1: shame_climate=0.3 align=0.1
+  L2: shame_climate=1.0 align=0.2 blame[crowd_participant]=0.3
+
+--- State snapshot at t=200 ---
+  A1: sha=0.5 gri=5.1
+  A2: sha=0.5 gri=2.2
+  A3: sha=0.5 gri=9.2
+  A4: sha=6.2 gui=8.0 fea=10.0 gri=3.1
+  A5: sha=10.0 gui=10.0 fea=10.0 gri=5.8
+  A6: sha=0.2 fea=0.1 gri=5.8
+  A7: sha=0.2 gui=3.2 fea=0.1 gri=2.3
+  A8: sha=0.2 gui=0.7 fea=0.1 gri=2.4
+  A9: sha=0.5 gri=3.1
+  A10: sha=10.0 gui=10.0 fea=10.0 gri=8.8
+  (crowd)
+  L1: shame_climate=0.3 align=0.1 blame[soldier_enforcer]=0.0
+  L2: shame_climate=0.4 align=0.0 blame[outsider]=0.0

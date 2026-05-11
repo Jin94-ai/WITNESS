@@ -1,0 +1,54 @@
+{
+  "iter": 77,
+  "pyhash": "0",
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "noise_stdev": 0.388,
+  "conditions": [
+    "A_pure_accusation",
+    "B_mixed_baseline",
+    "C_mixed_phase2a_off",
+    "D_mixed_shame_channel_off"
+  ],
+  "results": {
+    "A_pure_accusation": {
+      "condition": "A_pure_accusation",
+      "n_active": 30,
+      "rev_mean": 3.17,
+      "peak_shame": 9.32,
+      "final_shame": 5.96,
+      "final_awe": 3.0,
+      "confess_per_seed": 36.6
+    },
+    "B_mixed_baseline": {
+      "condition": "B_mixed_baseline",
+      "n_active": 30,
+      "rev_mean": 3.17,
+      "peak_shame": 9.32,
+      "final_shame": 5.96,
+      "final_awe": 3.0,
+      "confess_per_seed": 36.6
+    },
+    "C_mixed_phase2a_off": {
+      "condition": "C_mixed_phase2a_off",
+      "n_active": 30,
+      "rev_mean": 0,
+      "peak_shame": 10.0,
+      "final_shame": 10.0,
+      "final_awe": 3.0,
+      "confess_per_seed": 88.6
+    },
+    "D_mixed_shame_channel_off": {
+      "condition": "D_mixed_shame_channel_off",
+      "n_active": 30,
+      "rev_mean": 0,
+      "peak_shame": 10.0,
+      "final_shame": 10.0,
+      "final_awe": 3.0,
+      "confess_per_seed": 47.6
+    }
+  },
+  "p1_holds": true,
+  "shame_holds": true,
+  "verdict": "Mixed-arc PRESERVES structural findings: P1 (Phase 2a universal recovery channel) + Iter 71 (shame channel necessary) both hold under sacred injection."
+}

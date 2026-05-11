@@ -1,0 +1,88 @@
+{
+  "iter": 55,
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "per_seed": [
+    {
+      "seed": 0,
+      "n_active_agents": 6,
+      "total_reversals": 20,
+      "lag_shame_vs_forgiveness": -20,
+      "corr_shame_vs_forgiveness": 0.318,
+      "lag_shame_vs_alignment": 20,
+      "corr_shame_vs_alignment": 0.061,
+      "lag_shame_vs_confess": -20,
+      "corr_shame_vs_confess": 0.256
+    },
+    {
+      "seed": 1,
+      "n_active_agents": 6,
+      "total_reversals": 28,
+      "lag_shame_vs_forgiveness": -3,
+      "corr_shame_vs_forgiveness": 0.284,
+      "lag_shame_vs_alignment": 20,
+      "corr_shame_vs_alignment": -0.022,
+      "lag_shame_vs_confess": -2,
+      "corr_shame_vs_confess": 0.207
+    },
+    {
+      "seed": 2,
+      "n_active_agents": 6,
+      "total_reversals": 20,
+      "lag_shame_vs_forgiveness": -14,
+      "corr_shame_vs_forgiveness": 0.283,
+      "lag_shame_vs_alignment": 20,
+      "corr_shame_vs_alignment": -0.078,
+      "lag_shame_vs_confess": -13,
+      "corr_shame_vs_confess": 0.205
+    },
+    {
+      "seed": 3,
+      "n_active_agents": 6,
+      "total_reversals": 19,
+      "lag_shame_vs_forgiveness": -20,
+      "corr_shame_vs_forgiveness": 0.331,
+      "lag_shame_vs_alignment": 20,
+      "corr_shame_vs_alignment": 0.025,
+      "lag_shame_vs_confess": -19,
+      "corr_shame_vs_confess": 0.248
+    },
+    {
+      "seed": 4,
+      "n_active_agents": 6,
+      "total_reversals": 18,
+      "lag_shame_vs_forgiveness": -20,
+      "corr_shame_vs_forgiveness": 0.289,
+      "lag_shame_vs_alignment": 20,
+      "corr_shame_vs_alignment": 0.029,
+      "lag_shame_vs_confess": -20,
+      "corr_shame_vs_confess": 0.245
+    }
+  ],
+  "period_stats": {
+    "n": 84,
+    "mean": 31.607142857142858,
+    "stdev": 14.560234554862053,
+    "min": 10,
+    "max": 63
+  },
+  "avg_abs_correlations": {
+    "shame_vs_forgiveness": 0.301,
+    "shame_vs_alignment": 0.043,
+    "shame_vs_confess": 0.2322
+  },
+  "source_ranking": [
+    [
+      "forgiveness_rumors",
+      0.301
+    ],
+    [
+      "confess_events",
+      0.2322
+    ],
+    [
+      "crowd_alignment",
+      0.043
+    ]
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "results": {
+    "A_baseline": {
+      "label": "A_baseline",
+      "rev_mean": 3.73,
+      "n_active": 30,
+      "final_mean": 5.36,
+      "confess_per_seed": 33.4,
+      "public_suspicion_peak_mean": 1.0,
+      "top_motifs": {
+        "remain_present": 0.528,
+        "conceal": 0.192,
+        "observe_wait": 0.086,
+        "withdraw": 0.081,
+        "confess": 0.072
+      },
+      "blame_targets_seen": {
+        "soldier_enforcer": 3,
+        "authority_priest": 2,
+        "outsider": 3,
+        "crowd_participant": 2
+      }
+    },
+    "B_heavy_authority": {
+      "label": "B_heavy_authority",
+      "rev_mean": 3.8,
+      "n_active": 30,
+      "final_mean": 4.56,
+      "confess_per_seed": 37,
+      "public_suspicion_peak_mean": 1.0,
+      "top_motifs": {
+        "remain_present": 0.524,
+        "conceal": 0.183,
+        "observe_wait": 0.088,
+        "withdraw": 0.083,
+        "confess": 0.079
+      },
+      "blame_targets_seen": {
+        "soldier_enforcer": 2,
+        "authority_priest": 3,
+        "outsider": 4,
+        "crowd_participant": 2
+      }
+    },
+    "C_heavy_rumor": {
+      "label": "C_heavy_rumor",
+      "rev_mean": 3.9,
+      "n_active": 30,
+      "final_mean": 4.29,
+      "confess_per_seed": 36.2,
+      "public_suspicion_peak_mean": 1.0,
+      "top_motifs": {
+        "remain_present": 0.518,
+        "conceal": 0.203,
+        "observe_wait": 0.084,
+        "withdraw": 0.078,
+        "confess": 0.071
+      },
+      "blame_targets_seen": {
+        "outsider": 5,
+        "authority_priest": 3,
+        "soldier_enforcer": 1,
+        "crowd_participant": 1
+      }
+    },
+    "D_mixed": {
+      "label": "D_mixed",
+      "rev_mean": 3.7,
+      "n_active": 30,
+      "final_mean": 5.15,
+      "confess_per_seed": 33.4,
+      "public_suspicion_peak_mean": 1.0,
+      "top_motifs": {
+        "remain_present": 0.527,
+        "conceal": 0.196,
+        "withdraw": 0.081,
+        "observe_wait": 0.08,
+        "confess": 0.068
+      },
+      "blame_targets_seen": {
+        "authority_priest": 5,
+        "soldier_enforcer": 3,
+        "crowd_participant": 2,
+        "outsider": 5
+      }
+    }
+  },
+  "motif_drift_D_vs_A": {},
+  "verdict": "Score 0-1: D not distinct from A/B. Mixed condition collapses to single-loop dynamics."
+}

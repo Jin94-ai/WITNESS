@@ -1,0 +1,206 @@
+{
+  "iter": 57,
+  "n_seeds": 10,
+  "n_ticks": 100,
+  "high_guilt_agents": [
+    "agent_04",
+    "agent_06",
+    "agent_09"
+  ],
+  "condition_A_baseline": {
+    "agent_01": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.845,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_02": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.816,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_03": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.9,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_04": {
+      "top_motif": "conceal",
+      "top_motif_frac": 0.522,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "monotone_rise": 10
+      },
+      "most_common_shape": "monotone_rise"
+    },
+    "agent_05": {
+      "top_motif": "conceal",
+      "top_motif_frac": 0.377,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "monotone_rise": 6,
+        "rise_then_fall": 4
+      },
+      "most_common_shape": "monotone_rise"
+    },
+    "agent_06": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.511,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "rise_then_fall": 10
+      },
+      "most_common_shape": "rise_then_fall"
+    },
+    "agent_07": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.413,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "rise_then_fall": 9,
+        "monotone_rise": 1
+      },
+      "most_common_shape": "rise_then_fall"
+    },
+    "agent_08": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.481,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "rise_then_fall": 10
+      },
+      "most_common_shape": "rise_then_fall"
+    },
+    "agent_09": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.897,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_10": {
+      "top_motif": "withdraw",
+      "top_motif_frac": 0.631,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "monotone_rise": 10
+      },
+      "most_common_shape": "monotone_rise"
+    }
+  },
+  "condition_B_mixed": {
+    "agent_01": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.8,
+      "grieve_frac": 0.003,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_02": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.8,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_03": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.855,
+      "grieve_frac": 0.002,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_04": {
+      "top_motif": "conceal",
+      "top_motif_frac": 0.495,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "monotone_rise": 10
+      },
+      "most_common_shape": "monotone_rise"
+    },
+    "agent_05": {
+      "top_motif": "conceal",
+      "top_motif_frac": 0.409,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "rise_then_fall": 8,
+        "monotone_rise": 2
+      },
+      "most_common_shape": "rise_then_fall"
+    },
+    "agent_06": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.482,
+      "grieve_frac": 0.191,
+      "arc_shapes": {
+        "rise_then_fall": 8,
+        "monotone_rise": 1,
+        "flat": 1
+      },
+      "most_common_shape": "rise_then_fall"
+    },
+    "agent_07": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.483,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "rise_then_fall": 8,
+        "monotone_rise": 1,
+        "flat": 1
+      },
+      "most_common_shape": "rise_then_fall"
+    },
+    "agent_08": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.586,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "rise_then_fall": 8,
+        "monotone_rise": 1,
+        "flat": 1
+      },
+      "most_common_shape": "rise_then_fall"
+    },
+    "agent_09": {
+      "top_motif": "remain_present",
+      "top_motif_frac": 0.618,
+      "grieve_frac": 0.2,
+      "arc_shapes": {
+        "flat": 10
+      },
+      "most_common_shape": "flat"
+    },
+    "agent_10": {
+      "top_motif": "withdraw",
+      "top_motif_frac": 0.642,
+      "grieve_frac": 0.0,
+      "arc_shapes": {
+        "monotone_rise": 10
+      },
+      "most_common_shape": "monotone_rise"
+    }
+  },
+  "injected_grieve_frac_A": 0.0,
+  "injected_grieve_frac_B": 0.13033333333333333,
+  "verdict": "COEXISTENCE -- high-guilt agents show grieve while others continue crisis dynamics. Findings HOLD under mixed pressure."
+}

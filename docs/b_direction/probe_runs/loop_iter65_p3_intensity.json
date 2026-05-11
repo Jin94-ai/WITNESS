@@ -1,0 +1,43 @@
+{
+  "iter": 65,
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "intensity_levels": [
+    0.75,
+    1.5,
+    3.0
+  ],
+  "results": {
+    "0.75": {
+      "fg_intensity": 0.75,
+      "n_active_agents": 30,
+      "n_periods": 58,
+      "mean_period": 35.2,
+      "mean_amplitude": 4.43,
+      "amp_stdev": 3.19,
+      "mean_peak_shame": 9.56,
+      "mean_final_shame": 6.33
+    },
+    "1.5": {
+      "fg_intensity": 1.5,
+      "n_active_agents": 30,
+      "n_periods": 81,
+      "mean_period": 31.6,
+      "mean_amplitude": 5.49,
+      "amp_stdev": 3.14,
+      "mean_peak_shame": 9.66,
+      "mean_final_shame": 4.25
+    },
+    "3.0": {
+      "fg_intensity": 3.0,
+      "n_active_agents": 30,
+      "n_periods": 98,
+      "mean_period": 34.1,
+      "mean_amplitude": 5.91,
+      "amp_stdev": 3.31,
+      "mean_peak_shame": 9.49,
+      "mean_final_shame": 2.27
+    }
+  },
+  "verdict": "P3 CONFIRMED -- period stable (CV 5.5%) while amplitude scales 1.33x across 4x intensity range. Intensity controls amplitude not period."
+}

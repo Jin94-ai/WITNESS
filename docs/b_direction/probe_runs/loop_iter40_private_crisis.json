@@ -1,0 +1,88 @@
+{
+  "iter": 40,
+  "n_seeds": 20,
+  "n_ticks": 60,
+  "private_fp_summary": {
+    "motifs_top5": [
+      [
+        "remain_present",
+        6066
+      ],
+      [
+        "grieve",
+        2061
+      ],
+      [
+        "observe_wait",
+        1033
+      ],
+      [
+        "withdraw",
+        440
+      ]
+    ],
+    "actions_top5": [
+      [
+        "follow_closely",
+        2940
+      ],
+      [
+        "discuss_with_disciples",
+        2306
+      ],
+      [
+        "stay_awake",
+        1585
+      ],
+      [
+        "weep",
+        1061
+      ],
+      [
+        "withdraw_in_fear",
+        615
+      ]
+    ],
+    "events_top5": [
+      [
+        "discussion_emitted",
+        507
+      ],
+      [
+        "visible_grief",
+        421
+      ],
+      [
+        "guard_approaches",
+        20
+      ]
+    ],
+    "max_alignment": 0.0,
+    "public_denial": 0,
+    "private_denial": 0
+  },
+  "comparisons": {
+    "calling": {
+      "F1_motifs": 0.15,
+      "F2_actions": 0.094,
+      "F4_events": 0.372
+    },
+    "accusation": {
+      "F1_motifs": 0.288,
+      "F2_actions": 0.229,
+      "F4_events": 0.661
+    },
+    "scarcity": {
+      "F1_motifs": 0.277,
+      "F2_actions": 0.173,
+      "F4_events": 0.469
+    },
+    "sacred": {
+      "F1_motifs": 0.207,
+      "F2_actions": 0.152,
+      "F4_events": 0.398
+    }
+  },
+  "min_F1_to_existing": 0.15,
+  "verdict": "GENUINE 3RD (really 4TH) TOPOLOGY -- private_crisis distinct"
+}

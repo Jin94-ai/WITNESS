@@ -1,0 +1,1347 @@
+{
+  "iter": 26,
+  "q3_mean_iter25": 1.3,
+  "q3_mean_iter26": 2.4,
+  "q3_delta": 1.0999999999999999,
+  "full_readability_iter26": 2.6,
+  "by_scenario": {
+    "calling": 2.2,
+    "accusation": 2.8,
+    "scarcity": 3.0,
+    "sacred": 2.5
+  },
+  "probes": [
+    {
+      "probe_id": "PRB_CAL03_v2",
+      "scenario_hidden": "calling",
+      "seed": 3,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          2
+        ],
+        [
+          "outsider",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "fisher_laborer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[discuss_with_disciples(16), stay_awake(12), follow_closely(9)] motifs[remain_present(37), withdraw(2)] events[t3:prayer_invitation; t3:visible_withdrawal]",
+        "t06-10": "actions[follow_closely(21), stay_awake(8), discuss_with_disciples(6)] motifs[remain_present(36), withdraw(4)] events[t6:miracle_witnessed; t7:role_transition; t7:role_transition; t8:public_devotion]",
+        "t11-15": "actions[follow_closely(18), stay_awake(11), discuss_with_disciples(10)] motifs[remain_present(40)] events[t12:public_devotion]",
+        "t16-20": "actions[discuss_with_disciples(14), follow_closely(12), stay_awake(8)] motifs[remain_present(40)] events[t16:public_devotion; t17:public_devotion; t17:public_devotion; t18:public_accusation]",
+        "t21-25": "actions[follow_closely(26), discuss_with_disciples(9), stay_awake(3)] motifs[remain_present(40)] events[t21:public_devotion; t23:public_devotion]",
+        "t26-30": "actions[follow_closely(15), stay_awake(11), discuss_with_disciples(9)] motifs[remain_present(39), observe_wait(1)] events[t26:public_devotion; t27:public_devotion; t29:public_devotion; t30:public_devotion]"
+      },
+      "final_state": "shore: phase=idle align=0.05 blame[] | village_street: phase=idle align=0.00 blame[]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 0,
+        "total_shift_count": 0,
+        "rises": 0,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {}
+    },
+    {
+      "probe_id": "PRB_CAL00_v2",
+      "scenario_hidden": "calling",
+      "seed": 0,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          2
+        ],
+        [
+          "outsider",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "fisher_laborer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(14), stay_awake(13), discuss_with_disciples(11)] motifs[remain_present(38), withdraw(1)] events[t3:prayer_invitation]",
+        "t06-10": "actions[follow_closely(15), discuss_with_disciples(12), stay_awake(12)] motifs[remain_present(39), observe_wait(1)] events[t6:miracle_witnessed; t7:role_transition; t7:role_transition; t9:public_devotion]",
+        "t11-15": "actions[follow_closely(19), stay_awake(9), discuss_with_disciples(8)] motifs[remain_present(38), observe_wait(2)] events[t12:public_devotion; t13:public_devotion]",
+        "t16-20": "actions[follow_closely(18), discuss_with_disciples(9), stay_awake(8)] motifs[remain_present(39), observe_wait(1)] events[t16:public_devotion; t16:public_devotion; t17:public_devotion; t18:public_accusation]",
+        "t21-25": "actions[follow_closely(18), stay_awake(11), discuss_with_disciples(8)] motifs[remain_present(40)] events[t23:public_devotion; t24:public_devotion; t24:public_devotion]",
+        "t26-30": "actions[follow_closely(17), discuss_with_disciples(12), stay_awake(9)] motifs[remain_present(37), observe_wait(3)] events[t26:public_devotion; t30:public_devotion]"
+      },
+      "final_state": "shore: phase=idle align=0.05 blame[] | village_street: phase=idle align=0.00 blame[]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 0,
+        "total_shift_count": 0,
+        "rises": 0,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {}
+    },
+    {
+      "probe_id": "PRB_CAL08_v2",
+      "scenario_hidden": "calling",
+      "seed": 8,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          2
+        ],
+        [
+          "outsider",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "fisher_laborer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(19), discuss_with_disciples(13), stay_awake(7)] motifs[remain_present(39), observe_wait(1)] events[t3:prayer_invitation]",
+        "t06-10": "actions[discuss_with_disciples(14), follow_closely(12), stay_awake(9)] motifs[remain_present(36), observe_wait(2)] events[t6:miracle_witnessed; t7:role_transition; t7:role_transition; t8:public_devotion]",
+        "t11-15": "actions[follow_closely(15), discuss_with_disciples(13), stay_awake(7)] motifs[remain_present(38), observe_wait(2)] events[t11:public_devotion; t13:public_devotion; t14:public_devotion; t15:public_devotion]",
+        "t16-20": "actions[follow_closely(17), discuss_with_disciples(12), pray(6)] motifs[remain_present(38), observe_wait(1)] events[t16:public_devotion; t17:public_devotion; t17:public_devotion; t18:public_accusation]",
+        "t21-25": "actions[follow_closely(17), stay_awake(12), discuss_with_disciples(6)] motifs[remain_present(38), observe_wait(2)] events[t23:public_devotion; t24:public_devotion; t25:public_devotion]",
+        "t26-30": "actions[follow_closely(19), discuss_with_disciples(9), pray(6)] motifs[remain_present(39), observe_wait(1)] events[t26:public_devotion; t27:public_devotion; t27:public_devotion; t28:public_devotion]"
+      },
+      "final_state": "shore: phase=idle align=0.10 blame[] | village_street: phase=idle align=0.00 blame[]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 1,
+        "total_shift_count": 1,
+        "rises": 1,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_06": {
+          "role": "crowd_participant",
+          "shifts": {
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 1.0,
+              "delta": 1.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "probe_id": "PRB_ACC07_v2",
+      "scenario_hidden": "accusation",
+      "seed": 7,
+      "n_agents": 10,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          3
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "soldier_enforcer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[discuss_with_disciples(17), follow_closely(16), stay_awake(8)] motifs[remain_present(36), observe_wait(6)] events[t3:public_accusation; t3:public_denial; t5:visible_withdrawal]",
+        "t06-10": "actions[stay_awake(10), follow_closely(10), discuss_with_disciples(9)] motifs[remain_present(26), conceal(11)] events[t7:public_accusation; t8:visible_withdrawal; t8:public_denial; t8:public_denial]",
+        "t11-15": "actions[follow_closely(15), deny(15), stay_awake(9)] motifs[remain_present(26), conceal(17)] events[t11:public_denial; t11:visible_withdrawal; t11:public_denial; t12:guard_approaches]",
+        "t16-20": "actions[deny(19), stay_awake(10), discuss_with_disciples(6)] motifs[conceal(24), remain_present(20)] events[t16:public_denial; t16:public_denial; t16:public_denial; t16:public_denial]",
+        "t21-25": "actions[deny(16), follow_closely(8), discuss_with_disciples(7)] motifs[conceal(20), remain_present(18)] events[t21:public_denial; t21:public_denial; t21:public_denial; t22:public_denial]",
+        "t26-30": "actions[deny(17), stay_awake(8), follow_closely(7)] motifs[conceal(21), remain_present(19)] events[t26:public_denial; t26:public_denial; t26:visible_withdrawal; t26:visible_withdrawal]"
+      },
+      "final_state": "priest_courtyard: phase=idle align=0.27 blame[soldier_enforcer:0.35, authority_priest:0.13] | city_street: phase=lynch_mode align=1.00 blame[crowd_participant:1.00, outsider:0.24]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 6,
+        "total_shift_count": 19,
+        "rises": 19,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_04": {
+          "role": "authority_priest",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 9.89,
+              "delta": 9.39
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_05": {
+          "role": "soldier_enforcer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 9.84,
+              "delta": 9.34
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.5,
+              "delta": 9.5
+            }
+          }
+        },
+        "agent_06": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 7.72,
+              "delta": 7.22
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_07": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 7.98,
+              "delta": 7.48
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_08": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 7.94,
+              "delta": 7.44
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_10": {
+          "role": "outsider",
+          "shifts": {
+            "guilt[self]": {
+              "initial": 1.0,
+              "final": 2.08,
+              "delta": 1.08
+            },
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 10.0,
+              "delta": 9.5
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "probe_id": "PRB_ACC19_v2",
+      "scenario_hidden": "accusation",
+      "seed": 19,
+      "n_agents": 10,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          3
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "soldier_enforcer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(22), discuss_with_disciples(11), stay_awake(10)] motifs[remain_present(39), observe_wait(5)] events[t3:public_accusation; t5:public_denial]",
+        "t06-10": "actions[discuss_with_disciples(15), follow_closely(14), stay_awake(7)] motifs[remain_present(32), observe_wait(7)] events[t7:public_accusation; t7:public_denial; t8:visible_withdrawal; t9:visible_withdrawal]",
+        "t11-15": "actions[discuss_with_disciples(12), follow_closely(12), stay_awake(9)] motifs[remain_present(32), conceal(9)] events[t11:public_denial; t11:visible_withdrawal; t12:guard_approaches; t12:public_denial]",
+        "t16-20": "actions[discuss_with_disciples(11), stay_awake(9), follow_closely(9)] motifs[remain_present(29), conceal(10)] events[t16:public_denial; t16:public_denial; t16:visible_withdrawal; t16:visible_withdrawal]",
+        "t21-25": "actions[follow_closely(23), discuss_with_disciples(8), withdraw_in_fear(6)] motifs[remain_present(33), conceal(7)] events[t21:visible_withdrawal; t21:visible_withdrawal; t22:visible_withdrawal; t23:visible_withdrawal]",
+        "t26-30": "actions[follow_closely(18), discuss_with_disciples(8), deny(8)] motifs[remain_present(29), conceal(12)] events[t26:public_denial; t27:public_denial; t27:visible_withdrawal; t28:public_denial]"
+      },
+      "final_state": "priest_courtyard: phase=idle align=0.06 blame[soldier_enforcer:0.12, authority_priest:0.09] | city_street: phase=idle align=0.08 blame[crowd_participant:0.28]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 5,
+        "total_shift_count": 14,
+        "rises": 14,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_04": {
+          "role": "authority_priest",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 10.0,
+              "delta": 9.5
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.0,
+              "delta": 9.0
+            }
+          }
+        },
+        "agent_05": {
+          "role": "soldier_enforcer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 9.93,
+              "delta": 9.43
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.0,
+              "delta": 9.0
+            }
+          }
+        },
+        "agent_07": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 5.09,
+              "delta": 4.09
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 2.67,
+              "delta": 2.17
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 5.0,
+              "delta": 5.0
+            }
+          }
+        },
+        "agent_08": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 2.03,
+              "delta": 1.03
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 1.0,
+              "delta": 1.0
+            }
+          }
+        },
+        "agent_10": {
+          "role": "outsider",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 6.44,
+              "delta": 5.44
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 9.79,
+              "delta": 9.29
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 3.0,
+              "delta": 3.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "probe_id": "PRB_ACC04_v2",
+      "scenario_hidden": "accusation",
+      "seed": 4,
+      "n_agents": 10,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          3
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "soldier_enforcer",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(13), discuss_with_disciples(13), stay_awake(13)] motifs[remain_present(33), observe_wait(6)] events[t3:public_accusation; t3:public_denial; t4:public_denial; t4:visible_withdrawal]",
+        "t06-10": "actions[discuss_with_disciples(13), follow_closely(12), stay_awake(9)] motifs[remain_present(30), observe_wait(6)] events[t7:public_accusation; t7:public_denial; t8:public_denial; t9:visible_withdrawal]",
+        "t11-15": "actions[follow_closely(14), deny(9), stay_awake(7)] motifs[remain_present(24), conceal(14)] events[t11:public_denial; t12:guard_approaches; t12:public_denial; t12:visible_withdrawal]",
+        "t16-20": "actions[deny(13), follow_closely(10), discuss_with_disciples(9)] motifs[remain_present(20), conceal(19)] events[t16:public_denial; t16:public_denial; t16:public_denial; t16:public_denial]",
+        "t21-25": "actions[follow_closely(11), follow_at_distance(11), deny(8)] motifs[remain_present(19), conceal(18)] events[t21:visible_withdrawal; t22:public_denial; t22:public_denial; t22:public_denial]",
+        "t26-30": "actions[stay_awake(9), deny(9), follow_closely(8)] motifs[remain_present(20), conceal(18)] events[t26:public_denial; t26:visible_withdrawal; t26:visible_withdrawal; t26:public_denial]"
+      },
+      "final_state": "priest_courtyard: phase=idle align=0.12 blame[soldier_enforcer:0.05] | city_street: phase=lynch_mode align=0.75 blame[crowd_participant:0.96]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 6,
+        "total_shift_count": 18,
+        "rises": 18,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_04": {
+          "role": "authority_priest",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 9.22,
+              "delta": 8.22
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 9.73,
+              "delta": 9.23
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 6.0,
+              "delta": 6.0
+            }
+          }
+        },
+        "agent_05": {
+          "role": "soldier_enforcer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 9.71,
+              "delta": 9.21
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 8.0,
+              "delta": 8.0
+            }
+          }
+        },
+        "agent_06": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 7.62,
+              "delta": 6.62
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 7.75,
+              "delta": 7.25
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 5.0,
+              "delta": 5.0
+            }
+          }
+        },
+        "agent_07": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 8.06,
+              "delta": 7.56
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.5,
+              "delta": 9.5
+            }
+          }
+        },
+        "agent_08": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 7.76,
+              "delta": 7.26
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.0,
+              "delta": 9.0
+            }
+          }
+        },
+        "agent_10": {
+          "role": "outsider",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 9.58,
+              "delta": 8.58
+            },
+            "shame[public_group]": {
+              "initial": 0.5,
+              "final": 10.0,
+              "delta": 9.5
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 7.0,
+              "delta": 7.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "probe_id": "PRB_SCA03_v2",
+      "scenario_hidden": "scarcity",
+      "seed": 3,
+      "n_agents": 12,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "fisher_laborer",
+          3
+        ],
+        [
+          "soldier_enforcer",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "merchant",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ],
+        [
+          "elite_strategist",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(18), discuss_with_disciples(16), stay_awake(14)] motifs[remain_present(41), observe_wait(11)] events[t5:public_accusation; t5:public_denial]",
+        "t06-10": "actions[follow_closely(18), stay_awake(15), deny(10)] motifs[remain_present(30), observe_wait(14)] events[t6:public_denial; t6:public_denial; t7:public_denial; t7:public_denial]",
+        "t11-15": "actions[stay_awake(15), follow_closely(12), deny(7)] motifs[remain_present(25), conceal(17)] events[t11:public_denial; t11:public_denial; t12:visible_withdrawal; t13:public_denial]",
+        "t16-20": "actions[discuss_with_disciples(13), follow_closely(13), deny(11)] motifs[remain_present(28), conceal(19)] events[t16:visible_withdrawal; t16:public_denial; t16:visible_withdrawal; t17:public_denial]",
+        "t21-25": "actions[discuss_with_disciples(14), follow_closely(12), stay_awake(10)] motifs[remain_present(24), observe_wait(14)] events[t21:public_denial; t21:public_denial; t22:visible_withdrawal; t22:public_denial]",
+        "t26-30": "actions[discuss_with_disciples(17), follow_closely(12), deny(9)] motifs[remain_present(28), conceal(15)] events[t26:public_denial; t26:public_denial; t26:visible_withdrawal; t26:visible_withdrawal]"
+      },
+      "final_state": "marketplace: phase=lynch_mode align=1.00 blame[fisher_laborer:1.00, soldier_enforcer:0.21] | poor_quarter: phase=idle align=0.00 blame[]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 5,
+        "total_shift_count": 13,
+        "rises": 13,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_01": {
+          "role": "merchant",
+          "shifts": {
+            "guilt[self]": {
+              "initial": 1.0,
+              "final": 2.42,
+              "delta": 1.42
+            }
+          }
+        },
+        "agent_03": {
+          "role": "fisher_laborer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 9.85,
+              "delta": 8.85
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_05": {
+          "role": "fisher_laborer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_08": {
+          "role": "soldier_enforcer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_09": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.0,
+              "delta": 9.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "probe_id": "PRB_SCA17_v2",
+      "scenario_hidden": "scarcity",
+      "seed": 17,
+      "n_agents": 12,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "fisher_laborer",
+          3
+        ],
+        [
+          "soldier_enforcer",
+          2
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "merchant",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "outsider",
+          1
+        ],
+        [
+          "elite_strategist",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(20), discuss_with_disciples(14), stay_awake(12)] motifs[remain_present(37), observe_wait(11)] events[t5:public_accusation; t5:public_denial; t5:visible_withdrawal]",
+        "t06-10": "actions[follow_closely(17), stay_awake(11), deny(11)] motifs[remain_present(31), conceal(14)] events[t6:public_denial; t6:public_denial; t7:public_denial; t7:public_denial]",
+        "t11-15": "actions[follow_closely(16), stay_awake(12), discuss_with_disciples(9)] motifs[remain_present(28), conceal(16)] events[t11:public_denial; t12:public_denial; t12:visible_withdrawal; t12:visible_withdrawal]",
+        "t16-20": "actions[follow_closely(14), discuss_with_disciples(12), stay_awake(11)] motifs[remain_present(27), conceal(15)] events[t16:visible_withdrawal; t17:public_denial; t17:visible_withdrawal; t17:public_denial]",
+        "t21-25": "actions[discuss_with_disciples(16), stay_awake(11), follow_closely(9)] motifs[remain_present(24), conceal(15)] events[t21:public_denial; t21:public_denial; t21:public_denial; t22:visible_withdrawal]",
+        "t26-30": "actions[follow_closely(14), discuss_with_disciples(11), follow_at_distance(10)] motifs[remain_present(25), observe_wait(14)] events[t26:visible_withdrawal; t27:visible_withdrawal; t27:visible_withdrawal; t28:public_denial]"
+      },
+      "final_state": "marketplace: phase=lynch_mode align=1.00 blame[fisher_laborer:0.80, soldier_enforcer:0.17] | poor_quarter: phase=idle align=0.00 blame[]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 5,
+        "total_shift_count": 13,
+        "rises": 13,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_01": {
+          "role": "merchant",
+          "shifts": {
+            "guilt[self]": {
+              "initial": 1.0,
+              "final": 2.42,
+              "delta": 1.42
+            }
+          }
+        },
+        "agent_03": {
+          "role": "fisher_laborer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.0,
+              "delta": 9.0
+            }
+          }
+        },
+        "agent_05": {
+          "role": "fisher_laborer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.5,
+              "delta": 9.5
+            }
+          }
+        },
+        "agent_08": {
+          "role": "soldier_enforcer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 10.0,
+              "delta": 10.0
+            }
+          }
+        },
+        "agent_09": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "shame[public_group]": {
+              "initial": 1.0,
+              "final": 10.0,
+              "delta": 9.0
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 9.0,
+              "delta": 9.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "probe_id": "PRB_SAC02_v2",
+      "scenario_hidden": "sacred",
+      "seed": 2,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "spiritual_wanderer",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[follow_closely(12), discuss_with_disciples(12), stay_awake(11)] motifs[remain_present(31), observe_wait(5)] events[t5:prayer_invitation]",
+        "t06-10": "actions[discuss_with_disciples(14), follow_closely(14), stay_awake(7)] motifs[remain_present(34), observe_wait(6)] events[t10:miracle_witnessed]",
+        "t11-15": "actions[discuss_with_disciples(17), follow_closely(13), stay_awake(8)] motifs[remain_present(36), observe_wait(4)] events[]",
+        "t16-20": "actions[stay_awake(12), discuss_with_disciples(11), follow_closely(11)] motifs[remain_present(28), observe_wait(8)] events[t18:public_accusation; t18:public_denial; t19:visible_withdrawal; t19:public_denial]",
+        "t21-25": "actions[follow_closely(14), stay_awake(9), discuss_with_disciples(9)] motifs[remain_present(27), conceal(7)] events[t22:public_denial; t23:public_denial; t23:public_denial; t25:public_denial]",
+        "t26-30": "actions[follow_closely(10), discuss_with_disciples(9), stay_awake(7)] motifs[remain_present(19), conceal(13)] events[t26:public_denial; t27:public_denial; t27:public_denial; t29:visible_withdrawal]"
+      },
+      "final_state": "temple_outer_court: phase=idle align=0.29 blame[disciple_follower:0.25] | city_street: phase=idle align=0.00 blame[]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 5,
+        "total_shift_count": 14,
+        "rises": 14,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_01": {
+          "role": "spiritual_wanderer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 3.95,
+              "delta": 3.45
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 6.8,
+              "delta": 6.5
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 2.0,
+              "delta": 2.0
+            }
+          }
+        },
+        "agent_03": {
+          "role": "disciple_follower",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 4.08,
+              "delta": 3.58
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 3.87,
+              "delta": 3.57
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 3.0,
+              "delta": 3.0
+            }
+          }
+        },
+        "agent_04": {
+          "role": "disciple_follower",
+          "shifts": {
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 3.66,
+              "delta": 3.36
+            },
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 2.18,
+              "delta": 1.68
+            }
+          }
+        },
+        "agent_05": {
+          "role": "disciple_follower",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 4.02,
+              "delta": 3.52
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 3.74,
+              "delta": 3.44
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 3.0,
+              "delta": 3.0
+            }
+          }
+        },
+        "agent_06": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 4.45,
+              "delta": 3.95
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 4.59,
+              "delta": 4.29
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 3.0,
+              "delta": 3.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "probe_id": "PRB_SAC18_v2",
+      "scenario_hidden": "sacred",
+      "seed": 18,
+      "n_agents": 8,
+      "n_locations": 3,
+      "initial_roles": [
+        [
+          "disciple_follower",
+          3
+        ],
+        [
+          "crowd_participant",
+          2
+        ],
+        [
+          "spiritual_wanderer",
+          1
+        ],
+        [
+          "authority_priest",
+          1
+        ],
+        [
+          "family_anchor",
+          1
+        ]
+      ],
+      "windows": {
+        "t01-05": "actions[discuss_with_disciples(18), follow_closely(13), stay_awake(6)] motifs[remain_present(33), observe_wait(6)] events[t5:prayer_invitation]",
+        "t06-10": "actions[follow_closely(19), discuss_with_disciples(12), stay_awake(6)] motifs[remain_present(33), observe_wait(6)] events[t10:miracle_witnessed]",
+        "t11-15": "actions[discuss_with_disciples(16), follow_closely(14), stay_awake(8)] motifs[remain_present(34), observe_wait(6)] events[]",
+        "t16-20": "actions[discuss_with_disciples(15), follow_closely(11), stay_awake(10)] motifs[remain_present(31), observe_wait(7)] events[t17:visible_withdrawal; t18:public_accusation; t20:public_denial]",
+        "t21-25": "actions[follow_closely(14), stay_awake(11), discuss_with_disciples(10)] motifs[remain_present(30), observe_wait(5)] events[t21:public_denial; t23:public_denial; t24:visible_withdrawal; t25:public_denial]",
+        "t26-30": "actions[follow_closely(11), deny(10), stay_awake(9)] motifs[remain_present(22), conceal(12)] events[t26:public_denial; t27:public_denial; t28:public_denial; t28:public_denial]"
+      },
+      "final_state": "temple_outer_court: phase=gathered align=0.43 blame[disciple_follower:0.50, crowd_participant:0.14] | city_street: phase=idle align=0.00 blame[]",
+      "relation_delta_summary": {
+        "agents_with_significant_shift": 5,
+        "total_shift_count": 15,
+        "rises": 15,
+        "declines": 0
+      },
+      "per_agent_relation_shifts": {
+        "agent_01": {
+          "role": "spiritual_wanderer",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 3.88,
+              "delta": 3.38
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 6.65,
+              "delta": 6.35
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 2.0,
+              "delta": 2.0
+            }
+          }
+        },
+        "agent_03": {
+          "role": "disciple_follower",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 4.59,
+              "delta": 4.09
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 3.67,
+              "delta": 3.37
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 4.0,
+              "delta": 4.0
+            }
+          }
+        },
+        "agent_04": {
+          "role": "disciple_follower",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 4.6,
+              "delta": 4.1
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 3.7,
+              "delta": 3.4
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 4.0,
+              "delta": 4.0
+            }
+          }
+        },
+        "agent_05": {
+          "role": "disciple_follower",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 3.28,
+              "delta": 2.78
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 3.45,
+              "delta": 3.15
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 2.0,
+              "delta": 2.0
+            }
+          }
+        },
+        "agent_06": {
+          "role": "crowd_participant",
+          "shifts": {
+            "shame[self]": {
+              "initial": 0.5,
+              "final": 3.58,
+              "delta": 3.08
+            },
+            "shame[public_group]": {
+              "initial": 0.3,
+              "final": 4.07,
+              "delta": 3.77
+            },
+            "guilt[primary_focus]": {
+              "initial": 0.0,
+              "final": 2.0,
+              "delta": 2.0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "evaluations": [
+    {
+      "probe_id": "PRB_CAL03_v2",
+      "scenario": "calling",
+      "Q1_not_random": 3,
+      "Q2_axis": "role transition",
+      "Q2_score": 2,
+      "Q3_relation_shift": 1,
+      "Q4_accumulation": 2,
+      "Q5_arc_curve": 3,
+      "mean_score": 2.2
+    },
+    {
+      "probe_id": "PRB_CAL00_v2",
+      "scenario": "calling",
+      "Q1_not_random": 3,
+      "Q2_axis": "role transition",
+      "Q2_score": 2,
+      "Q3_relation_shift": 1,
+      "Q4_accumulation": 2,
+      "Q5_arc_curve": 3,
+      "mean_score": 2.2
+    },
+    {
+      "probe_id": "PRB_CAL08_v2",
+      "scenario": "calling",
+      "Q1_not_random": 3,
+      "Q2_axis": "role transition",
+      "Q2_score": 2,
+      "Q3_relation_shift": 1,
+      "Q4_accumulation": 2,
+      "Q5_arc_curve": 3,
+      "mean_score": 2.2
+    },
+    {
+      "probe_id": "PRB_ACC07_v2",
+      "scenario": "accusation",
+      "Q1_not_random": 3,
+      "Q2_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift": 3,
+      "Q4_accumulation": 3,
+      "Q5_arc_curve": 3,
+      "mean_score": 3.0
+    },
+    {
+      "probe_id": "PRB_ACC19_v2",
+      "scenario": "accusation",
+      "Q1_not_random": 3,
+      "Q2_axis": "unclear",
+      "Q2_score": 1,
+      "Q3_relation_shift": 3,
+      "Q4_accumulation": 2,
+      "Q5_arc_curve": 3,
+      "mean_score": 2.4
+    },
+    {
+      "probe_id": "PRB_ACC04_v2",
+      "scenario": "accusation",
+      "Q1_not_random": 3,
+      "Q2_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift": 3,
+      "Q4_accumulation": 3,
+      "Q5_arc_curve": 3,
+      "mean_score": 3.0
+    },
+    {
+      "probe_id": "PRB_SCA03_v2",
+      "scenario": "scarcity",
+      "Q1_not_random": 3,
+      "Q2_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift": 3,
+      "Q4_accumulation": 3,
+      "Q5_arc_curve": 3,
+      "mean_score": 3.0
+    },
+    {
+      "probe_id": "PRB_SCA17_v2",
+      "scenario": "scarcity",
+      "Q1_not_random": 3,
+      "Q2_axis": "blame accumulation -> lynch",
+      "Q2_score": 3,
+      "Q3_relation_shift": 3,
+      "Q4_accumulation": 3,
+      "Q5_arc_curve": 3,
+      "mean_score": 3.0
+    },
+    {
+      "probe_id": "PRB_SAC02_v2",
+      "scenario": "sacred",
+      "Q1_not_random": 3,
+      "Q2_axis": "unclear",
+      "Q2_score": 1,
+      "Q3_relation_shift": 3,
+      "Q4_accumulation": 2,
+      "Q5_arc_curve": 3,
+      "mean_score": 2.4
+    },
+    {
+      "probe_id": "PRB_SAC18_v2",
+      "scenario": "sacred",
+      "Q1_not_random": 3,
+      "Q2_axis": "unclear",
+      "Q2_score": 1,
+      "Q3_relation_shift": 3,
+      "Q4_accumulation": 3,
+      "Q5_arc_curve": 3,
+      "mean_score": 2.6
+    }
+  ],
+  "verdict": "SUBSTANTIAL Q3 improvement (+1.10)"
+}

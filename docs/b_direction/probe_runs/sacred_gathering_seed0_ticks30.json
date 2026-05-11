@@ -1,0 +1,1376 @@
+{
+  "seed": 0,
+  "n_ticks": 30,
+  "motif_distribution": {
+    "remain_present": 198,
+    "observe_wait": 36,
+    "confront": 4,
+    "conceal": 2
+  },
+  "action_distribution": {
+    "stay_awake": 63,
+    "watch_quietly": 7,
+    "discuss_with_disciples": 80,
+    "follow_closely": 84,
+    "assert_loyalty": 2,
+    "flee": 2,
+    "follow_at_distance": 1,
+    "deny": 1
+  },
+  "emergent_events": 1,
+  "final_rumor_count": 1,
+  "history": [
+    {
+      "tick": 1,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "watch_quietly",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "follow_closely",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "follow_closely",
+        "agent_07": "stay_awake",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.585,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.285,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 2,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "stay_awake",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "follow_closely",
+        "agent_06": "stay_awake",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.57,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.27,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 3,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "follow_closely",
+        "agent_03": "stay_awake",
+        "agent_04": "stay_awake",
+        "agent_05": "follow_closely",
+        "agent_06": "stay_awake",
+        "agent_07": "assert_loyalty",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "confront",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.555,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.05,
+          "density": 0.255,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 4,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "stay_awake",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "stay_awake",
+        "agent_06": "flee",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "confront",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.5,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.24,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 5,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "follow_closely",
+        "agent_05": "stay_awake",
+        "agent_06": "follow_closely",
+        "agent_07": "stay_awake",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.485,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.225,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": [
+        {
+          "tick": 5,
+          "event_id": "prayer_invitation",
+          "location": "temple_outer_court"
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "stay_awake",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "stay_awake",
+        "agent_07": "follow_closely",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.47,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.21,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 7,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "stay_awake",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.455,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.195,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 8,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "stay_awake",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "flee",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "confront",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.44,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.14,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 9,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "follow_closely",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.425,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.125,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 10,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "follow_closely",
+        "agent_05": "stay_awake",
+        "agent_06": "stay_awake",
+        "agent_07": "assert_loyalty",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "confront",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.41,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.05,
+          "density": 0.11,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": [
+        {
+          "tick": 10,
+          "event_id": "miracle_witnessed",
+          "location": "temple_outer_court"
+        }
+      ]
+    },
+    {
+      "tick": 11,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "follow_closely",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "follow_closely",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "follow_closely",
+        "agent_07": "stay_awake",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.395,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.095,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 12,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "stay_awake",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "watch_quietly",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "observe_wait",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.38,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.08,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 13,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "stay_awake",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "stay_awake",
+        "agent_07": "follow_closely",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.365,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.065,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 14,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "stay_awake",
+        "agent_03": "stay_awake",
+        "agent_04": "follow_closely",
+        "agent_05": "stay_awake",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.35,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 15,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "stay_awake",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "follow_closely",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.335,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.035,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 16,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "follow_closely",
+        "agent_04": "watch_quietly",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "stay_awake",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "observe_wait",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.32,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.02,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 17,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "stay_awake",
+        "agent_03": "stay_awake",
+        "agent_04": "stay_awake",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.305,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.005,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 18,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "follow_closely",
+        "agent_04": "follow_closely",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "watch_quietly"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "observe_wait"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "gathered",
+          "alignment": 0.4,
+          "density": 0.59,
+          "blame": {
+            "spiritual_wanderer": 0.26
+          },
+          "accusation_amp": 0.3
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.62,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 18,
+          "event_id": "public_accusation",
+          "target_role": "spiritual_wanderer",
+          "location": "temple_outer_court"
+        }
+      ]
+    },
+    {
+      "tick": 19,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "stay_awake",
+        "agent_05": "stay_awake",
+        "agent_06": "follow_closely",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "gathered",
+          "alignment": 0.35,
+          "density": 0.575,
+          "blame": {
+            "spiritual_wanderer": 0.22
+          },
+          "accusation_amp": 0.2
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.54,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 20,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "watch_quietly",
+        "agent_03": "stay_awake",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "gathered",
+          "alignment": 0.3,
+          "density": 0.56,
+          "blame": {
+            "spiritual_wanderer": 0.18
+          },
+          "accusation_amp": 0.1
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.46,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 21,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "stay_awake",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.25,
+          "density": 0.545,
+          "blame": {
+            "spiritual_wanderer": 0.13999999999999999
+          },
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.38,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 22,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "stay_awake",
+        "agent_03": "stay_awake",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.2,
+          "density": 0.53,
+          "blame": {
+            "spiritual_wanderer": 0.09999999999999998
+          },
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.3,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 23,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "stay_awake",
+        "agent_03": "follow_closely",
+        "agent_04": "stay_awake",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.15,
+          "density": 0.515,
+          "blame": {
+            "spiritual_wanderer": 0.05999999999999998
+          },
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.22,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 24,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "follow_closely",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.1,
+          "density": 0.5,
+          "blame": {
+            "spiritual_wanderer": 0.019999999999999976
+          },
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.14,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 25,
+      "actions": {
+        "agent_01": "follow_at_distance",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "follow_closely",
+        "agent_04": "follow_closely",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "follow_closely",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "conceal",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.05,
+          "density": 0.485,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "accusation",
+          "target": "spiritual_wanderer",
+          "intensity": 0.06,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 26,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "stay_awake",
+        "agent_03": "follow_closely",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "stay_awake",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.47,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 27,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "stay_awake",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "stay_awake",
+        "agent_05": "stay_awake",
+        "agent_06": "stay_awake",
+        "agent_07": "follow_closely",
+        "agent_08": "watch_quietly"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "observe_wait"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.455,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 28,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "stay_awake",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "watch_quietly",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "observe_wait",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.44,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 29,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "stay_awake",
+        "agent_03": "stay_awake",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "observe_wait",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.425,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [],
+      "events": []
+    },
+    {
+      "tick": 30,
+      "actions": {
+        "agent_01": "deny",
+        "agent_02": "follow_closely",
+        "agent_03": "follow_closely",
+        "agent_04": "stay_awake",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "conceal",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present"
+      },
+      "crowd": {
+        "temple_outer_court": {
+          "phase": "idle",
+          "alignment": 0.045,
+          "density": 0.425,
+          "blame": {
+            "spiritual_wanderer": 0.09
+          },
+          "accusation_amp": 0.12
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.0,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00002",
+          "tag": "public_denial",
+          "target": "agent_01",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 30,
+          "event_id": "public_denial",
+          "by": "agent_01"
+        }
+      ]
+    }
+  ]
+}

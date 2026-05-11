@@ -1,0 +1,84 @@
+{
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "results": {
+    "A_no_inject": {
+      "label": "A_no_inject",
+      "rev_inj": 3.1,
+      "rev_oth": 3.85,
+      "final_inj": 5.21,
+      "final_oth": 4.85,
+      "awe_trace_agent04_seed0": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "B_inject_aux_on_decay_on": {
+      "label": "B_inject_aux_on_decay_on",
+      "rev_inj": 2.6,
+      "rev_oth": 4,
+      "final_inj": 5.85,
+      "final_oth": 5.37,
+      "awe_trace_agent04_seed0": [
+        7.95,
+        6.95,
+        5.95,
+        4.95,
+        3.95,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "C_inject_aux_on_decay_OFF": {
+      "label": "C_inject_aux_on_decay_OFF",
+      "rev_inj": 3.8,
+      "rev_oth": 4.15,
+      "final_inj": 0.44,
+      "final_oth": 4.15,
+      "awe_trace_agent04_seed0": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    "D_inject_aux_off_decay_on": {
+      "label": "D_inject_aux_off_decay_on",
+      "rev_inj": 3.1,
+      "rev_oth": 3.85,
+      "final_inj": 5.21,
+      "final_oth": 4.85,
+      "awe_trace_agent04_seed0": [
+        7.95,
+        6.95,
+        5.95,
+        4.95,
+        3.95,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "decay_works": true,
+  "recovery_limited": true
+}

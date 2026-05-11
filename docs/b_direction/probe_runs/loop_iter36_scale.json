@@ -1,0 +1,60 @@
+{
+  "iter": 36,
+  "mode": "autonomous",
+  "n_seeds": 20,
+  "n_ticks": 60,
+  "n_bootstrap": 1000,
+  "results": {
+    "accusation": {
+      "active_obs": 120,
+      "rise_fall_count": 73,
+      "monotone_count": 44,
+      "other_count": 3,
+      "point_fraction": 0.608,
+      "bootstrap_ci_95": [
+        0.533,
+        0.658
+      ],
+      "bootstrap_median": 0.608,
+      "mean_drop": 9.08,
+      "mean_peak": 9.47,
+      "mean_confess_per_seed": 11.6
+    },
+    "scarcity": {
+      "active_obs": 80,
+      "rise_fall_count": 75,
+      "monotone_count": 2,
+      "other_count": 3,
+      "point_fraction": 0.938,
+      "bootstrap_ci_95": [
+        0.887,
+        0.988
+      ],
+      "bootstrap_median": 0.938,
+      "mean_drop": 8.01,
+      "mean_peak": 9.12,
+      "mean_confess_per_seed": 24.5
+    },
+    "sacred": {
+      "active_obs": 100,
+      "rise_fall_count": 91,
+      "monotone_count": 8,
+      "other_count": 1,
+      "point_fraction": 0.91,
+      "bootstrap_ci_95": [
+        0.81,
+        0.98
+      ],
+      "bootstrap_median": 0.91,
+      "mean_drop": 6.48,
+      "mean_peak": 7.76,
+      "mean_confess_per_seed": 13.7
+    }
+  },
+  "iter35_comparison": {
+    "accusation": 0.5,
+    "scarcity": 0.95,
+    "sacred": 0.88
+  },
+  "verdict": "SCALE CONFIRMED -- autonomous D-flow holds at n=20"
+}

@@ -1,0 +1,70 @@
+{
+  "iter": 84,
+  "n_ticks": 100,
+  "seed": 0,
+  "summary": {
+    "B_full": {
+      "n_calls": 1000,
+      "motif_means": {
+        "conceal": 0.557,
+        "confess": 0.516,
+        "withdraw": 0.457,
+        "remain_present": 0.681,
+        "confront": 0.364,
+        "grieve": 0.467,
+        "seek_repair": 0.177,
+        "observe_wait": 0.504
+      },
+      "primary_counts": {
+        "remain_present": 561,
+        "observe_wait": 8,
+        "confront": 23,
+        "conceal": 337,
+        "confess": 15,
+        "withdraw": 54,
+        "grieve": 2
+      }
+    },
+    "C_P2a_off": {
+      "n_calls": 1000,
+      "motif_means": {
+        "conceal": 0.641,
+        "confess": 0.701,
+        "withdraw": 0.525,
+        "remain_present": 0.587,
+        "confront": 0.364,
+        "grieve": 0.51,
+        "seek_repair": 0.245,
+        "observe_wait": 0.556
+      },
+      "primary_counts": {
+        "remain_present": 432,
+        "observe_wait": 7,
+        "confront": 8,
+        "conceal": 526,
+        "confess": 27
+      }
+    },
+    "D_shame_off": {
+      "n_calls": 1000,
+      "motif_means": {
+        "conceal": 0.637,
+        "confess": 0.521,
+        "withdraw": 0.512,
+        "remain_present": 0.619,
+        "confront": 0.364,
+        "grieve": 0.486,
+        "seek_repair": 0.218,
+        "observe_wait": 0.493
+      },
+      "primary_counts": {
+        "remain_present": 432,
+        "observe_wait": 7,
+        "confront": 8,
+        "conceal": 522,
+        "confess": 4,
+        "withdraw": 27
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+=== PROBE P_CV_09 (cast variant: sacred/no_outsider, n=7, v4) ===
+
+[Annotated headline summary]
+  Final summary:    RECOVERY_DOMINATED
+  Primary pressure: sacred
+  Cast size:        7
+
+  Cohort outcomes:
+    [L3 cohort, 2 agents]:  no shame accumulation
+    [L2 cohort, 1 agents]:  no shame accumulation
+    [L1 cohort, 4 agents]:  recovery: peak~6.9 -> final~2.8
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: spiritual_wanderer)
+    Recovery actions: 22 confessions, 16 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.4 at t=153 -> final 0.1
+    Public suspicion:    negligible (peak < 0.05)
+    Authority vigilance: negligible (peak < 0.05)
+    Top blame target:    spiritual_wanderer (peak 0.26, weak)
+
+============================================================
+
+Agents: A1=authority, A2=follower, A3=follower, A4=follower, A5=crowd, A6=crowd, A7=family
+Locations: L1, L2, L3
+
+Cast variant: no_outsider (n=7)

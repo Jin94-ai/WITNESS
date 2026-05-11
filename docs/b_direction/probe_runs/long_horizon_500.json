@@ -1,0 +1,33 @@
+{
+  "n_seeds": 3,
+  "n_ticks": 500,
+  "results": {
+    "A_acc": {
+      "label": "A_acc",
+      "rev_at_200": 3.33,
+      "rev_at_500": 6.56,
+      "final_at_500": 10.0,
+      "n_active": 18,
+      "rev_per_100tk_first_half": 1.67,
+      "rev_per_100tk_full": 1.31
+    },
+    "B_sacred": {
+      "label": "B_sacred",
+      "rev_at_200": 4.07,
+      "rev_at_500": 12.93,
+      "final_at_500": 1.51,
+      "n_active": 15,
+      "rev_per_100tk_first_half": 2.03,
+      "rev_per_100tk_full": 2.59
+    },
+    "C_mixed": {
+      "label": "C_mixed",
+      "rev_at_200": 3.83,
+      "rev_at_500": 8,
+      "final_at_500": 10.0,
+      "n_active": 18,
+      "rev_per_100tk_first_half": 1.92,
+      "rev_per_100tk_full": 1.6
+    }
+  }
+}

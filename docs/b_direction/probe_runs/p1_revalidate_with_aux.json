@@ -1,0 +1,57 @@
+{
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "results": {
+    "A_baseline_p2a_on": {
+      "label": "A_baseline_p2a_on",
+      "rev_inj": 3.1,
+      "rev_oth": 3.85,
+      "rev_all": 3.6,
+      "final_inj": 5.207,
+      "final_oth": 4.85,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "B_p1_ablate_no_awe": {
+      "label": "B_p1_ablate_no_awe",
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "rev_all": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "C_p1_ablate_+awe_inject": {
+      "label": "C_p1_ablate_+awe_inject",
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "rev_all": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "D_p1_ablate_+sacred_evts": {
+      "label": "D_p1_ablate_+sacred_evts",
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "rev_all": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "E_p1_ablate_+all_sources": {
+      "label": "E_p1_ablate_+all_sources",
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "rev_all": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 10,
+      "n_oth": 20
+    }
+  },
+  "verdict": "P1 FULLY PRESERVED -- Phase 2a structurally necessary even with aux available. Aux dampens but cannot generate recovery cycles."
+}

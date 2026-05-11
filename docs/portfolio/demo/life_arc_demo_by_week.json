@@ -1,0 +1,1488 @@
+{
+  "schema_version": "life_arc_narrative_v1",
+  "agent_id": "peter",
+  "agent_label": "베드로",
+  "seed": 0,
+  "total_hours": 3428.0,
+  "total_days": 142.83333333333334,
+  "windows": [
+    {
+      "label": "week_01",
+      "plain_label": "1주차 (0–7일)",
+      "start_hours": 0.0,
+      "end_hours": 168.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "01_calling",
+          "local_tick": 3,
+          "absolute_hours": 6.0,
+          "absolute_days": 0.25,
+          "event_id": "calling_01_teaching_from_boat",
+          "description": "예수께서 시몬의 배에 오르사 무리를 가르치심 (눅 5:3)",
+          "scripture_ref": "눅 5:3",
+          "chosen_action": "wash_nets",
+          "chosen_action_description": "그물 손질 계속 (밤새 허탕)"
+        },
+        {
+          "phase_id": "01_calling",
+          "local_tick": 8,
+          "absolute_hours": 16.0,
+          "absolute_days": 0.6666666666666666,
+          "event_id": "calling_02_deep_water_command",
+          "description": "'깊은 데로 가서 그물을 내려 고기를 잡으라' — 어부 전문성에 반하는 지시 (눅 5:4)",
+          "scripture_ref": "눅 5:4",
+          "chosen_action": "obey_reluctantly",
+          "chosen_action_description": "'말씀에 의지하여' 그물을 내림"
+        },
+        {
+          "phase_id": "01_calling",
+          "local_tick": 20,
+          "absolute_hours": 40.0,
+          "absolute_days": 1.6666666666666667,
+          "event_id": "calling_04_fall_at_knees",
+          "description": "'주여 나를 떠나소서 나는 죄인이로소이다' — 베드로의 두려움+고백 (눅 5:8)",
+          "scripture_ref": "눅 5:8",
+          "chosen_action": "confess_sinfulness",
+          "chosen_action_description": "무릎 꿇고 죄인임을 고백"
+        },
+        {
+          "phase_id": "01_calling",
+          "local_tick": 30,
+          "absolute_hours": 60.0,
+          "absolute_days": 2.5,
+          "event_id": "calling_05_call_and_follow",
+          "description": "'무서워하지 말라 이제 후로는 네가 사람을 취하리라' — 모든 것을 버려두고 따름 (눅 5:10-11). jesus_understanding: None → teacher (첫 제자 됨).",
+          "scripture_ref": "눅 5:10",
+          "chosen_action": "leave_everything_follow",
+          "chosen_action_description": "배와 그물과 동업자를 두고 예수를 따름"
+        }
+      ],
+      "unfired_events": [
+        {
+          "phase_id": "01_calling",
+          "local_tick": 14,
+          "absolute_hours": 28.0,
+          "absolute_days": 1.1666666666666667,
+          "event_id": "calling_03_miraculous_catch",
+          "description": "그물이 찢어지고 배 둘이 가라앉을 만큼 고기가 잡힘 — 초자연적 기적 목격 (눅 5:6-7)",
+          "scripture_ref": "눅 5:6-7"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 0.0,
+          "end_value": 6.0,
+          "delta": 6.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 4.0,
+          "end_value": 5.67,
+          "delta": 1.67
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.0,
+          "end_value": 1.81,
+          "delta": 0.81
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 0.0,
+          "end_value": 0.15,
+          "delta": 0.15
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 2.0,
+          "end_value": 2.09,
+          "delta": 0.09
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 3.0,
+          "end_value": 3.93,
+          "delta": 0.93
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (0–168 시각).\n\n**발화된 정경 사건 4건**:\n\n- **약 0.2일째** — 예수께서 시몬의 배에 오르사 무리를 가르치심 (눅 5:3)\n  - 시뮬레이션 베드로의 선택: **그물 손질 계속 (밤새 허탕)** *(`wash_nets`)*\n- **약 0.7일째** — '깊은 데로 가서 그물을 내려 고기를 잡으라' — 어부 전문성에 반하는 지시 (눅 5:4)\n  - 시뮬레이션 베드로의 선택: **'말씀에 의지하여' 그물을 내림** *(`obey_reluctantly`)*\n- **약 1.7일째** — '주여 나를 떠나소서 나는 죄인이로소이다' — 베드로의 두려움+고백 (눅 5:8)\n  - 시뮬레이션 베드로의 선택: **무릎 꿇고 죄인임을 고백** *(`confess_sinfulness`)*\n- **약 2.5일째** — '무서워하지 말라 이제 후로는 네가 사람을 취하리라' — 모든 것을 버려두고 따름 (눅 5:10-11). jesus_understanding: None → teacher (첫 제자 됨). *(눅 5:10)*\n  - 시뮬레이션 베드로의 선택: **배와 그물과 동업자를 두고 예수를 따름** *(`leave_everything_follow`)*\n\n**미발화 정경 사건 1건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 1.2일째 — 그물이 찢어지고 배 둘이 가라앉을 만큼 고기가 잡힘 — 초자연적 기적 목격 (눅 5:6-7)\n\n**감정 흐름**: 경외 0.0 → 6.0 ↑, 희망 4.0 → 5.7 ↑, 두려움 1.0 → 1.8 ↑, 사랑 3.0 → 3.9 ↑"
+    },
+    {
+      "label": "week_02",
+      "plain_label": "2주차 (7–14일)",
+      "start_hours": 168.0,
+      "end_hours": 336.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 6.0,
+          "end_value": 6.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.67,
+          "end_value": 5.67,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.81,
+          "end_value": 1.81,
+          "delta": 0.0
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 0.15,
+          "end_value": 0.15,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 2.09,
+          "end_value": 2.09,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 3.93,
+          "end_value": 3.93,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (168–336 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_03",
+      "plain_label": "3주차 (14–21일)",
+      "start_hours": 336.0,
+      "end_hours": 504.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 6.0,
+          "end_value": 6.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.58,
+          "end_value": 5.58,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.71,
+          "end_value": 1.71,
+          "delta": 0.0
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 0.06,
+          "end_value": 0.06,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.91,
+          "end_value": 1.91,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.15,
+          "end_value": 4.15,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (336–504 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_04",
+      "plain_label": "4주차 (21–28일)",
+      "start_hours": 504.0,
+      "end_hours": 672.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [
+        {
+          "phase_id": "02_galilean",
+          "local_tick": 14,
+          "absolute_hours": 504.0,
+          "absolute_days": 21.0,
+          "event_id": "gal_01_healing_mother_in_law",
+          "description": "가버나움 회당 이후 베드로 장모의 열병 치유 (막 1:29-31)",
+          "scripture_ref": "막 1:31"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 8.0,
+          "end_value": 8.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.39,
+          "end_value": 5.39,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.6,
+          "end_value": 1.6,
+          "delta": 0.0
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.63,
+          "end_value": 1.63,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.26,
+          "end_value": 4.26,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (504–672 시각).\n\n이 구간에서 *시뮬레이션 베드로*가 응답한 정경 사건은 0건이다 (trigger 조건 미일치). 정의된 정경 사건은 1건.\n\n**미발화 정경 사건 1건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 21.0일째 — 가버나움 회당 이후 베드로 장모의 열병 치유 (막 1:29-31) *(막 1:31)*\n"
+    },
+    {
+      "label": "week_05",
+      "plain_label": "5주차 (28–35일)",
+      "start_hours": 672.0,
+      "end_hours": 840.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 8.0,
+          "end_value": 8.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.39,
+          "end_value": 5.18,
+          "delta": -0.21
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.6,
+          "end_value": 1.43,
+          "delta": -0.18
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 0.05,
+          "end_value": 0.0,
+          "delta": -0.04
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.63,
+          "end_value": 1.44,
+          "delta": -0.19
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.26,
+          "end_value": 4.28,
+          "delta": 0.02
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (672–840 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_06",
+      "plain_label": "6주차 (35–42일)",
+      "start_hours": 840.0,
+      "end_hours": 1008.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 8.0,
+          "end_value": 8.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.18,
+          "end_value": 5.18,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.43,
+          "end_value": 1.43,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.44,
+          "end_value": 1.44,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.28,
+          "end_value": 4.28,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (840–1008 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_07",
+      "plain_label": "7주차 (42–49일)",
+      "start_hours": 1008.0,
+      "end_hours": 1176.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 8.0,
+          "end_value": 8.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 4.96,
+          "end_value": 4.96,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.36,
+          "end_value": 1.36,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.34,
+          "end_value": 1.34,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.22,
+          "end_value": 4.22,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (1008–1176 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_08",
+      "plain_label": "8주차 (49–56일)",
+      "start_hours": 1176.0,
+      "end_hours": 1344.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [
+        {
+          "phase_id": "02_galilean",
+          "local_tick": 45,
+          "absolute_hours": 1248.0,
+          "absolute_days": 52.0,
+          "event_id": "gal_02_sermon_on_the_mount",
+          "description": "산상수훈 경청 (마 5-7). 팔복, 주기도, 황금률 등",
+          "scripture_ref": "마 5:3"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 8.0,
+          "end_value": 8.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 4.96,
+          "end_value": 6.2,
+          "delta": 1.25
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.36,
+          "end_value": 1.14,
+          "delta": -0.22
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 0.0,
+          "end_value": 0.01,
+          "delta": 0.01
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.34,
+          "end_value": 1.64,
+          "delta": 0.3
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.22,
+          "end_value": 4.36,
+          "delta": 0.13
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (1176–1344 시각).\n\n이 구간에서 *시뮬레이션 베드로*가 응답한 정경 사건은 0건이다 (trigger 조건 미일치). 정의된 정경 사건은 1건.\n\n**미발화 정경 사건 1건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 52.0일째 — 산상수훈 경청 (마 5-7). 팔복, 주기도, 황금률 등 *(마 5:3)*\n\n**감정 흐름**: 희망 5.0 → 6.2 ↑"
+    },
+    {
+      "label": "week_09",
+      "plain_label": "9주차 (56–63일)",
+      "start_hours": 1344.0,
+      "end_hours": 1512.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 8.0,
+          "end_value": 8.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 6.2,
+          "end_value": 6.2,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.14,
+          "end_value": 1.14,
+          "delta": 0.0
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 0.01,
+          "end_value": 0.01,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.64,
+          "end_value": 1.64,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.36,
+          "end_value": 4.36,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (1344–1512 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_10",
+      "plain_label": "10주차 (63–70일)",
+      "start_hours": 1512.0,
+      "end_hours": 1680.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "03_confession",
+          "local_tick": 18,
+          "absolute_hours": 1644.0,
+          "absolute_days": 68.5,
+          "event_id": "conf_03_peters_confession",
+          "description": "'너희는 나를 누구라 하느냐' → 베드로 '주는 그리스도시요 살아계신 하나님의 아들이시니이다' (마 16:16). 신학적 최고점. jesus_understanding: teacher → messiah_political (정치적 메시아 기대 포함된 고백).",
+          "scripture_ref": "마 16:16",
+          "chosen_action": "confess_publicly",
+          "chosen_action_description": "제자들 앞에서 공개 고백"
+        }
+      ],
+      "unfired_events": [
+        {
+          "phase_id": "03_confession",
+          "local_tick": 6,
+          "absolute_hours": 1620.0,
+          "absolute_days": 67.5,
+          "event_id": "conf_01_arrival_caesarea_philippi",
+          "description": "가이사랴 빌립보 지역 도착. 이방 신전들이 보이는 pagan 배경에서 정체성 질문 제기 준비.",
+          "scripture_ref": "마 16:13"
+        },
+        {
+          "phase_id": "03_confession",
+          "local_tick": 12,
+          "absolute_hours": 1632.0,
+          "absolute_days": 68.0,
+          "event_id": "conf_02_who_do_men_say",
+          "description": "'사람들이 인자를 누구라 하느냐' 질문. 제자들이 '엘리야, 예레미야, 선지자 중 하나' 보고.",
+          "scripture_ref": "마 16:13"
+        },
+        {
+          "phase_id": "03_confession",
+          "local_tick": 22,
+          "absolute_hours": 1652.0,
+          "absolute_days": 68.83333333333333,
+          "event_id": "conf_04_blessing_and_keys",
+          "description": "'바요나 시몬아 네가 복이 있도다... 너는 베드로라 내가 이 반석 위에 내 교회를 세우리니... 내가 천국 열쇠를 네게 주리니' (마 16:17-19). 새 이름 + 사명 부여.",
+          "scripture_ref": "마 16:18"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 8.0,
+          "end_value": 10.0,
+          "delta": 2.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.94,
+          "end_value": 8.83,
+          "delta": 2.89
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.08,
+          "end_value": 0.82,
+          "delta": -0.25
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 1.52,
+          "end_value": 1.66,
+          "delta": 0.14
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.4,
+          "end_value": 4.66,
+          "delta": 0.26
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (1512–1680 시각).\n\n**발화된 정경 사건 1건**:\n\n- **약 68.5일째** — '너희는 나를 누구라 하느냐' → 베드로 '주는 그리스도시요 살아계신 하나님의 아들이시니이다' (마 16:16). 신학적 최고점. jesus_understanding: teacher → messiah_political (정치적 메시아 기대 포함된 고백).\n  - 시뮬레이션 베드로의 선택: **제자들 앞에서 공개 고백** *(`confess_publicly`)*\n\n**미발화 정경 사건 3건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 67.5일째 — 가이사랴 빌립보 지역 도착. 이방 신전들이 보이는 pagan 배경에서 정체성 질문 제기 준비. *(마 16:13)*\n- 약 68.0일째 — '사람들이 인자를 누구라 하느냐' 질문. 제자들이 '엘리야, 예레미야, 선지자 중 하나' 보고. *(마 16:13)*\n- 약 68.8일째 — '바요나 시몬아 네가 복이 있도다... 너는 베드로라 내가 이 반석 위에 내 교회를 세우리니... 내가 천국 열쇠를 네게 주리니' (마 16:17-19). 새 이름 + 사명 부여. *(마 16:18)*\n\n**감정 흐름**: 경외 8.0 → 10.0 ↑, 희망 5.9 → 8.8 ↑"
+    },
+    {
+      "label": "week_11",
+      "plain_label": "11주차 (70–77일)",
+      "start_hours": 1680.0,
+      "end_hours": 1848.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "03_confession",
+          "local_tick": 36,
+          "absolute_hours": 1680.0,
+          "absolute_days": 70.0,
+          "event_id": "conf_05_first_passion_prediction",
+          "description": "'인자가 많은 고난을 받고 장로들과 대제사장들과 서기관들에게 버린 바 되어 죽임을 당하고' — 첫 수난 예고 (마 16:21). 고백 직후의 충격적 반전.",
+          "scripture_ref": "마 16:21",
+          "chosen_action": "protest_rebuke_jesus",
+          "chosen_action_description": "'주여 그리 마옵소서 이 일이 결코 주께 미치지 아니하리이다' — 예수를 붙들고 항변"
+        }
+      ],
+      "unfired_events": [
+        {
+          "phase_id": "03_confession",
+          "local_tick": 38,
+          "absolute_hours": 1684.0,
+          "absolute_days": 70.16666666666667,
+          "event_id": "conf_06_get_behind_me_satan",
+          "description": "'사탄아 내 뒤로 물러 가라 너는 나를 넘어지게 하는 자로다 네가 하나님의 일을 생각지 아니하고 도리어 사람의 일을 생각하는도다' (마 16:23). 방금 '반석'이라 불린 베드로가 바로 '사탄'으로 책망받음. 정체성 급강하.",
+          "scripture_ref": "마 16:23"
+        },
+        {
+          "phase_id": "03_confession",
+          "local_tick": 44,
+          "absolute_hours": 1696.0,
+          "absolute_days": 70.66666666666667,
+          "event_id": "conf_07_take_up_cross",
+          "description": "'누구든지 나를 따라오려거든 자기를 부인하고 자기 십자가를 지고 나를 따를 것이니라' (마 16:24). 수난의 의미를 제자도로 확장.",
+          "scripture_ref": "마 16:24"
+        },
+        {
+          "phase_id": "04_journey",
+          "local_tick": 3,
+          "absolute_hours": 1780.0,
+          "absolute_days": 74.16666666666667,
+          "event_id": "jou_01_who_is_greatest",
+          "description": "'누가 크냐' 논쟁. 예수께서 어린아이를 세우시고 '섬기는 자가 큰 자' 가르침 (마 18:1-6, 막 9:33-37)",
+          "scripture_ref": "마 18:4"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.83,
+          "end_value": 5.58,
+          "delta": -0.25
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 4.22,
+          "end_value": 3.84,
+          "delta": -0.38
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 3.94,
+          "end_value": 4.39,
+          "delta": 0.44
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 4.46,
+          "end_value": 5.61,
+          "delta": 1.15
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.61,
+          "end_value": 4.72,
+          "delta": 0.11
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (1680–1848 시각).\n\n**발화된 정경 사건 1건**:\n\n- **약 70.0일째** — '인자가 많은 고난을 받고 장로들과 대제사장들과 서기관들에게 버린 바 되어 죽임을 당하고' — 첫 수난 예고 (마 16:21). 고백 직후의 충격적 반전.\n  - 시뮬레이션 베드로의 선택: **'주여 그리 마옵소서 이 일이 결코 주께 미치지 아니하리이다' — 예수를 붙들고 항변** *(`protest_rebuke_jesus`)*\n\n**미발화 정경 사건 3건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 70.2일째 — '사탄아 내 뒤로 물러 가라 너는 나를 넘어지게 하는 자로다 네가 하나님의 일을 생각지 아니하고 도리어 사람의 일을 생각하는도다' (마 16:23). 방금 '반석'이라 불린 베드로가 바로 '사탄'으로 책망받음. 정체성 급강하.\n- 약 70.7일째 — '누구든지 나를 따라오려거든 자기를 부인하고 자기 십자가를 지고 나를 따를 것이니라' (마 16:24). 수난의 의미를 제자도로 확장.\n- 약 74.2일째 — '누가 크냐' 논쟁. 예수께서 어린아이를 세우시고 '섬기는 자가 큰 자' 가르침 (마 18:1-6, 막 9:33-37) *(마 18:4)*\n\n**감정 흐름**: 혼란 4.5 → 5.6 ↑"
+    },
+    {
+      "label": "week_12",
+      "plain_label": "12주차 (77–84일)",
+      "start_hours": 1848.0,
+      "end_hours": 2016.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.51,
+          "end_value": 5.51,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 3.63,
+          "end_value": 3.63,
+          "delta": 0.0
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 4.75,
+          "end_value": 4.75,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 5.57,
+          "end_value": 5.57,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.89,
+          "end_value": 4.89,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (1848–2016 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_13",
+      "plain_label": "13주차 (84–91일)",
+      "start_hours": 2016.0,
+      "end_hours": 2184.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [
+        {
+          "phase_id": "04_journey",
+          "local_tick": 15,
+          "absolute_hours": 2068.0,
+          "absolute_days": 86.16666666666667,
+          "event_id": "jou_02_forgive_seventy_times_seven",
+          "description": "베드로 '주여 형제가 내게 죄를 범하면 몇 번이나 용서하여 주리이까 일곱 번까지 하오리이까' → '일곱 번을 일흔 번까지라도' (마 18:21-22)",
+          "scripture_ref": "마 18:22"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.51,
+          "end_value": 5.32,
+          "delta": -0.19
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 3.63,
+          "end_value": 3.41,
+          "delta": -0.22
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 4.75,
+          "end_value": 4.69,
+          "delta": -0.05
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 5.57,
+          "end_value": 5.94,
+          "delta": 0.36
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.89,
+          "end_value": 4.95,
+          "delta": 0.06
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (2016–2184 시각).\n\n이 구간에서 *시뮬레이션 베드로*가 응답한 정경 사건은 0건이다 (trigger 조건 미일치). 정의된 정경 사건은 1건.\n\n**미발화 정경 사건 1건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 86.2일째 — 베드로 '주여 형제가 내게 죄를 범하면 몇 번이나 용서하여 주리이까 일곱 번까지 하오리이까' → '일곱 번을 일흔 번까지라도' (마 18:21-22) *(마 18:22)*\n"
+    },
+    {
+      "label": "week_14",
+      "plain_label": "14주차 (91–98일)",
+      "start_hours": 2184.0,
+      "end_hours": 2352.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.32,
+          "end_value": 5.32,
+          "delta": 0.0
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 3.41,
+          "end_value": 3.41,
+          "delta": 0.0
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 4.69,
+          "end_value": 4.69,
+          "delta": 0.0
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 5.94,
+          "end_value": 5.94,
+          "delta": 0.0
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.95,
+          "end_value": 4.95,
+          "delta": 0.0
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (2184–2352 시각).\n\n이 구간에는 정경 사건이 발화되지 않았다 (시뮬레이션 trigger 조건 미일치). 감정 흐름만 관측된다.\n"
+    },
+    {
+      "label": "week_15",
+      "plain_label": "15주차 (98–105일)",
+      "start_hours": 2352.0,
+      "end_hours": 2520.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 5,
+          "absolute_hours": 2438.0,
+          "absolute_days": 101.58333333333333,
+          "event_id": "scene_01_jerusalem_entry",
+          "description": "예루살렘 입성. 군중이 호산나를 외침",
+          "scripture_ref": "마 21, 막 11, 눅 19",
+          "chosen_action": "watch_quietly",
+          "chosen_action_description": "예수의 표정을 주시하며 조용히 따라감"
+        }
+      ],
+      "unfired_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 15,
+          "absolute_hours": 2458.0,
+          "absolute_days": 102.41666666666667,
+          "event_id": "scene_02_temple_cleansing",
+          "description": "성전 정화. 예수가 상인들의 상을 뒤엎음",
+          "scripture_ref": "마 21:12-13"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 35,
+          "absolute_hours": 2498.0,
+          "absolute_days": 104.08333333333333,
+          "event_id": "scene_03_olivet_discourse",
+          "description": "감람산 종말 담화",
+          "scripture_ref": "마 24, 막 13"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 5.12,
+          "end_value": 6.61,
+          "delta": 1.49
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 3.13,
+          "end_value": 4.77,
+          "delta": 1.64
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 4.51,
+          "end_value": 4.02,
+          "delta": -0.49
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 5.58,
+          "end_value": 7.56,
+          "delta": 1.98
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 4.93,
+          "end_value": 4.96,
+          "delta": 0.04
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (2352–2520 시각).\n\n**발화된 정경 사건 1건**:\n\n- **약 101.6일째** — 예루살렘 입성. 군중이 호산나를 외침 *(마 21, 막 11, 눅 19)*\n  - 시뮬레이션 베드로의 선택: **예수의 표정을 주시하며 조용히 따라감** *(`watch_quietly`)*\n\n**미발화 정경 사건 2건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 102.4일째 — 성전 정화. 예수가 상인들의 상을 뒤엎음 *(마 21:12-13)*\n- 약 104.1일째 — 감람산 종말 담화 *(마 24, 막 13)*\n\n**감정 흐름**: 희망 5.1 → 6.6 ↑, 두려움 3.1 → 4.8 ↑, 혼란 5.6 → 7.6 ↑"
+    },
+    {
+      "label": "week_16",
+      "plain_label": "16주차 (105–112일)",
+      "start_hours": 2520.0,
+      "end_hours": 2688.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 117,
+          "absolute_hours": 2662.0,
+          "absolute_days": 110.91666666666667,
+          "event_id": "scene_05_foot_washing",
+          "description": "발씻음. 예수가 제자들의 발을 씻김",
+          "scripture_ref": "요 13:1-17",
+          "chosen_action": "resist_washing",
+          "chosen_action_description": "발씻음을 거부함"
+        }
+      ],
+      "unfired_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 105,
+          "absolute_hours": 2638.0,
+          "absolute_days": 109.91666666666667,
+          "event_id": "scene_04_passover_preparation",
+          "description": "유월절 준비",
+          "scripture_ref": "눅 22:7-13"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 125,
+          "absolute_hours": 2678.0,
+          "absolute_days": 111.58333333333333,
+          "event_id": "scene_06_last_supper",
+          "description": "최후의 만찬. 새 언약",
+          "scripture_ref": "마 26:17-30, 요 13"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 6.25,
+          "end_value": 4.98,
+          "delta": -1.28
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 4.45,
+          "end_value": 4.6,
+          "delta": 0.15
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 3.94,
+          "end_value": 2.73,
+          "delta": -1.21
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 7.1,
+          "end_value": 7.12,
+          "delta": 0.01
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 5.01,
+          "end_value": 7.11,
+          "delta": 2.1
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (2520–2688 시각).\n\n**발화된 정경 사건 1건**:\n\n- **약 110.9일째** — 발씻음. 예수가 제자들의 발을 씻김 *(요 13:1-17)*\n  - 시뮬레이션 베드로의 선택: **발씻음을 거부함** *(`resist_washing`)*\n\n**미발화 정경 사건 2건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 109.9일째 — 유월절 준비 *(눅 22:7-13)*\n- 약 111.6일째 — 최후의 만찬. 새 언약 *(마 26:17-30, 요 13)*\n\n**감정 흐름**: 희망 6.2 → 5.0 ↓, 슬픔 3.9 → 2.7 ↓, 사랑 5.0 → 7.1 ↑"
+    },
+    {
+      "label": "week_17",
+      "plain_label": "17주차 (112–119일)",
+      "start_hours": 2688.0,
+      "end_hours": 2856.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 143,
+          "absolute_hours": 2714.0,
+          "absolute_days": 113.08333333333333,
+          "event_id": "scene_07_gethsemane",
+          "description": "겟세마네 기도. 예수가 기도하는 동안 제자들이 잠듦",
+          "scripture_ref": "마 26:36-46",
+          "chosen_action": "fall_asleep",
+          "chosen_action_description": "피로에 잠듦"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 152,
+          "absolute_hours": 2732.0,
+          "absolute_days": 113.83333333333333,
+          "event_id": "scene_08_arrest",
+          "description": "체포. 유다의 배반, 무리가 예수를 체포",
+          "scripture_ref": "마 26:47-56, 요 18:1-11",
+          "chosen_action": "follow_at_distance",
+          "chosen_action_description": "멀리서 따라감"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 163,
+          "absolute_hours": 2754.0,
+          "absolute_days": 114.75,
+          "event_id": "scene_09_denial_1",
+          "description": "대제사장 집 마당. 여종이 베드로를 알아봄 (1차 부인)",
+          "scripture_ref": "마 26:69-70",
+          "chosen_action": "confess",
+          "chosen_action_description": "고백: 나는 그의 제자다"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 166,
+          "absolute_hours": 2760.0,
+          "absolute_days": 115.0,
+          "event_id": "scene_09_denial_2",
+          "description": "두 번째 사람이 알아봄 (2차 부인)",
+          "scripture_ref": "마 26:71-72",
+          "chosen_action": "deny",
+          "chosen_action_description": "맹세하며 부인"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 170,
+          "absolute_hours": 2768.0,
+          "absolute_days": 115.33333333333333,
+          "event_id": "scene_09_denial_3",
+          "description": "세 번째 추궁. 저주하며 부인 (3차 부인)",
+          "scripture_ref": "마 26:73-74",
+          "chosen_action": "deny",
+          "chosen_action_description": "저주하며 부인: 나는 그 사람을 알지 못한다"
+        }
+      ],
+      "unfired_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 172,
+          "absolute_hours": 2772.0,
+          "absolute_days": 115.5,
+          "event_id": "scene_10_rooster",
+          "description": "수탉이 울음. 예수의 눈과 마주침",
+          "scripture_ref": "눅 22:61-62"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 190,
+          "absolute_hours": 2808.0,
+          "absolute_days": 117.0,
+          "event_id": "scene_11_crucifixion_absence",
+          "description": "십자가. 베드로는 부재. 고립 상태",
+          "scripture_ref": ""
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 4.98,
+          "end_value": 0.49,
+          "delta": -4.49
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 4.6,
+          "end_value": 7.82,
+          "delta": 3.23
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 2.73,
+          "end_value": 9.67,
+          "delta": 6.93
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 7.12,
+          "end_value": 9.95,
+          "delta": 2.83
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 7.11,
+          "end_value": 6.33,
+          "delta": -0.78
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (2688–2856 시각).\n\n**발화된 정경 사건 5건**:\n\n- **약 113.1일째** — 겟세마네 기도. 예수가 기도하는 동안 제자들이 잠듦 *(마 26:36-46)*\n  - 시뮬레이션 베드로의 선택: **피로에 잠듦** *(`fall_asleep`)*\n- **약 113.8일째** — 체포. 유다의 배반, 무리가 예수를 체포 *(마 26:47-56, 요 18:1-11)*\n  - 시뮬레이션 베드로의 선택: **멀리서 따라감** *(`follow_at_distance`)*\n- **약 114.8일째** — 대제사장 집 마당. 여종이 베드로를 알아봄 (1차 부인) *(마 26:69-70)*\n  - 시뮬레이션 베드로의 선택: **고백: 나는 그의 제자다** *(`confess`)*\n- **약 115.0일째** — 두 번째 사람이 알아봄 (2차 부인) *(마 26:71-72)*\n  - 시뮬레이션 베드로의 선택: **맹세하며 부인** *(`deny`)*\n- **약 115.3일째** — 세 번째 추궁. 저주하며 부인 (3차 부인) *(마 26:73-74)*\n  - 시뮬레이션 베드로의 선택: **저주하며 부인: 나는 그 사람을 알지 못한다** *(`deny`)*\n\n**미발화 정경 사건 2건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 115.5일째 — 수탉이 울음. 예수의 눈과 마주침 *(눅 22:61-62)*\n- 약 117.0일째 — 십자가. 베드로는 부재. 고립 상태\n\n**감정 흐름**: 희망 5.0 → 0.5 ↓, 두려움 4.6 → 7.8 ↑, 슬픔 2.7 → 9.7 ↑, 혼란 7.1 → 9.9 ↑, 사랑 7.1 → 6.3 ↓"
+    },
+    {
+      "label": "week_18",
+      "plain_label": "18주차 (119–126일)",
+      "start_hours": 2856.0,
+      "end_hours": 3024.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 225,
+          "absolute_hours": 2878.0,
+          "absolute_days": 119.91666666666667,
+          "event_id": "scene_12_empty_tomb",
+          "description": "빈 무덤 소식. 달려감",
+          "scripture_ref": "눅 24:12, 요 20:3-10",
+          "chosen_action": "stay_hiding",
+          "chosen_action_description": "숨어 있음"
+        }
+      ],
+      "unfired_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 237,
+          "absolute_hours": 2902.0,
+          "absolute_days": 120.91666666666667,
+          "event_id": "scene_13_emmaus_jerusalem",
+          "description": "엠마오 이후 예루살렘. 부활하신 예수를 만남. jesus_understanding: messiah_political → risen_lord (부활 목격, 정치적 메시아 기대를 넘어선 이해 전환).",
+          "scripture_ref": "눅 24:33-49"
+        },
+        {
+          "phase_id": "05_passion",
+          "local_tick": 285,
+          "absolute_hours": 2998.0,
+          "absolute_days": 124.91666666666667,
+          "event_id": "scene_14_thomas_appearance",
+          "description": "도마를 위한 출현",
+          "scripture_ref": "요 20:24-29"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 0.47,
+          "end_value": 4.97,
+          "delta": 4.5
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 7.43,
+          "end_value": 3.15,
+          "delta": -4.28
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 9.5,
+          "end_value": 8.09,
+          "delta": -1.41
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 9.95,
+          "end_value": 6.7,
+          "delta": -3.25
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 6.38,
+          "end_value": 6.0,
+          "delta": -0.38
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (2856–3024 시각).\n\n**발화된 정경 사건 1건**:\n\n- **약 119.9일째** — 빈 무덤 소식. 달려감 *(눅 24:12, 요 20:3-10)*\n  - 시뮬레이션 베드로의 선택: **숨어 있음** *(`stay_hiding`)*\n\n**미발화 정경 사건 2건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 120.9일째 — 엠마오 이후 예루살렘. 부활하신 예수를 만남. jesus_understanding: messiah_political → risen_lord (부활 목격, 정치적 메시아 기대를 넘어선 이해 전환). *(눅 24:33-49)*\n- 약 124.9일째 — 도마를 위한 출현 *(요 20:24-29)*\n\n**감정 흐름**: 희망 0.5 → 5.0 ↑, 두려움 7.4 → 3.1 ↓, 슬픔 9.5 → 8.1 ↓, 혼란 9.9 → 6.7 ↓"
+    },
+    {
+      "label": "week_19",
+      "plain_label": "19주차 (126–133일)",
+      "start_hours": 3024.0,
+      "end_hours": 3192.0,
+      "duration_days": 7.0,
+      "canonical_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 355,
+          "absolute_hours": 3138.0,
+          "absolute_days": 130.75,
+          "event_id": "scene_15_tiberias",
+          "description": "디베랴 호수. 153마리 물고기. 회복의 장면",
+          "scripture_ref": "요 21",
+          "chosen_action": "stay_on_boat",
+          "chosen_action_description": "배에 머물러 있음"
+        }
+      ],
+      "unfired_events": [],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 4.39,
+          "end_value": 1.77,
+          "delta": -2.62
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 2.9,
+          "end_value": 1.48,
+          "delta": -1.42
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 7.87,
+          "end_value": 8.49,
+          "delta": 0.62
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 6.25,
+          "end_value": 6.09,
+          "delta": -0.17
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 5.99,
+          "end_value": 7.96,
+          "delta": 1.97
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (3024–3192 시각).\n\n**발화된 정경 사건 1건**:\n\n- **약 130.8일째** — 디베랴 호수. 153마리 물고기. 회복의 장면 *(요 21)*\n  - 시뮬레이션 베드로의 선택: **배에 머물러 있음** *(`stay_on_boat`)*\n\n**감정 흐름**: 희망 4.4 → 1.8 ↓, 두려움 2.9 → 1.5 ↓, 슬픔 7.9 → 8.5 ↑, 사랑 6.0 → 8.0 ↑"
+    },
+    {
+      "label": "week_20",
+      "plain_label": "20주차 (133–140일)",
+      "start_hours": 3192.0,
+      "end_hours": 3360.0,
+      "duration_days": 7.0,
+      "canonical_events": [],
+      "unfired_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 430,
+          "absolute_hours": 3288.0,
+          "absolute_days": 137.0,
+          "event_id": "scene_16_forty_days",
+          "description": "40일간의 가르침",
+          "scripture_ref": "행 1:3"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 1.63,
+          "end_value": 1.93,
+          "delta": 0.3
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 1.47,
+          "end_value": 0.57,
+          "delta": -0.89
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 8.31,
+          "end_value": 7.19,
+          "delta": -1.11
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 6.78,
+          "end_value": 4.39,
+          "delta": -2.4
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 7.73,
+          "end_value": 6.84,
+          "delta": -0.89
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 7.0일에 해당한다 (3192–3360 시각).\n\n이 구간에서 *시뮬레이션 베드로*가 응답한 정경 사건은 0건이다 (trigger 조건 미일치). 정의된 정경 사건은 1건.\n\n**미발화 정경 사건 1건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 137.0일째 — 40일간의 가르침 *(행 1:3)*\n\n**감정 흐름**: 두려움 1.5 → 0.6 ↓, 슬픔 8.3 → 7.2 ↓, 혼란 6.8 → 4.4 ↓, 사랑 7.7 → 6.8 ↓"
+    },
+    {
+      "label": "week_21",
+      "plain_label": "21주차 (140–143일)",
+      "start_hours": 3360.0,
+      "end_hours": 3428.0,
+      "duration_days": 2.8333333333333335,
+      "canonical_events": [],
+      "unfired_events": [
+        {
+          "phase_id": "05_passion",
+          "local_tick": 495,
+          "absolute_hours": 3418.0,
+          "absolute_days": 142.41666666666666,
+          "event_id": "scene_17_ascension",
+          "description": "승천. jesus_understanding: risen_lord → sending_lord (대사명 이후 파송자 이해 확정).",
+          "scripture_ref": "행 1:9-11"
+        }
+      ],
+      "emotion_deltas": [
+        {
+          "emotion": "awe",
+          "plain_emotion": "경외",
+          "start_value": 10.0,
+          "end_value": 10.0,
+          "delta": 0.0
+        },
+        {
+          "emotion": "hope",
+          "plain_emotion": "희망",
+          "start_value": 1.73,
+          "end_value": 5.04,
+          "delta": 3.31
+        },
+        {
+          "emotion": "fear",
+          "plain_emotion": "두려움",
+          "start_value": 0.52,
+          "end_value": 0.18,
+          "delta": -0.35
+        },
+        {
+          "emotion": "grief",
+          "plain_emotion": "슬픔",
+          "start_value": 7.01,
+          "end_value": 7.62,
+          "delta": 0.61
+        },
+        {
+          "emotion": "confusion",
+          "plain_emotion": "혼란",
+          "start_value": 4.18,
+          "end_value": 3.28,
+          "delta": -0.91
+        },
+        {
+          "emotion": "love",
+          "plain_emotion": "사랑",
+          "start_value": 6.81,
+          "end_value": 6.62,
+          "delta": -0.18
+        }
+      ],
+      "plain_narrative": "이 시간대는 약 2.8일에 해당한다 (3360–3428 시각).\n\n이 구간에서 *시뮬레이션 베드로*가 응답한 정경 사건은 0건이다 (trigger 조건 미일치). 정의된 정경 사건은 1건.\n\n**미발화 정경 사건 1건** *(JSON 정의되었으나 시뮬레이션 trigger 미일치)*:\n\n- 약 142.4일째 — 승천. jesus_understanding: risen_lord → sending_lord (대사명 이후 파송자 이해 확정). *(행 1:9-11)*\n\n**감정 흐름**: 희망 1.7 → 5.0 ↑, 슬픔 7.0 → 7.6 ↑, 혼란 4.2 → 3.3 ↓"
+    }
+  ]
+}

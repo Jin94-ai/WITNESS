@@ -1,0 +1,804 @@
+{
+  "summary": {
+    "phase_preservation_rate": 0.7666666666666667,
+    "emergent_ratio_mean": 0.8143452004457697,
+    "total_probes": 15
+  },
+  "results": [
+    {
+      "scenario": "scarcity",
+      "remove": "agent_01",
+      "seed": 0,
+      "baseline_emergent": 63,
+      "cf_emergent": 38,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "lynch_mode",
+          "alignment": 1.0,
+          "density": 1.0,
+          "max_blame": 1.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "lynch_mode",
+          "alignment": 1.0,
+          "density": 0.945,
+          "max_blame": 0.77
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -25,
+        "rumor_delta": -5,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "lynch_mode",
+            "counterfactual": "lynch_mode",
+            "same": true,
+            "alignment_delta": 0.0
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_01",
+      "seed": 1,
+      "baseline_emergent": 30,
+      "cf_emergent": 44,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "lynch_mode",
+          "alignment": 0.771,
+          "density": 0.64,
+          "max_blame": 0.73
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 1.0,
+          "density": 1.0,
+          "max_blame": 0.58
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": 14,
+        "rumor_delta": 4,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "lynch_mode",
+            "counterfactual": "aligned",
+            "same": false,
+            "alignment_delta": 0.229
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_01",
+      "seed": 2,
+      "baseline_emergent": 31,
+      "cf_emergent": 25,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 0.739,
+          "density": 0.68,
+          "max_blame": 0.48
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.313,
+          "density": 0.485,
+          "max_blame": 0.37
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -6,
+        "rumor_delta": -3,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "aligned",
+            "counterfactual": "idle",
+            "same": false,
+            "alignment_delta": -0.426
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_09",
+      "seed": 0,
+      "baseline_emergent": 63,
+      "cf_emergent": 19,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "lynch_mode",
+          "alignment": 1.0,
+          "density": 1.0,
+          "max_blame": 1.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.09,
+          "density": 0.595,
+          "max_blame": 0.42
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -44,
+        "rumor_delta": -12,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "lynch_mode",
+            "counterfactual": "idle",
+            "same": false,
+            "alignment_delta": -0.91
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_09",
+      "seed": 1,
+      "baseline_emergent": 30,
+      "cf_emergent": 25,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "lynch_mode",
+          "alignment": 0.771,
+          "density": 0.64,
+          "max_blame": 0.73
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.377,
+          "density": 0.815,
+          "max_blame": 0.47
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -5,
+        "rumor_delta": -5,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "lynch_mode",
+            "counterfactual": "gathered",
+            "same": false,
+            "alignment_delta": -0.394
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_09",
+      "seed": 2,
+      "baseline_emergent": 31,
+      "cf_emergent": 19,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 0.739,
+          "density": 0.68,
+          "max_blame": 0.48
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.15,
+          "density": 0.395,
+          "max_blame": 0.48
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -12,
+        "rumor_delta": -8,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "aligned",
+            "counterfactual": "idle",
+            "same": false,
+            "alignment_delta": -0.589
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_11",
+      "seed": 0,
+      "baseline_emergent": 63,
+      "cf_emergent": 26,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "lynch_mode",
+          "alignment": 1.0,
+          "density": 1.0,
+          "max_blame": 1.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.348,
+          "density": 0.51,
+          "max_blame": 0.42
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -37,
+        "rumor_delta": -13,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "lynch_mode",
+            "counterfactual": "gathered",
+            "same": false,
+            "alignment_delta": -0.652
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_11",
+      "seed": 1,
+      "baseline_emergent": 30,
+      "cf_emergent": 36,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "lynch_mode",
+          "alignment": 0.771,
+          "density": 0.64,
+          "max_blame": 0.73
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 1.0,
+          "density": 0.97,
+          "max_blame": 0.69
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": 6,
+        "rumor_delta": -3,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "lynch_mode",
+            "counterfactual": "aligned",
+            "same": false,
+            "alignment_delta": 0.229
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "scarcity",
+      "remove": "agent_11",
+      "seed": 2,
+      "baseline_emergent": 31,
+      "cf_emergent": 30,
+      "baseline_phases": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 0.739,
+          "density": 0.68,
+          "max_blame": 0.48
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "cf_phases": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 0.743,
+          "density": 0.545,
+          "max_blame": 0.49
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -1,
+        "rumor_delta": -7,
+        "phase_changes": {
+          "marketplace": {
+            "baseline": "aligned",
+            "counterfactual": "aligned",
+            "same": true,
+            "alignment_delta": 0.004
+          },
+          "poor_quarter": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "accusation",
+      "remove": "agent_01",
+      "seed": 0,
+      "baseline_emergent": 24,
+      "cf_emergent": 20,
+      "baseline_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.135,
+          "density": 0.37,
+          "max_blame": 0.22
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.045,
+          "density": 0.435,
+          "max_blame": 0.09
+        }
+      },
+      "cf_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.05,
+          "density": 0.3,
+          "max_blame": 0.11
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.045,
+          "density": 0.42,
+          "max_blame": 0.16
+        }
+      },
+      "delta": {
+        "emergent_delta": -4,
+        "rumor_delta": 1,
+        "phase_changes": {
+          "priest_courtyard": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": -0.085
+          },
+          "city_street": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "accusation",
+      "remove": "agent_01",
+      "seed": 1,
+      "baseline_emergent": 18,
+      "cf_emergent": 23,
+      "baseline_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.22,
+          "max_blame": 0.1
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.43,
+          "max_blame": 0.11
+        }
+      },
+      "cf_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.183,
+          "density": 0.33,
+          "max_blame": 0.22
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.395,
+          "max_blame": 0.05
+        }
+      },
+      "delta": {
+        "emergent_delta": 5,
+        "rumor_delta": 0,
+        "phase_changes": {
+          "priest_courtyard": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.183
+          },
+          "city_street": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "accusation",
+      "remove": "agent_01",
+      "seed": 2,
+      "baseline_emergent": 17,
+      "cf_emergent": 22,
+      "baseline_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.015,
+          "density": 0.135,
+          "max_blame": 0.09
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.045,
+          "density": 0.42,
+          "max_blame": 0.2
+        }
+      },
+      "cf_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.195,
+          "density": 0.435,
+          "max_blame": 0.05
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.05,
+          "density": 0.475,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": 5,
+        "rumor_delta": -2,
+        "phase_changes": {
+          "priest_courtyard": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.18
+          },
+          "city_street": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.005
+          }
+        }
+      }
+    },
+    {
+      "scenario": "accusation",
+      "remove": "agent_04",
+      "seed": 0,
+      "baseline_emergent": 24,
+      "cf_emergent": 7,
+      "baseline_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.135,
+          "density": 0.37,
+          "max_blame": 0.22
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.045,
+          "density": 0.435,
+          "max_blame": 0.09
+        }
+      },
+      "cf_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.215,
+          "max_blame": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.39,
+          "max_blame": 0.0
+        }
+      },
+      "delta": {
+        "emergent_delta": -17,
+        "rumor_delta": -5,
+        "phase_changes": {
+          "priest_courtyard": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": -0.135
+          },
+          "city_street": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": -0.045
+          }
+        }
+      }
+    },
+    {
+      "scenario": "accusation",
+      "remove": "agent_04",
+      "seed": 1,
+      "baseline_emergent": 18,
+      "cf_emergent": 12,
+      "baseline_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.22,
+          "max_blame": 0.1
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.43,
+          "max_blame": 0.11
+        }
+      },
+      "cf_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.215,
+          "max_blame": 0.0
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.545,
+          "max_blame": 0.11
+        }
+      },
+      "delta": {
+        "emergent_delta": -6,
+        "rumor_delta": -3,
+        "phase_changes": {
+          "priest_courtyard": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          },
+          "city_street": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "accusation",
+      "remove": "agent_04",
+      "seed": 2,
+      "baseline_emergent": 17,
+      "cf_emergent": 11,
+      "baseline_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.015,
+          "density": 0.135,
+          "max_blame": 0.09
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.045,
+          "density": 0.42,
+          "max_blame": 0.2
+        }
+      },
+      "cf_phases": {
+        "priest_courtyard": {
+          "phase": "idle",
+          "alignment": 0.045,
+          "density": 0.22,
+          "max_blame": 0.21
+        },
+        "city_street": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.485,
+          "max_blame": 0.07
+        }
+      },
+      "delta": {
+        "emergent_delta": -6,
+        "rumor_delta": -1,
+        "phase_changes": {
+          "priest_courtyard": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": 0.03
+          },
+          "city_street": {
+            "baseline": "idle",
+            "counterfactual": "idle",
+            "same": true,
+            "alignment_delta": -0.045
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# Internal Hold — P9 SAT Scarcity (Manual Edit Candidate)
+
+**Status**: ⚠️ **Internal hold, not for public release**
+**Probe ID**: P9
+**Reason**: Lee Gate 1 v3 verdict — saturation tone 개선됐지만 still slightly *report-like*
+
+---
+
+## Lee verdict (verbatim from Gate 1 v3)
+
+> "P9 SAT scarcity: Cycle 1보다 좋아졌다. saturation 톤은 선명해졌지만 여전히 설명문 냄새가 조금 남는다."
+
+→ **flat + report-like** (개선됨). Asset pack v1 main에는 미포함, manual edit 후보.
+
+---
+
+## Narrative (Cycle 7 후, no edit)
+
+곡식 자루가 가벼워질수록 사람들의 눈빛도 함께 가벼워지지는 않았다. 시장의 가격은 흔들렸고, 그 흔들림은 손끝의 망설임으로 이어졌다. 빈민가에서는 이미 며칠 전부터 작은 한숨들이 모이고 있었다. 권위의 시선은 거리 한 모서리에서 늘 한 박자 늦게 따라왔다. 그 공기가 깊어지기 전, 거리에 작은 사건이 떨어졌다.
+
+빈손이 늘어 가던 어느 시각, 상인의 이름이 처음 입에 올랐다. 누군가 곡식을 숨겼다는 말이 시장 한구석에서 시작되었고, 그 말은 오래 걸리지 않아 거리 끝까지 닿았다. 비난은 옅게라도 거리에 떠다녔다. 분명한 손가락질은 아니었지만, 누구도 그 흐름을 모르지는 않았다. 권위의 시선은 끝까지 느슨해지지 않았고, 그 시선 아래에서 사람들의 발걸음은 더 조심스러워졌다. 드문드문 고백이 새어 나왔다. 듣는 사람도, 말하는 사람도 그 무게에 익숙하지 않았다. 누군가 자루의 매듭을 만지작거리다가 다시 손을 내려놓았다. 사람들의 결은 그 무게 아래에서 갈라지기 시작했다.
+
+사람들은 자리에 굳었다. 고백이 있었어도 무거움은 풀리지 않았고, 어떤 자리에서는 시간이 멈춘 것처럼 보였다. 같은 자세를 며칠 동안 유지하는 사람들의 모습이 거리에 남았다.
+
+곡물 창고에서는 사람들이 그저 그 자리에 머물렀다. 고백도 외침도 그곳까지 닿지 않았고, 시간은 그 자리만 비켜 흐르는 듯했다.
+
+그 자리에서 시간은 더 이상 앞으로 나아가지 않았다.
+
+더 이상 올라갈 수 없는 곳까지 무거움이 차올랐다. 사람들은 그 자리에 갇혔다. 시장 끝자락의 자루들은 며칠째 풀리지 않았다. 그 매듭을 풀 결정은 어느 자리에서도 내려오지 않았다. 그러나 그 굳음 안에서도 작은 떨림이 멈추지 않았다. 며칠이 지난 뒤, 사건이 끝난 자리에는 무언가가 남아 있었다.
+
+권위의 무게는 며칠이 지나도 같은 자리에 그대로였다. 그 무게가 사라진다는 신호는 어디에서도 오지 않았다. 가장 무거웠던 자리들은 그 무게를 내려놓지 못했다. 시간이 그곳만 비켜 흘러간 듯, 같은 침묵이 며칠을 이어졌다.
+
+시장의 결은 다음 시각으로 천천히 옮겨 갔지만, 그 결의 흔적은 옅게라도 남았다.
+
+---
+
+## Manual edit guidance (if Lee approves)
+
+Renderer는 Cycle 7 freeze 유지 — *patch 안 함*. Manual edit만 가능.
+
+가능한 edit 방향:
+1. 반복되는 *"~지 않았다"* 문장 일부 → 다른 형태로 (e.g. "그대로였다", "그쳤다")
+2. *"같은 자세 / 같은 침묵 / 같은 자리"* 반복 어구 일부 변형
+3. Stage 5 (aftereffect) 한 단락 길이 단축 — saturation 톤 더 압축
+
+→ **Manual edit only when public release 결정 시**. 현재는 internal hold.
+
+---
+
+## Why not in main pack v1
+
+- main pack v1 = "configuration sensitivity divergence" 핵심 demo
+- P9 SAT scarcity는 *configuration sensitivity* 측면 약함 (cohort split 없음, full SATURATION)
+- Lee verdict "flat + report-like"가 *creative output 직접 사용*에 약점
+- *내부 reference* 또는 *manual edit 후 v2 candidate* 위치

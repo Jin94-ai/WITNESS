@@ -1,0 +1,19 @@
+{
+  "n_seeds": 3,
+  "n_ticks": 100,
+  "condition_zero": {
+    "rev_mean": 1,
+    "n_active": 18,
+    "final_mean": 4.598,
+    "confess_per_seed": 20.3
+  },
+  "condition_extreme": {
+    "rev_mean": 1,
+    "n_active": 18,
+    "final_mean": 4.598,
+    "confess_per_seed": 20.3
+  },
+  "delta_rev": 0,
+  "delta_final": 0.0,
+  "verdict": "INERT CONFIRMED -- bit-identical or near-zero delta"
+}

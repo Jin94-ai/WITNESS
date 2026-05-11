@@ -1,0 +1,119 @@
+{
+  "iter": 79,
+  "pyhash": "0",
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "noise_stdev": 0.388,
+  "conditions": [
+    "A_single_blame",
+    "B_layered_blame",
+    "C_layered_phase2a_off",
+    "D_layered_shame_off"
+  ],
+  "results": {
+    "A_single_blame": {
+      "condition": "A_single_blame",
+      "n_active_all": 30,
+      "rev_all": 3.17,
+      "per_role_rev": {
+        "authority_priest": {
+          "n": 5,
+          "rev": 0
+        },
+        "soldier_enforcer": {
+          "n": 5,
+          "rev": 4.2
+        },
+        "crowd_participant": {
+          "n": 15,
+          "rev": 4.93
+        },
+        "outsider": {
+          "n": 5,
+          "rev": 0
+        }
+      },
+      "peak_shame": 9.32,
+      "final_shame": 5.96
+    },
+    "B_layered_blame": {
+      "condition": "B_layered_blame",
+      "n_active_all": 30,
+      "rev_all": 3.17,
+      "per_role_rev": {
+        "authority_priest": {
+          "n": 5,
+          "rev": 0
+        },
+        "soldier_enforcer": {
+          "n": 5,
+          "rev": 4.2
+        },
+        "crowd_participant": {
+          "n": 15,
+          "rev": 4.93
+        },
+        "outsider": {
+          "n": 5,
+          "rev": 0
+        }
+      },
+      "peak_shame": 9.39,
+      "final_shame": 5.09
+    },
+    "C_layered_phase2a_off": {
+      "condition": "C_layered_phase2a_off",
+      "n_active_all": 30,
+      "rev_all": 0,
+      "per_role_rev": {
+        "authority_priest": {
+          "n": 5,
+          "rev": 0
+        },
+        "soldier_enforcer": {
+          "n": 5,
+          "rev": 0
+        },
+        "crowd_participant": {
+          "n": 15,
+          "rev": 0
+        },
+        "outsider": {
+          "n": 5,
+          "rev": 0
+        }
+      },
+      "peak_shame": 10.0,
+      "final_shame": 10.0
+    },
+    "D_layered_shame_off": {
+      "condition": "D_layered_shame_off",
+      "n_active_all": 30,
+      "rev_all": 0,
+      "per_role_rev": {
+        "authority_priest": {
+          "n": 5,
+          "rev": 0
+        },
+        "soldier_enforcer": {
+          "n": 5,
+          "rev": 0
+        },
+        "crowd_participant": {
+          "n": 15,
+          "rev": 0
+        },
+        "outsider": {
+          "n": 5,
+          "rev": 0
+        }
+      },
+      "peak_shame": 10.0,
+      "final_shame": 10.0
+    }
+  },
+  "mixing_worked": false,
+  "p1_holds": true,
+  "shame_holds": true,
+  "verdict": "Mixing ineffective (priest_activated=False, rev delta ratio 0.0σ)."
+}

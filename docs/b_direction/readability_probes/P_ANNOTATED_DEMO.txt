@@ -1,0 +1,55 @@
+=== PROBE P_ANNOTATED_DEMO ===
+
+[Annotated headline summary]
+  Cohort outcomes:
+    [L1 cohort]:  saturation: peak~10.0 → final~9.8 (stuck)
+    [L2 cohort]:  recovery: peak~10.0 at t=28 → final~2.7
+    [L3 cohort]:  no shame accumulation
+
+  Pressure events + recovery actions:
+    Accusations: 2 fired (outsider, disciple_follower)
+    Recovery actions: 76 confessions, 34 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 1.2 at t=22 → final 0.2
+
+============================================================
+
+Agents: A1=follower, A2=follower, A3=follower, A4=authority, A5=enforcer, A6=crowd, A7=crowd, A8=crowd, A9=family, A10=outsider
+Locations: L1, L2, L3
+
+--- Event log (selected ticks) ---
+  --- Tick 0-49 ---
+  t=  3  accusation against disciple_follower
+  t=  7  accusation against outsider
+  t= 23  confession by A5 (enforcer)
+  t= 25  confession by A3 (follower)
+  t= 25  confession by A6 (crowd)
+  t= 25  confession by A7 (crowd)
+  t= 25  confession by A9 (family)
+  t= 26  confession by A3 (follower)
+  t= 26  confession by A5 (enforcer)
+  t= 27  confession by A5 (enforcer)
+  t= 28  confession by A4 (authority)
+  t= 28  confession by A7 (crowd)
+  t= 29  confession by A2 (follower)
+  --- Tick 50-99 ---
+  t= 69  confession by A8 (crowd)
+  t= 70  confession by A4 (authority)
+  t= 71  confession by A3 (follower)
+  t= 72  confession by A1 (follower)
+  t= 72  confession by A3 (follower)
+  t= 73  confession by A5 (enforcer)
+  t= 74  confession by A6 (crowd)
+  t= 74  confession by A7 (crowd)
+  t= 74  confession by A8 (crowd)
+  t= 75  confession by A3 (follower)
+  t= 76  confession by A1 (follower)
+  t= 76  confession by A3 (follower)
+  t= 76  confession by A6 (crowd)
+  t= 78  confession by A2 (follower)
+  t= 78  confession by A3 (follower)
+  t= 78  confession by A5 (enforcer)
+  t= 79  confession by A3 (follower)
+  t= 79  confession by A6 (crowd)
+  t= 82  confession by A1 (follower)

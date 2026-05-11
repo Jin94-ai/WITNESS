@@ -1,0 +1,25 @@
+{
+  "iter": 56,
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "condition_A_enabled": {
+    "n_active_agents": 30,
+    "mean_reversals_per_agent": 3.3,
+    "max_reversals": 7,
+    "min_reversals": 0,
+    "mean_peak_shame": 9.39,
+    "mean_final_shame": 5.0,
+    "mean_confess_per_seed": 33.2
+  },
+  "condition_B_ablated": {
+    "n_active_agents": 30,
+    "mean_reversals_per_agent": 0,
+    "max_reversals": 0,
+    "min_reversals": 0,
+    "mean_peak_shame": 10.0,
+    "mean_final_shame": 10.0,
+    "mean_confess_per_seed": 131.4
+  },
+  "reversals_delta": 3.3,
+  "verdict": "P1 CONFIRMED -- disabling Phase 2a kills cycles. Cycle source identification (Iter 55) validated."
+}

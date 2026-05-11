@@ -1,0 +1,6659 @@
+{
+  "n_seeds": 15,
+  "results": [
+    {
+      "seed": 0,
+      "confessions": [
+        {
+          "tick": 22,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 24,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 24,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 24,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 24,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 25,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 25,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 26,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 27,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 27,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 28,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 65,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 66,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 66,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 69,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 69,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 69,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 69,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 70,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 71,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 71,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 72,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 74,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 132,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 132,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 133,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 134,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 136,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 138,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 138,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 139,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 139,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 140,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 140,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 142,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 143,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 160,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 221,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 222,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 222,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 223,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 224,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 224,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 225,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 227,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 228,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 228,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 229,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 229,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 230,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 231,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 232,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 233,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 233,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 235,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 235,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 236,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 237,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 237,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 238,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 238,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 241,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 243,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 244,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 246,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 248,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 300,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 301,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 301,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 302,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 302,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 302,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 303,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 303,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 354,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 355,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 356,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 357,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 357,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 358,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 358,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 359,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 360,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 361,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 361,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 361,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 361,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 362,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 363,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 364,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 364,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 419,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 420,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 420,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 421,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 421,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 422,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 422,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 422,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 424,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 425,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 485,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 487,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 487,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 488,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 489,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 489,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 490,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 490,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 491,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 491,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 492,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 493,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 494,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 495,
+          "agent_id": "agent_02"
+        }
+      ],
+      "n_confessions": 153,
+      "forgiveness_rumors": 14,
+      "forgiveness_rumor_ticks": 247,
+      "priest_final_mean": 5.79855548451226,
+      "street_final_mean": 2.5
+    },
+    {
+      "seed": 1,
+      "confessions": [
+        {
+          "tick": 37,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 74,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 74,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 75,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 76,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 77,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 78,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 79,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 80,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 115,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 116,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 117,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 124,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 124,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 125,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 126,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 126,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 129,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 129,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 129,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 167,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 168,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 169,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 170,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 170,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 171,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 172,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 172,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 172,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 173,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 174,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 174,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 174,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 175,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 175,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 175,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 195,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 231,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 232,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 233,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 236,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 236,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 236,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 237,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 238,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 238,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 238,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 241,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 246,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 246,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 248,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 248,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 248,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 249,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 249,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 251,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 303,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 304,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 304,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 305,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 305,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 306,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 306,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 307,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 307,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 307,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 307,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 308,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 310,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 310,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 311,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 312,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 314,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 315,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 315,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 315,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 355,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 357,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 357,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 357,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 357,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 358,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 358,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 359,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 360,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 360,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 363,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 434,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 435,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 437,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 437,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 438,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 439,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 440,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 440,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 440,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 443,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 443,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 443,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 444,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 445,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 445,
+          "agent_id": "agent_03"
+        }
+      ],
+      "n_confessions": 160,
+      "forgiveness_rumors": 13,
+      "forgiveness_rumor_ticks": 247,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 3.608818310552877
+    },
+    {
+      "seed": 2,
+      "confessions": [
+        {
+          "tick": 30,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 35,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 52,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 52,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 54,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 55,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 55,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 103,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 104,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 106,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 133,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 134,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 149,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 150,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 151,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 151,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 151,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 154,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 188,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 197,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 197,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 290,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 291,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 291,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 291,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 291,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 292,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 292,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 294,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 294,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 295,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 296,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 296,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 296,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 298,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 299,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 300,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 300,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 301,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 302,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 302,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 303,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 303,
+          "agent_id": "agent_09"
+        }
+      ],
+      "n_confessions": 89,
+      "forgiveness_rumors": 11,
+      "forgiveness_rumor_ticks": 166,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 3,
+      "confessions": [
+        {
+          "tick": 38,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 52,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 55,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 65,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 66,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 67,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 67,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 68,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 69,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 70,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 104,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 105,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 159,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 160,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 160,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 168,
+          "agent_id": "agent_03"
+        }
+      ],
+      "n_confessions": 57,
+      "forgiveness_rumors": 16,
+      "forgiveness_rumor_ticks": 94,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 4,
+      "confessions": [
+        {
+          "tick": 28,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 29,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 30,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 35,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 35,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 35,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 36,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 36,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 83,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 85,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 85,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 85,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 86,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 86,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 86,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 87,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 87,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 87,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 88,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 89,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 91,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 91,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 94,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 95,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 97,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 129,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 132,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 133,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 133,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 138,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 140,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 140,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 172,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 173,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 173,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 173,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 174,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 175,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 176,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 176,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 177,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 178,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 179,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 180,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 181,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 182,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 233,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 235,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 235,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 236,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 236,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 237,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 237,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 241,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 243,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 243,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 244,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 310,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 310,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 310,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 311,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 312,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 313,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 314,
+          "agent_id": "agent_03"
+        }
+      ],
+      "n_confessions": 101,
+      "forgiveness_rumors": 13,
+      "forgiveness_rumor_ticks": 160,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 5,
+      "confessions": [
+        {
+          "tick": 42,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 52,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 54,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 55,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 56,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 89,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 90,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 91,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 91,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 91,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 92,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 93,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 125,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 126,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 128,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 128,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 131,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 133,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 133,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 135,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 136,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 136,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 136,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 137,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 138,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 138,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 139,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 139,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 139,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 139,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 141,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 142,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 188,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 195,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 244,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 244,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 244,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 246,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 247,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 248,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 249,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 249,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 249,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 250,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 251,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 252,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 253,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 254,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 255,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 255,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 256,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 256,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 294,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 295,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 295,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 296,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 296,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 296,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 297,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 297,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 297,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 298,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 299,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 299,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 301,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 301,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 301,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 302,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 303,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 303,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 304,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 304,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 306,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 306,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 307,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 307,
+          "agent_id": "agent_09"
+        }
+      ],
+      "n_confessions": 122,
+      "forgiveness_rumors": 12,
+      "forgiveness_rumor_ticks": 173,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 6,
+      "confessions": [
+        {
+          "tick": 29,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 30,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 30,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 36,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 72,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 75,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 111,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 112,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 113,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 113,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 114,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 115,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 115,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 116,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 117,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 117,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 119,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 157,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 158,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 158,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 159,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 159,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 160,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 167,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 168,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 207,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 208,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 208,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 209,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 210,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 211,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 214,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 266,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 267,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 267,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 267,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 268,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 269,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 270,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 270,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 271,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 271,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 271,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 272,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 272,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 273,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 273,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 275,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 312,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 313,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 313,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 314,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 314,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 315,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 315,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 315,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 317,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 319,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 319,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 373,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 374,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 374,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 374,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 375,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 375,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 376,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 377,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 377,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 378,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 378,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 379,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 379,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 380,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 382,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 382,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 382,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 383,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 384,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 386,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 386,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 386,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 387,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 387,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 388,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 389,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 389,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 390,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 390,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 391,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 392,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 393,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 394,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 395,
+          "agent_id": "agent_02"
+        }
+      ],
+      "n_confessions": 127,
+      "forgiveness_rumors": 13,
+      "forgiveness_rumor_ticks": 213,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 7,
+      "confessions": [
+        {
+          "tick": 39,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 79,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 79,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 80,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 80,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 80,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 80,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 81,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 83,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 105,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 106,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 108,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 108,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 109,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 109,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 110,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 110,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 111,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 112,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 112,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 112,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 114,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 114,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 114,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 115,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 116,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 116,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 117,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 118,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 119,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 122,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 122,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 124,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 165,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 167,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 167,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 168,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 169,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 169,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 169,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 170,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 171,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 172,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 172,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 173,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 173,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 173,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 174,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 176,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 227,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 229,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 230,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 230,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 230,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 230,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 231,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 232,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 232,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 233,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 234,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 236,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 237,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 273,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 274,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 274,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 275,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 275,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 275,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 276,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 276,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 277,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 278,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 280,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 280,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 281,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 282,
+          "agent_id": "agent_02"
+        }
+      ],
+      "n_confessions": 106,
+      "forgiveness_rumors": 15,
+      "forgiveness_rumor_ticks": 158,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 8,
+      "confessions": [
+        {
+          "tick": 22,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 23,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 23,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 24,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 25,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 30,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 35,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 36,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 82,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 83,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 83,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 85,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 86,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 86,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 88,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 89,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 90,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 90,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 91,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 126,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 128,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 129,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 130,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 167,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 169,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 212,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 214,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 214,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 215,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 215,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 215,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 215,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 217,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 218,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 238,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 239,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 241,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 244,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 276,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 277,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 277,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 277,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 278,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 280,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 280,
+          "agent_id": "agent_09"
+        }
+      ],
+      "n_confessions": 81,
+      "forgiveness_rumors": 10,
+      "forgiveness_rumor_ticks": 170,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 9,
+      "confessions": [
+        {
+          "tick": 28,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 30,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 35,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 36,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 52,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 52,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 55,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 56,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 57,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 57,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 60,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 60,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 108,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 109,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 109,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 110,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 110,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 111,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 111,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 111,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 112,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 113,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 113,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 113,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 113,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 116,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 116,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 116,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 124,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 161,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 163,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 164,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 166,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 167,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 167,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 168,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 170,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 214,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 215,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 215,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 216,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 216,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 217,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 218,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 218,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 218,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 220,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 221,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 221,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 222,
+          "agent_id": "agent_03"
+        }
+      ],
+      "n_confessions": 83,
+      "forgiveness_rumors": 14,
+      "forgiveness_rumor_ticks": 131,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 10,
+      "confessions": [
+        {
+          "tick": 21,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 22,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 23,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 23,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 24,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 25,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 25,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 26,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 28,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 31,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 32,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 33,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 34,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 35,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 36,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 36,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 37,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 98,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 103,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 104,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 104,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 105,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 105,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 106,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 107,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 108,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 147,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 148,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 148,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 149,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 149,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 150,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 151,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 151,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 153,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 154,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 154,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 155,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 156,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 156,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 156,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 157,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 157,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 158,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 159,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 159,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 159,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 160,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 160,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 162,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 195,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 197,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 197,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 198,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 200,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 200,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 201,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 203,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 204,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 204,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 205,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 206,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 206,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 240,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 241,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 241,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 242,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 243,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 244,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 245,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 246,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 246,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 246,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 247,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 247,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 247,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 307,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 308,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 308,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 309,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 310,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 364,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 365,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 365,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 366,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 366,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 367,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 367,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 367,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 368,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 369,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 370,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 432,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 433,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 434,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 435,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 435,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 435,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 436,
+          "agent_id": "agent_09"
+        }
+      ],
+      "n_confessions": 143,
+      "forgiveness_rumors": 11,
+      "forgiveness_rumor_ticks": 222,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 11,
+      "confessions": [
+        {
+          "tick": 44,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 52,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 53,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 54,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 56,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 56,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 57,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 57,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 57,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 58,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 59,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 93,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 94,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 94,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 94,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 95,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 95,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 97,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 98,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 101,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 103,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 141,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 142,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 142,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 143,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 143,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 144,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 144,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 145,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 181,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 182,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 182,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 195,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 198,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 199,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 199,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 200,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 200,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 202,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 203,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 204,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 206,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 208,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 209,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 210,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 211,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 212,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 213,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 215,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 232,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 233,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 235,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 271,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 272,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 273,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 273,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 274,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 274,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 275,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 275,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 275,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 277,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 278,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 278,
+          "agent_id": "agent_09"
+        }
+      ],
+      "n_confessions": 95,
+      "forgiveness_rumors": 14,
+      "forgiveness_rumor_ticks": 175,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 12,
+      "confessions": [
+        {
+          "tick": 41,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 48,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 50,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 74,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 75,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 75,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 77,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 77,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 77,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 77,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 78,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 79,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 80,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 80,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 81,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 81,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 82,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 82,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 84,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 119,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 125,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 127,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 178,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 179,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 179,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 180,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 182,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 184,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 187,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 188,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_02"
+        }
+      ],
+      "n_confessions": 73,
+      "forgiveness_rumors": 11,
+      "forgiveness_rumor_ticks": 106,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 13,
+      "confessions": [
+        {
+          "tick": 37,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 38,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 39,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 46,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 97,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 98,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 98,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 99,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 100,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 101,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 101,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 101,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 101,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 102,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 103,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 103,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 103,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 104,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 106,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 106,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 140,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 141,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 141,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 141,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 142,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 142,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 142,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 143,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 144,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 144,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 145,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 146,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 146,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 147,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 149,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 149,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 150,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 188,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 195,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 197,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 225,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 226,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 226,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 226,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 226,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 227,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 229,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 230,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 230,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 231,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 232,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 281,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 282,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 282,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 282,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 282,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 283,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 283,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 284,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 286,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 342,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 344,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 344,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 345,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 345,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 346,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 346,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 346,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 346,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 347,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 347,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 348,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 348,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 349,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 349,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 350,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 350,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 351,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 413,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 414,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 414,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 415,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 415,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 415,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 416,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 416,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 417,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 417,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 417,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 418,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 418,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 418,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 418,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 419,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 419,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 420,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 421,
+          "agent_id": "agent_01"
+        }
+      ],
+      "n_confessions": 127,
+      "forgiveness_rumors": 11,
+      "forgiveness_rumor_ticks": 201,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 14,
+      "confessions": [
+        {
+          "tick": 39,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 40,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 41,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 42,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 43,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 44,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 45,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 47,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 49,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 51,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 65,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 66,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 66,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 67,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 68,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 68,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 69,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 69,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 70,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 70,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 70,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 71,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 72,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 73,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 74,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 75,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 75,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 76,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 77,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 77,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 78,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 78,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 79,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 120,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 121,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 122,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 123,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 124,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 125,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 126,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 151,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 152,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 153,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 154,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 154,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 154,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 156,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 156,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 158,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 159,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 180,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 181,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 181,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 182,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 182,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 183,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 185,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 186,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 189,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 190,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 191,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 192,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 193,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 194,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 196,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 254,
+          "agent_id": "agent_04"
+        },
+        {
+          "tick": 255,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 255,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 255,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 256,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 256,
+          "agent_id": "agent_08"
+        },
+        {
+          "tick": 257,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 257,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 257,
+          "agent_id": "agent_07"
+        },
+        {
+          "tick": 258,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 258,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 260,
+          "agent_id": "agent_03"
+        },
+        {
+          "tick": 260,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 262,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 264,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 265,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 265,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 266,
+          "agent_id": "agent_05"
+        },
+        {
+          "tick": 266,
+          "agent_id": "agent_06"
+        },
+        {
+          "tick": 267,
+          "agent_id": "agent_01"
+        },
+        {
+          "tick": 267,
+          "agent_id": "agent_02"
+        },
+        {
+          "tick": 268,
+          "agent_id": "agent_09"
+        },
+        {
+          "tick": 269,
+          "agent_id": "agent_03"
+        }
+      ],
+      "n_confessions": 109,
+      "forgiveness_rumors": 13,
+      "forgiveness_rumor_ticks": 163,
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    }
+  ]
+}

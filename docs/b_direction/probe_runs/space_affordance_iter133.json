@@ -1,0 +1,140 @@
+{
+  "n_seeds": 15,
+  "n_ticks": 500,
+  "results": {
+    "V0_default": {
+      "label": "V0_default",
+      "overrides": {},
+      "finals": [
+        10.0,
+        5.0,
+        3.68,
+        10.0,
+        2.91,
+        3.33,
+        9.37,
+        3.33,
+        3.33,
+        3.33,
+        10.0,
+        4.38,
+        3.33,
+        5.0,
+        3.53
+      ],
+      "mean": 5.369,
+      "stdev": 2.861,
+      "recovery_rate": "8/15",
+      "recovery_pct": 53.3
+    },
+    "V1_low_visibility": {
+      "label": "V1_low_visibility",
+      "overrides": {
+        "visibility": 0.3
+      },
+      "finals": [
+        0.13,
+        0.0,
+        2.0,
+        10.0,
+        10.0,
+        10.0,
+        2.5,
+        0.0,
+        0.0,
+        2.5,
+        10.0,
+        2.0,
+        8.0,
+        10.0,
+        0.0
+      ],
+      "mean": 4.475,
+      "stdev": 4.505,
+      "recovery_rate": "9/15",
+      "recovery_pct": 60.0
+    },
+    "V2_low_authority": {
+      "label": "V2_low_authority",
+      "overrides": {
+        "authority_reach": 0.2
+      },
+      "finals": [
+        3.33,
+        3.33,
+        3.48,
+        4.79,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        5.0,
+        4.13,
+        3.45,
+        4.49,
+        3.65,
+        3.33,
+        8.02
+      ],
+      "mean": 4.023,
+      "stdev": 1.249,
+      "recovery_rate": "10/15",
+      "recovery_pct": 66.7
+    },
+    "V3_high_concealment": {
+      "label": "V3_high_concealment",
+      "overrides": {
+        "concealment": 0.7
+      },
+      "finals": [
+        2.5,
+        2.5,
+        0.72,
+        10.0,
+        10.0,
+        5.53,
+        5.68,
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        2.0,
+        2.16,
+        0.0,
+        2.5
+      ],
+      "mean": 3.573,
+      "stdev": 3.773,
+      "recovery_rate": "10/15",
+      "recovery_pct": 66.7
+    },
+    "V4_low_visibility_low_auth": {
+      "label": "V4_low_visibility_low_auth",
+      "overrides": {
+        "visibility": 0.3,
+        "authority_reach": 0.2
+      },
+      "finals": [
+        2.5,
+        0.0,
+        7.47,
+        10.0,
+        10.0,
+        3.67,
+        0.0,
+        3.27,
+        10.0,
+        0.0,
+        7.89,
+        10.0,
+        0.0,
+        0.63,
+        10.0
+      ],
+      "mean": 5.029,
+      "stdev": 4.388,
+      "recovery_rate": "8/15",
+      "recovery_pct": 53.3
+    }
+  }
+}

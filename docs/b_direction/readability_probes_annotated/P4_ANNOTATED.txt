@@ -1,0 +1,59 @@
+=== PROBE P4_ANNOTATED (annotated supplement) ===
+
+[Annotated headline summary]
+  Final summary:  RECOVERY_DOMINATED
+
+  Cohort outcomes:
+    [L3 cohort, 2 agents]:  no shame accumulation
+    [L2 cohort, 1 agents]:  no shame accumulation
+    [L1 cohort, 5 agents]:  recovery: peak~10.0 → final~0.2
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: spiritual_wanderer)
+    Recovery actions: 35 confessions, 31 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.8 at t=132 → final 0.0
+
+============================================================
+
+Agents: A1=wanderer, A2=authority, A3=follower, A4=follower, A5=follower, A6=crowd, A7=crowd, A8=family
+Locations: L1, L2, L3
+
+--- Event log (grouped by 50-tick windows) ---
+  (showing first 30 of 35 confessions; total in headline)
+  --- Tick 0-49 ---
+  t= 18  accusation against spiritual_wanderer
+  t= 49  confession by A6 (crowd)
+  --- Tick 50-99 ---
+  t= 50  confession by A4 (follower)
+  t= 50  confession by A5 (follower)
+  t= 50  confession by A8 (family)
+  t= 51  confession by A3 (follower)
+  t= 51  confession by A6 (crowd)
+  t= 53  confession by A1 (wanderer)
+  t= 53  confession by A2 (authority)
+  --- Tick 100-149 ---
+  t=135  confession by A6 (crowd)
+  t=136  confession by A3 (follower)
+  t=136  confession by A4 (follower)
+  t=136  confession by A5 (follower)
+  t=137  confession by A1 (wanderer)
+  t=137  confession by A6 (crowd)
+  t=138  confession by A3 (follower)
+  t=139  confession by A6 (crowd)
+  t=141  confession by A3 (follower)
+  t=141  confession by A6 (crowd)
+  t=142  confession by A2 (authority)
+  --- Tick 150-199 ---
+  t=177  confession by A1 (wanderer)
+  t=178  confession by A2 (authority)
+  t=178  confession by A3 (follower)
+  t=178  confession by A7 (crowd)
+  t=178  confession by A8 (family)
+  t=179  confession by A1 (wanderer)
+  t=179  confession by A3 (follower)
+  t=179  confession by A6 (crowd)
+  t=180  confession by A6 (crowd)
+  t=181  confession by A1 (wanderer)
+  t=181  confession by A3 (follower)

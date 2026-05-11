@@ -1,0 +1,96 @@
+{
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "decays": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "results": {
+    "decay=0.05_p2a=on": {
+      "rev_inj": 3.2,
+      "rev_oth": 3.7,
+      "final_inj": 5.74,
+      "final_oth": 5.81,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "decay=0.05_p2a=off": {
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "decay=0.1_p2a=on": {
+      "rev_inj": 5.7,
+      "rev_oth": 4.25,
+      "final_inj": 5.39,
+      "final_oth": 4.99,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "decay=0.1_p2a=off": {
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "decay=0.2_p2a=on": {
+      "rev_inj": 3.8,
+      "rev_oth": 4.15,
+      "final_inj": 0.44,
+      "final_oth": 4.15,
+      "n_inj": 5,
+      "n_oth": 20
+    },
+    "decay=0.2_p2a=off": {
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 10,
+      "n_oth": 20
+    },
+    "decay=0.3_p2a=on": {
+      "rev_inj": 2.33,
+      "rev_oth": 4.2,
+      "final_inj": 0.23,
+      "final_oth": 3.48,
+      "n_inj": 3,
+      "n_oth": 20
+    },
+    "decay=0.3_p2a=off": {
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "final_inj": 10.0,
+      "final_oth": 10.0,
+      "n_inj": 5,
+      "n_oth": 20
+    },
+    "decay=0.5_p2a=on": {
+      "rev_inj": 0,
+      "rev_oth": 4.3,
+      "final_inj": 0,
+      "final_oth": 3.35,
+      "n_inj": 0,
+      "n_oth": 20
+    },
+    "decay=0.5_p2a=off": {
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "final_inj": 0,
+      "final_oth": 10.0,
+      "n_inj": 0,
+      "n_oth": 20
+    }
+  },
+  "threshold_cycling": null,
+  "threshold_partial": 0.5,
+  "scale_4_score": "Score 1.5 -- aux alone reduces final shame at decay >= 0.5 but no cycling. Partial alternative."
+}

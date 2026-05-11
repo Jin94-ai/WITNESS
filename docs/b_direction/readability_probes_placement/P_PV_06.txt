@@ -1,0 +1,27 @@
+=== PROBE P_PV_06 (placement variant: scarcity/clustered, v4) ===
+
+[Annotated headline summary]
+  Final summary:    PARTIAL
+  Primary pressure: scarcity
+
+  Cohort outcomes:
+    [L2 cohort, 2 agents]:  no shame accumulation
+    [L1 cohort, 9 agents]:  partial: peak~10.0 → final~4.4
+    [L3 cohort, 1 agents]:  no shame accumulation
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: merchant)
+    Recovery actions: 154 confessions, 148 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 2.6 at t=17 → final 0.2
+    Public suspicion:    peak 0.96 → final 0.01
+    Authority vigilance: peak 0.25 → final 0.25
+    Top blame target:    fisher_laborer (peak 1.00)
+
+============================================================
+
+Agents: A1=merchant, A2=family, A3=laborer, A4=laborer, A5=laborer, A6=authority, A7=enforcer, A8=enforcer, A9=crowd, A10=crowd, A11=outsider, A12=elite_strategist
+Locations: L1, L2, L3
+
+Placement variant: clustered

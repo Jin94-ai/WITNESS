@@ -1,0 +1,290 @@
+{
+  "n_seeds": 15,
+  "results": [
+    {
+      "seed": 0,
+      "role_confess_count": {
+        "soldier_enforcer": 20,
+        "disciple_follower": 56,
+        "crowd_participant": 49,
+        "family_anchor": 19,
+        "authority_priest": 9
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 5.79855548451226,
+      "street_final_mean": 2.5
+    },
+    {
+      "seed": 1,
+      "role_confess_count": {
+        "soldier_enforcer": 16,
+        "disciple_follower": 72,
+        "crowd_participant": 44,
+        "authority_priest": 10,
+        "family_anchor": 18
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 3.608818310552877
+    },
+    {
+      "seed": 2,
+      "role_confess_count": {
+        "soldier_enforcer": 11,
+        "authority_priest": 8,
+        "disciple_follower": 36,
+        "crowd_participant": 26,
+        "family_anchor": 8
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 3,
+      "role_confess_count": {
+        "soldier_enforcer": 8,
+        "authority_priest": 4,
+        "crowd_participant": 21,
+        "disciple_follower": 18,
+        "family_anchor": 6
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 4,
+      "role_confess_count": {
+        "soldier_enforcer": 15,
+        "crowd_participant": 34,
+        "disciple_follower": 37,
+        "authority_priest": 5,
+        "family_anchor": 10
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 5,
+      "role_confess_count": {
+        "soldier_enforcer": 13,
+        "crowd_participant": 37,
+        "disciple_follower": 46,
+        "family_anchor": 19,
+        "authority_priest": 7
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 6,
+      "role_confess_count": {
+        "soldier_enforcer": 16,
+        "crowd_participant": 40,
+        "disciple_follower": 47,
+        "authority_priest": 8,
+        "family_anchor": 16
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 7,
+      "role_confess_count": {
+        "authority_priest": 5,
+        "disciple_follower": 39,
+        "crowd_participant": 32,
+        "family_anchor": 14,
+        "soldier_enforcer": 16
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 8,
+      "role_confess_count": {
+        "crowd_participant": 22,
+        "disciple_follower": 35,
+        "authority_priest": 7,
+        "family_anchor": 8,
+        "soldier_enforcer": 9
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 9,
+      "role_confess_count": {
+        "crowd_participant": 26,
+        "disciple_follower": 28,
+        "authority_priest": 5,
+        "soldier_enforcer": 14,
+        "family_anchor": 10
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 10,
+      "role_confess_count": {
+        "crowd_participant": 45,
+        "authority_priest": 9,
+        "family_anchor": 16,
+        "disciple_follower": 57,
+        "soldier_enforcer": 16
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 11,
+      "role_confess_count": {
+        "authority_priest": 9,
+        "disciple_follower": 34,
+        "soldier_enforcer": 14,
+        "crowd_participant": 31,
+        "family_anchor": 7
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 12,
+      "role_confess_count": {
+        "authority_priest": 4,
+        "disciple_follower": 37,
+        "soldier_enforcer": 10,
+        "crowd_participant": 19,
+        "family_anchor": 3
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 13,
+      "role_confess_count": {
+        "soldier_enforcer": 15,
+        "disciple_follower": 45,
+        "crowd_participant": 42,
+        "family_anchor": 17,
+        "authority_priest": 8
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    },
+    {
+      "seed": 14,
+      "role_confess_count": {
+        "soldier_enforcer": 15,
+        "authority_priest": 6,
+        "disciple_follower": 50,
+        "crowd_participant": 26,
+        "family_anchor": 12
+      },
+      "confessor_roles": [
+        "authority_priest",
+        "crowd_participant",
+        "disciple_follower",
+        "family_anchor",
+        "soldier_enforcer"
+      ],
+      "priest_final_mean": 10.0,
+      "street_final_mean": 10.0
+    }
+  ]
+}

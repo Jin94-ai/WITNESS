@@ -1,0 +1,66 @@
+{
+  "iter": 81,
+  "pyhash": "0",
+  "n_seeds": 10,
+  "n_ticks": 100,
+  "noise_stdev": 0.388,
+  "injection": {
+    "targets": [
+      "agent_04",
+      "agent_06",
+      "agent_09"
+    ],
+    "guilt_self": 6.0,
+    "guilt_primary": 4.199999999999999,
+    "grief": 3.0
+  },
+  "conditions": [
+    "A_no_inject",
+    "B_full_inject",
+    "C_inject_P2a_off",
+    "D_inject_shame_off"
+  ],
+  "results": {
+    "A_no_inject": {
+      "condition": "A_no_inject",
+      "rev_all": 0.74,
+      "rev_inj": 0.57,
+      "rev_oth": 0.81,
+      "grieve_frac_inj": 0.0,
+      "grieve_frac_oth": 0.0,
+      "peak_shame": 9.27,
+      "final_shame": 4.64
+    },
+    "B_full_inject": {
+      "condition": "B_full_inject",
+      "rev_all": 1.15,
+      "rev_inj": 1,
+      "rev_oth": 1.21,
+      "grieve_frac_inj": 0.128,
+      "grieve_frac_oth": 0.0,
+      "peak_shame": 8.21,
+      "final_shame": 3.92
+    },
+    "C_inject_P2a_off": {
+      "condition": "C_inject_P2a_off",
+      "rev_all": 0,
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "grieve_frac_inj": 0.019,
+      "grieve_frac_oth": 0.009,
+      "peak_shame": 10.0,
+      "final_shame": 10.0
+    },
+    "D_inject_shame_off": {
+      "condition": "D_inject_shame_off",
+      "rev_all": 0,
+      "rev_inj": 0,
+      "rev_oth": 0,
+      "grieve_frac_inj": 0.121,
+      "grieve_frac_oth": 0.001,
+      "peak_shame": 10.0,
+      "final_shame": 10.0
+    }
+  },
+  "verdict": "Surprise: shame ablation does NOT kill cycles under full injection. D rev_inj=0. Dual-channel may actually exist -- Iter 80 conclusion retracts."
+}

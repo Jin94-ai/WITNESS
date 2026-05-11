@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>WITNESS Narrative Mining Console</title>
+<style>
+  :root {
+    --bg: #15110d;
+    --fg: #d4cfc7;
+    --fg-dim: #7a716a;
+    --accent: #e8c87a;
+    --strong: #7fc8a4;
+    --usable: #e8c87a;
+    --weak: #d96b6b;
+    --hold: #909090;
+    --panel: #1d1813;
+    --border: #2a221c;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  h1, h2, h3 { font-weight: normal; margin: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: baseline; gap: 24px;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  header .meta { color: var(--fg-dim); font-size: 11px; }
+  header .meta strong { color: var(--fg); font-weight: normal; }
+
+  .timeline-wrap {
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    background: var(--panel);
+  }
+  .timeline-wrap canvas { display: block; width: 100%; height: 80px; }
+  .timeline-legend {
+    margin-top: 6px;
+    font-size: 10px;
+    color: var(--fg-dim);
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .timeline-legend span { display: inline-flex; align-items: center; gap: 4px; }
+  .timeline-legend .dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 2px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1px;
+    background: var(--border);
+    min-height: calc(100vh - 200px);
+  }
+  .thread-list { background: var(--panel); padding: 12px; overflow-y: auto; }
+  .thread-list .item {
+    padding: 10px 12px; margin-bottom: 6px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .thread-list .item:hover { background: rgba(232, 200, 122, 0.04); }
+  .thread-list .item.active {
+    border-color: var(--accent);
+    background: rgba(232, 200, 122, 0.06);
+  }
+  .thread-list .item .id {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+  .thread-list .item .title { color: var(--fg); margin-top: 2px; }
+  .thread-list .item .meta {
+    color: var(--fg-dim); font-size: 10px; margin-top: 4px;
+    display: flex; justify-content: space-between;
+  }
+  .rank { padding: 1px 6px; border-radius: 2px; font-size: 10px; }
+  .rank.strong { background: rgba(127, 200, 164, 0.15); color: var(--strong); }
+  .rank.usable { background: rgba(232, 200, 122, 0.15); color: var(--usable); }
+  .rank.weak   { background: rgba(217, 107, 107, 0.15); color: var(--weak); }
+  .rank.hold   { background: rgba(144, 144, 144, 0.15); color: var(--hold); }
+
+  .detail { background: var(--bg); padding: 20px 28px; overflow-y: auto; }
+  .detail .empty {
+    color: var(--fg-dim); font-style: italic; padding: 24px 0;
+  }
+  .detail h2 {
+    font-size: 16px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+  .detail h2 .id-prefix { color: var(--fg-dim); }
+  .detail .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .detail .badge {
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--fg-dim);
+    font-size: 10px;
+  }
+  .detail .badge strong { color: var(--fg); font-weight: normal; }
+
+  .detail section { margin-bottom: 18px; }
+  .detail section h3 {
+    font-size: 11px;
+    color: var(--fg-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .detail .logline { font-size: 13px; line-height: 1.6; }
+  .detail .question {
+    padding: 8px 12px;
+    border-left: 2px solid var(--accent);
+    background: rgba(232, 200, 122, 0.04);
+  }
+
+  table.evidence {
+    width: 100%; border-collapse: collapse;
+    font-size: 11px;
+  }
+  table.evidence th, table.evidence td {
+    text-align: left; padding: 4px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  table.evidence th { color: var(--fg-dim); font-weight: normal; }
+  table.evidence td.tick { color: var(--accent); width: 50px; }
+  table.evidence td.type { color: var(--fg-dim); width: 160px; }
+  table.evidence td.prov {
+    width: 120px; font-size: 10px;
+  }
+  table.evidence td.prov.source_derived  { color: var(--strong); }
+  table.evidence td.prov.source_inferred { color: var(--usable); }
+  table.evidence td.prov.not_used        { color: var(--hold); }
+
+  .chip-row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip {
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--fg-dim);
+    font-size: 10px;
+  }
+  .creative-uses .chip { color: var(--accent); }
+
+  footer {
+    padding: 12px 24px;
+    border-top: 1px solid var(--border);
+    color: var(--fg-dim);
+    font-size: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>WITNESS · Narrative Mining Console</h1>
+  <span class="meta">
+    run <strong id="meta-run">—</strong>
+    · ticks <strong id="meta-ticks">—</strong>
+    · moments <strong id="meta-moments">—</strong>
+    · threads <strong id="meta-threads">—</strong>
+    · strong <strong id="meta-strong">—</strong>
+    · usable <strong id="meta-usable">—</strong>
+  </span>
+</header>
+
+<div class="timeline-wrap">
+  <canvas id="timeline" height="80"></canvas>
+  <div class="timeline-legend">
+    <span><i class="dot" style="background:var(--strong)"></i> strong thread</span>
+    <span><i class="dot" style="background:var(--usable)"></i> usable</span>
+    <span><i class="dot" style="background:var(--weak)"></i> weak</span>
+    <span><i class="dot" style="background:rgba(217,107,107,0.55)"></i> world pressure shift</span>
+    <span><i class="dot" style="background:rgba(232,200,122,0.55)"></i> agent state shift</span>
+    <span><i class="dot" style="background:rgba(127,200,164,0.55)"></i> group tension shift</span>
+  </div>
+</div>
+
+<main>
+  <aside class="thread-list" id="threadList"></aside>
+  <article class="detail" id="threadDetail">
+    <p class="empty">Select a thread on the left.</p>
+  </article>
+</main>
+
+<footer>
+  static console · self-contained · regenerated by
+  <code>scripts/narrative/build_mining_console.py</code> ·
+  data classes: <code>source_derived</code> /
+  <code>source_inferred</code> / <code>not_used</code>
+</footer>
+
+<script type="application/json" id="data-opportunities">{"run_label": "peter_scarcity_baseline", "summary": {"threads_total": 4, "strong_opportunities": 1, "usable_threads": 0, "weak_threads": 3, "hold_threads": 0}, "opportunities": [{"thread_id": "T01", "title": "Loyalty Strained by Survival Pressure", "logline": "Central agents stay in place under rising pressure until survival instinct begins to outweigh loyalty.", "core_conflict": "loyalty_vs_survival", "arc_direction": "fear_to_withdrawal", "unresolved_question": "Will the central agents stay in place or withdraw under pressure?", "creative_uses": ["film_scene", "novel_chapter", "game_quest_branch"], "score": 0.802, "rank": "strong", "main_agents": ["agent_03"], "groups": ["L1"], "start_tick": 2, "end_tick": 197, "moment_count": 21}, {"thread_id": "T02", "title": "Uncertainty Lingers Without Commitment", "logline": "Pressure stays on without a commitment moment — drift continues.", "core_conflict": "uncertainty_vs_commitment", "arc_direction": "fear_to_withdrawal", "unresolved_question": "Is a commitment moment coming, or does drift continue?", "creative_uses": ["short_story", "game_branch"], "score": 0.587, "rank": "weak", "main_agents": ["agent_08"], "groups": ["L3"], "start_tick": 6, "end_tick": 141, "moment_count": 9}, {"thread_id": "T03", "title": "Uncertainty Lingers Without Commitment", "logline": "Pressure stays on without a commitment moment — drift continues.", "core_conflict": "uncertainty_vs_commitment", "arc_direction": "fear_to_withdrawal", "unresolved_question": "Is a commitment moment coming, or does drift continue?", "creative_uses": ["short_story", "game_branch"], "score": 0.571, "rank": "weak", "main_agents": ["agent_09"], "groups": ["L1"], "start_tick": 3, "end_tick": 142, "moment_count": 12}, {"thread_id": "T04", "title": "Uncertainty Lingers Without Commitment", "logline": "Pressure stays on without a commitment moment — drift continues.", "core_conflict": "uncertainty_vs_commitment", "arc_direction": "fear_to_withdrawal", "unresolved_question": "Is a commitment moment coming, or does drift continue?", "creative_uses": ["short_story", "game_branch"], "score": 0.457, "rank": "weak", "main_agents": ["agent_05"], "groups": ["L3"], "start_tick": 6, "end_tick": 198, "moment_count": 16}], "schema_version": "narrative_opportunities_v1"}</script>
+<script type="application/json" id="data-threads">{"threads": [{"thread_id": "T01", "title": "Loyalty Strained by Survival Pressure", "main_agents": ["agent_03"], "supporting_agents": ["agent_09"], "groups": ["L1"], "core_conflict": "loyalty_vs_survival", "arc_direction": "fear_to_withdrawal", "moment_ids": ["M_t002_agent_03_fear", "M_t011_agent_03_fear", "M_t014_unresolved_agent_03_fear", "M_t015_agent_03_fear", "M_t015_conflict_authority_fear", "M_t015_world_authority_vigilance", "M_t026_agent_03_shame_self", "M_t030_agent_03_fear", "M_t053_agent_03_shame_self", "M_t058_agent_03_fear", "M_t067_agent_03_shame_self", "M_t117_agent_03_shame_self", "M_t124_agent_03_shame_self", "M_t137_agent_03_fear", "M_t142_agent_03_fear", "M_t148_agent_03_shame_self", "M_t152_agent_03_fear", "M_t173_agent_03_shame_self", "M_t179_agent_03_shame_self", "M_t193_agent_03_shame_self", "M_t197_agent_03_fear"], "start_tick": 2, "end_tick": 197, "pressure_history": ["fear", "authority_vigilance", "shame_self"], "relationship_drift": [], "unresolved_question": "Will the central agents stay in place or withdraw under pressure?", "story_potential_score": 0.802, "usable_as": ["film_scene", "novel_chapter", "game_quest_branch"], "provenance": "source_inferred"}, {"thread_id": "T02", "title": "Uncertainty Lingers Without Commitment", "main_agents": ["agent_08"], "supporting_agents": [], "groups": ["L3"], "core_conflict": "uncertainty_vs_commitment", "arc_direction": "fear_to_withdrawal", "moment_ids": ["M_t006_agent_08_fear", "M_t012_agent_08_fear", "M_t015_unresolved_agent_08_fear", "M_t065_agent_08_shame_self", "M_t070_agent_08_fear", "M_t117_agent_08_shame_self", "M_t125_agent_08_shame_self", "M_t137_agent_08_fear", "M_t141_unresolved_agent_08_fear"], "start_tick": 6, "end_tick": 141, "pressure_history": ["fear", "shame_self"], "relationship_drift": [], "unresolved_question": "Is a commitment moment coming, or does drift continue?", "story_potential_score": 0.587, "usable_as": ["short_story", "game_branch"], "provenance": "source_inferred"}, {"thread_id": "T03", "title": "Uncertainty Lingers Without Commitment", "main_agents": ["agent_09"], "supporting_agents": [], "groups": ["L1"], "core_conflict": "uncertainty_vs_commitment", "arc_direction": "fear_to_withdrawal", "moment_ids": ["M_t003_agent_09_fear", "M_t009_agent_09_shame_self", "M_t012_unresolved_agent_09_fear", "M_t015_agent_09_fear", "M_t075_agent_09_shame_self", "M_t080_agent_09_fear", "M_t085_agent_09_fear", "M_t117_agent_09_shame_self", "M_t124_agent_09_shame_self", "M_t137_agent_09_fear", "M_t141_unresolved_agent_09_fear", "M_t142_agent_09_fear"], "start_tick": 3, "end_tick": 142, "pressure_history": ["fear", "shame_self"], "relationship_drift": [], "unresolved_question": "Is a commitment moment coming, or does drift continue?", "story_potential_score": 0.571, "usable_as": ["short_story", "game_branch"], "provenance": "source_inferred"}, {"thread_id": "T04", "title": "Uncertainty Lingers Without Commitment", "main_agents": ["agent_05"], "supporting_agents": [], "groups": ["L3"], "core_conflict": "uncertainty_vs_commitment", "arc_direction": "fear_to_withdrawal", "moment_ids": ["M_t006_agent_05_shame_self", "M_t012_agent_05_fear", "M_t015_unresolved_agent_05_fear", "M_t026_agent_05_shame_self", "M_t030_agent_05_fear", "M_t053_agent_05_shame_self", "M_t058_agent_05_fear", "M_t067_agent_05_shame_self", "M_t125_agent_05_shame_self", "M_t131_agent_05_shame_self", "M_t139_agent_05_fear", "M_t148_agent_05_shame_self", "M_t173_agent_05_shame_self", "M_t179_agent_05_shame_self", "M_t193_agent_05_shame_self", "M_t198_agent_05_fear"], "start_tick": 6, "end_tick": 198, "pressure_history": ["shame_self", "fear"], "relationship_drift": [], "unresolved_question": "Is a commitment moment coming, or does drift continue?", "story_potential_score": 0.457, "usable_as": ["short_story", "game_branch"], "provenance": "source_inferred"}], "run_label": "peter_scarcity_baseline", "schema_version": "story_threads_v1", "summary": {"total": 4, "strong": 1, "usable": 0, "weak": 3}}</script>
+<script type="application/json" id="data-moments">{"moments": [{"moment_id": "M_t002_agent_03_fear", "tick": 2, "tick_range": [1, 2], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear rises (+0.54)", "salience_score": 0.108, "provenance": "source_derived"}, {"moment_id": "M_t003_agent_09_fear", "tick": 3, "tick_range": [2, 3], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_09 fear rises (+0.54)", "salience_score": 0.108, "provenance": "source_derived"}, {"moment_id": "M_t004_L1_tension", "tick": 4, "tick_range": [3, 4], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode low_activity → partial (tension +0.017)", "salience_score": 0.051, "provenance": "source_derived"}, {"moment_id": "M_t005_world_mood", "tick": 5, "tick_range": [4, 5], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t006_agent_05_shame_self", "tick": 6, "tick_range": [5, 6], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self rises (+0.28)", "salience_score": 0.056, "provenance": "source_derived"}, {"moment_id": "M_t006_agent_08_fear", "tick": 6, "tick_range": [5, 6], "moment_type": "agent_state_shift", "agents": ["agent_08"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_08 fear rises (+0.22)", "salience_score": 0.044, "provenance": "source_derived"}, {"moment_id": "M_t009_agent_09_shame_self", "tick": 9, "tick_range": [8, 9], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_09 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t009_world_mood", "tick": 9, "tick_range": [8, 9], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → agitated", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t011_agent_03_fear", "tick": 11, "tick_range": [10, 11], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear rises (+0.55)", "salience_score": 0.11, "provenance": "source_derived"}, {"moment_id": "M_t012_agent_05_fear", "tick": 12, "tick_range": [11, 12], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_05 fear rises (+0.62)", "salience_score": 0.124, "provenance": "source_derived"}, {"moment_id": "M_t012_agent_08_fear", "tick": 12, "tick_range": [11, 12], "moment_type": "agent_state_shift", "agents": ["agent_08"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_08 fear rises (+0.58)", "salience_score": 0.116, "provenance": "source_derived"}, {"moment_id": "M_t012_unresolved_agent_09_fear", "tick": 12, "tick_range": [12, 75], "moment_type": "unresolved_thread", "agents": ["agent_09"], "groups": [], "events": [], "pressures": ["fear"], "signals": ["unresolved_thread", "sustained_pressure"], "summary": "agent_09 fear stays above 7.0 for 64 ticks (peak 10.00)", "salience_score": 1.0, "provenance": "source_derived"}, {"moment_id": "M_t014_unresolved_agent_03_fear", "tick": 14, "tick_range": [14, 27], "moment_type": "unresolved_thread", "agents": ["agent_03"], "groups": [], "events": [], "pressures": ["fear"], "signals": ["unresolved_thread", "sustained_pressure"], "summary": "agent_03 fear stays above 7.0 for 14 ticks (peak 10.00)", "salience_score": 0.467, "provenance": "source_derived"}, {"moment_id": "M_t015_agent_03_fear", "tick": 15, "tick_range": [14, 15], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear rises (+1.57)", "salience_score": 0.314, "provenance": "source_derived"}, {"moment_id": "M_t015_agent_09_fear", "tick": 15, "tick_range": [14, 15], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_09 fear rises (+1.56)", "salience_score": 0.312, "provenance": "source_derived"}, {"moment_id": "M_t015_conflict_authority_fear", "tick": 15, "tick_range": [15, 17], "moment_type": "conflict_marker", "agents": ["agent_03", "agent_09"], "groups": [], "events": [], "pressures": ["fear", "authority_vigilance"], "signals": ["conflict_marker", "agent_state_shift", "world_pressure_shift"], "summary": "agents fear rises while authority_vigilance rises (co-occurrence at t=15)", "salience_score": 0.85, "provenance": "source_inferred"}, {"moment_id": "M_t015_unresolved_agent_05_fear", "tick": 15, "tick_range": [15, 27], "moment_type": "unresolved_thread", "agents": ["agent_05"], "groups": [], "events": [], "pressures": ["fear"], "signals": ["unresolved_thread", "sustained_pressure"], "summary": "agent_05 fear stays above 7.0 for 13 ticks (peak 10.00)", "salience_score": 0.433, "provenance": "source_derived"}, {"moment_id": "M_t015_unresolved_agent_08_fear", "tick": 15, "tick_range": [15, 66], "moment_type": "unresolved_thread", "agents": ["agent_08"], "groups": [], "events": [], "pressures": ["fear"], "signals": ["unresolved_thread", "sustained_pressure"], "summary": "agent_08 fear stays above 7.0 for 52 ticks (peak 10.00)", "salience_score": 1.0, "provenance": "source_derived"}, {"moment_id": "M_t015_world_authority_vigilance", "tick": 15, "tick_range": [14, 15], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["authority_vigilance"], "signals": ["world_pressure_shift"], "summary": "world.authority_vigilance rises (+0.250)", "salience_score": 1.0, "provenance": "source_derived"}, {"moment_id": "M_t020_L1_tension", "tick": 20, "tick_range": [19, 20], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode partial → saturation (tension +0.040)", "salience_score": 0.12, "provenance": "source_derived"}, {"moment_id": "M_t020_world_blame_concentration", "tick": 20, "tick_range": [19, 20], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["blame_concentration"], "signals": ["world_pressure_shift"], "summary": "world.blame_concentration rises (+0.080)", "salience_score": 0.32, "provenance": "source_derived"}, {"moment_id": "M_t024_world_public_suspicion", "tick": 24, "tick_range": [23, 24], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["public_suspicion"], "signals": ["world_pressure_shift"], "summary": "world.public_suspicion falls (-0.129)", "salience_score": 0.516, "provenance": "source_derived"}, {"moment_id": "M_t025_world_blame_concentration", "tick": 25, "tick_range": [24, 25], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["blame_concentration"], "signals": ["world_pressure_shift"], "summary": "world.blame_concentration falls (-0.143)", "salience_score": 0.572, "provenance": "source_derived"}, {"moment_id": "M_t025_world_mood", "tick": 25, "tick_range": [24, 25], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood agitated → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t026_L1_tension", "tick": 26, "tick_range": [25, 26], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode saturation → partial (tension -0.091)", "salience_score": 0.273, "provenance": "source_derived"}, {"moment_id": "M_t026_agent_03_shame_self", "tick": 26, "tick_range": [25, 26], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self falls (-1.68)", "salience_score": 0.336, "provenance": "source_derived"}, {"moment_id": "M_t026_agent_05_shame_self", "tick": 26, "tick_range": [25, 26], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self falls (-1.67)", "salience_score": 0.334, "provenance": "source_derived"}, {"moment_id": "M_t030_L1_tension", "tick": 30, "tick_range": [29, 30], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode partial → recovery (tension -0.013)", "salience_score": 0.039, "provenance": "source_derived"}, {"moment_id": "M_t030_agent_03_fear", "tick": 30, "tick_range": [29, 30], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear falls (-1.69)", "salience_score": 0.338, "provenance": "source_derived"}, {"moment_id": "M_t030_agent_05_fear", "tick": 30, "tick_range": [29, 30], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_05 fear falls (-1.69)", "salience_score": 0.338, "provenance": "source_derived"}, {"moment_id": "M_t033_world_mood", "tick": 33, "tick_range": [32, 33], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t034_world_mood", "tick": 34, "tick_range": [33, 34], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t037_world_mood", "tick": 37, "tick_range": [36, 37], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t039_world_mood", "tick": 39, "tick_range": [38, 39], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t043_L1_tension", "tick": 43, "tick_range": [42, 43], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode recovery → partial (tension +0.007)", "salience_score": 0.021, "provenance": "source_derived"}, {"moment_id": "M_t045_world_mood", "tick": 45, "tick_range": [44, 45], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t053_agent_03_shame_self", "tick": 53, "tick_range": [52, 53], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self rises (+0.34)", "salience_score": 0.068, "provenance": "source_derived"}, {"moment_id": "M_t053_agent_05_shame_self", "tick": 53, "tick_range": [52, 53], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self rises (+0.32)", "salience_score": 0.064, "provenance": "source_derived"}, {"moment_id": "M_t053_world_mood", "tick": 53, "tick_range": [52, 53], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → agitated", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t058_L1_tension", "tick": 58, "tick_range": [57, 58], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode partial → saturation (tension +0.020)", "salience_score": 0.06, "provenance": "source_derived"}, {"moment_id": "M_t058_agent_03_fear", "tick": 58, "tick_range": [57, 58], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear rises (+0.45)", "salience_score": 0.09, "provenance": "source_derived"}, {"moment_id": "M_t058_agent_05_fear", "tick": 58, "tick_range": [57, 58], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_05 fear rises (+0.45)", "salience_score": 0.09, "provenance": "source_derived"}, {"moment_id": "M_t058_world_blame_concentration", "tick": 58, "tick_range": [57, 58], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["blame_concentration"], "signals": ["world_pressure_shift"], "summary": "world.blame_concentration rises (+0.087)", "salience_score": 0.348, "provenance": "source_derived"}, {"moment_id": "M_t062_world_blame_concentration", "tick": 62, "tick_range": [61, 62], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["blame_concentration"], "signals": ["world_pressure_shift"], "summary": "world.blame_concentration falls (-0.097)", "salience_score": 0.388, "provenance": "source_derived"}, {"moment_id": "M_t062_world_mood", "tick": 62, "tick_range": [61, 62], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood agitated → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t063_L1_tension", "tick": 63, "tick_range": [62, 63], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode saturation → partial (tension -0.021)", "salience_score": 0.063, "provenance": "source_derived"}, {"moment_id": "M_t065_agent_08_shame_self", "tick": 65, "tick_range": [64, 65], "moment_type": "agent_state_shift", "agents": ["agent_08"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_08 shame_self falls (-1.53)", "salience_score": 0.306, "provenance": "source_derived"}, {"moment_id": "M_t065_world_mood", "tick": 65, "tick_range": [64, 65], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t067_agent_03_shame_self", "tick": 67, "tick_range": [66, 67], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self falls (-0.59)", "salience_score": 0.118, "provenance": "source_derived"}, {"moment_id": "M_t067_agent_05_shame_self", "tick": 67, "tick_range": [66, 67], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self falls (-0.59)", "salience_score": 0.118, "provenance": "source_derived"}, {"moment_id": "M_t068_L1_tension", "tick": 68, "tick_range": [67, 68], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode partial → recovery (tension -0.103)", "salience_score": 0.309, "provenance": "source_derived"}, {"moment_id": "M_t068_world_mood", "tick": 68, "tick_range": [67, 68], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t069_world_mood", "tick": 69, "tick_range": [68, 69], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t070_agent_08_fear", "tick": 70, "tick_range": [69, 70], "moment_type": "agent_state_shift", "agents": ["agent_08"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_08 fear falls (-0.58)", "salience_score": 0.116, "provenance": "source_derived"}, {"moment_id": "M_t075_agent_09_shame_self", "tick": 75, "tick_range": [74, 75], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_09 shame_self falls (-1.23)", "salience_score": 0.246, "provenance": "source_derived"}, {"moment_id": "M_t080_agent_09_fear", "tick": 80, "tick_range": [79, 80], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_09 fear falls (-0.41)", "salience_score": 0.082, "provenance": "source_derived"}, {"moment_id": "M_t085_agent_09_fear", "tick": 85, "tick_range": [84, 85], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_09 fear falls (-0.39)", "salience_score": 0.078, "provenance": "source_derived"}, {"moment_id": "M_t117_agent_03_shame_self", "tick": 117, "tick_range": [116, 117], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self rises (+0.18)", "salience_score": 0.036, "provenance": "source_derived"}, {"moment_id": "M_t117_agent_08_shame_self", "tick": 117, "tick_range": [116, 117], "moment_type": "agent_state_shift", "agents": ["agent_08"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_08 shame_self rises (+0.18)", "salience_score": 0.036, "provenance": "source_derived"}, {"moment_id": "M_t117_agent_09_shame_self", "tick": 117, "tick_range": [116, 117], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_09 shame_self rises (+0.18)", "salience_score": 0.036, "provenance": "source_derived"}, {"moment_id": "M_t120_world_mood", "tick": 120, "tick_range": [119, 120], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t123_world_mood", "tick": 123, "tick_range": [122, 123], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → agitated", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t124_agent_03_shame_self", "tick": 124, "tick_range": [123, 124], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t124_agent_09_shame_self", "tick": 124, "tick_range": [123, 124], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_09 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t124_world_mood", "tick": 124, "tick_range": [123, 124], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood agitated → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t125_agent_05_shame_self", "tick": 125, "tick_range": [124, 125], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self rises (+0.32)", "salience_score": 0.064, "provenance": "source_derived"}, {"moment_id": "M_t125_agent_08_shame_self", "tick": 125, "tick_range": [124, 125], "moment_type": "agent_state_shift", "agents": ["agent_08"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_08 shame_self rises (+0.38)", "salience_score": 0.076, "provenance": "source_derived"}, {"moment_id": "M_t126_L1_tension", "tick": 126, "tick_range": [125, 126], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode recovery → partial (tension +0.038)", "salience_score": 0.114, "provenance": "source_derived"}, {"moment_id": "M_t131_agent_05_shame_self", "tick": 131, "tick_range": [130, 131], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t132_world_blame_concentration", "tick": 132, "tick_range": [131, 132], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["blame_concentration"], "signals": ["world_pressure_shift"], "summary": "world.blame_concentration rises (+0.080)", "salience_score": 0.32, "provenance": "source_derived"}, {"moment_id": "M_t132_world_mood", "tick": 132, "tick_range": [131, 132], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → agitated", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t133_L1_tension", "tick": 133, "tick_range": [132, 133], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode partial → saturation (tension +0.040)", "salience_score": 0.12, "provenance": "source_derived"}, {"moment_id": "M_t134_world_mood", "tick": 134, "tick_range": [133, 134], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood agitated → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t135_world_mood", "tick": 135, "tick_range": [134, 135], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → agitated", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t137_agent_03_fear", "tick": 137, "tick_range": [136, 137], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear rises (+0.46)", "salience_score": 0.092, "provenance": "source_derived"}, {"moment_id": "M_t137_agent_08_fear", "tick": 137, "tick_range": [136, 137], "moment_type": "agent_state_shift", "agents": ["agent_08"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_08 fear rises (+0.46)", "salience_score": 0.092, "provenance": "source_derived"}, {"moment_id": "M_t137_agent_09_fear", "tick": 137, "tick_range": [136, 137], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_09 fear rises (+0.46)", "salience_score": 0.092, "provenance": "source_derived"}, {"moment_id": "M_t139_agent_05_fear", "tick": 139, "tick_range": [138, 139], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_05 fear rises (+0.51)", "salience_score": 0.102, "provenance": "source_derived"}, {"moment_id": "M_t141_unresolved_agent_08_fear", "tick": 141, "tick_range": [141, 200], "moment_type": "unresolved_thread", "agents": ["agent_08"], "groups": [], "events": [], "pressures": ["fear"], "signals": ["unresolved_thread", "sustained_pressure"], "summary": "agent_08 fear stays above 7.0 for 60 ticks until end of run (peak 10.00)", "salience_score": 1.0, "provenance": "source_derived"}, {"moment_id": "M_t141_unresolved_agent_09_fear", "tick": 141, "tick_range": [141, 200], "moment_type": "unresolved_thread", "agents": ["agent_09"], "groups": [], "events": [], "pressures": ["fear"], "signals": ["unresolved_thread", "sustained_pressure"], "summary": "agent_09 fear stays above 7.0 for 60 ticks until end of run (peak 10.00)", "salience_score": 1.0, "provenance": "source_derived"}, {"moment_id": "M_t142_agent_03_fear", "tick": 142, "tick_range": [141, 142], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear rises (+1.60)", "salience_score": 0.32, "provenance": "source_derived"}, {"moment_id": "M_t142_agent_09_fear", "tick": 142, "tick_range": [141, 142], "moment_type": "agent_state_shift", "agents": ["agent_09"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_09 fear rises (+1.60)", "salience_score": 0.32, "provenance": "source_derived"}, {"moment_id": "M_t143_world_blame_concentration", "tick": 143, "tick_range": [142, 143], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["blame_concentration"], "signals": ["world_pressure_shift"], "summary": "world.blame_concentration falls (-0.264)", "salience_score": 1.0, "provenance": "source_derived"}, {"moment_id": "M_t143_world_mood", "tick": 143, "tick_range": [142, 143], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood agitated → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t145_world_mood", "tick": 145, "tick_range": [144, 145], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t148_L1_tension", "tick": 148, "tick_range": [147, 148], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode saturation → partial (tension -0.125)", "salience_score": 0.375, "provenance": "source_derived"}, {"moment_id": "M_t148_agent_03_shame_self", "tick": 148, "tick_range": [147, 148], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self falls (-2.10)", "salience_score": 0.42, "provenance": "source_derived"}, {"moment_id": "M_t148_agent_05_shame_self", "tick": 148, "tick_range": [147, 148], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self falls (-2.16)", "salience_score": 0.432, "provenance": "source_derived"}, {"moment_id": "M_t152_agent_03_fear", "tick": 152, "tick_range": [151, 152], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear falls (-0.85)", "salience_score": 0.17, "provenance": "source_derived"}, {"moment_id": "M_t157_world_mood", "tick": 157, "tick_range": [156, 157], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t158_world_mood", "tick": 158, "tick_range": [157, 158], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t165_world_mood", "tick": 165, "tick_range": [164, 165], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t166_world_mood", "tick": 166, "tick_range": [165, 166], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → calm", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t168_world_mood", "tick": 168, "tick_range": [167, 168], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood calm → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t173_agent_03_shame_self", "tick": 173, "tick_range": [172, 173], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self rises (+0.30)", "salience_score": 0.06, "provenance": "source_derived"}, {"moment_id": "M_t173_agent_05_shame_self", "tick": 173, "tick_range": [172, 173], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self rises (+0.30)", "salience_score": 0.06, "provenance": "source_derived"}, {"moment_id": "M_t179_L1_tension", "tick": 179, "tick_range": [178, 179], "moment_type": "group_tension_shift", "agents": [], "groups": ["L1"], "events": [], "pressures": ["group_tension"], "signals": ["group_tension_shift"], "summary": "group L1 mode partial → saturation (tension +0.020)", "salience_score": 0.06, "provenance": "source_derived"}, {"moment_id": "M_t179_agent_03_shame_self", "tick": 179, "tick_range": [178, 179], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t179_agent_05_shame_self", "tick": 179, "tick_range": [178, 179], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t180_world_mood", "tick": 180, "tick_range": [179, 180], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood tense → agitated", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t184_world_mood", "tick": 184, "tick_range": [183, 184], "moment_type": "world_pressure_shift", "agents": [], "groups": [], "events": [], "pressures": ["crowd_mood"], "signals": ["world_pressure_shift", "mood_shift"], "summary": "crowd_mood agitated → tense", "salience_score": 0.7, "provenance": "source_derived"}, {"moment_id": "M_t193_agent_03_shame_self", "tick": 193, "tick_range": [192, 193], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_03 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t193_agent_05_shame_self", "tick": 193, "tick_range": [192, 193], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["shame_self"], "signals": ["agent_state_shift"], "summary": "agent_05 shame_self rises (+0.40)", "salience_score": 0.08, "provenance": "source_derived"}, {"moment_id": "M_t197_agent_03_fear", "tick": 197, "tick_range": [196, 197], "moment_type": "agent_state_shift", "agents": ["agent_03"], "groups": ["L1"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_03 fear rises (+0.22)", "salience_score": 0.044, "provenance": "source_derived"}, {"moment_id": "M_t198_agent_05_fear", "tick": 198, "tick_range": [197, 198], "moment_type": "agent_state_shift", "agents": ["agent_05"], "groups": ["L3"], "events": [], "pressures": ["fear"], "signals": ["agent_state_shift"], "summary": "agent_05 fear rises (+0.22)", "salience_score": 0.044, "provenance": "source_derived"}], "run_label": "peter_scarcity_baseline", "schema_version": "moments_v1", "summary": {"total": 105, "by_type": {"agent_state_shift": 50, "group_tension_shift": 12, "world_pressure_shift": 36, "unresolved_thread": 6, "conflict_marker": 1}, "by_provenance": {"source_derived": 104, "source_inferred": 1}}}</script>
+<script type="application/json" id="data-meta">{"ticks": 200, "anchor_id": "peter_scarcity_baseline", "seed": 0}</script>
+
+<script>
+"use strict";
+
+const OPPS    = JSON.parse(document.getElementById("data-opportunities").textContent);
+const THREADS = JSON.parse(document.getElementById("data-threads").textContent);
+const MOMENTS = JSON.parse(document.getElementById("data-moments").textContent);
+const META    = JSON.parse(document.getElementById("data-meta").textContent);
+
+const THREAD_BY_ID = Object.fromEntries(THREADS.threads.map(t => [t.thread_id, t]));
+const MOMENT_BY_ID = Object.fromEntries(MOMENTS.moments.map(m => [m.moment_id, m]));
+
+// ============================================================
+// Header meta
+// ============================================================
+document.getElementById("meta-run").textContent      = OPPS.run_label;
+document.getElementById("meta-ticks").textContent    = META.ticks;
+document.getElementById("meta-moments").textContent  = MOMENTS.moments.length;
+document.getElementById("meta-threads").textContent  = OPPS.summary.threads_total;
+document.getElementById("meta-strong").textContent   = OPPS.summary.strong_opportunities;
+document.getElementById("meta-usable").textContent   = OPPS.summary.usable_threads;
+
+// ============================================================
+// Thread list
+// ============================================================
+const list = document.getElementById("threadList");
+let activeId = null;
+
+OPPS.opportunities.forEach(op => {
+  const item = document.createElement("div");
+  item.className = "item";
+  item.dataset.id = op.thread_id;
+  item.innerHTML = `
+    <div class="id">${op.thread_id}</div>
+    <div class="title">${op.title}</div>
+    <div class="meta">
+      <span>t${op.start_tick}–${op.end_tick} · ${op.moment_count} moments</span>
+      <span class="rank ${op.rank}">${op.rank} · ${op.score.toFixed(2)}</span>
+    </div>
+  `;
+  item.addEventListener("click", () => selectThread(op.thread_id));
+  list.appendChild(item);
+});
+
+function selectThread(threadId) {
+  activeId = threadId;
+  for (const el of list.querySelectorAll(".item")) {
+    el.classList.toggle("active", el.dataset.id === threadId);
+  }
+  renderDetail(threadId);
+  renderTimeline();
+}
+
+// ============================================================
+// Detail panel
+// ============================================================
+function renderDetail(threadId) {
+  const detail = document.getElementById("threadDetail");
+  const op = OPPS.opportunities.find(o => o.thread_id === threadId);
+  const t  = THREAD_BY_ID[threadId];
+  if (!op || !t) {
+    detail.innerHTML = `<p class="empty">Thread not found.</p>`;
+    return;
+  }
+
+  const evidenceRows = (t.moment_ids || []).map(mid => {
+    const m = MOMENT_BY_ID[mid];
+    if (!m) return "";
+    return `
+      <tr>
+        <td class="tick">t${m.tick}</td>
+        <td><code>${m.moment_id}</code></td>
+        <td class="type">${m.moment_type}</td>
+        <td class="prov ${m.provenance}">${m.provenance}</td>
+        <td>${escapeHtml(m.summary)}</td>
+      </tr>`;
+  }).join("");
+
+  const pressureChips = (t.pressure_history || [])
+    .map(p => `<span class="chip">${p}</span>`).join("");
+  const creativeChips = (op.creative_uses || [])
+    .map(u => `<span class="chip">${u}</span>`).join("")
+    || `<span class="chip">(no tags)</span>`;
+  const groupsList    = (t.groups || []).join(", ") || "—";
+  const mainAgents    = (t.main_agents || []).join(", ") || "(world-level)";
+  const supporting    = (t.supporting_agents || []).join(", ") || "—";
+  const relationship  = (t.relationship_drift || []).join(", ") || "—";
+
+  detail.innerHTML = `
+    <h2><span class="id-prefix">${op.thread_id} · </span>${escapeHtml(op.title)}</h2>
+    <div class="badges">
+      <span class="badge"><strong>${op.rank}</strong> · score ${op.score.toFixed(3)}</span>
+      <span class="badge">conflict <strong>${op.core_conflict}</strong></span>
+      <span class="badge">arc <strong>${op.arc_direction}</strong></span>
+      <span class="badge">tick span <strong>${t.start_tick}–${t.end_tick}</strong></span>
+      <span class="badge">${(t.moment_ids || []).length} moments</span>
+    </div>
+
+    <section>
+      <h3>Logline</h3>
+      <p class="logline">${escapeHtml(op.logline)}</p>
+    </section>
+
+    <section>
+      <h3>Unresolved Question</h3>
+      <p class="question">${escapeHtml(op.unresolved_question)}</p>
+    </section>
+
+    <section>
+      <h3>Cast &amp; Setting</h3>
+      <p>main: <strong>${escapeHtml(mainAgents)}</strong></p>
+      <p>supporting: ${escapeHtml(supporting)}</p>
+      <p>groups: ${escapeHtml(groupsList)}</p>
+      <p>relationship drift: ${escapeHtml(relationship)}</p>
+    </section>
+
+    <section>
+      <h3>Pressure History</h3>
+      <div class="chip-row">${pressureChips || "<span class='chip'>(none)</span>"}</div>
+    </section>
+
+    <section>
+      <h3>Creative Uses</h3>
+      <div class="chip-row creative-uses">${creativeChips}</div>
+    </section>
+
+    <section>
+      <h3>Evidence</h3>
+      <table class="evidence">
+        <thead>
+          <tr><th>Tick</th><th>Moment</th><th>Type</th><th>Provenance</th><th>Summary</th></tr>
+        </thead>
+        <tbody>${evidenceRows || "<tr><td colspan='5'>—</td></tr>"}</tbody>
+      </table>
+    </section>
+  `;
+}
+
+function escapeHtml(s) {
+  return String(s ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+// ============================================================
+// Timeline canvas
+// ============================================================
+function renderTimeline() {
+  const canvas = document.getElementById("timeline");
+  const ctx = canvas.getContext("2d");
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.clientWidth;
+  const H = canvas.clientHeight;
+  canvas.width  = W * dpr;
+  canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, W, H);
+
+  const totalTicks = META.ticks || 200;
+  const xOf = t => (t / totalTicks) * W;
+
+  // Background grid
+  ctx.strokeStyle = "rgba(255,255,255,0.03)";
+  ctx.lineWidth = 1;
+  for (let t = 0; t <= totalTicks; t += 25) {
+    const x = xOf(t);
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, H);
+    ctx.stroke();
+  }
+
+  // Moment dots by type
+  const colorByType = {
+    agent_state_shift:    "rgba(232,200,122,0.55)",
+    group_tension_shift:  "rgba(127,200,164,0.55)",
+    world_pressure_shift: "rgba(217,107,107,0.55)",
+    conflict_marker:      "rgba(255,255,255,0.7)",
+    unresolved_thread:    "rgba(160,140,200,0.5)",
+  };
+  for (const m of MOMENTS.moments) {
+    const c = colorByType[m.moment_type] || "rgba(255,255,255,0.3)";
+    const x = xOf(m.tick);
+    const y = H - 14;
+    ctx.fillStyle = c;
+    ctx.beginPath();
+    ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Thread spans
+  const rankColor = {
+    strong: "rgba(127,200,164,0.65)",
+    usable: "rgba(232,200,122,0.55)",
+    weak:   "rgba(217,107,107,0.45)",
+    hold:   "rgba(144,144,144,0.40)",
+  };
+  let row = 0;
+  for (const op of OPPS.opportunities) {
+    const x0 = xOf(op.start_tick);
+    const x1 = xOf(op.end_tick);
+    const isActive = op.thread_id === activeId;
+    const color = rankColor[op.rank] || "rgba(255,255,255,0.3)";
+    const yTop = 6 + row * 12;
+    ctx.fillStyle = color;
+    ctx.fillRect(x0, yTop, Math.max(2, x1 - x0), isActive ? 6 : 4);
+    if (isActive) {
+      ctx.strokeStyle = "rgba(232,200,122,0.9)";
+      ctx.lineWidth = 1;
+      ctx.strokeRect(x0 - 1, yTop - 1, Math.max(2, x1 - x0) + 2, 8);
+    }
+    row = (row + 1) % 5;
+  }
+}
+
+// Initial render
+renderTimeline();
+window.addEventListener("resize", renderTimeline);
+
+// Auto-select first thread if any
+if (OPPS.opportunities.length > 0) {
+  selectThread(OPPS.opportunities[0].thread_id);
+}
+</script>
+</body>
+</html>

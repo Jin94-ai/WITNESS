@@ -1,0 +1,110 @@
+{
+  "schema_version": "story_seed_cards_v1",
+  "run_label": "peter_scarcity_baseline",
+  "seed": 0,
+  "cards": [
+    {
+      "seed_id": "S01",
+      "title": "침묵으로 변해가는 충성",
+      "subtitle": "Peter — 충성과 생존 사이",
+      "main_character": "Peter",
+      "plain_premise": "Peter의 두려움은 200단계 중 약 39단계 동안 높게 유지된다. 같은 사람이 두드러지게 보이는 단계는 후반으로 갈수록 줄어든다.",
+      "why_interesting": "Peter의 두려움은 줄어들지 않지만, 같은 사람이 두드러지게 보이는 단계 수는 후반으로 갈수록 줄어든다. 내적 압력과 외적 행동이 같은 방향으로 가지 않는다는 점이 특이하다.",
+      "scene_image": "같은 그룹 안에 Peter가 머물러 있는 자리. 58단계 부근에서 그의 상태는 긴장에서 물러섬으로 바뀌어 있다.",
+      "unresolved_question": "침묵도 충성일까, 아니면 이미 물러선 것일까?",
+      "usable_for": [
+        "단편 영화 장면",
+        "소설 챕터",
+        "게임 선택지"
+      ],
+      "confidence_label": "바로 발전 가능한 씨앗",
+      "evidence_summary": {
+        "source_thread_id": "T01",
+        "evidence_count": 21,
+        "strongest_signals": [
+          "권위자의 압박",
+          "지속되는 압력",
+          "동시에 겹친 변화"
+        ],
+        "audit_status": "통과",
+        "technical_link": null
+      },
+      "risk_note": "없는 사건을 추가하지 않음. 대사를 만들지 않음."
+    },
+    {
+      "seed_id": "S02",
+      "title": "결정을 미루는 사람",
+      "subtitle": "Andrew — 결정 없는 시간",
+      "main_character": "Andrew",
+      "plain_premise": "Andrew의 두려움은 200단계 중 약 122단계 동안 높게 유지된다. 같은 사람이 두드러지게 보이는 단계는 후반으로 갈수록 줄어든다.",
+      "why_interesting": "Andrew의 두려움은 줄어들지 않지만, 같은 사람이 두드러지게 보이는 단계 수는 후반으로 갈수록 줄어든다. 내적 압력과 외적 행동이 같은 방향으로 가지 않는다는 점이 특이하다.",
+      "scene_image": "같은 그룹 안에 Andrew가 머물러 있는 자리. 125단계 부근에서 그의 상태는 긴장에서 물러섬으로 바뀌어 있다.",
+      "unresolved_question": "결정의 순간이 올까, 아니면 표류가 계속될까?",
+      "usable_for": [
+        "단편 소설",
+        "게임 분기"
+      ],
+      "confidence_label": "보완이 필요한 씨앗",
+      "evidence_summary": {
+        "source_thread_id": "T02",
+        "evidence_count": 9,
+        "strongest_signals": [
+          "지속되는 압력"
+        ],
+        "audit_status": "통과",
+        "technical_link": null
+      },
+      "risk_note": "없는 사건을 추가하지 않음. 대사를 만들지 않음."
+    },
+    {
+      "seed_id": "S03",
+      "title": "결정을 미루는 사람",
+      "subtitle": "James — 결정 없는 시간",
+      "main_character": "James",
+      "plain_premise": "James의 두려움은 200단계 중 약 135단계 동안 높게 유지된다. 마지막에 관측된 상태 변화는 긴장에서 물러섬으로이다.",
+      "why_interesting": "비난이 한쪽으로 몰리는 흐름과 분위기가 같은 시간대에 함께 올라간다. 두 압력이 따로 움직이지 않는다는 점이 이 데이터의 특징이다.",
+      "scene_image": "같은 그룹 안에 James가 머물러 있는 자리. 124단계 부근에서 그의 상태는 긴장에서 물러섬으로 바뀌어 있다.",
+      "unresolved_question": "결정의 순간이 올까, 아니면 표류가 계속될까?",
+      "usable_for": [
+        "단편 소설",
+        "게임 분기"
+      ],
+      "confidence_label": "보완이 필요한 씨앗",
+      "evidence_summary": {
+        "source_thread_id": "T03",
+        "evidence_count": 12,
+        "strongest_signals": [
+          "지속되는 압력"
+        ],
+        "audit_status": "통과",
+        "technical_link": null
+      },
+      "risk_note": "없는 사건을 추가하지 않음. 대사를 만들지 않음."
+    },
+    {
+      "seed_id": "S04",
+      "title": "결정을 미루는 사람",
+      "subtitle": "John — 결정 없는 시간",
+      "main_character": "John",
+      "plain_premise": "John의 두려움은 200단계 중 약 35단계 동안 높게 유지된다. 같은 사람이 두드러지게 보이는 단계는 후반으로 갈수록 줄어든다.",
+      "why_interesting": "John의 두려움은 줄어들지 않지만, 같은 사람이 두드러지게 보이는 단계 수는 후반으로 갈수록 줄어든다. 내적 압력과 외적 행동이 같은 방향으로 가지 않는다는 점이 특이하다.",
+      "scene_image": "같은 그룹 안에 John가 머물러 있는 자리. 58단계 부근에서 그의 상태는 긴장에서 물러섬으로 바뀌어 있다.",
+      "unresolved_question": "결정의 순간이 올까, 아니면 표류가 계속될까?",
+      "usable_for": [
+        "단편 소설",
+        "게임 분기"
+      ],
+      "confidence_label": "보완이 필요한 씨앗",
+      "evidence_summary": {
+        "source_thread_id": "T04",
+        "evidence_count": 16,
+        "strongest_signals": [
+          "지속되는 압력"
+        ],
+        "audit_status": "통과",
+        "technical_link": null
+      },
+      "risk_note": "없는 사건을 추가하지 않음. 대사를 만들지 않음."
+    }
+  ]
+}

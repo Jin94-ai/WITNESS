@@ -1,0 +1,26 @@
+=== PROBE P_PV_09 (placement variant: sacred/clustered, v4) ===
+
+[Annotated headline summary]
+  Final summary:    LOW_ACTIVITY
+  Primary pressure: none_clear
+
+  Cohort outcomes:
+    [L3 cohort, 1 agents]:  no shame accumulation
+    [L2 cohort, 7 agents]:  no shame accumulation
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: spiritual_wanderer)
+    Recovery actions: 0 confessions, 0 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.3 at t=50 → final 0.0
+    Public suspicion:    negligible (peak < 0.05)
+    Authority vigilance: negligible (peak < 0.05)
+    Top blame target:    spiritual_wanderer (peak 0.26, weak)
+
+============================================================
+
+Agents: A1=wanderer, A2=authority, A3=follower, A4=follower, A5=follower, A6=crowd, A7=crowd, A8=family
+Locations: L1, L2, L3
+
+Placement variant: clustered

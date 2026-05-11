@@ -1,0 +1,32 @@
+{
+  "iter": 83,
+  "n_ticks": 100,
+  "seed": 0,
+  "summary": {
+    "B_full": {
+      "crowd_sc": 0.36,
+      "shame": 3.8,
+      "grief": 6.12,
+      "guilt": 7.3,
+      "conceal_act": 0.31,
+      "grieve_act": 0.687
+    },
+    "C_P2a_off": {
+      "crowd_sc": 1.0,
+      "shame": 6.83,
+      "grief": 5.71,
+      "guilt": 8.3,
+      "conceal_act": 0.414,
+      "grieve_act": 0.696
+    },
+    "D_shame_off": {
+      "crowd_sc": 0.71,
+      "shame": 6.83,
+      "grief": 6.15,
+      "guilt": 7.74,
+      "conceal_act": 0.38,
+      "grieve_act": 0.698
+    }
+  },
+  "verdict": "crowd_sc similar between C and D (+0.29) -- Iter 82 premise fails."
+}

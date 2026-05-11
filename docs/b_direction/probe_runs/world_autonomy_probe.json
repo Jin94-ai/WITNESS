@@ -1,0 +1,729 @@
+{
+  "n_ticks": 100,
+  "snapshots_A_normal": [
+    {
+      "tick": 0,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.4,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.6,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "threat_to_authority",
+          "target_role": "disciple_follower",
+          "intensity": 0.6,
+          "reach_size": 2
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.5999999999999999,
+          "alignment_strength": 0.315,
+          "shame_climate": 0.52,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {
+            "disciple_follower": 0.18,
+            "authority_priest": 0.049999999999999996
+          },
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.22000000000000006,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.45999999999999985,
+          "alignment_strength": 0.14500000000000002,
+          "shame_climate": 0.12,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {
+            "crowd_participant": 0.049999999999999996
+          },
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.01999999999999999,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "threat_to_authority",
+          "target_role": "disciple_follower",
+          "intensity": 0.19999999999999996,
+          "reach_size": 2
+        },
+        {
+          "tag": "accusation",
+          "target_role": "disciple_follower",
+          "intensity": 0.46,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.04000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.04000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.42,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_07",
+          "intensity": 0.42,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.2,
+          "reach_size": 1
+        }
+      ]
+    },
+    {
+      "tick": 15,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.5199999999999998,
+          "alignment_strength": 0.15999999999999992,
+          "shame_climate": 1.0,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {
+            "authority_priest": 0.15999999999999995,
+            "soldier_enforcer": 0.15999999999999998
+          },
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.346,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.3099999999999997,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.12,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.09999999999999994,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.08999999999999993,
+          "reach_size": 2
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.17999999999999994,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.17999999999999994,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.33999999999999997,
+          "reach_size": 1
+        },
+        {
+          "tag": "visible_withdrawal",
+          "target_role": "agent_05",
+          "intensity": 0.08999999999999998,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.04000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.42,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.12000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.2,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1
+        }
+      ]
+    },
+    {
+      "tick": 30,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.45999999999999974,
+          "alignment_strength": 0.045,
+          "shame_climate": 0.12,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {
+            "soldier_enforcer": 0.09
+          },
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.16600000000000018,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.044999999999999624,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.08999999999999993,
+          "reach_size": 2
+        },
+        {
+          "tag": "confession",
+          "target_role": "agent_05",
+          "intensity": 0.18999999999999995,
+          "reach_size": 2
+        },
+        {
+          "tag": "forgiveness",
+          "target_role": "soldier_enforcer",
+          "intensity": 1.0999999999999996,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.17999999999999994,
+          "reach_size": 1
+        },
+        {
+          "tag": "confession",
+          "target_role": "agent_04",
+          "intensity": 0.35,
+          "reach_size": 2
+        },
+        {
+          "tag": "forgiveness",
+          "target_role": "authority_priest",
+          "intensity": 1.2499999999999998,
+          "reach_size": 2
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.04000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "confession",
+          "target_role": "agent_05",
+          "intensity": 0.52,
+          "reach_size": 1
+        },
+        {
+          "tag": "forgiveness",
+          "target_role": "soldier_enforcer",
+          "intensity": 1.41,
+          "reach_size": 2
+        },
+        {
+          "tag": "confession",
+          "target_role": "agent_06",
+          "intensity": 0.52,
+          "reach_size": 1
+        },
+        {
+          "tag": "forgiveness",
+          "target_role": "crowd_participant",
+          "intensity": 1.42,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.12000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.2,
+          "reach_size": 1
+        }
+      ]
+    },
+    {
+      "tick": 50,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.25499999999999956,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.08700000000000008,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {
+            "authority_priest": 0.09999999999999998
+          },
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.03999999999999998,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.0,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "forgiveness",
+          "target_role": "crowd_participant",
+          "intensity": 0.27999999999999986,
+          "reach_size": 3
+        },
+        {
+          "tag": "forgiveness",
+          "target_role": "soldier_enforcer",
+          "intensity": 0.34999999999999987,
+          "reach_size": 4
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.32999999999999996,
+          "reach_size": 2
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.030000000000000013,
+          "reach_size": 2
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.42,
+          "reach_size": 1
+        },
+        {
+          "tag": "visible_withdrawal",
+          "target_role": "agent_05",
+          "intensity": 0.16999999999999998,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.2,
+          "reach_size": 1
+        },
+        {
+          "tag": "visible_withdrawal",
+          "target_role": "agent_05",
+          "intensity": 0.25,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.2,
+          "reach_size": 1
+        }
+      ]
+    },
+    {
+      "tick": 100,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.015,
+          "alignment_strength": 0.045,
+          "shame_climate": 1.0,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {
+            "soldier_enforcer": 0.09
+          },
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.15999999999999998,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.0,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.48,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.08999999999999993,
+          "reach_size": 2
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_07",
+          "intensity": 0.25999999999999995,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_04",
+          "intensity": 0.33999999999999997,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.33999999999999997,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.04000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.04000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.12000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.12000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.12000000000000001,
+          "reach_size": 1
+        },
+        {
+          "tag": "visible_withdrawal",
+          "target_role": "agent_04",
+          "intensity": 0.25,
+          "reach_size": 1
+        },
+        {
+          "tag": "public_denial",
+          "target_role": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.2,
+          "reach_size": 1
+        },
+        {
+          "tag": "discussion",
+          "target_role": null,
+          "intensity": 0.2,
+          "reach_size": 1
+        }
+      ]
+    }
+  ],
+  "snapshots_B_frozen": [
+    {
+      "tick": 0,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.4,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.6,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "threat_to_authority",
+          "target_role": "disciple_follower",
+          "intensity": 0.6,
+          "reach_size": 2
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.6249999999999999,
+          "alignment_strength": 0.3,
+          "shame_climate": 0.4,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {
+            "disciple_follower": 0.18
+          },
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.10000000000000003,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.5249999999999999,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": [
+        {
+          "tag": "threat_to_authority",
+          "target_role": "disciple_follower",
+          "intensity": 0.19999999999999996,
+          "reach_size": 2
+        },
+        {
+          "tag": "accusation",
+          "target_role": "disciple_follower",
+          "intensity": 0.46,
+          "reach_size": 1
+        }
+      ]
+    },
+    {
+      "tick": 15,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.47499999999999976,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.4,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.3749999999999998,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": []
+    },
+    {
+      "tick": 30,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.24999999999999956,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.4,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.14999999999999958,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": []
+    },
+    {
+      "tick": 50,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.0,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.4,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.0,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": []
+    },
+    {
+      "tick": 100,
+      "crowds": {
+        "priest_courtyard": {
+          "density": 0.0,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.4,
+          "authority_vigilance": 0.25,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        },
+        "city_street": {
+          "density": 0.0,
+          "alignment_strength": 0.0,
+          "shame_climate": 0.0,
+          "authority_vigilance": 0.0,
+          "blame_concentration": {},
+          "rumor_intensity": 0.0,
+          "accusation_amplification": 0.0,
+          "phase": "unknown"
+        }
+      },
+      "rumors": []
+    }
+  ],
+  "frozen_changes": [
+    {
+      "cid": "priest_courtyard",
+      "key": "density",
+      "init": 0.4,
+      "final": 0.0,
+      "delta": 0.4
+    },
+    {
+      "cid": "priest_courtyard",
+      "key": "shame_climate",
+      "init": 0.0,
+      "final": 0.4,
+      "delta": 0.4
+    },
+    {
+      "cid": "priest_courtyard",
+      "key": "authority_vigilance",
+      "init": 0.0,
+      "final": 0.25,
+      "delta": 0.25
+    },
+    {
+      "cid": "city_street",
+      "key": "density",
+      "init": 0.6,
+      "final": 0.0,
+      "delta": 0.6
+    }
+  ],
+  "process_count": 3,
+  "verdict": "Score 3 -- multiple processes + cross-influence"
+}

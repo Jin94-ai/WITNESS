@@ -1,0 +1,85 @@
+{
+  "iter": 76,
+  "pyhash": "0",
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "noise_stdev": 0.388,
+  "scenarios": [
+    "accusation",
+    "scarcity",
+    "sacred"
+  ],
+  "mul_values": [
+    0.05,
+    0.4,
+    0.8
+  ],
+  "results": {
+    "accusation": {
+      "0.05": {
+        "rev": 0.2,
+        "peak": 10.0,
+        "final": 10.0,
+        "n_active": 30
+      },
+      "0.4": {
+        "rev": 3.17,
+        "peak": 9.32,
+        "final": 5.96,
+        "n_active": 30
+      },
+      "0.8": {
+        "rev": 5.17,
+        "peak": 9.38,
+        "final": 3.61,
+        "n_active": 30
+      }
+    },
+    "scarcity": {
+      "0.05": {
+        "rev": 0.1,
+        "peak": 9.49,
+        "final": 9.49,
+        "n_active": 41
+      },
+      "0.4": {
+        "rev": 3.9,
+        "peak": 9.5,
+        "final": 3.28,
+        "n_active": 20
+      },
+      "0.8": {
+        "rev": 3.65,
+        "peak": 9.58,
+        "final": 6.1,
+        "n_active": 20
+      }
+    },
+    "sacred": {
+      "0.05": {
+        "rev": 1.08,
+        "peak": 10.0,
+        "final": 9.43,
+        "n_active": 25
+      },
+      "0.4": {
+        "rev": 5.36,
+        "peak": 9.17,
+        "final": 2.01,
+        "n_active": 25
+      },
+      "0.8": {
+        "rev": 4.68,
+        "peak": 8.87,
+        "final": 0.51,
+        "n_active": 25
+      }
+    }
+  },
+  "regime_holds": {
+    "accusation": "FULL (emergence + secondary rise)",
+    "scarcity": "PARTIAL (emergence only, no secondary rise)",
+    "sacred": "DIFFERENT"
+  },
+  "verdict": "Iter 73 regime shape PARTIALLY generalizes: 1 full + 1 partial + 1 different."
+}

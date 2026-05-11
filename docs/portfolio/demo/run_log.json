@@ -1,0 +1,58 @@
+{
+  "schema_version": "run_log_v1",
+  "anchor_id": "peter_scarcity_baseline",
+  "seed": 0,
+  "ticks": 200,
+  "agents": 12,
+  "groups": 3,
+  "story_threads_found": 4,
+  "story_seeds_generated": 4,
+  "episode_outlines_generated": 1,
+  "audit_failures": 0,
+  "pipeline_steps": [
+    {
+      "step_no": 1,
+      "label": "simulation",
+      "plain_label": "세계 시뮬레이션 실행",
+      "status": "completed",
+      "duration_ms": 275
+    },
+    {
+      "step_no": 2,
+      "label": "pressure",
+      "plain_label": "압력 변화 관찰",
+      "status": "completed",
+      "duration_ms": 13
+    },
+    {
+      "step_no": 3,
+      "label": "threads",
+      "plain_label": "이야기 흐름 채굴",
+      "status": "completed",
+      "duration_ms": 40
+    },
+    {
+      "step_no": 4,
+      "label": "episode",
+      "plain_label": "에피소드 개요 조립",
+      "status": "completed",
+      "duration_ms": 0
+    },
+    {
+      "step_no": 5,
+      "label": "seed_cards",
+      "plain_label": "이야기 씨앗 카드 생성",
+      "status": "completed",
+      "duration_ms": 2
+    },
+    {
+      "step_no": 6,
+      "label": "evidence",
+      "plain_label": "근거 / 검증 패키징",
+      "status": "completed",
+      "duration_ms": 0
+    }
+  ],
+  "started_at_iso": "2026-05-11T21:10:45",
+  "runtime_seconds": 0.364
+}

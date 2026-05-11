@@ -1,0 +1,41 @@
+{
+  "iter": 46,
+  "scenario": "court_chamber",
+  "guilt_level": 6.0,
+  "n_seeds": 20,
+  "n_ticks": 60,
+  "fingerprint": {
+    "guilt_level": 6.0,
+    "motifs": {
+      "remain_present": 2998,
+      "confront": 216,
+      "observe_wait": 3006,
+      "grieve": 373,
+      "withdraw": 607
+    },
+    "actions": {
+      "follow_closely": 1847,
+      "assert_loyalty": 82,
+      "discuss_with_disciples": 2049,
+      "flee": 48,
+      "weep": 198,
+      "follow_at_distance": 264,
+      "draw_sword": 86,
+      "stay_awake": 1603,
+      "withdraw_in_fear": 310,
+      "watch_quietly": 505,
+      "fall_asleep": 125,
+      "pray": 75,
+      "stay_hiding": 8
+    },
+    "events": {
+      "discussion_emitted": 854,
+      "guard_approaches": 20
+    },
+    "grieve_fraction": 0.052,
+    "weep_count": 198,
+    "deny_count": 0,
+    "max_alignment": 0.0
+  },
+  "verdict": "Intermediate -- Arc D partial"
+}

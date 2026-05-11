@@ -1,0 +1,43 @@
+{
+  "total_ticks": 200,
+  "dominant_world_pressure": "분위기",
+  "peak_pressure_tick": 15,
+  "pressure_phases": [
+    {
+      "start_tick": 1,
+      "end_tick": 66,
+      "label": "early_pressure_buildup",
+      "plain_label": "초반",
+      "summary": "초반에는 분위기가 빠르게 올라갑니다."
+    },
+    {
+      "start_tick": 67,
+      "end_tick": 132,
+      "label": "mid_pressure_peak",
+      "plain_label": "중반",
+      "summary": "중반에는 분위기를 중심으로 여러 압력이 함께 쌓입니다."
+    },
+    {
+      "start_tick": 133,
+      "end_tick": 200,
+      "label": "late_unresolved_drift",
+      "plain_label": "후반",
+      "summary": "후반에는 결정되지 않은 긴장이 지속됩니다."
+    }
+  ],
+  "top_agent_pressures": [
+    {
+      "agent_name": "James",
+      "summary": "James는 약 144단계 동안 두려움이나 수치심이 높게 유지되었습니다."
+    },
+    {
+      "agent_name": "Andrew",
+      "summary": "Andrew는 약 131단계 동안 두려움이나 수치심이 높게 유지되었습니다."
+    },
+    {
+      "agent_name": "Peter",
+      "summary": "Peter는 약 72단계 동안 두려움이나 수치심이 높게 유지되었습니다."
+    }
+  ],
+  "plain_language_summary": "초반에는 분위기가 빠르게 올라갑니다. 중반에는 분위기를 중심으로 여러 압력이 함께 쌓입니다. 후반에는 결정되지 않은 긴장이 지속됩니다."
+}

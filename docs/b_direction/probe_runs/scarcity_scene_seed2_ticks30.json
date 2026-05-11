@@ -1,0 +1,3098 @@
+{
+  "seed": 2,
+  "n_ticks": 30,
+  "motif_distribution": {
+    "remain_present": 202,
+    "observe_wait": 70,
+    "confront": 30,
+    "withdraw": 5,
+    "conceal": 51,
+    "confess": 2
+  },
+  "action_distribution": {
+    "follow_closely": 114,
+    "stay_awake": 57,
+    "watch_quietly": 16,
+    "draw_sword": 10,
+    "discuss_with_disciples": 85,
+    "fall_asleep": 2,
+    "flee": 11,
+    "stay_hiding": 1,
+    "follow_at_distance": 11,
+    "assert_loyalty": 10,
+    "withdraw_in_fear": 12,
+    "deny": 30,
+    "weep": 1
+  },
+  "emergent_event_count": 31,
+  "final_rumor_count": 15,
+  "final_crowd": {
+    "marketplace": {
+      "phase": "aligned",
+      "alignment": 0.7391955550585737,
+      "blame": {
+        "crowd_participant": 0.12999999999999995,
+        "fisher_laborer": 0.48000000000000004,
+        "soldier_enforcer": 0.29999999999999993
+      }
+    },
+    "poor_quarter": {
+      "phase": "idle",
+      "alignment": 0.0,
+      "blame": {}
+    }
+  },
+  "history": [
+    {
+      "tick": 1,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "follow_closely",
+        "agent_04": "stay_awake",
+        "agent_05": "stay_awake",
+        "agent_06": "watch_quietly",
+        "agent_07": "follow_closely",
+        "agent_08": "draw_sword",
+        "agent_09": "stay_awake",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "follow_closely",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "confront",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.685,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.485,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.62,
+          "reach_size": 2,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 2,
+      "actions": {
+        "agent_01": "watch_quietly",
+        "agent_02": "fall_asleep",
+        "agent_03": "flee",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "stay_awake",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_closely",
+        "agent_09": "discuss_with_disciples",
+        "agent_10": "follow_closely",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "withdraw",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.63,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.47,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.54,
+          "reach_size": 2,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 3,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "follow_closely",
+        "agent_03": "follow_closely",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "flee",
+        "agent_08": "draw_sword",
+        "agent_09": "follow_closely",
+        "agent_10": "stay_awake",
+        "agent_11": "stay_hiding",
+        "agent_12": "watch_quietly"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "confront",
+        "agent_08": "confront",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "withdraw",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.615,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.455,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.46,
+          "reach_size": 2,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 4,
+      "actions": {
+        "agent_01": "watch_quietly",
+        "agent_02": "stay_awake",
+        "agent_03": "follow_closely",
+        "agent_04": "watch_quietly",
+        "agent_05": "follow_at_distance",
+        "agent_06": "stay_awake",
+        "agent_07": "draw_sword",
+        "agent_08": "draw_sword",
+        "agent_09": "discuss_with_disciples",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "observe_wait",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "confront",
+        "agent_08": "confront",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.6,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.44,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.38,
+          "reach_size": 2,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 5,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "assert_loyalty",
+        "agent_04": "stay_awake",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "flee",
+        "agent_08": "draw_sword",
+        "agent_09": "discuss_with_disciples",
+        "agent_10": "follow_closely",
+        "agent_11": "follow_closely",
+        "agent_12": "watch_quietly"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "confront",
+        "agent_08": "confront",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.45,
+          "density": 0.885,
+          "blame": {
+            "merchant": 0.26
+          },
+          "accusation_amp": 0.3
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.425,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.3,
+          "reach_size": 2,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.62,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 5,
+          "event_id": "public_accusation",
+          "target_role": "merchant",
+          "location": "marketplace"
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "flee",
+        "agent_04": "follow_closely",
+        "agent_05": "withdraw_in_fear",
+        "agent_06": "watch_quietly",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "stay_awake",
+        "agent_09": "assert_loyalty",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "follow_closely",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.42,
+          "density": 0.83,
+          "blame": {
+            "merchant": 0.22
+          },
+          "accusation_amp": 0.2
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.41,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.22,
+          "reach_size": 2,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.54,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 7,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "follow_closely",
+        "agent_04": "stay_awake",
+        "agent_05": "stay_awake",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "draw_sword",
+        "agent_09": "follow_closely",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "follow_closely",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "confront",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.37,
+          "density": 0.815,
+          "blame": {
+            "merchant": 0.18
+          },
+          "accusation_amp": 0.1
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.395,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.14,
+          "reach_size": 2,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.46,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 8,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "assert_loyalty",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "draw_sword",
+        "agent_09": "follow_closely",
+        "agent_10": "follow_closely",
+        "agent_11": "follow_closely",
+        "agent_12": "watch_quietly"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "confront",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.37,
+          "density": 0.8,
+          "blame": {
+            "merchant": 0.13999999999999999
+          },
+          "accusation_amp": 0.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.38,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00001",
+          "tag": "misdeed",
+          "target": "merchant",
+          "intensity": 0.06,
+          "reach_size": 2,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.38,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 9,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "assert_loyalty",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_closely",
+        "agent_09": "assert_loyalty",
+        "agent_10": "follow_closely",
+        "agent_11": "follow_closely",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.42,
+          "density": 0.785,
+          "blame": {
+            "merchant": 0.09999999999999998
+          },
+          "accusation_amp": 0.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.365,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.3,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 10,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "follow_closely",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "deny",
+        "agent_06": "stay_awake",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "follow_closely",
+        "agent_09": "discuss_with_disciples",
+        "agent_10": "stay_awake",
+        "agent_11": "follow_at_distance",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present",
+        "agent_09": "remain_present",
+        "agent_10": "remain_present",
+        "agent_11": "withdraw",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.415,
+          "density": 0.785,
+          "blame": {
+            "merchant": 0.05999999999999998,
+            "fisher_laborer": 0.09
+          },
+          "accusation_amp": 0.12
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.35,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.22,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00003",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 10,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        }
+      ]
+    },
+    {
+      "tick": 11,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "follow_closely",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "stay_awake",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "follow_at_distance",
+        "agent_09": "assert_loyalty",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.415,
+          "density": 0.77,
+          "blame": {
+            "merchant": 0.019999999999999976,
+            "fisher_laborer": 0.049999999999999996
+          },
+          "accusation_amp": 0.02
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.335,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.14,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00003",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 12,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "follow_closely",
+        "agent_05": "stay_awake",
+        "agent_06": "stay_awake",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_closely",
+        "agent_09": "assert_loyalty",
+        "agent_10": "follow_closely",
+        "agent_11": "stay_awake",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "remain_present",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.415,
+          "density": 0.755,
+          "blame": {},
+          "accusation_amp": 0.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.32,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00002",
+          "tag": "accusation",
+          "target": "merchant",
+          "intensity": 0.06,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00003",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 13,
+      "actions": {
+        "agent_01": "watch_quietly",
+        "agent_02": "follow_closely",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "follow_closely",
+        "agent_05": "stay_awake",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "draw_sword",
+        "agent_08": "deny",
+        "agent_09": "flee",
+        "agent_10": "follow_closely",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "confront",
+        "agent_08": "conceal",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.38,
+          "density": 0.715,
+          "blame": {
+            "soldier_enforcer": 0.09
+          },
+          "accusation_amp": 0.12
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.305,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00003",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00004",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 13,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        }
+      ]
+    },
+    {
+      "tick": 14,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "follow_closely",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_closely",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "deny",
+        "agent_09": "deny",
+        "agent_10": "follow_closely",
+        "agent_11": "withdraw_in_fear",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "withdraw",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.42,
+          "density": 0.73,
+          "blame": {
+            "soldier_enforcer": 0.13999999999999999,
+            "crowd_participant": 0.09
+          },
+          "accusation_amp": 0.26
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.29,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00003",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.17,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00004",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00005",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00006",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 14,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        },
+        {
+          "tick": 14,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 15,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "stay_awake",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "follow_at_distance",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "follow_closely",
+        "agent_08": "watch_quietly",
+        "agent_09": "deny",
+        "agent_10": "follow_closely",
+        "agent_11": "stay_awake",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "observe_wait",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.331,
+          "density": 0.73,
+          "blame": {
+            "soldier_enforcer": 0.09999999999999998,
+            "crowd_participant": 0.13999999999999999
+          },
+          "accusation_amp": 0.202
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.275,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00003",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.09,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00004",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00005",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.41,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00006",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00007",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 15,
+          "event_id": "guard_approaches",
+          "location": "marketplace"
+        },
+        {
+          "tick": 15,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 16,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "follow_closely",
+        "agent_03": "withdraw_in_fear",
+        "agent_04": "follow_closely",
+        "agent_05": "deny",
+        "agent_06": "stay_awake",
+        "agent_07": "stay_awake",
+        "agent_08": "follow_at_distance",
+        "agent_09": "follow_at_distance",
+        "agent_10": "stay_awake",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.326,
+          "density": 0.73,
+          "blame": {
+            "soldier_enforcer": 0.05999999999999998,
+            "crowd_participant": 0.09999999999999998,
+            "fisher_laborer": 0.09
+          },
+          "accusation_amp": 0.222
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.26,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00004",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.25,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00005",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.33,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00006",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00007",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.41,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00008",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 16,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        }
+      ]
+    },
+    {
+      "tick": 17,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "follow_at_distance",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "discuss_with_disciples",
+        "agent_06": "stay_awake",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "withdraw_in_fear",
+        "agent_09": "flee",
+        "agent_10": "stay_awake",
+        "agent_11": "stay_awake",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.246,
+          "density": 0.675,
+          "blame": {
+            "soldier_enforcer": 0.019999999999999976,
+            "crowd_participant": 0.05999999999999998,
+            "fisher_laborer": 0.049999999999999996
+          },
+          "accusation_amp": 0.122
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.245,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00004",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.17,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00005",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.25,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00006",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00007",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.32,
+          "reach_size": 3,
+          "distortion": 0.1
+        },
+        {
+          "id": "r_00008",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 18,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "follow_closely",
+        "agent_03": "follow_at_distance",
+        "agent_04": "watch_quietly",
+        "agent_05": "deny",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "follow_closely",
+        "agent_08": "deny",
+        "agent_09": "flee",
+        "agent_10": "watch_quietly",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "observe_wait",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "confront",
+        "agent_10": "observe_wait",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.256,
+          "density": 0.65,
+          "blame": {
+            "crowd_participant": 0.019999999999999976,
+            "fisher_laborer": 0.09,
+            "soldier_enforcer": 0.09
+          },
+          "accusation_amp": 0.262
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.23,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00004",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.09,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00005",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.17,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00006",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00007",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.24,
+          "reach_size": 3,
+          "distortion": 0.1
+        },
+        {
+          "id": "r_00008",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00009",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00010",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 18,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        },
+        {
+          "tick": 18,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        }
+      ]
+    },
+    {
+      "tick": 19,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "follow_closely",
+        "agent_03": "discuss_with_disciples",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "follow_closely",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "flee",
+        "agent_08": "discuss_with_disciples",
+        "agent_09": "withdraw_in_fear",
+        "agent_10": "follow_closely",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "observe_wait",
+        "agent_07": "confront",
+        "agent_08": "observe_wait",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.206,
+          "density": 0.635,
+          "blame": {
+            "fisher_laborer": 0.049999999999999996,
+            "soldier_enforcer": 0.049999999999999996
+          },
+          "accusation_amp": 0.162
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.215,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00005",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.09,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00006",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00007",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.16,
+          "reach_size": 3,
+          "distortion": 0.1
+        },
+        {
+          "id": "r_00008",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00009",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00010",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": []
+    },
+    {
+      "tick": 20,
+      "actions": {
+        "agent_01": "watch_quietly",
+        "agent_02": "follow_closely",
+        "agent_03": "follow_closely",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "follow_closely",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "stay_awake",
+        "agent_09": "deny",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "watch_quietly",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "remain_present",
+        "agent_04": "remain_present",
+        "agent_05": "remain_present",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "observe_wait",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "observe_wait",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.201,
+          "density": 0.635,
+          "blame": {
+            "crowd_participant": 0.09
+          },
+          "accusation_amp": 0.182
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.2,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00007",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.08,
+          "reach_size": 3,
+          "distortion": 0.1
+        },
+        {
+          "id": "r_00008",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00009",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00010",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00011",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 20,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 21,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "flee",
+        "agent_04": "stay_awake",
+        "agent_05": "deny",
+        "agent_06": "follow_closely",
+        "agent_07": "draw_sword",
+        "agent_08": "deny",
+        "agent_09": "assert_loyalty",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "follow_closely",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "remain_present",
+        "agent_07": "confront",
+        "agent_08": "conceal",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.261,
+          "density": 0.61,
+          "blame": {
+            "crowd_participant": 0.049999999999999996,
+            "fisher_laborer": 0.09,
+            "soldier_enforcer": 0.09
+          },
+          "accusation_amp": 0.322
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.185,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00008",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.09,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00009",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00010",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00011",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.41,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00012",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00013",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 21,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        },
+        {
+          "tick": 21,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        }
+      ]
+    },
+    {
+      "tick": 22,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "assert_loyalty",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "withdraw_in_fear",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_at_distance",
+        "agent_09": "deny",
+        "agent_10": "follow_closely",
+        "agent_11": "stay_awake",
+        "agent_12": "stay_awake"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.306,
+          "density": 0.61,
+          "blame": {
+            "fisher_laborer": 0.049999999999999996,
+            "soldier_enforcer": 0.049999999999999996,
+            "crowd_participant": 0.09
+          },
+          "accusation_amp": 0.342
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.17,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00009",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00010",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00011",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.33,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00012",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.41,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00013",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.41,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00014",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 22,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 23,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "flee",
+        "agent_04": "follow_closely",
+        "agent_05": "follow_at_distance",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "discuss_with_disciples",
+        "agent_08": "discuss_with_disciples",
+        "agent_09": "deny",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "confront",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "observe_wait",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.271,
+          "density": 0.57,
+          "blame": {
+            "crowd_participant": 0.13999999999999999
+          },
+          "accusation_amp": 0.362
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.155,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00009",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00010",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00011",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.25,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00012",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.33,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00013",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.33,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00014",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00015",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 23,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 24,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "stay_awake",
+        "agent_03": "withdraw_in_fear",
+        "agent_04": "follow_closely",
+        "agent_05": "deny",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "follow_closely",
+        "agent_08": "deny",
+        "agent_09": "flee",
+        "agent_10": "follow_closely",
+        "agent_11": "stay_awake",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "confront",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "idle",
+          "alignment": 0.281,
+          "density": 0.545,
+          "blame": {
+            "crowd_participant": 0.09999999999999998,
+            "fisher_laborer": 0.09,
+            "soldier_enforcer": 0.09
+          },
+          "accusation_amp": 0.502
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.14,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00011",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.17,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00012",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.25,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00013",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.25,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00014",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00015",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00016",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00017",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 24,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        },
+        {
+          "tick": 24,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        }
+      ]
+    },
+    {
+      "tick": 25,
+      "actions": {
+        "agent_01": "follow_closely",
+        "agent_02": "follow_closely",
+        "agent_03": "deny",
+        "agent_04": "discuss_with_disciples",
+        "agent_05": "deny",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "draw_sword",
+        "agent_08": "deny",
+        "agent_09": "withdraw_in_fear",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "remain_present",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "confront",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.366,
+          "density": 0.575,
+          "blame": {
+            "crowd_participant": 0.05999999999999998,
+            "fisher_laborer": 0.22999999999999998,
+            "soldier_enforcer": 0.13999999999999999
+          },
+          "accusation_amp": 0.762
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.125,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00011",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.09,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00012",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.17,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00013",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.17,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00014",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00015",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00016",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00017",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00018",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00019",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00020",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 25,
+          "event_id": "public_denial",
+          "by": "agent_03"
+        },
+        {
+          "tick": 25,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        },
+        {
+          "tick": 25,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        }
+      ]
+    },
+    {
+      "tick": 26,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "withdraw_in_fear",
+        "agent_04": "follow_closely",
+        "agent_05": "assert_loyalty",
+        "agent_06": "stay_awake",
+        "agent_07": "follow_closely",
+        "agent_08": "deny",
+        "agent_09": "deny",
+        "agent_10": "stay_awake",
+        "agent_11": "stay_awake",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "confess",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.456,
+          "density": 0.59,
+          "blame": {
+            "crowd_participant": 0.10999999999999997,
+            "fisher_laborer": 0.18999999999999997,
+            "soldier_enforcer": 0.18999999999999997
+          },
+          "accusation_amp": 0.902
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.11,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00012",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.09,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00013",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.09,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00014",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00015",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00016",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00017",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00018",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00019",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00020",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00021",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00022",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 26,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        },
+        {
+          "tick": 26,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 27,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "follow_closely",
+        "agent_03": "deny",
+        "agent_04": "stay_awake",
+        "agent_05": "deny",
+        "agent_06": "follow_closely",
+        "agent_07": "follow_closely",
+        "agent_08": "follow_at_distance",
+        "agent_09": "withdraw_in_fear",
+        "agent_10": "follow_closely",
+        "agent_11": "stay_awake",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "gathered",
+          "alignment": 0.502,
+          "density": 0.605,
+          "blame": {
+            "crowd_participant": 0.06999999999999998,
+            "fisher_laborer": 0.32999999999999996,
+            "soldier_enforcer": 0.14999999999999997
+          },
+          "accusation_amp": 1.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.095,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00014",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00015",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00016",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00017",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00018",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00019",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00020",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00021",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00022",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00023",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00024",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 27,
+          "event_id": "public_denial",
+          "by": "agent_03"
+        },
+        {
+          "tick": 27,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        }
+      ]
+    },
+    {
+      "tick": 28,
+      "actions": {
+        "agent_01": "watch_quietly",
+        "agent_02": "follow_closely",
+        "agent_03": "deny",
+        "agent_04": "stay_awake",
+        "agent_05": "deny",
+        "agent_06": "stay_awake",
+        "agent_07": "follow_closely",
+        "agent_08": "deny",
+        "agent_09": "deny",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "follow_closely",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 0.639,
+          "density": 0.65,
+          "blame": {
+            "crowd_participant": 0.11999999999999997,
+            "fisher_laborer": 0.47,
+            "soldier_enforcer": 0.19999999999999996
+          },
+          "accusation_amp": 1.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.08,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00015",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00016",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00017",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00018",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00019",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00020",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00021",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00022",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.33,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00023",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00024",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00025",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00026",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00027",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00028",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 28,
+          "event_id": "public_denial",
+          "by": "agent_03"
+        },
+        {
+          "tick": 28,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        },
+        {
+          "tick": 28,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        },
+        {
+          "tick": 28,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 29,
+      "actions": {
+        "agent_01": "stay_awake",
+        "agent_02": "discuss_with_disciples",
+        "agent_03": "withdraw_in_fear",
+        "agent_04": "follow_closely",
+        "agent_05": "deny",
+        "agent_06": "follow_closely",
+        "agent_07": "stay_awake",
+        "agent_08": "deny",
+        "agent_09": "deny",
+        "agent_10": "follow_closely",
+        "agent_11": "discuss_with_disciples",
+        "agent_12": "discuss_with_disciples"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "conceal",
+        "agent_04": "remain_present",
+        "agent_05": "conceal",
+        "agent_06": "remain_present",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "observe_wait"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 0.733,
+          "density": 0.68,
+          "blame": {
+            "crowd_participant": 0.16999999999999996,
+            "fisher_laborer": 0.52,
+            "soldier_enforcer": 0.24999999999999994
+          },
+          "accusation_amp": 1.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.065,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00016",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00017",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00018",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00019",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00020",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00021",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00022",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.25,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00023",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00024",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00025",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00026",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.41,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00027",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00028",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00029",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00030",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00031",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 29,
+          "event_id": "public_denial",
+          "by": "agent_05"
+        },
+        {
+          "tick": 29,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        },
+        {
+          "tick": 29,
+          "event_id": "public_denial",
+          "by": "agent_09"
+        }
+      ]
+    },
+    {
+      "tick": 30,
+      "actions": {
+        "agent_01": "discuss_with_disciples",
+        "agent_02": "follow_closely",
+        "agent_03": "fall_asleep",
+        "agent_04": "watch_quietly",
+        "agent_05": "weep",
+        "agent_06": "discuss_with_disciples",
+        "agent_07": "follow_closely",
+        "agent_08": "deny",
+        "agent_09": "withdraw_in_fear",
+        "agent_10": "discuss_with_disciples",
+        "agent_11": "follow_closely",
+        "agent_12": "follow_closely"
+      },
+      "motifs": {
+        "agent_01": "observe_wait",
+        "agent_02": "remain_present",
+        "agent_03": "withdraw",
+        "agent_04": "observe_wait",
+        "agent_05": "confess",
+        "agent_06": "observe_wait",
+        "agent_07": "remain_present",
+        "agent_08": "conceal",
+        "agent_09": "conceal",
+        "agent_10": "remain_present",
+        "agent_11": "remain_present",
+        "agent_12": "remain_present"
+      },
+      "crowd": {
+        "marketplace": {
+          "phase": "aligned",
+          "alignment": 0.739,
+          "density": 0.68,
+          "blame": {
+            "crowd_participant": 0.12999999999999995,
+            "fisher_laborer": 0.48000000000000004,
+            "soldier_enforcer": 0.29999999999999993
+          },
+          "accusation_amp": 1.0
+        },
+        "poor_quarter": {
+          "phase": "idle",
+          "alignment": 0.0,
+          "density": 0.05,
+          "blame": {},
+          "accusation_amp": 0.0
+        }
+      },
+      "rumors": [
+        {
+          "id": "r_00018",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00019",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00020",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.1,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00021",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.18,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00022",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.16,
+          "reach_size": 3,
+          "distortion": 0.1
+        },
+        {
+          "id": "r_00023",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00024",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.26,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00025",
+          "tag": "public_denial",
+          "target": "agent_03",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00026",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.33,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00027",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.33,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00028",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.34,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00029",
+          "tag": "public_denial",
+          "target": "agent_05",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00030",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.41,
+          "reach_size": 2,
+          "distortion": 0.05
+        },
+        {
+          "id": "r_00031",
+          "tag": "public_denial",
+          "target": "agent_09",
+          "intensity": 0.42,
+          "reach_size": 1,
+          "distortion": 0.0
+        },
+        {
+          "id": "r_00032",
+          "tag": "public_denial",
+          "target": "agent_08",
+          "intensity": 0.5,
+          "reach_size": 1,
+          "distortion": 0.0
+        }
+      ],
+      "events": [
+        {
+          "tick": 30,
+          "event_id": "visible_grief",
+          "by": "agent_05"
+        },
+        {
+          "tick": 30,
+          "event_id": "public_denial",
+          "by": "agent_08"
+        }
+      ]
+    }
+  ]
+}

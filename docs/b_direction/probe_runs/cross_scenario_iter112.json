@@ -1,0 +1,81 @@
+{
+  "n_seeds": 15,
+  "n_ticks": 500,
+  "results": {
+    "accusation": {
+      "label": "accusation",
+      "rev_mean": 7.289,
+      "rev_stdev": 1.754,
+      "final_mean": 10.0,
+      "final_stdev": 0.0,
+      "n_active_mean": 6,
+      "per_seed_finals": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "sacred_standalone": {
+      "label": "sacred_standalone",
+      "rev_mean": 11.987,
+      "rev_stdev": 1.672,
+      "final_mean": 3.981,
+      "final_stdev": 3.687,
+      "n_active_mean": 5,
+      "per_seed_finals": [
+        0.16,
+        1.61,
+        0.37,
+        0.47,
+        2.32,
+        0.4,
+        2.22,
+        0.79,
+        3.03,
+        10.0,
+        8.51,
+        6.22,
+        5.96,
+        9.84,
+        7.83
+      ]
+    },
+    "scarcity": {
+      "label": "scarcity",
+      "rev_mean": 5.267,
+      "rev_stdev": 1.71,
+      "final_mean": 10.0,
+      "final_stdev": 0.0,
+      "n_active_mean": 4,
+      "per_seed_finals": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "iter": 23,
+  "n_seeds": 5,
+  "n_ticks": 30,
+  "fingerprints": {
+    "calling": {
+      "scenario": "calling",
+      "F1_motifs": {
+        "remain_present": 1134,
+        "withdraw": 21,
+        "observe_wait": 39,
+        "conceal": 6
+      },
+      "F2_actions": {
+        "stay_awake": 301,
+        "follow_closely": 494,
+        "discuss_with_disciples": 286,
+        "follow_at_distance": 9,
+        "watch_quietly": 29,
+        "pray": 63,
+        "withdraw_in_fear": 10,
+        "fall_asleep": 4,
+        "deny": 4
+      },
+      "F4_event_types": {
+        "discussion_emitted": 286,
+        "prayer_invitation": 5,
+        "miracle_witnessed": 5,
+        "role_transition": 10,
+        "public_devotion": 63,
+        "public_accusation": 5,
+        "visible_withdrawal": 10,
+        "public_denial": 4
+      },
+      "F3_alignment": {
+        "mean": 0.047,
+        "peak": 0.229,
+        "final": 0.015,
+        "auc": 0.047
+      },
+      "F3_density": {
+        "mean": 0.286,
+        "peak": 0.435,
+        "final": 0.181,
+        "auc": 0.286
+      },
+      "F3_blame": {
+        "mean": 0.017,
+        "peak": 0.13,
+        "final": 0.0,
+        "auc": 0.017
+      },
+      "F3_shame_climate": {
+        "mean": 0.08,
+        "peak": 0.216,
+        "final": 0.15,
+        "auc": 0.08
+      },
+      "F3_authority_vigilance": {
+        "mean": 0.0,
+        "peak": 0.0,
+        "final": 0.0,
+        "auc": 0.0
+      },
+      "F5_layer_contribution": {
+        "rumor_tick_total": 921,
+        "crowd_change_total": 10,
+        "event_total": 388
+      }
+    },
+    "accusation": {
+      "scenario": "accusation",
+      "F1_motifs": {
+        "remain_present": 771,
+        "observe_wait": 116,
+        "withdraw": 140,
+        "confront": 78,
+        "conceal": 392,
+        "confess": 3
+      },
+      "F2_actions": {
+        "follow_closely": 367,
+        "discuss_with_disciples": 272,
+        "stay_hiding": 1,
+        "stay_awake": 219,
+        "flee": 31,
+        "withdraw_in_fear": 114,
+        "follow_at_distance": 133,
+        "assert_loyalty": 49,
+        "deny": 260,
+        "fall_asleep": 24,
+        "watch_quietly": 29,
+        "weep": 1
+      },
+      "F4_event_types": {
+        "discussion_emitted": 96,
+        "visible_withdrawal": 113,
+        "public_accusation": 10,
+        "public_denial": 260,
+        "guard_approaches": 5,
+        "visible_grief": 1
+      },
+      "F3_alignment": {
+        "mean": 0.311,
+        "peak": 0.494,
+        "final": 0.494,
+        "auc": 0.311
+      },
+      "F3_density": {
+        "mean": 0.612,
+        "peak": 0.667,
+        "final": 0.644,
+        "auc": 0.612
+      },
+      "F3_blame": {
+        "mean": 0.306,
+        "peak": 0.605,
+        "final": 0.602,
+        "auc": 0.306
+      },
+      "F3_shame_climate": {
+        "mean": 0.736,
+        "peak": 0.998,
+        "final": 0.997,
+        "auc": 0.736
+      },
+      "F3_authority_vigilance": {
+        "mean": 0.0,
+        "peak": 0.0,
+        "final": 0.0,
+        "auc": 0.0
+      },
+      "F5_layer_contribution": {
+        "rumor_tick_total": 2084,
+        "crowd_change_total": 32,
+        "event_total": 485
+      }
+    },
+    "scarcity": {
+      "scenario": "scarcity",
+      "F1_motifs": {
+        "observe_wait": 362,
+        "remain_present": 856,
+        "confront": 109,
+        "conceal": 368,
+        "withdraw": 76,
+        "confess": 28,
+        "grieve": 1
+      },
+      "F2_actions": {
+        "watch_quietly": 62,
+        "follow_closely": 440,
+        "discuss_with_disciples": 385,
+        "stay_awake": 331,
+        "flee": 34,
+        "draw_sword": 24,
+        "deny": 229,
+        "stay_hiding": 4,
+        "assert_loyalty": 58,
+        "follow_at_distance": 106,
+        "withdraw_in_fear": 88,
+        "fall_asleep": 17,
+        "confess": 11,
+        "weep": 10,
+        "pray": 1
+      },
+      "F4_event_types": {
+        "discussion_emitted": 202,
+        "public_denial": 229,
+        "public_accusation": 5,
+        "visible_withdrawal": 79,
+        "guard_approaches": 5,
+        "public_confession": 11,
+        "visible_grief": 10
+      },
+      "F3_alignment": {
+        "mean": 0.367,
+        "peak": 0.5,
+        "final": 0.5,
+        "auc": 0.367
+      },
+      "F3_density": {
+        "mean": 0.571,
+        "peak": 0.652,
+        "final": 0.506,
+        "auc": 0.571
+      },
+      "F3_blame": {
+        "mean": 0.274,
+        "peak": 0.478,
+        "final": 0.463,
+        "auc": 0.274
+      },
+      "F3_shame_climate": {
+        "mean": 0.415,
+        "peak": 0.5,
+        "final": 0.5,
+        "auc": 0.415
+      },
+      "F3_authority_vigilance": {
+        "mean": 0.024,
+        "peak": 0.115,
+        "final": 0.0,
+        "auc": 0.024
+      },
+      "F5_layer_contribution": {
+        "rumor_tick_total": 2204,
+        "crowd_change_total": 19,
+        "event_total": 541
+      }
+    },
+    "sacred": {
+      "scenario": "sacred",
+      "F1_motifs": {
+        "remain_present": 841,
+        "observe_wait": 186,
+        "confront": 21,
+        "conceal": 148,
+        "confess": 4
+      },
+      "F2_actions": {
+        "stay_awake": 263,
+        "watch_quietly": 52,
+        "discuss_with_disciples": 332,
+        "follow_closely": 380,
+        "assert_loyalty": 14,
+        "deny": 80,
+        "follow_at_distance": 37,
+        "withdraw_in_fear": 31,
+        "confess": 1,
+        "flee": 9,
+        "weep": 1
+      },
+      "F4_event_types": {
+        "discussion_emitted": 276,
+        "prayer_invitation": 5,
+        "miracle_witnessed": 5,
+        "public_denial": 80,
+        "public_accusation": 5,
+        "visible_withdrawal": 31,
+        "public_confession": 1,
+        "visible_grief": 1
+      },
+      "F3_alignment": {
+        "mean": 0.1,
+        "peak": 0.282,
+        "final": 0.282
+      },
+      "F3_blame": {
+        "mean": 0.052,
+        "peak": 0.196,
+        "final": 0.196
+      },
+      "F3_shame_climate": {
+        "mean": 0.183,
+        "peak": 0.498,
+        "final": 0.498
+      },
+      "F3_authority_vigilance": {
+        "mean": 0.0,
+        "peak": 0.0,
+        "final": 0.0
+      },
+      "F5_layer_contribution": {
+        "rumor_tick_total": 1308,
+        "crowd_change_total": 9,
+        "event_total": 404
+      }
+    }
+  },
+  "sacred_vs_calling_F1": 0.11258694560937048,
+  "sacred_vs_crisis_F1": 0.07506905623472945,
+  "sacred_vs_calling_F4": 0.18141460980055601,
+  "sacred_vs_crisis_F4": 0.15439886567043504,
+  "verdict": "MERGES WITH CRISIS",
+  "cond_4_status": "UNCHANGED -- still 2 topologies; need new 3rd",
+  "distinct_topologies": 2
+}

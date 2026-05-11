@@ -1,0 +1,81 @@
+{
+  "n_seeds": 15,
+  "n_ticks": 500,
+  "results": {
+    "V0_n3_rumor": {
+      "label": "V0_n3_rumor",
+      "n_outsiders": 3,
+      "include_rumor": true,
+      "finals": [
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.66,
+        3.33,
+        3.33,
+        9.16,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33
+      ],
+      "mean": 3.743,
+      "recovery_rate": "14/15",
+      "recovery_pct": 93.3
+    },
+    "V1_n4_rumor": {
+      "label": "V1_n4_rumor",
+      "n_outsiders": 4,
+      "include_rumor": true,
+      "finals": [
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33
+      ],
+      "mean": 3.333,
+      "recovery_rate": "15/15",
+      "recovery_pct": 100.0
+    },
+    "V2_n4_no_rumor": {
+      "label": "V2_n4_no_rumor",
+      "n_outsiders": 4,
+      "include_rumor": false,
+      "finals": [
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33,
+        3.33
+      ],
+      "mean": 3.333,
+      "recovery_rate": "15/15",
+      "recovery_pct": 100.0
+    }
+  }
+}

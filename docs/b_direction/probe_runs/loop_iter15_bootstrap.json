@@ -1,0 +1,32 @@
+{
+  "iter": 15,
+  "n_seeds": 20,
+  "n_ticks": 30,
+  "n_bootstrap": 2000,
+  "blame_threshold": 0.1,
+  "role_status": {
+    "authority_priest": "DIFF",
+    "crowd_participant": "SAME",
+    "family_anchor": "SAME",
+    "outsider": "DIFF",
+    "soldier_enforcer": "SAME"
+  },
+  "same_roles": [
+    "crowd_participant",
+    "family_anchor",
+    "soldier_enforcer"
+  ],
+  "diff_roles": [
+    "authority_priest",
+    "outsider"
+  ],
+  "same_mean_js": 0.12751937691114218,
+  "diff_mean_js": 0.48825546614830057,
+  "point_ratio": 3.828872740560251,
+  "bootstrap_ci_95": [
+    3.4267774487034397,
+    4.33055272005824
+  ],
+  "bootstrap_median": 3.827115862847278,
+  "verdict": "STRONG (lower CI 3.43 >= 3.0)"
+}

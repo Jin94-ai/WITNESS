@@ -1,0 +1,16 @@
+{
+  "iter": 85,
+  "n_ticks": 100,
+  "seed": 0,
+  "forgiveness_emitted_mean": {
+    "B": 1,
+    "C": 1,
+    "D": 1
+  },
+  "confess_activation_mean": {
+    "B_full": 0.516,
+    "C_P2a_off": 0.701,
+    "D_shame_off": 0.521
+  },
+  "verdict": "Iter 84 story NOT confirmed: C forgiveness_emitted (1.000) not higher than D (1.000) or B (1.000). Real mechanism still unknown."
+}

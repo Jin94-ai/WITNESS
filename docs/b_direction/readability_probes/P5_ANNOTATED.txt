@@ -1,0 +1,62 @@
+=== PROBE P5_ANNOTATED (annotated supplement, v4) ===
+
+[Annotated headline summary]
+  Final summary:    RECOVERY_DOMINATED
+  Primary pressure: sacred
+
+  Cohort outcomes:
+    [L3 cohort, 2 agents]:  no shame accumulation
+    [L2 cohort, 1 agents]:  no shame accumulation
+    [L1 cohort, 5 agents]:  recovery: peak~7.7 → final~1.5
+
+  Pressure events + recovery actions:
+    Accusations: 1 fired (targets: spiritual_wanderer)
+    Recovery actions: 43 confessions, 30 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 0.5 at t=181 → final 0.0
+    Top blame target:    disciple_follower (peak 0.29, weak)
+    Public suspicion:    peak 0.06 → final 0.00
+    Authority vigilance: negligible (peak < 0.05)
+
+============================================================
+
+Agents: A1=wanderer, A2=authority, A3=follower, A4=follower, A5=follower, A6=crowd, A7=crowd, A8=family
+Locations: L1, L2, L3
+
+--- Event log (grouped by 50-tick windows) ---
+  (showing first 30 of 43 confessions; total in headline)
+  --- Tick 0-49 ---
+  t= 18  accusation against spiritual_wanderer
+  t= 47  confession by A1 (wanderer)
+  t= 48  confession by A1 (wanderer)
+  t= 48  confession by A2 (authority)
+  t= 49  confession by A1 (wanderer)
+  t= 49  confession by A3 (follower)
+  t= 49  confession by A4 (follower)
+  --- Tick 50-99 ---
+  t= 51  confession by A6 (crowd)
+  t= 51  confession by A8 (family)
+  t= 52  confession by A2 (authority)
+  t= 52  confession by A6 (crowd)
+  t= 54  confession by A1 (wanderer)
+  t= 55  confession by A2 (authority)
+  t= 55  confession by A3 (follower)
+  t= 55  confession by A6 (crowd)
+  t= 56  confession by A2 (authority)
+  t= 57  confession by A2 (authority)
+  --- Tick 100-149 ---
+  t=124  confession by A6 (crowd)
+  t=125  confession by A1 (wanderer)
+  t=125  confession by A3 (follower)
+  t=125  confession by A5 (follower)
+  t=126  confession by A2 (authority)
+  t=128  confession by A2 (authority)
+  t=133  confession by A6 (crowd)
+  t=134  confession by A2 (authority)
+  t=134  confession by A8 (family)
+  t=135  confession by A1 (wanderer)
+  t=136  confession by A6 (crowd)
+  t=137  confession by A3 (follower)
+  t=138  confession by A2 (authority)
+  t=140  confession by A2 (authority)

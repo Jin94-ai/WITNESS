@@ -1,0 +1,368 @@
+{
+  "iter": 2,
+  "structural_change": "distant-role transition (fisher -> elite_strategist)",
+  "n_seeds": 10,
+  "n_ticks": 100,
+  "success": true,
+  "aggregate": {
+    "counter_div_mean": 0.2331,
+    "counter_div_max": 0.333,
+    "post_acc_div_mean": 0.54,
+    "verdict_distribution": {
+      "C_propagating": 10
+    },
+    "seeds_pass_threshold": 7
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 235,
+      "emergent_events_ctrl": 257,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.5,
+      "counterfactual_action_div": 0.0,
+      "with_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "follow_at_distance"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 1,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.0
+      }
+    },
+    {
+      "seed": 1,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 226,
+      "emergent_events_ctrl": 261,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.6,
+      "counterfactual_action_div": 0.333,
+      "with_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "withdraw_in_fear"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 3,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.333
+      }
+    },
+    {
+      "seed": 2,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 216,
+      "emergent_events_ctrl": 260,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.5,
+      "counterfactual_action_div": 0.333,
+      "with_tr_top5": [
+        "stay_awake",
+        "follow_closely",
+        "discuss_with_disciples",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "fall_asleep"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 3,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.333
+      }
+    },
+    {
+      "seed": 3,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 197,
+      "emergent_events_ctrl": 248,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.5,
+      "counterfactual_action_div": 0.333,
+      "with_tr_top5": [
+        "follow_closely",
+        "stay_awake",
+        "discuss_with_disciples",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "withdraw_in_fear"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 3,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.333
+      }
+    },
+    {
+      "seed": 4,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 212,
+      "emergent_events_ctrl": 249,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.6,
+      "counterfactual_action_div": 0.333,
+      "with_tr_top5": [
+        "stay_awake",
+        "follow_closely",
+        "discuss_with_disciples",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "withdraw_in_fear"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 3,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.333
+      }
+    },
+    {
+      "seed": 5,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 226,
+      "emergent_events_ctrl": 257,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.5,
+      "counterfactual_action_div": 0.0,
+      "with_tr_top5": [
+        "discuss_with_disciples",
+        "follow_closely",
+        "stay_awake",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "follow_at_distance"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 1,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.0
+      }
+    },
+    {
+      "seed": 6,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 233,
+      "emergent_events_ctrl": 269,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.5,
+      "counterfactual_action_div": 0.0,
+      "with_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "follow_at_distance"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 1,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.0
+      }
+    },
+    {
+      "seed": 7,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 209,
+      "emergent_events_ctrl": 241,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.75,
+      "post_accusation_div": 0.6,
+      "counterfactual_action_div": 0.333,
+      "with_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "withdraw_in_fear"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 3,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.333
+      }
+    },
+    {
+      "seed": 8,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 220,
+      "emergent_events_ctrl": 251,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.6,
+      "counterfactual_action_div": 0.333,
+      "with_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "fall_asleep"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 3,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.333
+      }
+    },
+    {
+      "seed": 9,
+      "verdict": "C_propagating",
+      "emergent_events_tr": 215,
+      "emergent_events_ctrl": 246,
+      "cross_layer_ticks_tr": 7,
+      "cross_layer_ticks_ctrl": 7,
+      "post_miracle_div": 0.5,
+      "post_accusation_div": 0.5,
+      "counterfactual_action_div": 0.333,
+      "with_tr_top5": [
+        "follow_closely",
+        "stay_awake",
+        "discuss_with_disciples",
+        "follow_at_distance",
+        "watch_quietly"
+      ],
+      "without_tr_top5": [
+        "follow_closely",
+        "discuss_with_disciples",
+        "stay_awake",
+        "watch_quietly",
+        "withdraw_in_fear"
+      ],
+      "scores": {
+        "propagation": 1,
+        "persistence": 3,
+        "restructuring": 3,
+        "divergence": 3,
+        "boundedness": 3,
+        "readability": 3,
+        "propagation_ratio": 0.07,
+        "counterfactual_action_divergence": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "iter": 50,
+  "n_seeds": 10,
+  "n_ticks": 200,
+  "results": {
+    "accusation": {
+      "scenario": "accusation",
+      "active_obs": 60,
+      "rise_fall": 32,
+      "monotone_rise": 27,
+      "flat": 40,
+      "other": 1,
+      "rise_fall_fraction": 0.533,
+      "mean_drop": 7.73,
+      "mean_confess_per_seed": 33.9,
+      "mean_cycles_per_agent": 3.58,
+      "mean_final_shame_climate": 0.681
+    },
+    "scarcity": {
+      "scenario": "scarcity",
+      "active_obs": 40,
+      "rise_fall": 37,
+      "monotone_rise": 2,
+      "flat": 80,
+      "other": 1,
+      "rise_fall_fraction": 0.925,
+      "mean_drop": 7.68,
+      "mean_confess_per_seed": 99.6,
+      "mean_cycles_per_agent": 3.83,
+      "mean_final_shame_climate": 0.334
+    },
+    "sacred": {
+      "scenario": "sacred",
+      "active_obs": 50,
+      "rise_fall": 43,
+      "monotone_rise": 7,
+      "flat": 30,
+      "other": 0,
+      "rise_fall_fraction": 0.86,
+      "mean_drop": 6.95,
+      "mean_confess_per_seed": 47.7,
+      "mean_cycles_per_agent": 6.32,
+      "mean_final_shame_climate": 0.327
+    },
+    "private_crisis": {
+      "scenario": "private_crisis",
+      "active_obs": 80,
+      "rise_fall": 0,
+      "monotone_rise": 0,
+      "flat": 0,
+      "other": 80,
+      "rise_fall_fraction": 0.0,
+      "mean_drop": 0.0,
+      "mean_confess_per_seed": 0,
+      "mean_cycles_per_agent": 0,
+      "mean_final_shame_climate": 0.0
+    }
+  },
+  "iter36_comparison": {
+    "accusation": 0.6,
+    "scarcity": 0.963,
+    "sacred": 0.91
+  },
+  "scenarios_stable_within_10pp": 3
+}

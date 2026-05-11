@@ -1,0 +1,59 @@
+=== PROBE P8_ANNOTATED (annotated supplement) ===
+
+[Annotated headline summary]
+  Final summary:  MIXED
+
+  Cohort outcomes:
+    [L3 cohort, 4 agents]:  recovery: peak~10.0 → final~2.6
+    [L1 cohort, 2 agents]:  saturation: peak~10.0 → final~8.1 (stuck)
+    [L2 cohort, 4 agents]:  no shame accumulation
+
+  Pressure events + recovery actions:
+    Accusations: 2 fired (targets: disciple_follower, outsider)
+    Recovery actions: 68 confessions, 38 forgiveness rumors emitted
+
+  World-level dynamics:
+    Crowd blame total:   peak 1.7 at t=33 → final 0.1
+
+============================================================
+
+Agents: A1=follower, A2=follower, A3=follower, A4=authority, A5=enforcer, A6=crowd, A7=crowd, A8=crowd, A9=family, A10=outsider
+Locations: L1, L2, L3
+
+--- Event log (grouped by 50-tick windows) ---
+  (showing first 30 of 68 confessions; total in headline)
+  --- Tick 0-49 ---
+  t=  3  accusation against disciple_follower
+  t=  7  accusation against outsider
+  t= 33  confession by A5 (enforcer)
+  t= 34  confession by A6 (crowd)
+  t= 34  confession by A7 (crowd)
+  t= 35  confession by A1 (follower)
+  t= 35  confession by A4 (authority)
+  t= 35  confession by A8 (crowd)
+  t= 36  confession by A6 (crowd)
+  t= 36  confession by A9 (family)
+  t= 37  confession by A9 (family)
+  t= 39  confession by A7 (crowd)
+  t= 41  confession by A2 (follower)
+  t= 41  confession by A3 (follower)
+  t= 41  confession by A6 (crowd)
+  t= 42  confession by A1 (follower)
+  t= 42  confession by A6 (crowd)
+  t= 42  confession by A9 (family)
+  t= 43  confession by A1 (follower)
+  t= 45  confession by A5 (enforcer)
+  t= 48  confession by A4 (authority)
+  t= 49  confession by A5 (enforcer)
+  --- Tick 50-99 ---
+  t= 50  confession by A1 (follower)
+  t= 50  confession by A3 (follower)
+  t= 51  confession by A5 (enforcer)
+  t= 52  confession by A3 (follower)
+  t= 52  confession by A8 (crowd)
+  t= 54  confession by A6 (crowd)
+  t= 55  confession by A4 (authority)
+  t= 57  confession by A1 (follower)
+  --- Tick 100-149 ---
+  t=101  confession by A6 (crowd)
+  t=102  confession by A5 (enforcer)

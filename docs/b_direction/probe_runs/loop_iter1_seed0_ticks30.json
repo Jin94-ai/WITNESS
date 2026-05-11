@@ -1,0 +1,93 @@
+{
+  "iter": 1,
+  "structural_change": "role_transition mechanism",
+  "seed": 0,
+  "n_ticks": 30,
+  "verdict": "C_propagating",
+  "scores": {
+    "propagation": 1,
+    "persistence": 2,
+    "restructuring": 2,
+    "divergence": 1,
+    "boundedness": 3,
+    "readability": 3,
+    "propagation_ratio": 0.233,
+    "counterfactual_action_divergence": 0.0
+  },
+  "with_transition": {
+    "motifs": {
+      "remain_present": 232,
+      "observe_wait": 7,
+      "withdraw": 1
+    },
+    "actions": {
+      "follow_closely": 82,
+      "discuss_with_disciples": 80,
+      "stay_awake": 70,
+      "watch_quietly": 7,
+      "follow_at_distance": 1
+    },
+    "emergent_events": 80,
+    "cross_layer_ticks": 7,
+    "total_ticks": 30,
+    "transitioned_agents": [
+      "agent_01",
+      "agent_02"
+    ],
+    "post_miracle_divergence": 0.3333333333333333,
+    "post_accusation_divergence": 0.25,
+    "post_miracle_actions_treat": {
+      "discuss_with_disciples": 9,
+      "follow_closely": 6,
+      "stay_awake": 5
+    },
+    "post_miracle_actions_ctrl": {
+      "follow_closely": 6,
+      "stay_awake": 4
+    },
+    "post_accusation_actions_treat": {
+      "stay_awake": 11,
+      "discuss_with_disciples": 7,
+      "follow_closely": 5,
+      "watch_quietly": 1
+    },
+    "post_accusation_actions_ctrl": {
+      "discuss_with_disciples": 5,
+      "follow_closely": 4,
+      "stay_awake": 3
+    }
+  },
+  "without_transition": {
+    "motifs": {
+      "remain_present": 227,
+      "observe_wait": 10,
+      "withdraw": 3
+    },
+    "actions": {
+      "follow_closely": 96,
+      "discuss_with_disciples": 70,
+      "stay_awake": 61,
+      "watch_quietly": 10,
+      "follow_at_distance": 2,
+      "withdraw_in_fear": 1
+    },
+    "emergent_events": 71,
+    "cross_layer_ticks": 7,
+    "total_ticks": 30,
+    "transitioned_agents": [],
+    "post_miracle_divergence": 1.0,
+    "post_accusation_divergence": 1.0,
+    "post_miracle_actions_treat": {},
+    "post_miracle_actions_ctrl": {
+      "discuss_with_disciples": 3,
+      "follow_closely": 5,
+      "stay_awake": 2
+    },
+    "post_accusation_actions_treat": {},
+    "post_accusation_actions_ctrl": {
+      "discuss_with_disciples": 6,
+      "stay_awake": 5,
+      "follow_closely": 1
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "demo_run_summary_v1",
+  "anchor_id": "peter_scarcity_baseline",
+  "seed": 0,
+  "ticks": 200,
+  "agents": 12,
+  "groups": 3,
+  "moments": 105,
+  "links": 1727,
+  "threads": 4,
+  "candidates": 4,
+  "seeds": 4,
+  "audit_pass": 4,
+  "audit_fail": 0,
+  "strong_viable": 1,
+  "viable_with_gaps": 3,
+  "runtime_seconds": 0.35
+}

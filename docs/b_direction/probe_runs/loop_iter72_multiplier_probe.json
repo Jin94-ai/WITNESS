@@ -1,0 +1,93 @@
+{
+  "iter": 72,
+  "pyhash": "0",
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "noise_stdev": 0.388,
+  "conditions": [
+    "A_production",
+    "B_equal_0.3",
+    "C_inverted",
+    "D_equal_0.4",
+    "E_equal_0.2"
+  ],
+  "results": {
+    "A_production": {
+      "condition": "A_production",
+      "multipliers": [
+        0.4,
+        0.3,
+        0.2
+      ],
+      "total_mass": 0.8999999999999999,
+      "n_active": 30,
+      "rev_mean": 3.17,
+      "peak_shame": 9.32,
+      "final_shame": 5.96,
+      "final_guilt": 6.38,
+      "final_fear": 5.79
+    },
+    "B_equal_0.3": {
+      "condition": "B_equal_0.3",
+      "multipliers": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "total_mass": 0.8999999999999999,
+      "n_active": 30,
+      "rev_mean": 2.93,
+      "peak_shame": 9.4,
+      "final_shame": 4.99,
+      "final_guilt": 4.81,
+      "final_fear": 4.94
+    },
+    "C_inverted": {
+      "condition": "C_inverted",
+      "multipliers": [
+        0.2,
+        0.3,
+        0.4
+      ],
+      "total_mass": 0.9,
+      "n_active": 30,
+      "rev_mean": 3.6,
+      "peak_shame": 9.75,
+      "final_shame": 5.13,
+      "final_guilt": 5.07,
+      "final_fear": 4.9
+    },
+    "D_equal_0.4": {
+      "condition": "D_equal_0.4",
+      "multipliers": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "total_mass": 1.2000000000000002,
+      "n_active": 30,
+      "rev_mean": 3.5,
+      "peak_shame": 9.36,
+      "final_shame": 5.0,
+      "final_guilt": 4.75,
+      "final_fear": 5.03
+    },
+    "E_equal_0.2": {
+      "condition": "E_equal_0.2",
+      "multipliers": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "total_mass": 0.6000000000000001,
+      "n_active": 30,
+      "rev_mean": 3.53,
+      "peak_shame": 9.41,
+      "final_shame": 5.88,
+      "final_guilt": 6.02,
+      "final_fear": 5.34
+    }
+  },
+  "verdict_c": "C matches A -> cycle rate invariant to field redistribution. Dominance is PARAMETER-NEUTRAL (total mass matters, not distribution).",
+  "summary": "Indeterminate; both tests weak."
+}

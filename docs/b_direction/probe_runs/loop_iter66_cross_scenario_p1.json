@@ -1,0 +1,90 @@
+{
+  "iter": 66,
+  "n_seeds": 5,
+  "n_ticks": 200,
+  "scenarios": [
+    "accusation",
+    "scarcity",
+    "sacred"
+  ],
+  "results": {
+    "accusation": {
+      "A": {
+        "scenario": "accusation",
+        "fg_on": true,
+        "n_active_agents": 30,
+        "mean_reversals_per_agent": 3.23,
+        "max_reversals": 9,
+        "mean_peak_shame": 9.65,
+        "mean_final_shame": 4.17,
+        "mean_confess_per_seed": 32.2,
+        "mean_forgiveness_events_per_seed": 32.2
+      },
+      "B": {
+        "scenario": "accusation",
+        "fg_on": false,
+        "n_active_agents": 30,
+        "mean_reversals_per_agent": 0,
+        "max_reversals": 0,
+        "mean_peak_shame": 10.0,
+        "mean_final_shame": 10.0,
+        "mean_confess_per_seed": 108.2,
+        "mean_forgiveness_events_per_seed": 108.2
+      }
+    },
+    "scarcity": {
+      "A": {
+        "scenario": "scarcity",
+        "fg_on": true,
+        "n_active_agents": 20,
+        "mean_reversals_per_agent": 4.85,
+        "max_reversals": 6,
+        "mean_peak_shame": 9.66,
+        "mean_final_shame": 4.83,
+        "mean_confess_per_seed": 83.8,
+        "mean_forgiveness_events_per_seed": 83.8
+      },
+      "B": {
+        "scenario": "scarcity",
+        "fg_on": false,
+        "n_active_agents": 45,
+        "mean_reversals_per_agent": 0,
+        "max_reversals": 0,
+        "mean_peak_shame": 10.0,
+        "mean_final_shame": 10.0,
+        "mean_confess_per_seed": 267,
+        "mean_forgiveness_events_per_seed": 267
+      }
+    },
+    "sacred": {
+      "A": {
+        "scenario": "sacred",
+        "fg_on": true,
+        "n_active_agents": 25,
+        "mean_reversals_per_agent": 5.68,
+        "max_reversals": 10,
+        "mean_peak_shame": 8.99,
+        "mean_final_shame": 2.54,
+        "mean_confess_per_seed": 54.8,
+        "mean_forgiveness_events_per_seed": 54.8
+      },
+      "B": {
+        "scenario": "sacred",
+        "fg_on": false,
+        "n_active_agents": 35,
+        "mean_reversals_per_agent": 0,
+        "max_reversals": 0,
+        "mean_peak_shame": 10.0,
+        "mean_final_shame": 10.0,
+        "mean_confess_per_seed": 214.6,
+        "mean_forgiveness_events_per_seed": 214.6
+      }
+    }
+  },
+  "scenario_verdicts": {
+    "accusation": "P1 holds (Phase 2a drives cycles)",
+    "scarcity": "P1 holds (Phase 2a drives cycles)",
+    "sacred": "P1 holds (Phase 2a drives cycles)"
+  },
+  "cross_scenario_verdict": "Phase 2a is universal cycle mechanism: P1 holds in 3/3 scenarios with cycles; 0 had no baseline cycles."
+}
