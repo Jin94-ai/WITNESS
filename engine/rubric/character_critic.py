@@ -1,16 +1,29 @@
-"""Character Critic -- Axis 1 of 4-axis rubric.
+"""Character Consistency Critic — Axis 1 of re-designed 4-axis rubric.
 
-Spec §6.2 verbatim:
-    축 1: Character Consistency
-    - 측정: 충동성 패턴, 관계 반응, 두려움-용기 전환
+**Phase H.1 재설계 (2026-04-23, Lee 지시).**
 
-v3 discovery definitions §3.2 measurement methods:
-    (1) impulsivity_pattern_match
-    (2) relationship_specific_response_check
-    (3) fear_courage_oscillation
+Rule #22: Character consistency는 smoothness가 아니다.
+  - Fear oscillation / 급격한 장면 전환 자체를 impulsivity penalty로 쓰지 않음.
+  - "매끈함" 금지. "Scene-appropriate response family에 속하는가"로 측정.
 
-Rule #1: this critic is person-agnostic. Content provides the baseline
-patterns (scenario-specific impulsivity-score baseline etc.).
+Lee 정의 (Phase H spec §5.1):
+  character_consistency = target-aware relation 일관성
+                        + 감정/의지의 장기 연속성
+                        + recovery plausibility
+                        + 핵심 장면 이후 성향 붕괴 없음
+
+구체 축 3개:
+  (1) relation_stability: loyalty/love/trust to primary_figure의 unexplained drop 없음
+  (2) identity_retention: resolve + 핵심 관계 값이 trajectory 후반부에도 유지
+  (3) recovery_plausibility: guilt/grief spike 후 repentance family 응답 있음
+
+scene-appropriate response 측정은 별도 critic
+(`engine/rubric/scene_response_critic.py`).
+
+기존 impulsivity_score / oscillation_score는 삭제.
+relationship_coherence는 scene_response_critic로 이동.
+
+Rule #1: 이 critic은 person-agnostic. primary_figure 등 generic key만 사용.
 """
 
 from __future__ import annotations
@@ -21,98 +34,195 @@ from typing import Any
 
 @dataclass
 class CharacterReport:
-    impulsivity_score: float       # 0-1 (higher = more impulsivity patterns)
-    relationship_coherence: float  # 0-1 (higher = matches expected pattern)
-    oscillation_score: float       # 0-1 (higher = more fear-courage oscillation)
-    composite: float               # weighted mean of above
+    relation_stability: float      # 0-1
+    identity_retention: float      # 0-1
+    recovery_plausibility: float   # 0-1
+    composite: float               # display only — decision은 passed_minimum_signature 사용 (review §2.3)
     notes: list[str]
+    # Phase 3.05 rubric review §2.3 P1: minimum gate (단순 평균이 약한 축 덮는 문제 회피)
+    passed_minimum_signature: bool = True   # 모든 축이 min threshold 이상이면 True
+    weak_axes: tuple[str, ...] = ()         # min threshold 미만 축 명시
+    calibration_status: str = "uncalibrated_phase3_placeholder"
+
+
+REPENTANCE_FAMILY = frozenset({
+    "weep", "confess", "pray", "withdraw_in_fear",
+})
 
 
 class CharacterCritic:
-    """Measure trajectory's character consistency against a baseline profile.
+    """Measure trajectory's character consistency without smoothness bias.
 
-    The baseline profile (content-provided) specifies:
-        impulsivity_threshold: min rapid-switch frequency
-        relationship_patterns: {event_cat: expected_action_cat}
-        oscillation_target: expected sign-change frequency for a fear-like variable
+    Phase 3.05 rubric review §2.3 P1:
+        composite은 *display only* — 단순 평균은 약한 축의 신호를 덮어버린다.
+        decision은 `passed_minimum_signature` (axis별 minimum gate).
+
+    Args:
+        unexplained_drop_threshold: If loyalty/love/trust to primary_figure
+            drops by > this value within 1 tick without a canonical event,
+            counts as instability.
+        minimum_final_identity: At the end of trajectory, the max of
+            loyalty[pf], love[pf], trust[pf] should be ≥ this value.
+        repentance_response_window: ticks after guilt/grief spike to look
+            for repentance-family action.
+        relation_stability_min: minimum gate for relation_stability axis (uncalibrated).
+        identity_retention_min: minimum gate for identity_retention axis (uncalibrated).
+        recovery_plausibility_min: minimum gate for recovery_plausibility axis (uncalibrated).
     """
 
     def __init__(
         self,
         *,
-        impulsivity_threshold: float = 0.1,
-        relationship_patterns: dict[str, set[str]] | None = None,
-        oscillation_target: float = 0.15,
+        unexplained_drop_threshold: float = 2.0,
+        minimum_final_identity: float = 4.0,
+        repentance_response_window: int = 5,
+        spike_threshold: float = 2.0,
+        # Phase 3.05 review §2.3 P1: minimum gate per axis (uncalibrated placeholder)
+        relation_stability_min: float = 0.5,
+        identity_retention_min: float = 0.5,
+        recovery_plausibility_min: float = 0.3,
     ) -> None:
-        self._imp_t = impulsivity_threshold
-        self._rel_patterns = relationship_patterns or {}
-        self._osc_target = oscillation_target
+        self._drop_t = unexplained_drop_threshold
+        self._min_final = minimum_final_identity
+        self._repent_window = repentance_response_window
+        self._spike_t = spike_threshold
+        # minimum gate thresholds
+        self._rs_min = relation_stability_min
+        self._ir_min = identity_retention_min
+        self._rp_min = recovery_plausibility_min
 
-    def _impulsivity(self, records: list[dict[str, Any]]) -> tuple[float, str]:
-        """Count consecutive direction-flip patterns.
+    # -----------------------------------------------------------------
+    # (1) relation_stability
+    # -----------------------------------------------------------------
 
-        Heuristic: detect 'A → (large state change) → B' where A and B are
-        opposite-category actions in close succession. Uses consecutive
-        different-kind action runs as a proxy.
-        """
+    def _relation_stability(
+        self, records: list[dict[str, Any]],
+    ) -> tuple[float, str]:
+        """Penalize large unexplained drops in loyalty[primary_figure] /
+        love[primary_figure] / trust[primary_figure] across adjacent ticks."""
         if len(records) < 2:
-            return 0.0, "trajectory too short for impulsivity"
-        flips = 0
+            return 1.0, "trajectory too short"
+        drops = 0
+        windows = 0
         for i in range(len(records) - 1):
-            a = records[i].get("action_kind", "")
-            b = records[i + 1].get("action_kind", "")
-            if a and b and a != b:
-                flips += 1
-        rate = flips / max(1, len(records) - 1)
-        score = min(1.0, rate / max(0.01, self._imp_t))
-        return score, f"flip_rate={rate:.3f} vs threshold={self._imp_t:.3f}"
+            s0 = records[i].get("state", {})
+            s1 = records[i + 1].get("state", {})
+            # "love" may be flattened to a scalar (max of dict); handle both.
+            for key in ("loyalty_pf", "love", "trust_pf"):
+                if key in s0 and key in s1:
+                    v0, v1 = float(s0[key]), float(s1[key])
+                    windows += 1
+                    if v0 - v1 > self._drop_t:
+                        # Large drop. Consider it "explained" only if a
+                        # denial-like action occurred at this boundary.
+                        action = records[i + 1].get("action_id")
+                        if action != "deny":
+                            drops += 1
+            # Fallback: use "love" scalar
+            if "love" in s0 and "love" in s1:
+                v0, v1 = float(s0["love"]), float(s1["love"])
+                windows += 1
+                if v0 - v1 > self._drop_t:
+                    action = records[i + 1].get("action_id")
+                    if action != "deny":
+                        drops += 1
+        if windows == 0:
+            return 1.0, "no relation keys observable"
+        rate = drops / max(1, windows)
+        score = max(0.0, 1.0 - rate * 3.0)  # every 1/3 drop rate → score 0
+        return score, f"drops={drops}/{windows} (rate {rate:.3f})"
 
-    def _relationship(self, records: list[dict[str, Any]]) -> tuple[float, str]:
-        """For each (event_category, action_category) pair, check that the
-        action belongs to the expected set for that event."""
-        if not self._rel_patterns:
-            return 1.0, "no relationship patterns provided"
-        matches = 0
-        total = 0
-        for r in records:
-            ec = r.get("event_category")
-            ak = r.get("action_kind")
-            if ec is None or ak is None:
-                continue
-            total += 1
-            expected = self._rel_patterns.get(ec)
-            if expected is None or ak in expected:
-                matches += 1
-        if total == 0:
-            return 1.0, "no typed records"
-        score = matches / total
-        return score, f"{matches}/{total} relationship-consistent"
+    # -----------------------------------------------------------------
+    # (2) identity_retention
+    # -----------------------------------------------------------------
 
-    def _oscillation(self, records: list[dict[str, Any]]) -> tuple[float, str]:
-        """Count sign changes in a fear-like variable across ticks."""
-        fear_series = [r.get("fear_like") for r in records if r.get("fear_like") is not None]
-        if len(fear_series) < 3:
-            return 0.0, "fear series too short"
-        # Sign changes in first-difference
-        diffs = [fear_series[i + 1] - fear_series[i] for i in range(len(fear_series) - 1)]
-        sign_changes = sum(
-            1 for i in range(len(diffs) - 1) if diffs[i] * diffs[i + 1] < 0
-        )
-        rate = sign_changes / max(1, len(diffs) - 1)
-        # Score = 1 if rate == target, drop off with |rate - target|
-        deviation = abs(rate - self._osc_target)
-        score = max(0.0, 1.0 - deviation * 3.0)
-        return score, f"osc_rate={rate:.3f} target={self._osc_target:.3f}"
+    def _identity_retention(
+        self, records: list[dict[str, Any]],
+    ) -> tuple[float, str]:
+        """Did the agent retain core identity markers by the end?"""
+        if not records:
+            return 1.0, "empty trajectory"
+        final = records[-1].get("state", {})
+        # Pick the best available signal of "primary relation"
+        candidates = []
+        for k in ("loyalty_pf", "love", "trust_pf"):
+            if k in final:
+                candidates.append(float(final[k]))
+        if not candidates:
+            return 1.0, "no relation keys in final state"
+        best = max(candidates)
+        if best >= self._min_final:
+            return 1.0, f"final_pf={best:.2f} ≥ {self._min_final}"
+        # Linearly scale below threshold
+        score = max(0.0, best / self._min_final)
+        return score, f"final_pf={best:.2f} < {self._min_final}"
+
+    # -----------------------------------------------------------------
+    # (3) recovery_plausibility
+    # -----------------------------------------------------------------
+
+    def _recovery_plausibility(
+        self, records: list[dict[str, Any]],
+    ) -> tuple[float, str]:
+        """After a guilt or grief spike ≥ spike_threshold, check for at
+        least one repentance-family action within the response window."""
+        if len(records) < 2:
+            return 1.0, "trajectory too short"
+        # Detect spikes in guilt or grief (from state)
+        def _get(state: dict, key: str) -> float:
+            v = state.get(key, 0.0)
+            if isinstance(v, dict):
+                return max(v.values()) if v else 0.0
+            return float(v)
+
+        spikes_found = 0
+        spikes_answered = 0
+        for i in range(len(records) - 1):
+            s0 = records[i].get("state", {})
+            s1 = records[i + 1].get("state", {})
+            for key in ("guilt", "grief"):
+                v0 = _get(s0, key)
+                v1 = _get(s1, key)
+                if v1 - v0 >= self._spike_t:
+                    spikes_found += 1
+                    # Look for repentance in next N ticks
+                    end = min(len(records), i + 1 + self._repent_window)
+                    window_actions = [
+                        records[j].get("action_id") for j in range(i + 1, end)
+                    ]
+                    if any(a in REPENTANCE_FAMILY for a in window_actions):
+                        spikes_answered += 1
+        if spikes_found == 0:
+            return 1.0, "no guilt/grief spikes detected"
+        score = spikes_answered / spikes_found
+        return score, f"{spikes_answered}/{spikes_found} spikes answered"
+
+    # -----------------------------------------------------------------
+    # Top-level
+    # -----------------------------------------------------------------
 
     def evaluate(self, records: list[dict[str, Any]]) -> CharacterReport:
-        imp, imp_note = self._impulsivity(records)
-        rel, rel_note = self._relationship(records)
-        osc, osc_note = self._oscillation(records)
-        composite = (imp + rel + osc) / 3.0
+        rs, rs_note = self._relation_stability(records)
+        ir, ir_note = self._identity_retention(records)
+        rp, rp_note = self._recovery_plausibility(records)
+        composite = (rs + ir + rp) / 3.0
+
+        # Phase 3.05 review §2.3 P1: minimum gate per axis (composite 평균이 약한 축 덮는 문제 회피)
+        weak: list[str] = []
+        if rs < self._rs_min:
+            weak.append("relation_stability")
+        if ir < self._ir_min:
+            weak.append("identity_retention")
+        if rp < self._rp_min:
+            weak.append("recovery_plausibility")
+        passed = len(weak) == 0
+
         return CharacterReport(
-            impulsivity_score=imp,
-            relationship_coherence=rel,
-            oscillation_score=osc,
+            relation_stability=rs,
+            identity_retention=ir,
+            recovery_plausibility=rp,
             composite=composite,
-            notes=[imp_note, rel_note, osc_note],
+            notes=[rs_note, ir_note, rp_note],
+            passed_minimum_signature=passed,
+            weak_axes=tuple(weak),
         )
