@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "scenario": "peter_novel_candidate",
+    "purpose": "Rubric demo — CHARACTER_CONSISTENT_NOVEL_CANDIDATE 분류 시연 fixture",
+    "notes": [
+      "이 trace는 *합성*이다. 정경 reproduction이 아니라 *character-consistent alternative*",
+      "베드로 특성 (loyalty/fear oscillation/repentance)을 유지하되 정경 sequence에서 약간 일탈",
+      "Phase 3.05 review §2.1 P0 — CANDIDATE class 시연용 (truth claim 0)",
+      "Non-Claims"
+    ],
+    "expected_discovery_class": "character_consistent_novel_candidate or canon_compatible_character_drift"
+  },
+  "records": [
+    {"tick": 1, "action_id": "follow_closely", "scene_id": "sacred_meal",
+     "state": {"loyalty_pf": 9.0, "love": 8.5, "fear": 1.0, "hope": 7.5},
+     "event_in": ["sacred_meal"], "event_triggered": false},
+    {"tick": 2, "action_id": "pray", "scene_id": "prayer_invitation",
+     "state": {"loyalty_pf": 9.0, "love": 8.5, "fear": 1.5, "hope": 7.0},
+     "event_in": ["prayer_call"], "event_triggered": true},
+    {"tick": 3, "action_id": "stay_awake", "scene_id": "prayer_invitation",
+     "state": {"loyalty_pf": 9.0, "love": 8.5, "fear": 2.0, "hope": 6.5},
+     "event_in": [], "event_triggered": false},
+    {"tick": 4, "action_id": "draw_sword", "scene_id": "guard_approaches",
+     "state": {"loyalty_pf": 9.5, "love": 8.5, "fear": 5.0, "hope": 5.0, "anger": 5.0},
+     "event_in": ["guard_approaches"], "event_triggered": true},
+    {"tick": 5, "action_id": "follow_closely", "scene_id": "ally_departure",
+     "state": {"loyalty_pf": 8.0, "love": 8.0, "fear": 7.0, "hope": 3.0},
+     "event_in": ["ally_departure"], "event_triggered": true},
+    {"tick": 6, "action_id": "pray", "scene_id": "primary_figure_suffering_visible",
+     "state": {"loyalty_pf": 7.0, "love": 8.5, "fear": 6.0, "hope": 3.5, "grief": 4.0},
+     "event_in": ["sorrow_witnessed"], "event_triggered": true},
+    {"tick": 7, "action_id": "weep", "scene_id": "primary_figure_suffering_visible",
+     "state": {"loyalty_pf": 7.0, "love": 8.5, "fear": 5.0, "hope": 3.0, "grief": 7.0, "guilt": 2.0},
+     "event_in": [], "event_triggered": false},
+    {"tick": 8, "action_id": "confess", "scene_id": "restoration_moment",
+     "state": {"loyalty_pf": 8.0, "love": 9.0, "fear": 2.0, "hope": 6.0, "guilt": 4.0, "grief": 5.0},
+     "event_in": ["forgiveness_offered"], "event_triggered": true},
+    {"tick": 9, "action_id": "assert_loyalty", "scene_id": "restoration_moment",
+     "state": {"loyalty_pf": 9.5, "love": 9.5, "fear": 1.0, "hope": 7.5, "guilt": 1.5, "grief": 3.0},
+     "event_in": [], "event_triggered": false}
+  ]
+}

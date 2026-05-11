@@ -1,0 +1,131 @@
+{
+  "discovery_class": "not_discovery_incoherent",
+  "character": {
+    "relation_stability": 1.0,
+    "identity_retention": 0.75,
+    "recovery_plausibility": 1.0,
+    "composite": 0.9166666666666666,
+    "notes": [
+      "drops=0/4 (rate 0.000)",
+      "final_pf=3.00 < 4.0",
+      "2/2 spikes answered"
+    ],
+    "passed_minimum_signature": true,
+    "weak_axes": [],
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "scene_response": {
+    "fit_rate": 1.0,
+    "n_scenes_observed": 0,
+    "per_scene_detail": [],
+    "notes": [
+      "no recognized scenes in trajectory"
+    ]
+  },
+  "context_break": {
+    "affordance_violations": 2,
+    "scene_mismatch_count": 0,
+    "motive_gap_count": 2,
+    "total_actions": 5,
+    "break_rate": 0.8,
+    "is_context_coherent": false,
+    "notes": [
+      "afford=2, scene=0, motive=2",
+      "break_rate=0.800 (broken)"
+    ],
+    "detail": [
+      {
+        "tick": 3,
+        "action": "draw_sword",
+        "violations": [
+          {
+            "type": "affordance",
+            "reason": "no active threat within 2 ticks"
+          },
+          {
+            "type": "motive_gap",
+            "reason": "draw_sword but anger=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "action": "deny",
+        "violations": [
+          {
+            "type": "affordance",
+            "reason": "no accusation within 2 ticks"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "action": "weep",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "weep but grief_or_guilt=0.00 < 2.0"
+          }
+        ]
+      }
+    ]
+  },
+  "canon": {
+    "hard_violations": [],
+    "soft_drift": 2.0,
+    "is_canon_valid": true,
+    "is_canon_reproducing": true,
+    "soft_deviations": [],
+    "soft_compatibility_score": 0.8,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "hard_pass": true
+  },
+  "causal": {
+    "unexplained_jumps": 4,
+    "mean_jump_size": 196.5,
+    "smoothness_score": 0.0,
+    "notes": [
+      "total_ticks=5",
+      "unexplained_jumps=4",
+      "explained_ratio=0.000",
+      "passed_causal_gate=False"
+    ],
+    "explained_transition_ratio": 0.0,
+    "total_transitions": 4,
+    "passed_causal_gate": false,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "pressure_action_alignment": 1.0,
+    "alignment_evaluated": false,
+    "aligned_actions": 0,
+    "misaligned_actions": 0,
+    "unmapped_actions": 0,
+    "misaligned_examples": []
+  },
+  "novelty": {
+    "response_family_variation": 0.5,
+    "branching_coherence": 1.0,
+    "action_diversity": 1.0,
+    "structured_deviation": 0.25,
+    "novelty_band": "meaningful",
+    "notes": [
+      "no recognizable scenes",
+      "explained=4/4 action changes",
+      "entropy=1.609 norm=1.000 n_unique=5",
+      "band=meaningful (structured_deviation=0.250)"
+    ],
+    "changed_axes": [
+      "action_diversity"
+    ],
+    "interpretation": "구조적으로 다른 trajectory — discovery 후보 가능 (변화 axis: action_diversity)",
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "canon_distance": 0.25,
+    "copy_like": false,
+    "is_copy": false,
+    "is_noise": false,
+    "noise_like": false,
+    "structured_difference_score": 0.25
+  },
+  "justification": [
+    "Step 3: causal.smoothness_score=0.000 < 0.4 (uncalibrated, unexplained_jumps=4) → NOT_DISCOVERY_INCOHERENT"
+  ]
+}

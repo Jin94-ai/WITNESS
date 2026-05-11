@@ -1,0 +1,137 @@
+{
+  "discovery_class": "canonical_reproduction",
+  "character": {
+    "relation_stability": 1.0,
+    "identity_retention": 1.0,
+    "recovery_plausibility": 1.0,
+    "composite": 1.0,
+    "notes": [
+      "drops=0/27 (rate 0.000)",
+      "final_pf=9.50 ≥ 4.0",
+      "3/3 spikes answered"
+    ],
+    "passed_minimum_signature": true,
+    "weak_axes": [],
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "scene_response": {
+    "fit_rate": 1.0,
+    "n_scenes_observed": 4,
+    "per_scene_detail": [
+      {
+        "tick": 5,
+        "event_in": "guard_approaches",
+        "action": "draw_sword",
+        "fit": true,
+        "family_size": 5
+      },
+      {
+        "tick": 6,
+        "event_in": "ally_departure",
+        "action": "follow_at_distance",
+        "fit": true,
+        "family_size": 4
+      },
+      {
+        "tick": 7,
+        "event_in": "public_accusation",
+        "action": "deny",
+        "fit": true,
+        "family_size": 6
+      },
+      {
+        "tick": 9,
+        "event_in": "forgiveness_offered",
+        "action": "confess",
+        "fit": true,
+        "family_size": 4
+      }
+    ],
+    "notes": [
+      "scenes=4, fits=4 (rate 1.000)",
+      "threshold pass: True"
+    ]
+  },
+  "context_break": {
+    "affordance_violations": 0,
+    "scene_mismatch_count": 0,
+    "motive_gap_count": 1,
+    "total_actions": 10,
+    "break_rate": 0.1,
+    "is_context_coherent": true,
+    "notes": [
+      "afford=0, scene=0, motive=1",
+      "break_rate=0.100 (coherent)"
+    ],
+    "detail": [
+      {
+        "tick": 5,
+        "action": "draw_sword",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "draw_sword but fear_ratio=0.44 < 0.7"
+          }
+        ]
+      }
+    ]
+  },
+  "canon": {
+    "hard_violations": [],
+    "soft_drift": 0.0,
+    "is_canon_valid": true,
+    "is_canon_reproducing": true,
+    "soft_deviations": [],
+    "soft_compatibility_score": 1.0,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "hard_pass": true
+  },
+  "causal": {
+    "unexplained_jumps": 0,
+    "mean_jump_size": 5.277777777777778,
+    "smoothness_score": 0.4722222222222222,
+    "notes": [
+      "total_ticks=10",
+      "unexplained_jumps=0",
+      "explained_ratio=1.000",
+      "passed_causal_gate=True"
+    ],
+    "explained_transition_ratio": 1.0,
+    "total_transitions": 9,
+    "passed_causal_gate": true,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "pressure_action_alignment": 1.0,
+    "alignment_evaluated": false,
+    "aligned_actions": 0,
+    "misaligned_actions": 0,
+    "unmapped_actions": 0,
+    "misaligned_examples": []
+  },
+  "novelty": {
+    "response_family_variation": 0.0,
+    "branching_coherence": 0.8888888888888888,
+    "action_diversity": 0.9999999999999998,
+    "structured_deviation": 0.0,
+    "novelty_band": "copy",
+    "notes": [
+      "in_family=4/4, variation=0.000",
+      "explained=8/9 action changes",
+      "entropy=2.303 norm=1.000 n_unique=10",
+      "band=copy (structured_deviation=0.000)"
+    ],
+    "changed_axes": [
+      "action_diversity"
+    ],
+    "interpretation": "정경 복사에 가까움 — meaningful difference 없음 (변화 axis: action_diversity)",
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "canon_distance": 0.0,
+    "copy_like": true,
+    "is_copy": true,
+    "is_noise": false,
+    "noise_like": false,
+    "structured_difference_score": 0.0
+  },
+  "justification": [
+    "Step 6: soft_drift=0.00 ≤ reproduction_threshold → §1 CANONICAL_REPRODUCTION"
+  ]
+}

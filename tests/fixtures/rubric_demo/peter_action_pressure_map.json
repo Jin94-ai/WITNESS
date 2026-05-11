@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "purpose": "Phase 3.05 review §2.5 P1 extended (cycle 16/20/22) — action→pressure map for Peter passion vocabulary",
+    "non_claims": [
+      "이 매핑은 *truth claim*이 아니다. action이 *반드시* 이 압력에서만 나온다는 주장이 아니라, '이 압력이 elevated일 때 이 action이 자연스럽게 설명된다'는 휴리스틱 정렬 신호.",
+      "uncalibrated — pressure_min_value (default 3.0)는 placeholder. Phase 5+ 실측 보정 필요.",
+      "engine은 person-agnostic — 이 매핑은 *content* 레이어 (orchestrator/script가 주입). CausalCritic은 map 없으면 alignment_evaluated=False로 gate 영향 0."
+    ],
+    "source": "tests/fixtures/rubric_demo/peter_*.json 의 action_id 인벤토리 (cycle 22)",
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "pray": ["fear", "grief", "hope"],
+  "discuss_with_disciples": ["confusion", "hope"],
+  "follow_closely": ["love", "hope", "loyalty_pf"],
+  "follow_at_distance": ["fear", "confusion"],
+  "fall_asleep": ["fatigue", "exhaustion_emotional"],
+  "stay_awake": ["fear", "love"],
+  "draw_sword": ["anger", "loyalty_pf", "fear"],
+  "flee": ["fear"],
+  "withdraw_in_fear": ["fear"],
+  "deny": ["fear", "confusion"],
+  "weep": ["grief", "guilt", "love"],
+  "confess": ["guilt", "grief", "hope", "love"],
+  "assert_loyalty": ["love", "loyalty_pf"],
+  "run_to_tomb": ["hope", "grief", "love"]
+}

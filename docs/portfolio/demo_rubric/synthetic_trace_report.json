@@ -1,0 +1,137 @@
+{
+  "discovery_class": "canon_compatible_character_drift",
+  "character": {
+    "relation_stability": 1.0,
+    "identity_retention": 1.0,
+    "recovery_plausibility": 1.0,
+    "composite": 1.0,
+    "notes": [
+      "drops=0/33 (rate 0.000)",
+      "final_pf=9.00 ≥ 4.0",
+      "3/3 spikes answered"
+    ],
+    "passed_minimum_signature": true,
+    "weak_axes": [],
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "scene_response": {
+    "fit_rate": 1.0,
+    "n_scenes_observed": 4,
+    "per_scene_detail": [
+      {
+        "tick": 5,
+        "event_in": "guard_approaches",
+        "action": "draw_sword",
+        "fit": true,
+        "family_size": 5
+      },
+      {
+        "tick": 6,
+        "event_in": "weapon_drawn_nearby",
+        "action": "flee",
+        "fit": true,
+        "family_size": 4
+      },
+      {
+        "tick": 8,
+        "event_in": "public_accusation",
+        "action": "deny",
+        "fit": true,
+        "family_size": 6
+      },
+      {
+        "tick": 12,
+        "event_in": "forgiveness_offered",
+        "action": "confess",
+        "fit": true,
+        "family_size": 4
+      }
+    ],
+    "notes": [
+      "scenes=4, fits=4 (rate 1.000)",
+      "threshold pass: True"
+    ]
+  },
+  "context_break": {
+    "affordance_violations": 0,
+    "scene_mismatch_count": 0,
+    "motive_gap_count": 1,
+    "total_actions": 12,
+    "break_rate": 0.08333333333333333,
+    "is_context_coherent": true,
+    "notes": [
+      "afford=0, scene=0, motive=1",
+      "break_rate=0.083 (coherent)"
+    ],
+    "detail": [
+      {
+        "tick": 5,
+        "action": "draw_sword",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "draw_sword but fear_ratio=0.40 < 0.7"
+          }
+        ]
+      }
+    ]
+  },
+  "canon": {
+    "hard_violations": [],
+    "soft_drift": 7.0,
+    "is_canon_valid": true,
+    "is_canon_reproducing": false,
+    "soft_deviations": [],
+    "soft_compatibility_score": 0.30000000000000004,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "hard_pass": true
+  },
+  "causal": {
+    "unexplained_jumps": 1,
+    "mean_jump_size": 5.045454545454546,
+    "smoothness_score": 0.49545454545454537,
+    "notes": [
+      "total_ticks=12",
+      "unexplained_jumps=1",
+      "explained_ratio=0.909",
+      "passed_causal_gate=True"
+    ],
+    "explained_transition_ratio": 0.9090909090909091,
+    "total_transitions": 11,
+    "passed_causal_gate": true,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "pressure_action_alignment": 1.0,
+    "alignment_evaluated": false,
+    "aligned_actions": 0,
+    "misaligned_actions": 0,
+    "unmapped_actions": 0,
+    "misaligned_examples": []
+  },
+  "novelty": {
+    "response_family_variation": 0.0,
+    "branching_coherence": 1.0,
+    "action_diversity": 0.9881090915741206,
+    "structured_deviation": 0.0,
+    "novelty_band": "copy",
+    "notes": [
+      "in_family=4/4, variation=0.000",
+      "explained=11/11 action changes",
+      "entropy=2.369 norm=0.988 n_unique=11",
+      "band=copy (structured_deviation=0.000)"
+    ],
+    "changed_axes": [
+      "action_diversity"
+    ],
+    "interpretation": "정경 복사에 가까움 — meaningful difference 없음 (변화 axis: action_diversity)",
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "canon_distance": 0.0,
+    "copy_like": true,
+    "is_copy": true,
+    "is_noise": false,
+    "noise_like": false,
+    "structured_difference_score": 0.0
+  },
+  "justification": [
+    "Step 8: canon-compatible, drift=7.00, novelty=copy, character[composite=1.00 (min 0.5)], scene_fit=1.00 (min 0.5) → §2 CANON_COMPATIBLE_CHARACTER_DRIFT"
+  ]
+}

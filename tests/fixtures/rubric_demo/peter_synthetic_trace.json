@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "scenario": "peter_synthetic",
+    "purpose": "Rubric runner demo fixture — fictional / synthetic trajectory",
+    "notes": [
+      "이 trace는 *합성*이다. 실제 simulation 출력이 아니며, 학습 데이터가 아니다.",
+      "Rubric Runner CLI의 demo 입력으로만 사용.",
+      "Phase 3.05 review §3 Non-Claims — truth claim 0건."
+    ]
+  },
+  "records": [
+    {
+      "tick": 1,
+      "action_id": "follow_closely",
+      "scene_id": "sacred_meal",
+      "state": {
+        "loyalty_pf": 9.0,
+        "love": 8.0,
+        "fear": 1.0,
+        "hope": 7.0,
+        "guilt": 0.0,
+        "grief": 0.0
+      },
+      "event_in": ["meal_started"],
+      "event_triggered": false
+    },
+    {
+      "tick": 2,
+      "action_id": "discuss_with_disciples",
+      "scene_id": "sacred_meal",
+      "state": {
+        "loyalty_pf": 9.0,
+        "love": 8.0,
+        "fear": 1.5,
+        "hope": 6.5,
+        "guilt": 0.0,
+        "grief": 0.0
+      },
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 3,
+      "action_id": "pray",
+      "scene_id": "prayer_invitation",
+      "state": {
+        "loyalty_pf": 9.0,
+        "love": 8.0,
+        "fear": 2.0,
+        "hope": 6.0,
+        "guilt": 0.0,
+        "grief": 0.0
+      },
+      "event_in": ["prayer_call"],
+      "event_triggered": true
+    },
+    {
+      "tick": 4,
+      "action_id": "fall_asleep",
+      "scene_id": "prayer_invitation",
+      "state": {
+        "loyalty_pf": 8.5,
+        "love": 8.0,
+        "fear": 2.5,
+        "hope": 5.0,
+        "guilt": 1.0,
+        "grief": 0.0,
+        "fatigue": 6.0
+      },
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 5,
+      "action_id": "draw_sword",
+      "scene_id": "guard_approaches",
+      "state": {
+        "loyalty_pf": 9.0,
+        "love": 8.0,
+        "fear": 6.0,
+        "hope": 4.0,
+        "guilt": 1.0,
+        "grief": 0.0,
+        "anger": 4.0
+      },
+      "event_in": ["guard_approaches"],
+      "event_triggered": true
+    },
+    {
+      "tick": 6,
+      "action_id": "flee",
+      "scene_id": "weapon_drawn_nearby",
+      "state": {
+        "loyalty_pf": 7.0,
+        "love": 7.0,
+        "fear": 8.0,
+        "hope": 2.0,
+        "guilt": 2.0,
+        "grief": 1.0
+      },
+      "event_in": ["weapon_drawn_nearby"],
+      "event_triggered": true
+    },
+    {
+      "tick": 7,
+      "action_id": "follow_at_distance",
+      "scene_id": "ally_departure",
+      "state": {
+        "loyalty_pf": 6.0,
+        "love": 7.0,
+        "fear": 7.0,
+        "hope": 1.5,
+        "guilt": 3.0,
+        "grief": 2.0
+      },
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 8,
+      "action_id": "deny",
+      "scene_id": "public_accusation",
+      "state": {
+        "loyalty_pf": 3.0,
+        "love": 6.0,
+        "fear": 8.5,
+        "hope": 1.0,
+        "guilt": 6.0,
+        "grief": 3.0
+      },
+      "event_in": ["public_accusation"],
+      "event_triggered": true
+    },
+    {
+      "tick": 9,
+      "action_id": "weep",
+      "scene_id": "eye_contact",
+      "state": {
+        "loyalty_pf": 3.0,
+        "love": 7.0,
+        "fear": 5.0,
+        "hope": 1.5,
+        "guilt": 9.0,
+        "grief": 8.0
+      },
+      "event_in": ["eye_contact_made"],
+      "event_triggered": true
+    },
+    {
+      "tick": 10,
+      "action_id": "withdraw_in_fear",
+      "scene_id": "eye_contact",
+      "state": {
+        "loyalty_pf": 4.0,
+        "love": 7.0,
+        "fear": 4.0,
+        "hope": 2.0,
+        "guilt": 8.0,
+        "grief": 7.0
+      },
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 11,
+      "action_id": "pray",
+      "scene_id": "primary_figure_suffering_visible",
+      "state": {
+        "loyalty_pf": 5.0,
+        "love": 8.0,
+        "fear": 3.0,
+        "hope": 3.0,
+        "guilt": 6.0,
+        "grief": 6.0
+      },
+      "event_in": ["sorrow_witnessed"],
+      "event_triggered": true
+    },
+    {
+      "tick": 12,
+      "action_id": "confess",
+      "scene_id": "restoration_moment",
+      "state": {
+        "loyalty_pf": 7.0,
+        "love": 9.0,
+        "fear": 1.5,
+        "hope": 5.0,
+        "guilt": 3.0,
+        "grief": 4.0
+      },
+      "event_in": ["forgiveness_offered"],
+      "event_triggered": true
+    }
+  ]
+}

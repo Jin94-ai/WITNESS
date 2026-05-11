@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "tool": "multi-seed peter rubric ensemble (Phase 3.05 review §H8)",
+    "generated": "2026-05-11T10:54:53",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "agent": "peter",
+    "simulation": "examples/demo_v07.py"
+  },
+  "distribution": {
+    "not_discovery_noise": 1,
+    "character_consistent_novel_candidate": 4
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "discovery_class": "not_discovery_noise",
+      "character_passed": true,
+      "causal_gate": true,
+      "novelty_band": "meaningful",
+      "canon_valid": true
+    },
+    {
+      "seed": 1,
+      "discovery_class": "character_consistent_novel_candidate",
+      "character_passed": true,
+      "causal_gate": true,
+      "novelty_band": "meaningful",
+      "canon_valid": true
+    },
+    {
+      "seed": 2,
+      "discovery_class": "character_consistent_novel_candidate",
+      "character_passed": true,
+      "causal_gate": true,
+      "novelty_band": "meaningful",
+      "canon_valid": true
+    },
+    {
+      "seed": 3,
+      "discovery_class": "character_consistent_novel_candidate",
+      "character_passed": true,
+      "causal_gate": true,
+      "novelty_band": "meaningful",
+      "canon_valid": true
+    },
+    {
+      "seed": 4,
+      "discovery_class": "character_consistent_novel_candidate",
+      "character_passed": true,
+      "causal_gate": true,
+      "novelty_band": "meaningful",
+      "canon_valid": true
+    }
+  ],
+  "axis_means": {
+    "character_composite": 1.0,
+    "causal_smoothness": 1.0,
+    "causal_explained_ratio": 1.0,
+    "novelty_structured_deviation": 0.7221,
+    "canon_soft_compatibility": 0.0
+  },
+  "calibration_status": "uncalibrated_phase3_placeholder"
+}

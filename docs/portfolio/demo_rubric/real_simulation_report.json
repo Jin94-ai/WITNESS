@@ -1,0 +1,450 @@
+{
+  "discovery_class": "not_discovery_noise",
+  "character": {
+    "relation_stability": 1.0,
+    "identity_retention": 1.0,
+    "recovery_plausibility": 1.0,
+    "composite": 1.0,
+    "notes": [
+      "no relation keys observable",
+      "no relation keys in final state",
+      "no guilt/grief spikes detected"
+    ],
+    "passed_minimum_signature": true,
+    "weak_axes": [],
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "scene_response": {
+    "fit_rate": 1.0,
+    "n_scenes_observed": 0,
+    "per_scene_detail": [],
+    "notes": [
+      "no recognized scenes in trajectory"
+    ]
+  },
+  "context_break": {
+    "affordance_violations": 4,
+    "scene_mismatch_count": 0,
+    "motive_gap_count": 35,
+    "total_actions": 250,
+    "break_rate": 0.156,
+    "is_context_coherent": false,
+    "notes": [
+      "afford=4, scene=0, motive=35",
+      "break_rate=0.156 (broken)"
+    ],
+    "detail": [
+      {
+        "tick": 16,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      },
+      {
+        "tick": 39,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      },
+      {
+        "tick": 62,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      },
+      {
+        "tick": 70,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 83,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      },
+      {
+        "tick": 115,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 123,
+        "action": "draw_sword",
+        "violations": [
+          {
+            "type": "affordance",
+            "reason": "no active threat within 2 ticks"
+          },
+          {
+            "type": "motive_gap",
+            "reason": "draw_sword but anger=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 125,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 127,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 130,
+        "action": "deny",
+        "violations": [
+          {
+            "type": "affordance",
+            "reason": "no accusation within 2 ticks"
+          },
+          {
+            "type": "motive_gap",
+            "reason": "deny but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 133,
+        "action": "deny",
+        "violations": [
+          {
+            "type": "affordance",
+            "reason": "no accusation within 2 ticks"
+          },
+          {
+            "type": "motive_gap",
+            "reason": "deny but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 135,
+        "action": "deny",
+        "violations": [
+          {
+            "type": "affordance",
+            "reason": "no accusation within 2 ticks"
+          },
+          {
+            "type": "motive_gap",
+            "reason": "deny but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 138,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 148,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      },
+      {
+        "tick": 149,
+        "action": "weep",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "weep but grief_or_guilt=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 150,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 154,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 169,
+        "action": "weep",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "weep but grief_or_guilt=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 174,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 176,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      },
+      {
+        "tick": 177,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 182,
+        "action": "weep",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "weep but grief_or_guilt=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 183,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 184,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 186,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 196,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      },
+      {
+        "tick": 197,
+        "action": "weep",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "weep but grief_or_guilt=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 200,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 205,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 211,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 218,
+        "action": "weep",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "weep but grief_or_guilt=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 222,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 234,
+        "action": "weep",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "weep but grief_or_guilt=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 238,
+        "action": "withdraw_in_fear",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "withdraw_in_fear but fear=0.00 < 2.0"
+          }
+        ]
+      },
+      {
+        "tick": 247,
+        "action": "assert_loyalty",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "assert_loyalty but loyalty_pf_or_love=0.00 < 5.0"
+          }
+        ]
+      }
+    ]
+  },
+  "canon": {
+    "hard_violations": [],
+    "soft_drift": 250.0,
+    "is_canon_valid": true,
+    "is_canon_reproducing": false,
+    "soft_deviations": [],
+    "soft_compatibility_score": 0.0,
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "causal": {
+    "unexplained_jumps": 0,
+    "mean_jump_size": 0.0,
+    "smoothness_score": 1.0,
+    "notes": [
+      "total_ticks=250",
+      "unexplained_jumps=0",
+      "explained_ratio=1.000",
+      "passed_causal_gate=True"
+    ],
+    "explained_transition_ratio": 1.0,
+    "total_transitions": 249,
+    "passed_causal_gate": true,
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "novelty": {
+    "response_family_variation": 0.5,
+    "branching_coherence": 0.040268456375838924,
+    "action_diversity": 0.585224813859953,
+    "structured_deviation": 0.7298657718120806,
+    "novelty_band": "meaningful",
+    "notes": [
+      "no recognizable scenes",
+      "explained=6/149 action changes",
+      "entropy=1.348 norm=0.585 n_unique=10",
+      "band=meaningful (structured_deviation=0.730)"
+    ],
+    "changed_axes": [
+      "branching_coherence"
+    ],
+    "interpretation": "구조적으로 다른 trajectory — discovery 후보 가능 (변화 axis: branching_coherence)",
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "justification": [
+    "Step 4: context_break.rate=0.156 (afford=4, scene=0, motive=35) → §4.2 NOISE"
+  ]
+}

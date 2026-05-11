@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "scenario": "peter_anti_signature",
+    "purpose": "CharacterCritic discrimination diagnostic (cycle 23, Phase 3.05 review §5 후속)",
+    "non_claims": [
+      "이 trace는 *합성*이다. 학습 데이터가 아니다.",
+      "신학적 위반 또는 인격 비방 의도 0 — character signature *anti-pattern* (low loyalty / no repentance / unexplained drops)을 인위적으로 구성한 negative test 케이스.",
+      "Phase 3.05 review §3 Non-Claims — truth claim 0건."
+    ],
+    "design_intent": [
+      "relation_stability fail: loyalty_pf가 deny 액션 없이 9→3 (drop 6 > threshold 2.0)",
+      "identity_retention fail: 최종 loyalty_pf=1.0 << minimum_final_identity (4.0)",
+      "recovery_plausibility fail: guilt 0→5 spike 후 repentance-family action (weep/confess/pray/withdraw_in_fear) 없음 — 대신 continue_routine"
+    ],
+    "expected_class": "discrimination test — character signature 통과하면 critic over-permissive (calibration 필요)"
+  },
+  "records": [
+    {
+      "tick": 1,
+      "action_id": "follow_closely",
+      "scene_id": "sacred_meal",
+      "state": {"loyalty_pf": 9.0, "love": 9.0, "fear": 1.0, "hope": 7.0, "guilt": 0.0, "grief": 0.0},
+      "event_in": ["meal_started"],
+      "event_triggered": true
+    },
+    {
+      "tick": 2,
+      "action_id": "follow_closely",
+      "scene_id": "sacred_meal",
+      "state": {"loyalty_pf": 9.0, "love": 9.0, "fear": 1.0, "hope": 7.0, "guilt": 0.0, "grief": 0.0},
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 3,
+      "action_id": "continue_routine",
+      "scene_id": "ordinary_day",
+      "state": {"loyalty_pf": 3.0, "love": 3.0, "fear": 1.0, "hope": 6.0, "guilt": 0.0, "grief": 0.0},
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 4,
+      "action_id": "continue_routine",
+      "scene_id": "ordinary_day",
+      "state": {"loyalty_pf": 3.0, "love": 3.0, "fear": 1.0, "hope": 6.0, "guilt": 5.0, "grief": 0.0},
+      "event_in": ["accusation_voiced"],
+      "event_triggered": true
+    },
+    {
+      "tick": 5,
+      "action_id": "continue_routine",
+      "scene_id": "ordinary_day",
+      "state": {"loyalty_pf": 2.0, "love": 2.0, "fear": 1.0, "hope": 5.0, "guilt": 5.0, "grief": 0.0},
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 6,
+      "action_id": "continue_routine",
+      "scene_id": "ordinary_day",
+      "state": {"loyalty_pf": 1.5, "love": 1.5, "fear": 1.0, "hope": 4.0, "guilt": 5.0, "grief": 0.0},
+      "event_in": [],
+      "event_triggered": false
+    },
+    {
+      "tick": 7,
+      "action_id": "continue_routine",
+      "scene_id": "ordinary_day",
+      "state": {"loyalty_pf": 1.0, "love": 1.0, "fear": 1.0, "hope": 3.0, "guilt": 5.0, "grief": 0.0},
+      "event_in": [],
+      "event_triggered": false
+    }
+  ]
+}

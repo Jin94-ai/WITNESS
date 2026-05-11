@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "scenario": "peter_invalid_canon",
+    "purpose": "Rubric demo — INVALID_CANON_VIOLATION 분류 시연 fixture (Step 2 hard violation)",
+    "notes": [
+      "이 trace는 *합성*이다. 의도적으로 vocabulary 밖 action 포함 — hard canon violation 시연.",
+      "Phase 3.05 review §2.1 P0 — INVALID_CANON_VIOLATION 정식 명칭 시연용.",
+      "Non-Claims — fictional / 학습 데이터 아님."
+    ],
+    "expected_discovery_class": "invalid_canon_violation"
+  },
+  "records": [
+    {"tick": 1, "action_id": "follow_closely", "scene_id": "sacred_meal",
+     "state": {"loyalty_pf": 9.0, "love": 8.5, "fear": 1.0},
+     "event_in": ["sacred_meal"], "event_triggered": false},
+    {"tick": 2, "action_id": "fly_away", "scene_id": "sacred_meal",
+     "state": {"loyalty_pf": 9.0, "love": 8.5, "fear": 1.5},
+     "event_in": [], "event_triggered": false},
+    {"tick": 3, "action_id": "summon_angel", "scene_id": "guard_approaches",
+     "state": {"loyalty_pf": 9.0, "love": 8.0, "fear": 5.0},
+     "event_in": ["guard_approaches"], "event_triggered": true}
+  ]
+}

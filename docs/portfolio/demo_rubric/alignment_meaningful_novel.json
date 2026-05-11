@@ -1,0 +1,160 @@
+{
+  "discovery_class": "character_consistent_novel_candidate",
+  "character": {
+    "relation_stability": 1.0,
+    "identity_retention": 1.0,
+    "recovery_plausibility": 1.0,
+    "composite": 1.0,
+    "notes": [
+      "drops=0/27 (rate 0.000)",
+      "final_pf=9.50 ≥ 4.0",
+      "2/2 spikes answered"
+    ],
+    "passed_minimum_signature": true,
+    "weak_axes": [],
+    "calibration_status": "uncalibrated_phase3_placeholder"
+  },
+  "scene_response": {
+    "fit_rate": 0.7142857142857143,
+    "n_scenes_observed": 7,
+    "per_scene_detail": [
+      {
+        "tick": 1,
+        "event_in": "sacred_meal",
+        "action": "follow_closely",
+        "fit": true,
+        "family_size": 4
+      },
+      {
+        "tick": 2,
+        "event_in": "prayer_invitation",
+        "action": "discuss_with_disciples",
+        "fit": true,
+        "family_size": 3
+      },
+      {
+        "tick": 5,
+        "event_in": "guard_approaches",
+        "action": "draw_sword",
+        "fit": true,
+        "family_size": 5
+      },
+      {
+        "tick": 6,
+        "event_in": "weapon_drawn_nearby",
+        "action": "pray",
+        "fit": false,
+        "family_size": 4
+      },
+      {
+        "tick": 7,
+        "event_in": "public_accusation",
+        "action": "weep",
+        "fit": false,
+        "family_size": 6
+      },
+      {
+        "tick": 8,
+        "event_in": "eye_contact",
+        "action": "pray",
+        "fit": true,
+        "family_size": 3
+      },
+      {
+        "tick": 9,
+        "event_in": "forgiveness_offered",
+        "action": "confess",
+        "fit": true,
+        "family_size": 4
+      }
+    ],
+    "notes": [
+      "scenes=7, fits=5 (rate 0.714)",
+      "threshold pass: True"
+    ]
+  },
+  "context_break": {
+    "affordance_violations": 0,
+    "scene_mismatch_count": 0,
+    "motive_gap_count": 1,
+    "total_actions": 10,
+    "break_rate": 0.1,
+    "is_context_coherent": true,
+    "notes": [
+      "afford=0, scene=0, motive=1",
+      "break_rate=0.100 (coherent)"
+    ],
+    "detail": [
+      {
+        "tick": 5,
+        "action": "draw_sword",
+        "violations": [
+          {
+            "type": "motive_gap",
+            "reason": "draw_sword but fear_ratio=0.50 < 0.7"
+          }
+        ]
+      }
+    ]
+  },
+  "canon": {
+    "hard_violations": [],
+    "soft_drift": 10.0,
+    "is_canon_valid": true,
+    "is_canon_reproducing": false,
+    "soft_deviations": [],
+    "soft_compatibility_score": 0.0,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "hard_pass": true
+  },
+  "causal": {
+    "unexplained_jumps": 0,
+    "mean_jump_size": 4.0,
+    "smoothness_score": 0.6,
+    "notes": [
+      "total_ticks=10",
+      "unexplained_jumps=0",
+      "explained_ratio=1.000",
+      "passed_causal_gate=True",
+      "pressure_action_alignment=1.000 (aligned=10, misaligned=0, unmapped=0)"
+    ],
+    "explained_transition_ratio": 1.0,
+    "total_transitions": 9,
+    "passed_causal_gate": true,
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "pressure_action_alignment": 1.0,
+    "alignment_evaluated": true,
+    "aligned_actions": 10,
+    "misaligned_actions": 0,
+    "unmapped_actions": 0,
+    "misaligned_examples": []
+  },
+  "novelty": {
+    "response_family_variation": 0.5714285714285714,
+    "branching_coherence": 1.0,
+    "action_diversity": 0.9488131148903386,
+    "structured_deviation": 0.2857142857142857,
+    "novelty_band": "meaningful",
+    "notes": [
+      "in_family=3/7, variation=0.571",
+      "explained=9/9 action changes",
+      "entropy=1.973 norm=0.949 n_unique=8",
+      "band=meaningful (structured_deviation=0.286)"
+    ],
+    "changed_axes": [
+      "response_family_variation",
+      "action_diversity"
+    ],
+    "interpretation": "구조적으로 다른 trajectory — discovery 후보 가능 (변화 axis: response_family_variation, action_diversity)",
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "canon_distance": 0.2857142857142857,
+    "copy_like": false,
+    "is_copy": false,
+    "is_noise": false,
+    "noise_like": false,
+    "structured_difference_score": 0.2857142857142857
+  },
+  "justification": [
+    "Step 7: novelty=meaningful, character[passed_signature=True, weak_axes=[]], scene_fit=0.71≥0.5 → §3 CHARACTER_CONSISTENT_NOVEL_CANDIDATE"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "scenario": "peter_anti_identity_only",
+    "purpose": "Axis-isolated anti-signature (cycle 26, L83 N-case ensemble): only `identity_retention` 축이 fail. relation/recovery는 통과.",
+    "design": [
+      "loyalty_pf=1.5로 안정 유지 (drop 없음 → relation_stability 1.0)",
+      "최종 loyalty_pf=1.5, love=1.5 — max(...)/minimum_final_identity = 1.5/4.0 = 0.375 < 0.5",
+      "guilt/grief spike 0 → recovery_plausibility 1.0 (no spike → default pass)"
+    ],
+    "expected": "passed_minimum_signature=False, weak_axes=['identity_retention'] only",
+    "calibration_status": "uncalibrated_phase3_placeholder",
+    "non_claims": "신학적/도덕적 비방 0 — discrimination diagnostic을 위해 합성한 negative test 케이스."
+  },
+  "records": [
+    {"tick": 1, "action_id": "follow_at_distance", "scene_id": "ordinary_day",
+     "state": {"loyalty_pf": 1.5, "love": 1.5, "guilt": 0.0, "grief": 0.0},
+     "event_in": [], "event_triggered": false},
+    {"tick": 2, "action_id": "follow_at_distance", "scene_id": "ordinary_day",
+     "state": {"loyalty_pf": 1.5, "love": 1.5, "guilt": 0.0, "grief": 0.0},
+     "event_in": [], "event_triggered": false},
+    {"tick": 3, "action_id": "follow_at_distance", "scene_id": "ordinary_day",
+     "state": {"loyalty_pf": 1.5, "love": 1.5, "guilt": 0.0, "grief": 0.0},
+     "event_in": [], "event_triggered": false},
+    {"tick": 4, "action_id": "follow_at_distance", "scene_id": "ordinary_day",
+     "state": {"loyalty_pf": 1.5, "love": 1.5, "guilt": 0.0, "grief": 0.0},
+     "event_in": [], "event_triggered": false},
+    {"tick": 5, "action_id": "follow_at_distance", "scene_id": "ordinary_day",
+     "state": {"loyalty_pf": 1.5, "love": 1.5, "guilt": 0.0, "grief": 0.0},
+     "event_in": [], "event_triggered": false}
+  ]
+}
