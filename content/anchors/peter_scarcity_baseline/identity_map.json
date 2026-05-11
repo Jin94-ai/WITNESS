@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "anchor_id": "peter_scarcity_baseline",
+    "purpose": "Maps anonymous multi-agent IDs (agent_01 .. agent_12) to creator-readable labels. Loaded by engine/observer/identity_resolver.py as Stage 5 enrichment input.",
+    "rules": [
+      "This map names *who is who* — it does NOT prescribe what they will do.",
+      "Plots emerge from the simulation. Story Threads are mined from the data, not from this map.",
+      "Edit freely: change names, archetypes, roles. The mining pipeline reads the map post-hoc; changing labels does not change which threads emerge.",
+      "If this file is deleted, the resolver falls back to archetype inference from observer initial state — IDs stay as 'agent_03' but get an archetype tag."
+    ],
+    "edit_freedom": "Names below are example labels chosen for the peter_scarcity_baseline anchor. They are not engine-validated — agent_03 does not 'have to' be Peter; another reading of the same simulation could call agent_03 something else."
+  },
+
+  "agents": {
+    "agent_03": {
+      "display_name": "Peter",
+      "archetype": "loyal_under_pressure",
+      "role": "disciple",
+      "dramatic_function": "stays close, vulnerable to authority pressure",
+      "initial_desire": "remain loyal",
+      "core_vulnerability": "fear of public exposure"
+    },
+    "agent_05": {
+      "display_name": "John",
+      "archetype": "loyal_under_pressure",
+      "role": "disciple",
+      "dramatic_function": "parallel loyal follower under fear",
+      "initial_desire": "remain present",
+      "core_vulnerability": "shame after withdrawal"
+    },
+    "agent_08": {
+      "display_name": "Andrew",
+      "archetype": "peripheral_disciple",
+      "role": "disciple",
+      "dramatic_function": "lower-salience follower whose fear surfaces mid-run",
+      "initial_desire": "stay with the group",
+      "core_vulnerability": "uncertainty under public scrutiny"
+    },
+    "agent_09": {
+      "display_name": "James",
+      "archetype": "skeptic_witness",
+      "role": "disciple",
+      "dramatic_function": "watches more than acts; pressure rises late",
+      "initial_desire": "understand what is happening",
+      "core_vulnerability": "delayed reaction"
+    },
+    "agent_01": {"display_name": "Crowd member 01", "archetype": "background_presence",  "role": "onlooker"},
+    "agent_02": {"display_name": "Crowd member 02", "archetype": "background_presence",  "role": "onlooker"},
+    "agent_04": {"display_name": "Crowd member 03", "archetype": "background_presence",  "role": "onlooker"},
+    "agent_06": {"display_name": "Crowd member 04", "archetype": "background_presence",  "role": "onlooker"},
+    "agent_07": {"display_name": "Crowd member 05", "archetype": "background_presence",  "role": "onlooker"},
+    "agent_10": {"display_name": "Crowd member 06", "archetype": "background_presence",  "role": "onlooker"},
+    "agent_11": {"display_name": "Crowd member 07", "archetype": "background_presence",  "role": "onlooker"},
+    "agent_12": {"display_name": "Crowd member 08", "archetype": "background_presence",  "role": "onlooker"}
+  },
+
+  "groups": {
+    "L1": {
+      "display_name": "core disciples",
+      "function": "loyalty group under direct authority gaze",
+      "risk": "fragmentation when fear concentrates"
+    },
+    "L2": {
+      "display_name": "outer crowd A",
+      "function": "public mood amplifier (one cluster)",
+      "risk": "scapegoating drift"
+    },
+    "L3": {
+      "display_name": "outer crowd B",
+      "function": "public mood amplifier (second cluster)",
+      "risk": "scapegoating drift"
+    }
+  }
+}

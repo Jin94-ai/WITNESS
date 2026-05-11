@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>WITNESS · 같은 뼈대, 두 장르 렌즈</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          max-width: 1280px; margin: 1.5em auto; padding: 0 1em; line-height: 1.55;
+          color: #222; background: #fafaf7; }
+  header.page-head { margin-bottom: 1.5em; }
+  header.page-head h1 { font-size: 1.9em; margin: 0 0 0.3em 0; }
+  header.page-head .lead { font-size: 1.05em; color: #444; }
+  .muted { color: #777; }
+  .small { font-size: 0.88em; }
+
+  .lens-preview { display: grid;
+                   grid-template-columns: repeat(2, 1fr);
+                   gap: 1em; margin: 1.5em 0 2em; }
+  @media (max-width: 880px) {
+    .lens-preview { grid-template-columns: 1fr; }
+  }
+  .lens-card { background: #f7f3ec; padding: 1em 1.2em; border-radius: 8px;
+                border-left: 3px solid #c9a; }
+  .lens-card h3 { margin: 0 0 0.4em 0; font-size: 1.1em; }
+  .lens-card .lens-line { margin: 0; font-size: 0.95em; line-height: 1.5; }
+
+  .skeleton-summary { background: #f0ede5; padding: 1em 1.2em;
+                       border-radius: 8px; margin: 1em 0 2em; }
+  .skeleton-summary h2 { margin-top: 0; font-size: 1.15em; }
+  .skeleton-summary table { border-collapse: collapse; width: 100%;
+                              font-size: 0.92em; }
+  .skeleton-summary th, .skeleton-summary td { text-align: left;
+            padding: 0.5em 0.7em; border-bottom: 1px solid #d5d0c2;
+            vertical-align: top; }
+  .skeleton-summary th { background: rgba(0,0,0,0.04); font-weight: 600; }
+
+  .compare-grid { display: grid;
+                   grid-template-columns: repeat(2, 1fr);
+                   gap: 1.5em; }
+  @media (max-width: 880px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+  .genre-col { background: #fff; padding: 1.2em 1.4em;
+                border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .genre-head h2 { margin: 0 0 0.2em 0; font-size: 1.25em; }
+  .genre-col h3 { margin-top: 1.4em; font-size: 0.95em; color: #555; }
+  .genre-col p, .genre-col ol { margin: 0.3em 0; }
+  .genre-lens { margin: 0.6em 0; padding: 0.6em 0.9em; background: #f5f1e8;
+                 border-radius: 5px; border-left: 2px solid #c9a; }
+  .genre-lens .lens-label { font-size: 0.8em; color: #888; font-weight: 600;
+                              text-transform: uppercase; letter-spacing: 0.04em; }
+  .genre-lens p { margin: 0.2em 0 0 0; font-size: 0.95em; }
+  .audit-row { margin: 0.6em 0 0; }
+  .audit { display: inline-block; padding: 0.2em 0.7em; border-radius: 4px;
+            font-size: 0.85em; font-weight: 600; margin-right: 0.3em; }
+  .audit-pass { background: #e9f5ec; color: #2c6c3d; }
+  .audit-fail { background: #fbe9e9; color: #a23030; }
+  .quality-clean { background: #e9f5ec; color: #2c6c3d; }
+  .quality-warn { background: #fdf3e3; color: #946a1f; }
+  .title-line { font-weight: 600; }
+  blockquote { border-left: 3px solid #c9a; background: #fbf8f3;
+                padding: 0.5em 0.9em; margin: 0.5em 0; border-radius: 4px;
+                font-style: italic; }
+  .outline-list { padding-left: 1.4em; }
+  .outline-list li { margin: 0.5em 0; }
+  .step-name { font-weight: 600; font-size: 0.92em; color: #555; }
+  .step-line { margin-top: 0.15em; }
+  .why-section { background: #f5f3ed; padding: 1em 1.2em; border-radius: 8px;
+                  margin: 2em 0 1em; }
+  .why-section h2 { margin-top: 0; font-size: 1.1em; }
+  .why-row { padding: 0.4em 0; border-bottom: 1px dotted #d5d0c2; }
+  .why-row:last-child { border-bottom: 0; }
+  details { margin: 1.5em 0; padding: 0.8em 1em; background: #f5f3ed;
+             border-radius: 6px; }
+  summary { cursor: pointer; font-weight: 600; }
+  code { background: #efece4; padding: 1px 5px; border-radius: 3px;
+          font-size: 0.88em; }
+  footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #e0dcd0;
+            color: #999; font-size: 0.85em; }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <h1>WITNESS · 같은 뼈대, 두 장르 렌즈</h1>
+  <p class="lead">같은 이야기 뼈대가 장르 문법에 따라 다르게 살아나는 과정을 보여줍니다.</p>
+  <p class="small muted">audit: korean_morning_melodrama: pass · japanese_quiet_drama: pass</p>
+</header>
+
+<section class="lens-preview">
+  <div class="lens-card"><h3>한국 아침 막장 드라마</h3><p class="lens-line">침묵은 갈등을 줄이지 않는다. 오히려 주변의 의심과 오해를 키운다.</p></div>
+<div class="lens-card"><h3>일본 정적 드라마</h3><p class="lens-line">침묵은 폭발하지 않는다. 정적으로 남아 인물 사이의 거리를 조금씩 바꾼다.</p></div>
+</section>
+
+<section class="skeleton-summary">
+  <h2>입력 — Universal Skeleton (모든 장르의 공통 입력)</h2>
+  <p class="muted small">4개의 anchor-clean universal seed. 인물 이름 / 시대 / 정경 사건 0.</p>
+  <table>
+    <thead>
+      <tr><th>seed</th><th>흐름 위치</th><th>갈등 축</th><th>압력</th><th>욕망</th><th>인물 유형</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>S01</strong></td><td>중심 흐름<br><small class="muted">main_arc</small></td><td>곁에 남기 vs 살아남기<br><small class="muted">loyalty_vs_survival</small></td><td>권위자의 압박</td><td>곁에 남으려는 마음, 스스로를 지키려는 본능</td><td>압력 속에서도 남으려는 사람</td></tr>
+<tr><td><strong>S02</strong></td><td>망설이는 보조 흐름<br><small class="muted">supporting_uncertainty</small></td><td>결정 미루기 vs 결정하기<br><small class="muted">uncertainty_vs_commitment</small></td><td>혼란</td><td>결정하려는 의지</td><td>결정을 미루는 사람</td></tr>
+<tr><td><strong>S03</strong></td><td>지켜보는 흐름<br><small class="muted">witness_arc</small></td><td>결정 미루기 vs 결정하기<br><small class="muted">uncertainty_vs_commitment</small></td><td>혼란</td><td>결정하려는 의지</td><td>지켜보지만 말하지 않는 사람</td></tr>
+<tr><td><strong>S04</strong></td><td>뒤늦은 반응 흐름<br><small class="muted">delayed_response_arc</small></td><td>결정 미루기 vs 결정하기<br><small class="muted">uncertainty_vs_commitment</small></td><td>혼란</td><td>결정하려는 의지</td><td>뒤늦게 반응하는 사람</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<h2 style="margin-top:2em">장르 변환 결과 (side-by-side)</h2>
+<section class="compare-grid">
+  
+    <article class="genre-col">
+      <header class="genre-head">
+        <h2>한국 아침 막장 드라마</h2>
+        <code class="muted">korean_morning_melodrama</code>
+      </header>
+      
+        <div class="genre-lens">
+          <div class="lens-label">장르 렌즈</div>
+          <p>침묵은 갈등을 줄이지 않는다. 오히려 주변의 의심과 오해를 키운다.</p>
+        </div>
+      <div class="audit-row">
+        <span class="audit audit-pass">audit: pass</span>
+        <span class="audit quality-clean">quality warnings: 0</span>
+      </div>
+
+      <h3>제목</h3>
+      <p class="title-line">한국 아침 막장 드라마: 버티는 사람 이야기</p>
+
+      <h3>전제</h3>
+      <p>버티는 사람이 가족/권위자의 시선 속에서 겉으로는 곁에 남지만 점점 말이 줄어든다.</p>
+
+      <h3>회차 흐름</h3>
+      <ol class="outline-list"><li><div class="step-name">평온한 표면</div><div class="step-line">버티는 사람은 아직 자리를 지키지만, 가족/권위자의 시선은 이미 주변을 누르고 있다.</div></li>
+<li><div class="step-name">작은 균열</div><div class="step-line">알아차리지만 말하지 않는 사람은 변화를 눈치채지만 아직 말하지 않는다.</div></li>
+<li><div class="step-name">의심의 확산</div><div class="step-line">결정을 미루는 시간이 길어질수록 주변의 의심은 커진다.</div></li>
+<li><div class="step-name">침묵 또는 회피</div><div class="step-line">버티는 사람의 침묵은 갈등을 줄이지 못하고 오해의 여지를 남긴다.</div></li>
+<li><div class="step-name">관계 충돌</div><div class="step-line">뒤늦게 반응하는 사람의 반응은 이미 커진 오해와 부딪힌다.</div></li>
+<li><div class="step-name">마지막 질문</div><div class="step-line">누군가 침묵을 배신으로 해석하기 시작한다.</div></li></ol>
+
+      <h3>마지막 질문</h3>
+      <blockquote>누군가 침묵을 배신으로 해석하기 시작한다.</blockquote>
+    </article>
+    
+
+    <article class="genre-col">
+      <header class="genre-head">
+        <h2>일본 정적 드라마</h2>
+        <code class="muted">japanese_quiet_drama</code>
+      </header>
+      
+        <div class="genre-lens">
+          <div class="lens-label">장르 렌즈</div>
+          <p>침묵은 폭발하지 않는다. 정적으로 남아 인물 사이의 거리를 조금씩 바꾼다.</p>
+        </div>
+      <div class="audit-row">
+        <span class="audit audit-pass">audit: pass</span>
+        <span class="audit quality-clean">quality warnings: 0</span>
+      </div>
+
+      <h3>제목</h3>
+      <p class="title-line">일본 정적 드라마: 조용히 머무는 사람 이야기</p>
+
+      <h3>전제</h3>
+      <p>조용히 머무는 사람이 조용한 권위의 시선 속에서 곁에 머물지만 말은 점점 사라진다.</p>
+
+      <h3>회차 흐름</h3>
+      <ol class="outline-list"><li><div class="step-name">정적인 시작</div><div class="step-line">조용히 머무는 사람은 자리에 머물지만 조용한 권위의 시선이 공기를 무겁게 만든다.</div></li>
+<li><div class="step-name">미세한 변화</div><div class="step-line">보지만 말하지 않는 사람은 작은 변화를 읽어내지만 입을 열지 않는다.</div></li>
+<li><div class="step-name">거리의 조정</div><div class="step-line">곁에서 숨을 고르는 사람의 망설임은 두 사람 사이의 거리를 조금씩 넓힌다.</div></li>
+<li><div class="step-name">말 없는 시간</div><div class="step-line">조용히 머무는 사람의 침묵은 갈등을 키우지 않고 그대로 머문다.</div></li>
+<li><div class="step-name">한 사람의 작은 움직임</div><div class="step-line">오래 후에 작게 반응하는 사람의 반응은 누구에게도 닿지 못한 채 끝난다.</div></li>
+<li><div class="step-name">다시 정적</div><div class="step-line">정적은 끝나지 않고 그대로 다음 회차로 이어진다.</div></li></ol>
+
+      <h3>마지막 질문</h3>
+      <blockquote>정적은 끝나지 않고 그대로 다음 회차로 이어진다.</blockquote>
+    </article>
+    
+</section>
+
+<section class="why-section">
+  <h2>왜 다르게 나오는가 (rulebook 근거)</h2>
+  <div class="why-row"><strong>한국 아침 막장 드라마</strong>: 침묵이 오해를 키운다.</div>
+<div class="why-row"><strong>일본 정적 드라마</strong>: 고요함이 긴장을 *해소하지 않고 머물게* 한다.</div>
+</section>
+
+<details>
+  <summary>Evidence Preservation</summary>
+  <ul>
+    <li>원본 source_seed_ids: S01, S02, S03, S04</li>
+    <li>모든 장르에서 보존된 갈등 축: loyalty_vs_survival, uncertainty_vs_commitment</li>
+    <li>모든 변환의 transformation_level: <code>structure_only</code></li>
+    <li>대사 / 출생의 비밀 / 작품 모방 0건 — 각 장르 audit이 자동 검증.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Technical Appendix (내부 ID + schema)</summary>
+  <ul>
+    <li>입력: <code>skeleton_output_v1</code> (UniversalStorySeed v1.1)</li>
+    <li>장르 수: 2</li>
+    <li>장르 schema: <code>genre_rulebook_v1</code> + <code>genre_audit_blocklist_v1</code></li>
+    <li>변환 schema: <code>genre_adapted_output_v1_1</code> (structured outline 포함)</li>
+    <li>외부 의존 0 — LLM API / 데이터 fetch / 모델 학습 없음.</li>
+    <li>같은 코드 (<code>engine.observer.genre_adapter</code>)가 모든 장르를 처리 — rulebook abstraction이 parametric.</li>
+  </ul>
+</details>
+
+<footer>
+  <p>WITNESS Phase 2.8 · Cross-genre Adapter Demo · structure-only.
+     CLI: <code>scripts/narrative/run_genre_comparison.py</code></p>
+</footer>
+
+</body>
+</html>

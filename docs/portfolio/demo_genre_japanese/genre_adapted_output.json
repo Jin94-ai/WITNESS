@@ -1,0 +1,217 @@
+{
+  "schema_version": "genre_adapted_output_v1_1",
+  "genre_id": "japanese_quiet_drama",
+  "source_skeleton_version": "skeleton_output_v1",
+  "source_seed_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04"
+  ],
+  "adapted_seeds": [
+    {
+      "adaptation_id": "S01__japanese_quiet_drama",
+      "source_seed_id": "S01",
+      "genre_id": "japanese_quiet_drama",
+      "source_conflict_axis_id": "loyalty_vs_survival",
+      "source_desires": [
+        "loyalty",
+        "survival"
+      ],
+      "source_pressures": [
+        "authority_vigilance"
+      ],
+      "source_flow_role": "main_arc",
+      "genre_role": "조용히 머무는 사람",
+      "genre_pressure": [
+        "조용한 권위의 시선"
+      ],
+      "genre_conflict_amplifier": "stillness_holds_tension",
+      "adapted_title_ko": "조용히 머무는 사람 — 고요함이 긴장을 *해소하지 않고 머물게* 한다.",
+      "adapted_premise_ko": "조용히 머무는 사람이 조용한 권위의 시선 속에서 곁에 머물지만 말은 점점 사라진다.",
+      "adapted_function_ko": "이 인물의 정적은 다음 회차로 그대로 이어진다.",
+      "cliffhanger_ko": "정적은 끝나지 않고 그대로 다음 회차로 이어진다.",
+      "transformation_level": "structure_only",
+      "evidence_preserved": true,
+      "forbidden_added": false
+    },
+    {
+      "adaptation_id": "S02__japanese_quiet_drama",
+      "source_seed_id": "S02",
+      "genre_id": "japanese_quiet_drama",
+      "source_conflict_axis_id": "uncertainty_vs_commitment",
+      "source_desires": [
+        "commitment"
+      ],
+      "source_pressures": [
+        "confusion"
+      ],
+      "source_flow_role": "supporting_uncertainty",
+      "genre_role": "곁에서 숨을 고르는 사람",
+      "genre_pressure": [
+        "정리되지 않은 마음"
+      ],
+      "genre_conflict_amplifier": "atmosphere_outweighs_event",
+      "adapted_title_ko": "곁에서 숨을 고르는 사람 — 사건보다 *분위기*가 인물의 결정을 더 무겁게 만든다.",
+      "adapted_premise_ko": "곁에서 숨을 고르는 사람이 정리되지 않은 마음 속에서 결정을 미루며 거리만 조금씩 더해진다.",
+      "adapted_function_ko": "망설이는 시간이 분위기를 더 무겁게 만든다.",
+      "cliffhanger_ko": "분위기가 더 무거워진 채 회차가 끝난다.",
+      "transformation_level": "structure_only",
+      "evidence_preserved": true,
+      "forbidden_added": false
+    },
+    {
+      "adaptation_id": "S03__japanese_quiet_drama",
+      "source_seed_id": "S03",
+      "genre_id": "japanese_quiet_drama",
+      "source_conflict_axis_id": "uncertainty_vs_commitment",
+      "source_desires": [
+        "commitment"
+      ],
+      "source_pressures": [
+        "confusion"
+      ],
+      "source_flow_role": "witness_arc",
+      "genre_role": "보지만 말하지 않는 사람",
+      "genre_pressure": [
+        "정리되지 않은 마음"
+      ],
+      "genre_conflict_amplifier": "atmosphere_outweighs_event",
+      "adapted_title_ko": "보지만 말하지 않는 사람 — 사건보다 *분위기*가 인물의 결정을 더 무겁게 만든다.",
+      "adapted_premise_ko": "보지만 말하지 않는 사람이 정리되지 않은 마음 속에서 함께 있지만 사이는 더 조용해진다.",
+      "adapted_function_ko": "지켜보는 시선이 변화를 읽어내지만 말하지 않는다.",
+      "cliffhanger_ko": "지켜본 사람이 말하지 않은 채로 자리를 지킨다.",
+      "transformation_level": "structure_only",
+      "evidence_preserved": true,
+      "forbidden_added": false
+    },
+    {
+      "adaptation_id": "S04__japanese_quiet_drama",
+      "source_seed_id": "S04",
+      "genre_id": "japanese_quiet_drama",
+      "source_conflict_axis_id": "uncertainty_vs_commitment",
+      "source_desires": [
+        "commitment"
+      ],
+      "source_pressures": [
+        "confusion"
+      ],
+      "source_flow_role": "delayed_response_arc",
+      "genre_role": "오래 후에 작게 반응하는 사람",
+      "genre_pressure": [
+        "정리되지 않은 마음"
+      ],
+      "genre_conflict_amplifier": "atmosphere_outweighs_event",
+      "adapted_title_ko": "오래 후에 작게 반응하는 사람 — 사건보다 *분위기*가 인물의 결정을 더 무겁게 만든다.",
+      "adapted_premise_ko": "오래 후에 작게 반응하는 사람이 정리되지 않은 마음 속에서 한참 후 작은 움직임만 도착한다.",
+      "adapted_function_ko": "뒤늦은 작은 움직임이 누구에게도 닿지 못한다.",
+      "cliffhanger_ko": "한 사람의 작은 움직임이 누구에게도 읽히지 않은 채 끝난다.",
+      "transformation_level": "structure_only",
+      "evidence_preserved": true,
+      "forbidden_added": false
+    }
+  ],
+  "adapted_flow": {
+    "schema_version": "genre_adapted_flow_v1_1",
+    "adaptation_id": "flow__japanese_quiet_drama",
+    "genre_id": "japanese_quiet_drama",
+    "source_ordered_seed_ids": [
+      "S01",
+      "S03",
+      "S02",
+      "S04"
+    ],
+    "title_ko": "일본 정적 드라마: 조용히 머무는 사람 이야기",
+    "premise_ko": "조용히 머무는 사람이 조용한 권위의 시선 속에서 곁에 머물지만 말은 점점 사라진다.",
+    "genre_lens_ko": "침묵은 폭발하지 않는다. 정적으로 남아 인물 사이의 거리를 조금씩 바꾼다.",
+    "role_map": {
+      "S01": "조용히 머무는 사람",
+      "S03": "보지만 말하지 않는 사람",
+      "S02": "곁에서 숨을 고르는 사람",
+      "S04": "오래 후에 작게 반응하는 사람"
+    },
+    "episode_rhythm": [
+      "정적인 시작",
+      "미세한 변화",
+      "거리의 조정",
+      "말 없는 시간",
+      "한 사람의 작은 움직임",
+      "다시 정적"
+    ],
+    "adapted_outline_ko": [
+      "1. 정적인 시작 — 조용히 머무는 사람은 자리에 머물지만 조용한 권위의 시선이 공기를 무겁게 만든다.",
+      "2. 미세한 변화 — 보지만 말하지 않는 사람은 작은 변화를 읽어내지만 입을 열지 않는다.",
+      "3. 거리의 조정 — 곁에서 숨을 고르는 사람의 망설임은 두 사람 사이의 거리를 조금씩 넓힌다.",
+      "4. 말 없는 시간 — 조용히 머무는 사람의 침묵은 갈등을 키우지 않고 그대로 머문다.",
+      "5. 한 사람의 작은 움직임 — 오래 후에 작게 반응하는 사람의 반응은 누구에게도 닿지 못한 채 끝난다.",
+      "6. 다시 정적 — 정적은 끝나지 않고 그대로 다음 회차로 이어진다."
+    ],
+    "adapted_outline_steps": [
+      {
+        "step": "정적인 시작",
+        "source_seed_id": "S01",
+        "source_flow_role": "main_arc",
+        "line_ko": "조용히 머무는 사람은 자리에 머물지만 조용한 권위의 시선이 공기를 무겁게 만든다."
+      },
+      {
+        "step": "미세한 변화",
+        "source_seed_id": "S03",
+        "source_flow_role": "witness_arc",
+        "line_ko": "보지만 말하지 않는 사람은 작은 변화를 읽어내지만 입을 열지 않는다."
+      },
+      {
+        "step": "거리의 조정",
+        "source_seed_id": "S02",
+        "source_flow_role": "supporting_uncertainty",
+        "line_ko": "곁에서 숨을 고르는 사람의 망설임은 두 사람 사이의 거리를 조금씩 넓힌다."
+      },
+      {
+        "step": "말 없는 시간",
+        "source_seed_id": "S01",
+        "source_flow_role": "main_arc",
+        "line_ko": "조용히 머무는 사람의 침묵은 갈등을 키우지 않고 그대로 머문다."
+      },
+      {
+        "step": "한 사람의 작은 움직임",
+        "source_seed_id": "S04",
+        "source_flow_role": "delayed_response_arc",
+        "line_ko": "오래 후에 작게 반응하는 사람의 반응은 누구에게도 닿지 못한 채 끝난다."
+      },
+      {
+        "step": "다시 정적",
+        "source_seed_id": "S01",
+        "source_flow_role": "main_arc",
+        "line_ko": "정적은 끝나지 않고 그대로 다음 회차로 이어진다."
+      }
+    ],
+    "cliffhanger_ko": "정적은 끝나지 않고 그대로 다음 회차로 이어진다.",
+    "evidence_summary": {
+      "source_seed_count": 4,
+      "preserved_conflict_axes": [
+        "loyalty_vs_survival",
+        "uncertainty_vs_commitment"
+      ],
+      "preserved_pressures": [
+        "authority_vigilance",
+        "confusion"
+      ],
+      "preserved_desires": [
+        "commitment",
+        "loyalty",
+        "survival"
+      ]
+    },
+    "audit_status": "pass"
+  },
+  "audit": {
+    "schema_version": "genre_audit_result_v1_1",
+    "genre_id": "japanese_quiet_drama",
+    "overall": "pass",
+    "forbidden_event_violations": [],
+    "dialogue_violations": [],
+    "source_imitation_violations": [],
+    "evidence_violations": [],
+    "quality_warnings": [],
+    "notes": []
+  }
+}

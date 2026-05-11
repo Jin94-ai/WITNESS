@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "schema_version": "universal_taxonomy_v1_1",
+    "purpose": "Anchor-agnostic desire taxonomy. Universal motivations characters can pursue. Maps to UniversalStorySeed.dominant_desires.",
+    "rules": [
+      "Desires are pulls toward a chosen state or relation.",
+      "Names are universal — no figure-specific bindings.",
+      "Each desire pairs naturally with one or more pressures it can collide with.",
+      "Phase 2.5 (2026-05-09): natural_collisions split into colliding_desires + colliding_pressures (Plan §B.1)."
+    ],
+    "deprecated": {
+      "natural_collisions": "Phase 2.5: split into colliding_desires + colliding_pressures. Backward-compat field retained for adapter migration but new code must use the split fields."
+    }
+  },
+  "desires": {
+    "loyalty": {
+      "id": "loyalty",
+      "plain_label_ko": "곁에 남으려는 마음",
+      "category": "relational",
+      "colliding_desires": [],
+      "colliding_pressures": ["fear", "authority_vigilance", "public_suspicion"],
+      "natural_collisions": ["fear", "authority_vigilance", "public_suspicion"],
+      "description_ko": "약속한 상대 또는 집단 곁에 남고자 하는 의지."
+    },
+    "survival": {
+      "id": "survival",
+      "plain_label_ko": "스스로를 지키려는 본능",
+      "category": "self_preservation",
+      "colliding_desires": ["loyalty"],
+      "colliding_pressures": ["love", "shame_self"],
+      "natural_collisions": ["loyalty", "love", "shame_self"],
+      "description_ko": "위험으로부터 자신을 보호하려는 본능. love는 appetitive pressure로 분류되어 colliding_pressures에 들어간다."
+    },
+    "control": {
+      "id": "control",
+      "plain_label_ko": "통제하려는 의지",
+      "category": "agency",
+      "colliding_desires": [],
+      "colliding_pressures": ["public_suspicion", "blame_concentration"],
+      "natural_collisions": ["public_suspicion", "blame_concentration"],
+      "description_ko": "상황을 자신이 통제 가능한 상태로 유지하려는 의지."
+    },
+    "exposure_avoidance": {
+      "id": "exposure_avoidance",
+      "plain_label_ko": "드러나지 않으려는 마음",
+      "category": "self_preservation",
+      "colliding_desires": [],
+      "colliding_pressures": ["public_suspicion", "authority_vigilance"],
+      "natural_collisions": ["public_suspicion", "authority_vigilance"],
+      "description_ko": "자신이 노출되거나 식별되는 것을 피하려는 의지."
+    },
+    "identity_preservation": {
+      "id": "identity_preservation",
+      "plain_label_ko": "이름을 지키려는 마음",
+      "category": "self_concept",
+      "colliding_desires": [],
+      "colliding_pressures": ["shame_self", "grief"],
+      "natural_collisions": ["shame_self", "grief"],
+      "description_ko": "자신이 약속한 정체성을 유지하려는 의지."
+    },
+    "commitment": {
+      "id": "commitment",
+      "plain_label_ko": "결정하려는 의지",
+      "category": "agency",
+      "colliding_desires": [],
+      "colliding_pressures": ["fear", "confusion"],
+      "natural_collisions": ["fear", "confusion"],
+      "description_ko": "결정을 미루지 않고 한쪽으로 행동하려는 의지."
+    },
+    "trust": {
+      "id": "trust",
+      "plain_label_ko": "관계를 지키려는 마음",
+      "category": "relational",
+      "colliding_desires": [],
+      "colliding_pressures": ["fear", "shame_self"],
+      "natural_collisions": ["fear", "shame_self"],
+      "description_ko": "관계의 신뢰 자체를 지키려는 의지."
+    },
+    "group_safety": {
+      "id": "group_safety",
+      "plain_label_ko": "그룹의 안전을 지키려는 마음",
+      "category": "collective",
+      "colliding_desires": [],
+      "colliding_pressures": ["blame_concentration", "group_tension"],
+      "natural_collisions": ["blame_concentration", "group_tension"],
+      "description_ko": "자신이 속한 집단을 위협으로부터 보호하려는 의지."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "anchor_id": "peter_scarcity_baseline",
+    "purpose": "Anchor-specific forbidden phrases for Stage F evidence audit. Loaded by engine/observer/story_audit.py at runtime; engine code stays content-agnostic.",
+    "rules": [
+      "List narrative phrases that the auditor should treat as plot prescription or scripture injection.",
+      "These are *forbidden patterns* the system should NOT generate, not commands the system follows.",
+      "Edit freely: add patterns specific to this anchor's domain (Bethany / Galilee / etc.)."
+    ]
+  },
+
+  "forbidden_phrases": [
+    "Caiaphas said",
+    "Pilate ordered",
+    "Judas betrayed",
+    "the rooster crowed",
+    "the cock crowed",
+    "denied him three times",
+    "in the courtyard of",
+    "high priest's house"
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": "flesh_baseline_output_v1",
+  "source_skeleton_id": "peter_scarcity_baseline",
+  "source_skeleton_version": "skeleton_output_v1",
+  "genre_profiles_used": [
+    "korean_morning_melodrama",
+    "japanese_quiet_drama"
+  ],
+  "recommendations": [
+    {
+      "source_seed_id": "S01",
+      "genre_id": "korean_morning_melodrama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:loyalty_vs_survival",
+        "pressure:authority_vigilance"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    },
+    {
+      "source_seed_id": "S01",
+      "genre_id": "japanese_quiet_drama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:loyalty_vs_survival",
+        "pressure:authority_vigilance"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    },
+    {
+      "source_seed_id": "S02",
+      "genre_id": "korean_morning_melodrama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:uncertainty_vs_commitment",
+        "pressure:confusion"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    },
+    {
+      "source_seed_id": "S02",
+      "genre_id": "japanese_quiet_drama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:uncertainty_vs_commitment",
+        "pressure:confusion"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    },
+    {
+      "source_seed_id": "S03",
+      "genre_id": "korean_morning_melodrama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:uncertainty_vs_commitment",
+        "pressure:confusion"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    },
+    {
+      "source_seed_id": "S03",
+      "genre_id": "japanese_quiet_drama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:uncertainty_vs_commitment",
+        "pressure:confusion"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    },
+    {
+      "source_seed_id": "S04",
+      "genre_id": "korean_morning_melodrama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:uncertainty_vs_commitment",
+        "pressure:confusion"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    },
+    {
+      "source_seed_id": "S04",
+      "genre_id": "japanese_quiet_drama",
+      "score": 1.0,
+      "fit_label": "strong_fit",
+      "reason_features": [
+        "conflict_axis:uncertainty_vs_commitment",
+        "pressure:confusion"
+      ],
+      "recommended_adapter": "rulebook_v2_8",
+      "score_breakdown": {
+        "axis_match": 0.5,
+        "pressure_overlap": 0.5,
+        "compatibility_score": 1.0,
+        "annotation_score": null,
+        "annotation_components": {},
+        "final_score": 1.0,
+        "mode": "rulebook_only"
+      }
+    }
+  ],
+  "model": {
+    "type": "weighted_rule_score",
+    "trained": false,
+    "data_source": "rulebook_only"
+  },
+  "audit": {
+    "raw_text_used": false,
+    "evidence_preserved": true
+  }
+}

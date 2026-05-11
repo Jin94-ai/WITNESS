@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "schema_version": "anchor_binding_v1",
+    "purpose": "Peter scarcity baseline anchor binding — universal seeds + this binding produce '베드로' surface. Skeleton engine does not read this file; only flesh engine / portfolio orchestrator use it.",
+    "rules": [
+      "이 파일은 universal seed의 main_role / 영어 raw name을 '베드로' 등 한국어 display로 매핑한다.",
+      "skeleton engine은 이 파일을 import하지 않는다.",
+      "raw_id_to_display_name_ko는 기존 identity_map.json의 display_name과 일치하도록 유지한다."
+    ]
+  },
+  "description_ko": "예수 공생애 끝자락의 베드로(Peter) anchor. universal seed에 한국어 인물 표시를 입힌다.",
+  "raw_id_to_display_name_ko": {
+    "Peter": "베드로",
+    "Andrew": "안드레",
+    "James": "야고보",
+    "John": "요한",
+    "Judas": "유다",
+    "Caiaphas": "가야바",
+    "Pilate": "빌라도"
+  },
+  "archetype_to_display_name_ko": {
+    "loyal_under_pressure": "베드로",
+    "uncertain_disciple": "안드레",
+    "watcher": "야고보",
+    "late_responder": "요한"
+  },
+  "role_to_display_name_ko": {
+    "main_loyal_under_pressure": "베드로",
+    "supporting_uncertain": "안드레",
+    "supporting_watcher": "야고보",
+    "supporting_late_responder": "요한"
+  },
+  "role_label_overrides_ko": {
+    "supporting_uncertain": "결정을 미루는 사람",
+    "supporting_watcher": "지켜보는 사람",
+    "supporting_late_responder": "늦게 반응하는 사람"
+  }
+}

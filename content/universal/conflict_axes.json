@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "schema_version": "universal_taxonomy_v1_1",
+    "purpose": "Anchor-agnostic conflict axes. Each axis is a pair of (desire vs pressure) or (desire vs desire) that produces narrative tension.",
+    "rules": [
+      "Axes are universal — no figure-specific bindings.",
+      "Each axis lists the two poles + a plain label + a question that captures the tension.",
+      "Existing conflict labels (loyalty_vs_survival 등) map to these axes 1:1 where possible.",
+      "Phase 2.5 (2026-05-09): unknown axis declared fallback_only with valid_for_training=false (Plan §B.2)."
+    ]
+  },
+  "axes": {
+    "loyalty_vs_survival": {
+      "id": "loyalty_vs_survival",
+      "plain_label_ko": "곁에 남기 vs 살아남기",
+      "status": "normal",
+      "valid_for_training": true,
+      "pole_a": {"id": "loyalty", "kind": "desire"},
+      "pole_b": {"id": "survival", "kind": "desire"},
+      "tension_question_ko": "곁에 남는 것이 자신의 안전을 위협할 때, 무엇을 선택하는가?"
+    },
+    "uncertainty_vs_commitment": {
+      "id": "uncertainty_vs_commitment",
+      "plain_label_ko": "결정 미루기 vs 결정하기",
+      "status": "normal",
+      "valid_for_training": true,
+      "pole_a": {"id": "confusion", "kind": "pressure"},
+      "pole_b": {"id": "commitment", "kind": "desire"},
+      "tension_question_ko": "결정의 순간이 다가오는데 아직 정리되지 않은 마음을 어떻게 다루는가?"
+    },
+    "control_vs_exposure": {
+      "id": "control_vs_exposure",
+      "plain_label_ko": "통제하기 vs 노출되기",
+      "status": "normal",
+      "valid_for_training": true,
+      "pole_a": {"id": "control", "kind": "desire"},
+      "pole_b": {"id": "public_suspicion", "kind": "pressure"},
+      "tension_question_ko": "감시는 좁아지고 의심은 퍼질 때, 자기 자리를 어떻게 지키는가?"
+    },
+    "collective_fear_vs_scapegoating": {
+      "id": "collective_fear_vs_scapegoating",
+      "plain_label_ko": "집단의 두려움 vs 표적 만들기",
+      "status": "normal",
+      "valid_for_training": true,
+      "pole_a": {"id": "group_safety", "kind": "desire"},
+      "pole_b": {"id": "blame_concentration", "kind": "pressure"},
+      "tension_question_ko": "그룹의 두려움이 한 방향으로 모일 때, 표적은 어떻게 정해지는가?"
+    },
+    "identity_vs_failure": {
+      "id": "identity_vs_failure",
+      "plain_label_ko": "이름 지키기 vs 무너짐",
+      "status": "normal",
+      "valid_for_training": true,
+      "pole_a": {"id": "identity_preservation", "kind": "desire"},
+      "pole_b": {"id": "shame_self", "kind": "pressure"},
+      "tension_question_ko": "스스로 약속한 이름이 작은 실패들로 흔들릴 때, 어떤 이름이 남는가?"
+    },
+    "atmosphere_vs_action": {
+      "id": "atmosphere_vs_action",
+      "plain_label_ko": "분위기 vs 행동",
+      "status": "normal",
+      "valid_for_training": true,
+      "pole_a": {"id": "crowd_mood", "kind": "pressure"},
+      "pole_b": {"id": "commitment", "kind": "desire"},
+      "tension_question_ko": "분위기가 이미 변했는데 누구도 움직이지 않는 시간이 길어지면 어떻게 되는가?"
+    },
+    "trust_vs_self_protection": {
+      "id": "trust_vs_self_protection",
+      "plain_label_ko": "신뢰 지키기 vs 자기 보호",
+      "status": "normal",
+      "valid_for_training": true,
+      "pole_a": {"id": "trust", "kind": "desire"},
+      "pole_b": {"id": "survival", "kind": "desire"},
+      "tension_question_ko": "관계를 지키는 일이 자신을 위험에 두는 일과 같아질 때, 거리는 어떻게 변하는가?"
+    },
+    "unknown": {
+      "id": "unknown",
+      "plain_label_ko": "정리되지 않은 긴장",
+      "status": "fallback_only",
+      "valid_for_training": false,
+      "pole_a": null,
+      "pole_b": null,
+      "tension_question_ko": "변화는 시작됐지만 그 방향이 아직 분명하지 않다.",
+      "policy": "정상 SkeletonOutput에서 unknown은 금지. strict validator는 unknown을 가진 seed를 거부하고, lenient validator는 audit_trail.unknown_axis_count로 기록한다 (Plan §B.2)."
+    }
+  }
+}

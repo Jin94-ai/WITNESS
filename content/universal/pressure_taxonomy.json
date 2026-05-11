@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "schema_version": "universal_taxonomy_v1_1",
+    "purpose": "Anchor-agnostic pressure taxonomy. Per WITNESS Narrative Mode Refactor Plan §1.1, the skeleton engine is generalized so pressures are defined in universal terms; anchor-specific bindings live in content/anchors/{id}/identity_map.json.",
+    "rules": [
+      "Pressures are forces that push an agent away from a chosen state.",
+      "Names here are universal (no historical-figure references).",
+      "Each entry has: id, plain_label_ko, polarity, axis hint.",
+      "Phase 2.5 (2026-05-09): crowd_mood is environmental_state, not aversive pressure (Plan §B.3). Use crowd_tension for actual aversive collective pressure."
+    ]
+  },
+  "pressures": {
+    "fear": {
+      "id": "fear",
+      "plain_label_ko": "두려움",
+      "polarity": "aversive",
+      "axis_hint": "internal_emotional",
+      "kind": "pressure",
+      "description_ko": "위협 또는 처벌 가능성에 대한 회피 반응."
+    },
+    "shame_self": {
+      "id": "shame_self",
+      "plain_label_ko": "수치심",
+      "polarity": "aversive",
+      "axis_hint": "internal_emotional",
+      "kind": "pressure",
+      "description_ko": "자기 평가의 추락 또는 사회적 노출에 대한 반응."
+    },
+    "hope": {
+      "id": "hope",
+      "plain_label_ko": "희망",
+      "polarity": "appetitive",
+      "axis_hint": "internal_emotional",
+      "kind": "pressure",
+      "description_ko": "기대되는 보상 또는 의미 있는 결과에 대한 끌림."
+    },
+    "grief": {
+      "id": "grief",
+      "plain_label_ko": "슬픔",
+      "polarity": "aversive",
+      "axis_hint": "internal_emotional",
+      "kind": "pressure",
+      "description_ko": "상실 이후의 감정적 무게."
+    },
+    "confusion": {
+      "id": "confusion",
+      "plain_label_ko": "혼란",
+      "polarity": "aversive",
+      "axis_hint": "internal_cognitive",
+      "kind": "pressure",
+      "description_ko": "사건 해석이 안정되지 않은 상태."
+    },
+    "love": {
+      "id": "love",
+      "plain_label_ko": "사랑",
+      "polarity": "appetitive",
+      "axis_hint": "internal_emotional",
+      "kind": "pressure",
+      "description_ko": "타자에 대한 강한 애착과 책임감."
+    },
+    "authority_vigilance": {
+      "id": "authority_vigilance",
+      "plain_label_ko": "권위자의 압박",
+      "polarity": "aversive",
+      "axis_hint": "external_social",
+      "kind": "pressure",
+      "description_ko": "권위 구조가 좁혀오는 시선."
+    },
+    "public_suspicion": {
+      "id": "public_suspicion",
+      "plain_label_ko": "사람들의 의심",
+      "polarity": "aversive",
+      "axis_hint": "external_social",
+      "kind": "pressure",
+      "description_ko": "주변 인물 / 관중의 의심이 누적되는 흐름."
+    },
+    "blame_concentration": {
+      "id": "blame_concentration",
+      "plain_label_ko": "비난이 한쪽으로 몰리는 흐름",
+      "polarity": "aversive",
+      "axis_hint": "external_social",
+      "kind": "pressure",
+      "description_ko": "그룹의 비난이 특정 인물로 집중되는 패턴."
+    },
+    "group_tension": {
+      "id": "group_tension",
+      "plain_label_ko": "집단의 긴장",
+      "polarity": "aversive",
+      "axis_hint": "external_social",
+      "kind": "pressure",
+      "description_ko": "그룹 내부의 분열 또는 마찰이 누적되는 상태."
+    },
+    "crowd_mood": {
+      "id": "crowd_mood",
+      "plain_label_ko": "분위기",
+      "polarity": "neutral",
+      "axis_hint": "external_atmospheric",
+      "kind": "environmental_pressure_state",
+      "description_ko": "주변 환경의 정서적 톤 (calm / tense / agitated). 압력 그 자체가 아니라 환경 상태이므로 adapter가 자동으로 dominant_pressure에 매핑하지 않는다.",
+      "deprecated_as_pressure": true
+    },
+    "crowd_tension": {
+      "id": "crowd_tension",
+      "plain_label_ko": "군중의 긴장",
+      "polarity": "aversive",
+      "axis_hint": "external_social",
+      "kind": "pressure",
+      "description_ko": "Phase 2.5 신설. crowd_mood가 명백한 압력으로 작용할 때 (군중이 공격적이거나 적대적으로 변할 때) 사용한다."
+    }
+  }
+}
