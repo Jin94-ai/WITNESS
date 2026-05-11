@@ -1,0 +1,23 @@
+{
+  "annotation_id": "ann_modelB_km_titleB_ep002",
+  "record_id": "km_titleB_ep002",
+  "annotator_id": "modelB",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 2,
+    "dangling_thread_generation": 4,
+    "cliffhanger_strength": 3,
+    "relationship_pressure": 3,
+    "hidden_information_pressure": 3,
+    "silence_or_avoidance": 3,
+    "emotional_suppression": 4
+  },
+  "evidence_quotes": {
+    "emotional_suppression": ["분노가 자라고 있다"],
+    "silence_or_avoidance": ["말하지 않는다"],
+    "hidden_information_pressure": ["의심하기 시작한다"],
+    "cliffhanger_strength": ["익명 메일이 도착"]
+  },
+  "confidence": {"overall": 0.71},
+  "warnings": []
+}

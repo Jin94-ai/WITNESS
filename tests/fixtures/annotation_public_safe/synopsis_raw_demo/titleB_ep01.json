@@ -1,0 +1,12 @@
+{
+  "genre_id": "korean_morning_melodrama",
+  "title_id": "titleB",
+  "episode_number": 1,
+  "synopsis_text": "회사 동료들 사이에서 사소한 거짓말 하나가 드러나기 시작한다. 신입 사원은 모르는 척하지만 선배는 이미 의심하고 있다. 점심 자리에서 어색한 침묵이 길어지고, 한 사람은 자리를 일찍 떠난다. 회차 끝에서 신입은 메시지를 받지만 답하지 않고, 누군가가 그를 멀리서 지켜본다.",
+  "source_name": "fictional_demo",
+  "source_url": "",
+  "source_license_note": "Public-safe fixture — fictional, no external source",
+  "fetched_at": "2026-05-11",
+  "public_safe_summary": "직장 내 작은 거짓말이 의심으로 번지는 회차",
+  "notes": "fixture/annotation_public_safe demo titleB episode 1"
+}

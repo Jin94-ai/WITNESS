@@ -1,0 +1,24 @@
+{
+  "annotation_id": "ann_modelA_km_titleB_ep005",
+  "record_id": "km_titleB_ep005",
+  "annotator_id": "modelA",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 3,
+    "dangling_thread_generation": 4,
+    "cliffhanger_strength": 4,
+    "relationship_pressure": 3,
+    "hidden_information_pressure": 4,
+    "silence_or_avoidance": 4,
+    "emotional_suppression": 4
+  },
+  "evidence_quotes": {
+    "dangling_thread_generation": ["새로운 의심이 또 자란다"],
+    "silence_or_avoidance": ["끝내 침묵한다"],
+    "hidden_information_pressure": ["핵심 비밀은 여전히 숨겨져"],
+    "emotional_suppression": ["사과하려다 말지 못하고"],
+    "cliffhanger_strength": ["보이지 않는다"]
+  },
+  "confidence": {"overall": 0.83},
+  "warnings": []
+}

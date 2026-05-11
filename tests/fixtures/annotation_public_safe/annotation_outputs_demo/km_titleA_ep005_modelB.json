@@ -1,0 +1,22 @@
+{
+  "annotation_id": "ann_modelB_km_titleA_ep005",
+  "record_id": "km_titleA_ep005",
+  "annotator_id": "modelB",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 5,
+    "dangling_thread_generation": 4,
+    "cliffhanger_strength": 5,
+    "relationship_pressure": 5,
+    "hidden_information_pressure": 4,
+    "silence_or_avoidance": 3,
+    "emotional_suppression": 3
+  },
+  "evidence_quotes": {
+    "conflict_intensity_peak": ["본격적 충돌을 예고"],
+    "cliffhanger_strength": ["본격적 충돌을 예고"],
+    "relationship_pressure": ["권위적인 태도로 회차를 마감"]
+  },
+  "confidence": {"overall": 0.84},
+  "warnings": []
+}

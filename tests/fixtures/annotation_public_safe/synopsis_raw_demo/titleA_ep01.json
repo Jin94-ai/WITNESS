@@ -1,0 +1,12 @@
+{
+  "genre_id": "korean_morning_melodrama",
+  "title_id": "titleA",
+  "episode_number": 1,
+  "synopsis_text": "주인공은 가족 모임에서 작은 변화를 느끼지만 아무에게도 말하지 않는다. 어머니의 시선이 깊어지고, 동생은 눈치를 보다가 자리를 피한다. 식사 자리는 평온해 보이지만, 누군가 무언가를 숨기고 있다는 분위기가 식탁 위로 무겁게 깔린다. 회차 끝에서 주인공은 침묵을 선택하지만, 다음 회차로 이어질 의심의 씨앗이 명확하게 남는다.",
+  "source_name": "fictional_demo",
+  "source_url": "",
+  "source_license_note": "Public-safe fixture — fictional, no external source",
+  "fetched_at": "2026-05-11",
+  "public_safe_summary": "가족 모임의 작은 변화, 침묵으로 끝나는 회차",
+  "notes": "fixture/annotation_public_safe demo episode 1"
+}

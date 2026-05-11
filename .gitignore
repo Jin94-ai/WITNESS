@@ -95,3 +95,38 @@ benchmarks/results/
 
 # 실측 산출물 중 대용량은 제외 (구조/코드만 커밋)
 # 단 docs/person/v3_measurement/*.json 은 유지 (rubric 비교 소스)
+
+# Archive — local-only legacy / superseded artifacts
+# (created 2026-04-27 via WITNESS_PROJECT_DIET_ACTIONS.md Phase 2)
+# README.md만 git tracked, 내용물은 로컬 한정 + 외부 백업으로 운영.
+archive/*
+!archive/README.md
+!archive/.gitkeep
+
+# Phase 3.0 Data Pilot — 외부 데이터 / 저작권 위험 영역
+# (Phase 2.9 prep + Phase 3.0 v1.1 pipeline, 사용자 승인 후 실제 fetch 시작)
+# DATA_SOURCE_CANDIDATE_REVIEW.md + PHASE_3_0_DATA_PILOT_PREP.md §6.2 참조
+# 원문 synopsis: 비공개 strict
+data/external_private/
+data/annotation/phase3_pilot/per_annotator/
+data/annotation/phase3_pilot/synopsis_cache/
+# Phase 3.0 v1.1 §8.2 — annotation_inputs는 synopsis_text 포함이므로 비공개
+data/annotation/phase3_pilot/annotation_inputs/
+data/annotation/phase3_pilot/annotation_outputs/
+data/annotation/phase3_pilot/validated/
+# normalized_synopsis.jsonl도 synopsis_text 포함 → 비공개
+data/annotation/phase3_pilot/normalized_synopsis.jsonl
+# 단, public-safe / features / reports는 공개 가능 → 추적
+!data/annotation/phase3_pilot/public_safe_dataset.jsonl
+!data/annotation/phase3_pilot/features/
+!data/annotation/phase3_pilot/reports/
+# LLM API key / 호출 로그 — 비공개
+data/llm_keys/
+data/llm_call_logs/
+
+# Models — local-only ML artifacts (Phase 3.2+ 예정, 현재 0 trained)
+models/
+
+# Visual track — frozen 2026-05-06 (per CLAUDE.md). Local HTML demos만 보존.
+# (frozen sub-tracks: pixel_event_playback / world_flow_observer / dot_observer_* 등)
+visual/

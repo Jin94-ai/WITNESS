@@ -1,0 +1,23 @@
+{
+  "annotation_id": "ann_modelA_km_titleB_ep004",
+  "record_id": "km_titleB_ep004",
+  "annotator_id": "modelA",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 4,
+    "dangling_thread_generation": 3,
+    "cliffhanger_strength": 3,
+    "relationship_pressure": 4,
+    "hidden_information_pressure": 3,
+    "silence_or_avoidance": 3,
+    "emotional_suppression": 4
+  },
+  "evidence_quotes": {
+    "relationship_pressure": ["가족과 직장이 얽히"],
+    "emotional_suppression": ["격하게 화를 내지만", "표정을 다스린다"],
+    "silence_or_avoidance": ["결정을 미루고"],
+    "dangling_thread_generation": ["멀리서 또 다른 인물이 모든 것을 지켜본다"]
+  },
+  "confidence": {"overall": 0.79},
+  "warnings": []
+}

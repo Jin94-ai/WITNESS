@@ -1,0 +1,23 @@
+{
+  "annotation_id": "ann_modelB_km_titleB_ep003",
+  "record_id": "km_titleB_ep003",
+  "annotator_id": "modelB",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 3,
+    "dangling_thread_generation": 4,
+    "cliffhanger_strength": 3,
+    "relationship_pressure": 3,
+    "hidden_information_pressure": 4,
+    "silence_or_avoidance": 4,
+    "emotional_suppression": 3
+  },
+  "evidence_quotes": {
+    "conflict_intensity_peak": ["거짓말이 우연히 폭로"],
+    "silence_or_avoidance": ["자리를 피한다", "침묵을 선택"],
+    "hidden_information_pressure": ["숨기기로 결심"],
+    "dangling_thread_generation": ["또 다른 비밀을 만든다"]
+  },
+  "confidence": {"overall": 0.76},
+  "warnings": []
+}

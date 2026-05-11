@@ -1,0 +1,22 @@
+{
+  "annotation_id": "ann_modelA_km_titleA_ep005",
+  "record_id": "km_titleA_ep005",
+  "annotator_id": "modelA",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 5,
+    "dangling_thread_generation": 5,
+    "cliffhanger_strength": 5,
+    "relationship_pressure": 5,
+    "hidden_information_pressure": 4,
+    "silence_or_avoidance": 3,
+    "emotional_suppression": 3
+  },
+  "evidence_quotes": {
+    "conflict_intensity_peak": ["다음 회차의 본격적 충돌을 예고"],
+    "cliffhanger_strength": ["다음 회차의 본격적 충돌을 예고"],
+    "relationship_pressure": ["친척 한 명이 비난을 강하게 표출"]
+  },
+  "confidence": {"overall": 0.88},
+  "warnings": []
+}

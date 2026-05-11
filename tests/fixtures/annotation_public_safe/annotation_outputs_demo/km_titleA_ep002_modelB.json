@@ -1,0 +1,22 @@
+{
+  "annotation_id": "ann_modelB_km_titleA_ep002",
+  "record_id": "km_titleA_ep002",
+  "annotator_id": "modelB",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 3,
+    "dangling_thread_generation": 3,
+    "cliffhanger_strength": 4,
+    "relationship_pressure": 4,
+    "hidden_information_pressure": 3,
+    "silence_or_avoidance": 4,
+    "emotional_suppression": 3
+  },
+  "evidence_quotes": {
+    "relationship_pressure": ["주변 사람들은 슬쩍 거리를 둔다"],
+    "silence_or_avoidance": ["침묵을 선택하고"],
+    "cliffhanger_strength": ["멀리서 무언가를 본 듯한 표정"]
+  },
+  "confidence": {"overall": 0.75},
+  "warnings": []
+}

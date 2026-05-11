@@ -1,0 +1,22 @@
+{
+  "annotation_id": "ann_modelA_km_titleA_ep001",
+  "record_id": "km_titleA_ep001",
+  "annotator_id": "modelA",
+  "genre_id": "korean_morning_melodrama",
+  "features": {
+    "conflict_intensity_peak": 2,
+    "dangling_thread_generation": 4,
+    "cliffhanger_strength": 3,
+    "relationship_pressure": 3,
+    "hidden_information_pressure": 4,
+    "silence_or_avoidance": 5,
+    "emotional_suppression": 4
+  },
+  "evidence_quotes": {
+    "silence_or_avoidance": ["주인공은 침묵을 선택"],
+    "hidden_information_pressure": ["누군가 무언가를 숨기고 있다는 분위기"],
+    "dangling_thread_generation": ["다음 회차로 이어질 의심의 씨앗"]
+  },
+  "confidence": {"overall": 0.78},
+  "warnings": []
+}
