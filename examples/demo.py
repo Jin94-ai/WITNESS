@@ -13,19 +13,23 @@ import statistics
 import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
-from content.caiaphas.domain_politics import PoliticalCalculationState
-from content.crowd.domain_crowd import CrowdDynamicsState
-from content.gauguin.domain_artistic_ego import ArtisticEgoState
-from content.judas.domain_betrayal import BetrayalPsychologyState
-from content.peter.domain_faith import FaithJourneyState
-from content.theo.domain_patron import PatronState
-from content.vangogh.domain_creative import CreativeDriveState
-from engine.core.world import SimulationConfig
-from engine.io.loader import (
+from content.caiaphas.domain_politics import PoliticalCalculationState  # noqa: E402
+from content.crowd.domain_crowd import CrowdDynamicsState  # noqa: E402
+from content.gauguin.domain_artistic_ego import ArtisticEgoState  # noqa: E402
+from content.judas.domain_betrayal import BetrayalPsychologyState  # noqa: E402
+from content.peter.domain_faith import FaithJourneyState  # noqa: E402
+from content.theo.domain_patron import PatronState  # noqa: E402
+from content.vangogh.domain_creative import CreativeDriveState  # noqa: E402
+from engine.core.world import SimulationConfig  # noqa: E402
+from engine.io.loader import (  # noqa: E402
     load_agent_state,
     load_behavior_profile,
     load_hazard_events,
@@ -33,13 +37,13 @@ from engine.io.loader import (
     load_triggers,
     register_domain_type,
 )
-from engine.rendering.narrator import render_ensemble_summary
-from engine.rules.base import RuleEngine
-from engine.rules.emotional import FearResponseRule, GriefRule, HopeRule, LoveRule
-from engine.rules.physical import FatigueRule, HungerRule
-from engine.rules.temporal import HomeostasisRule
-from engine.simulation.explanation import format_explanation_text, generate_explanation
-from engine.simulation.world import SimulationWorld
+from engine.rendering.narrator import render_ensemble_summary  # noqa: E402
+from engine.rules.base import RuleEngine  # noqa: E402
+from engine.rules.emotional import FearResponseRule, GriefRule, HopeRule, LoveRule  # noqa: E402
+from engine.rules.physical import FatigueRule, HungerRule  # noqa: E402
+from engine.rules.temporal import HomeostasisRule  # noqa: E402
+from engine.simulation.explanation import format_explanation_text, generate_explanation  # noqa: E402
+from engine.simulation.world import SimulationWorld  # noqa: E402
 
 # 도메인 등록
 register_domain_type("faith_journey", FaithJourneyState)

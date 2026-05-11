@@ -11,18 +11,24 @@ from __future__ import annotations
 
 import json
 import random
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 from engine.action.action_event_mapper import ActionEventMapper
-from engine.action.availability_gate import GateContext, filter_available
+from engine.action.availability_gate import GateContext, is_available
 from engine.person.state_derived import DerivedCalculator
 from engine.person.state_transitions import (
     StateTransitionEngine,
     TransitionContext,
 )
 from engine.person.state_v3 import ActiveState
+from engine.persona import (
+    DEFAULT_PROFILE,
+    PersonaProfile,
+    activate_motifs,
+    select_action,
+)
 from engine.world.events import EventRegistry
 from engine.world.pressure import PressureLayer, PressureVector
 from engine.world.primitives import PrimitiveState
@@ -40,6 +46,13 @@ class TrajectoryRecord:
     event_category: str          # "canonical" / "action_caused" / "voluntary"
     action_kind: str             # rough category for CharacterCritic
     fear_like: float             # For oscillation tracking
+    # Step F: decision provenance (None for non-motif-mediated legacy paths)
+    selected_motif: str | None = None
+    motif_activations: dict[str, float] | None = None
+    blocked_actions: list[str] | None = None
+    dominant_pressure: str | None = None
+    guilt_source: str | None = None
+    shame_source: str | None = None
 
 
 class PersonV3Loop:
@@ -54,6 +67,7 @@ class PersonV3Loop:
         *,
         initial_state_path: Path | str,
         canonical_events_path: Path | str,
+        persona_profile: PersonaProfile | None = None,
         policy: Any | None = None,
         seed: int = 0,
     ) -> None:
@@ -66,12 +80,17 @@ class PersonV3Loop:
         self.primitives, self.schedule = self._load_scenario(canonical_events_path)
         self.policy = policy  # None → rule-based default
         self.transitions = StateTransitionEngine()
+        # Step E: persona profile (default = baseline human). Scenario content
+        # can override by passing profile explicitly.
+        self.profile: PersonaProfile = persona_profile or DEFAULT_PROFILE
 
         self.trajectory: list[TrajectoryRecord] = []
         # event_id -> last-fired tick_index (for availability gate)
         self._recent_event_last_fired: dict[str, int] = {}
         # running tick index, for Recent lookup
         self._current_tick: int = 0
+        # Step F: last decision provenance, filled by _decide_action
+        self._last_selection = None
 
     @staticmethod
     def _load_initial_state(path: Path | str) -> ActiveState:
@@ -141,18 +160,28 @@ class PersonV3Loop:
             self._recent_event_last_fired[action_event_id] = tick_index
             fired_this_tick.append(action_event_id)
 
-        # 6. Record
+        # 6. Record (with Step F provenance)
         derived_values = self.derived.compute_all(self.state)
+        sel = self._last_selection
+        pv = pressures.to_dict()
+        dominant_pressure = max(pv, key=pv.get) if pv else None
         record = TrajectoryRecord(
             tick=tick_index,
             action_id=action_id,
             state=self._serialize_state(),
-            pressures=pressures.to_dict(),
+            pressures=pv,
             derived=derived_values,
             fired_events=fired_this_tick,
             event_category=event_category,
             action_kind=self._action_kind(action_id),
             fear_like=self.state.fear,
+            # Step F provenance
+            selected_motif=sel.selected_motif if sel else None,
+            motif_activations=dict(sel.motif_activations) if sel else None,
+            blocked_actions=list(sel.blocked_actions) if sel else None,
+            dominant_pressure=dominant_pressure,
+            guilt_source=self._infer_guilt_source(fired_this_tick),
+            shame_source=self._infer_shame_source(fired_this_tick),
         )
         self.trajectory.append(record)
         return record
@@ -176,20 +205,35 @@ class PersonV3Loop:
     )
 
     def _decide_action(self, pressures: PressureVector) -> str:
-        """2-stage decision (Dynamics Step 3 + B2 policy retune).
+        """3-stage motif-mediated decision (Persona Engine transition, Step C).
 
-        Stage A: Availability gate filters ALL_ACTIONS by context.
-        Stage B: Weight-based sampling over the survivors.
+        Stage 1: scene recognizer (recent events → event-recent flags)
+        Stage 2: motif activator (pressure + state + profile → motif activations)
+        Stage 3: action selector (top motifs + priors + availability gate)
 
-        B2 retune (2026-04-23): accusation_fresh/eye_contact_fresh/forgiveness_fresh
-        signals drive deny/weep/confess weights directly. follow_closely is
-        suppressed under active accusation (context-driven attenuation).
+        Direct action boosts (accusation → deny +8, etc.) removed per
+        Persona Engine transition. All scene → action routing goes through
+        motif layer. Persona differences expressed via profile parameters
+        (content/<scenario>/profile.json), not engine code.
+
+        Selection provenance stored on self._last_selection for trace.
         """
-        s = self.state
-        p = pressures
+        # ---- Stage 1: scene recognizer (event recency flags) ----
+        events_recent = {
+            ev: 1 if (self._current_tick - t) <= 3 else 0
+            for ev, t in self._recent_event_last_fired.items()
+        }
 
-        # Build gate context up-front; reused for weight signals.
-        ctx = GateContext(
+        # ---- Stage 2: motif activator (persona profile modulates) ----
+        motif_result = activate_motifs(
+            state=self.state,
+            pressures=pressures.to_dict(),
+            events_recent=events_recent,
+            profile=self.profile,
+        )
+
+        # ---- Stage 3: action selector with availability gate ----
+        gate_ctx = GateContext(
             state=self.state,
             primitives=self.primitives,
             recent_events={
@@ -198,97 +242,21 @@ class PersonV3Loop:
             },
             tick_index=self._current_tick,
         )
-        # Fresh-event signals (age 0 = this tick, age 1 = last tick)
-        accusation_fresh = ctx.has_any_recent(
-            ["public_accusation", "crowd_mockery"], within=0,
-        )
-        accusation_recent = ctx.has_any_recent(
-            ["public_accusation", "crowd_mockery"], within=1,
-        )
-        eye_contact_fresh = ctx.has_recent("eye_contact", within=1)
-        forgiveness_fresh = ctx.has_recent("forgiveness_offered", within=3)
-        restoration_fresh = ctx.has_recent("restoration_moment", within=1)
 
-        # State helpers
-        loyalty_max = max(s.loyalty.values()) if s.loyalty else 0.0
-        love_primary = s.love.get("primary_figure", 0.0)
-        guilt_primary = s.guilt.get("primary_figure", 0.0)
-        shame_crowd = s.shame.get("crowd", 0.0)
+        def _available(action: str) -> bool:
+            return is_available(action, gate_ctx)
 
-        # Scaling factors concentrating mass on canonical responses.
-        accusation_attenuate = 0.25 if accusation_fresh else 1.0
-        eye_contact_attenuate = 0.35 if eye_contact_fresh else 1.0
-        restoration_attenuate = 0.35 if restoration_fresh else 1.0
-
-        # follow_closely: reduced heavily under fresh accusation
-        follow_closely_w = (
-            2.0 + 0.2 * love_primary + 0.1 * loyalty_max
-            - 0.1 * s.fear
-            - 2.5 * (1.0 if accusation_fresh else 0.0)
-            - 1.0 * (1.0 if accusation_recent else 0.0)
-        )
-        # deny: strongly dominant under fresh accusation, but eye_contact
-        # is the canonical turning point (Luke 22:61) — suppresses deny.
-        deny_w = (
-            0.1
-            + 8.0 * (1.0 if accusation_fresh else 0.0)
-            + 1.5 * (1.0 if accusation_recent else 0.0)
-            + 0.3 * p.social_threat
-            + 0.2 * p.physical_threat
-            + 0.2 * max(0.0, s.fear - 4.0)
-        ) * (0.15 if eye_contact_fresh else 1.0)
-        # weep: triggered by eye_contact after denial (tick 20 canonical)
-        # eye_contact is the explicit turning point in Luke 22:61 -- strong boost
-        weep_w = (
-            0.2 + 0.2 * s.grief + 0.15 * guilt_primary
-            + 6.0 * (1.0 if eye_contact_fresh else 0.0)
-            + 0.3 * max(0.0, guilt_primary - 3.0)
-        )
-        # confess: triggered by forgiveness_offered/restoration_moment.
-        # restoration_moment is the canonical restoration scene (John 21).
-        confess_w = (
-            0.2 + 0.15 * loyalty_max - 0.15 * s.fear
-            + 2.0 * (1.0 if forgiveness_fresh else 0.0)
-            + 6.0 * (1.0 if restoration_fresh else 0.0)
-            + 0.2 * max(0.0, guilt_primary - 3.0)
+        selection = select_action(
+            motif_result=motif_result,
+            profile=self.profile,
+            availability_filter=_available,
+            rng=self._rng,
+            default_action="follow_closely",
         )
 
-        # Non-deny/weep/confess alternatives are attenuated during canonical moments.
-        scale = accusation_attenuate * eye_contact_attenuate * restoration_attenuate
-        weights = {
-            "follow_closely": follow_closely_w * eye_contact_attenuate,
-            "pray": (0.8 + 0.15 * s.grief + 0.1 * p.sacred_salience) * scale,
-            "discuss_with_disciples": (0.6 + 0.1 * s.confusion) * scale,
-            "assert_loyalty": (0.4 + 0.15 * loyalty_max - 0.2 * s.fear) * scale,
-            "withdraw_in_fear": (0.3 + 0.3 * s.fear + 0.1 * p.social_threat) * scale,
-            "weep": weep_w,
-            "deny": deny_w,
-            "confess": confess_w,
-            "stay_awake": (0.3 - 0.15 * s.fatigue) * scale,
-            "fall_asleep": (0.2 + 0.3 * s.fatigue) * scale,
-            "draw_sword": 0.05 + 0.25 * s.anger - 0.1 * s.fear,
-            "flee": (0.1 + 0.35 * (s.fear > 7) + 0.15 * p.physical_threat) * scale,
-            "follow_at_distance": (0.3 + 0.2 * (s.fear > 4) + 0.1 * shame_crowd) * scale,
-            "stay_hiding": (0.1 + 0.2 * shame_crowd + 0.15 * (s.fear > 5)) * scale,
-            "run_to_tomb": 0.05 + 0.15 * s.hope + 0.1 * love_primary,
-        }
-
-        # Stage A: availability gate
-        available = filter_available(list(self.ACTIONS), ctx)
-        # Keep only weights for gated-in actions
-        filtered_weights = {a: weights.get(a, 0.1) for a in available}
-
-        # Stage B: weighted sampling over survivors
-        total = sum(max(0.0, w) for w in filtered_weights.values())
-        if total <= 0:
-            return "follow_closely"
-        r = self._rng.random() * total
-        cumulative = 0.0
-        for action, w in filtered_weights.items():
-            cumulative += max(0.0, w)
-            if r <= cumulative:
-                return action
-        return "follow_closely"
+        # Store provenance for TrajectoryRecord (Step F)
+        self._last_selection = selection
+        return selection.action
 
     # -----------------------------------------------------------------
     # Direct edges update (v2 §6 simplified)
@@ -367,3 +335,33 @@ class PersonV3Loop:
         if action_id in {"deny", "fall_asleep"}:
             return "defensive"
         return "neutral"
+
+    # -----------------------------------------------------------------
+    # Step F: provenance inference helpers
+    # -----------------------------------------------------------------
+
+    _GUILT_SOURCE_EVENTS = {
+        "public_accusation": "social_accusation",
+        "crowd_mockery": "social_accusation",
+        "betrayal_witnessed": "peer_failure",
+        "eye_contact": "exposure",
+        "primary_figure_suffering_visible": "vicarious_guilt",
+    }
+    _SHAME_SOURCE_EVENTS = {
+        "public_accusation": "public_exposure",
+        "crowd_mockery": "public_exposure",
+        "eye_contact": "intimate_exposure",
+        "betrayal_witnessed": "peer_failure",
+    }
+
+    def _infer_guilt_source(self, fired_events: list[str]) -> str | None:
+        for ev in fired_events:
+            if ev in self._GUILT_SOURCE_EVENTS:
+                return self._GUILT_SOURCE_EVENTS[ev]
+        return None
+
+    def _infer_shame_source(self, fired_events: list[str]) -> str | None:
+        for ev in fired_events:
+            if ev in self._SHAME_SOURCE_EVENTS:
+                return self._SHAME_SOURCE_EVENTS[ev]
+        return None

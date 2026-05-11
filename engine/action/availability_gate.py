@@ -19,7 +19,6 @@ from typing import Callable
 from engine.person.state_v3 import ActiveState
 from engine.world.primitives import PrimitiveState
 
-
 # ---------------------------------------------------------------------
 # Context bag passed into each gate
 # ---------------------------------------------------------------------

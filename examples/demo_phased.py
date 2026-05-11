@@ -23,36 +23,49 @@ import io
 import sys
 from pathlib import Path
 
-if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-from content.caiaphas.domain_politics import PoliticalCalculationState
-from content.crowd.domain_crowd import CrowdDynamicsState
-from content.judas.domain_betrayal import BetrayalPsychologyState
-from content.peter.domain_faith import FaithJourneyState
-from engine.core.phase import (
+
+def _wrap_stdout_utf8() -> None:
+    """Wrap stdout/stderr in UTF-8 TextIOWrapper. Call from main() only —
+    doing this at import time breaks pytest capture and any other consumer
+    that imports this module's helpers."""
+    if sys.platform == "win32":
+        sys.stdout = io.TextIOWrapper(
+            sys.stdout.buffer, encoding="utf-8", errors="replace",
+        )
+        sys.stderr = io.TextIOWrapper(
+            sys.stderr.buffer, encoding="utf-8", errors="replace",
+        )
+
+from content.caiaphas.domain_politics import PoliticalCalculationState  # noqa: E402
+from content.crowd.domain_crowd import CrowdDynamicsState  # noqa: E402
+from content.judas.domain_betrayal import BetrayalPsychologyState  # noqa: E402
+from content.peter.domain_faith import FaithJourneyState  # noqa: E402
+from engine.core.phase import (  # noqa: E402
     FieldMapping,
     Phase,
     PhaseExitCondition,
     PhaseHandoffSpec,
 )
-from engine.core.world import SimulationConfig
-from engine.io.loader import load_agent_state, register_domain_type
-from engine.rules.base import RuleEngine
-from engine.rules.emotional import (
+from engine.core.world import SimulationConfig  # noqa: E402
+from engine.io.loader import load_agent_state, register_domain_type  # noqa: E402
+from engine.rules.base import RuleEngine  # noqa: E402
+from engine.rules.emotional import (  # noqa: E402
     ConfusionRule,
     FearResponseRule,
     GriefRule,
     HopeRule,
     LoveRule,
 )
-from engine.rules.slow_recovery import SlowStateFieldRecoveryRule
-from engine.rules.temporal import HomeostasisRule
-from engine.simulation.phased_world import PhasedSimulationWorld
-from engine.simulation.time_axis import hours_to_days
+from engine.rules.slow_recovery import SlowStateFieldRecoveryRule  # noqa: E402
+from engine.rules.temporal import HomeostasisRule  # noqa: E402
+from engine.simulation.phased_world import PhasedSimulationWorld  # noqa: E402
+from engine.simulation.time_axis import hours_to_days  # noqa: E402
 
-CONTENT = Path(__file__).resolve().parent / "content"
+CONTENT = ROOT / "content"
 
 
 def _rules(with_recovery: bool = False) -> RuleEngine:
@@ -280,6 +293,7 @@ def _print_final_summary(result) -> None:
 
 
 def main() -> None:
+    _wrap_stdout_utf8()
     parser = argparse.ArgumentParser()
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--with-recovery", action="store_true",

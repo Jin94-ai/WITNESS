@@ -1,0 +1,76 @@
+{
+  "_doc": "Judas persona profile (Step E). Same schema, different parameters.",
+  "_scenario": "judas_passion",
+  "_date": "2026-04-23",
+
+  "name": "judas_passion",
+  "description": "Judas: calculating then remorseful. Lower primary_focus attachment (eroded pre-betrayal), no repair path (seek_repair_tendency 0.4).",
+
+  "pressure_sensitivity": {
+    "social_threat": 0.8,
+    "shame_exposure": 1.0,
+    "loyalty_pull": 0.7,
+    "uncertainty": 1.0,
+    "urgency": 1.2,
+    "isolation_pressure": 1.2,
+    "sacred_salience": 0.8,
+    "physical_threat": 0.9
+  },
+
+  "motif_tendency": {
+    "conceal": 1.3,
+    "confess": 0.7,
+    "withdraw": 1.2,
+    "remain_present": 0.8,
+    "confront": 0.6,
+    "grieve": 1.0,
+    "seek_repair": 0.4,
+    "observe_wait": 1.3
+  },
+
+  "recovery_bias": {
+    "fear_recovery_rate": 0.9,
+    "guilt_decay_rate": 0.5,
+    "grief_tail_strength": 1.3,
+    "confusion_decay_rate": 1.0,
+    "trust_restoration_bias": 0.5
+  },
+
+  "relation_bias": {
+    "primary_focus_attachment_strength": 0.7,
+    "peer_dependence": 0.6,
+    "authority_reactivity": 1.2,
+    "public_exposure_sensitivity": 1.2
+  },
+
+  "motif_action_priors": {
+    "conceal": {
+      "deny": 0.10, "stay_hiding": 0.40,
+      "follow_at_distance": 0.30, "withdraw_in_fear": 0.20
+    },
+    "confess": {
+      "confess": 0.30, "weep": 0.20, "assert_loyalty": 0.50
+    },
+    "withdraw": {
+      "flee": 0.40, "stay_hiding": 0.30,
+      "follow_at_distance": 0.20, "fall_asleep": 0.10
+    },
+    "remain_present": {
+      "discuss_with_disciples": 0.40, "follow_closely": 0.30,
+      "stay_awake": 0.30
+    },
+    "confront": {
+      "flee": 0.60, "draw_sword": 0.20, "assert_loyalty": 0.20
+    },
+    "grieve": {
+      "weep": 0.40, "withdraw_in_fear": 0.50, "pray": 0.10
+    },
+    "seek_repair": {
+      "confess": 0.30, "flee": 0.40, "assert_loyalty": 0.30
+    },
+    "observe_wait": {
+      "stay_awake": 0.30, "discuss_with_disciples": 0.50,
+      "watch_quietly": 0.20
+    }
+  }
+}

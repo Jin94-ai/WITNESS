@@ -23,11 +23,10 @@ Grief 최소 3 경로 (ChatGPT 권고):
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Iterable
 
+from engine.person.recovery_profile import RECOVERY_PROFILES
 from engine.person.state_v3 import ActiveState
 from engine.world.primitives import PrimitiveState
-
 
 # ---------------------------------------------------------------------
 # Utility
@@ -274,12 +273,19 @@ class StateTransitionEngine:
             )
 
         # ==============================================================
-        # Passive decay (small, keeps acute spikes from persisting forever)
+        # Variable-specific recovery profile (Phase G Step G5)
         # ==============================================================
-        state.fear = _clip01_to_10(state.fear - self.DECAY_FEAR)
-        state.confusion = _clip01_to_10(state.confusion - self.DECAY_CONFUSION)
-        state.anger = _clip01_to_10(state.anger - self.DECAY_ANGER)
-        if "self" in state.shame:
-            state.shame["self"] = _clip01_to_10(
-                state.shame["self"] - self.DECAY_SHAME_SELF,
-            )
+        # Different half-lives + floors per variable. fear/anger decay
+        # quickly toward 0; grief/guilt/shame retain a long-tail floor.
+        state.fear = RECOVERY_PROFILES["fear"].apply(state.fear)
+        state.confusion = RECOVERY_PROFILES["confusion"].apply(state.confusion)
+        state.anger = RECOVERY_PROFILES["anger"].apply(state.anger)
+        state.grief = RECOVERY_PROFILES["grief"].apply(state.grief)
+        state.awe = RECOVERY_PROFILES["awe"].apply(state.awe)
+        # target-aware fields: guilt / shame. Each target decays toward its floor.
+        guilt_prof = RECOVERY_PROFILES["guilt"]
+        for k in list(state.guilt.keys()):
+            state.guilt[k] = guilt_prof.apply(state.guilt[k])
+        shame_prof = RECOVERY_PROFILES["shame"]
+        for k in list(state.shame.keys()):
+            state.shame[k] = shame_prof.apply(state.shame[k])

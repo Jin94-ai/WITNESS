@@ -259,11 +259,12 @@ def test_shame_and_guilt_dict_structure_matches_but_semantics_differ() -> None:
     assert isinstance(s.guilt, dict)
     # No single hard assertion for semantics, but default targets hint:
     # shame["crowd"] valid; guilt has no "crowd" default because guilt isn't
-    # crowd-directed. This is a sanity check that default_targets differ.
+    # public-directed. Sanity check default_targets differ (Step D generic roles).
     from engine.person.state_v3 import ACTIVE_VARIABLES_META
     meta_by_name = {m.name: m for m in ACTIVE_VARIABLES_META}
-    assert "crowd" in meta_by_name["shame"].default_targets
-    assert "crowd" not in meta_by_name["guilt"].default_targets
+    # shame has public_group (where public shame is felt); guilt does not.
+    assert "public_group" in meta_by_name["shame"].default_targets
+    assert "public_group" not in meta_by_name["guilt"].default_targets
 
 
 # =============================================================================

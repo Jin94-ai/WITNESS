@@ -64,25 +64,47 @@ class SlowState(BaseModel):
     동일한 추상 변수로 표현 가능.
     """
 
+    # MicroWorld coupling note (Iter 89, freeze audit 2026-04-25;
+    # confirmed Iter 162 PYHASH N=15 ablation; formalized Iter 179
+    # Step B1+B2 of WITNESS_INTERNAL_BRANCH_DECISION_AND_NEXT_STEPS):
+    # All 5 fields below are MicroWorld-INERT — not read by any motif
+    # activator (engine/persona/) or world step (engine/world/micro_world/).
+    # They ARE read by: latent_drive (v1.0 unused), narrator (rendering),
+    # trajectory (logging). Cross-pipeline retain.
+    # Status: 5 RESERVE state fields. DO NOT REMOVE (breaks Pydantic schema,
+    # narrator render, trajectory format, v3 PersonV3Loop tests).
+    # Canonical reference: docs/b_direction/STATE_FIELD_STATUS.md
     moral_injury: float = Field(
         default=0.0, ge=0.0, le=10.0,
-        description="도덕적 상처. 자신의 신념/가치에 반하는 행동 후 누적.",
+        description="도덕적 상처. 자신의 신념/가치에 반하는 행동 후 누적. "
+                    "MicroWorld-INERT (RESERVE): latent_drive/narrator/trajectory만 읽음. "
+                    "Future reactivation: v1.2 SlowStateFieldRecoveryRule OR v1.0 LatentDrive.",
     )
     breach_count: float = Field(
         default=0.0, ge=0.0,
-        description="자기파괴적/위반적 행동 누적. (위반, 자해, 약속 파기, 폭발 등)",
+        description="자기파괴적/위반적 행동 누적. "
+                    "MicroWorld-INERT (RESERVE, lowest priority): trajectory logging-only. "
+                    "Iter 89 listed as REMOVE_CANDIDATE; Iter 162 promoted to RESERVE. "
+                    "No candidate rule defined for update; v1.2 trauma-counter use possible. "
+                    "If v1.2 doesn't claim it, may revert to REMOVE_CANDIDATE.",
     )
     event_trauma: float = Field(
         default=0.0, ge=0.0, le=10.0,
-        description="사건 트라우마. 극한 사건 경험/목격 후 누적.",
+        description="사건 트라우마. 극한 사건 경험/목격 후 누적. "
+                    "MicroWorld-INERT (RESERVE): latent_drive/trajectory/slow_recovery (unwired). "
+                    "Future reactivation: v1.2 SlowStateFieldRecoveryRule (rule already defined).",
     )
     identity_shift: float = Field(
         default=0.0, ge=-10.0, le=10.0,
-        description="정체성 변화. 양수=강화/성장, 음수=붕괴/해체.",
+        description="정체성 변화. 양수=강화/성장, 음수=붕괴/해체. "
+                    "MicroWorld-INERT (RESERVE): latent_drive/narrator/trajectory. "
+                    "Future reactivation: v1.2 SlowStateFieldRecoveryRule OR v1.0 LatentDrive.",
     )
     trust_scar: float = Field(
         default=0.0, ge=0.0, le=10.0,
-        description="관계 상처. 관계 단절이나 고립 후 누적.",
+        description="관계 상처. 관계 단절이나 고립 후 누적. "
+                    "MicroWorld-INERT (RESERVE): latent_drive/trajectory/slow_recovery (unwired). "
+                    "Future reactivation: v1.2 SlowStateFieldRecoveryRule (rule already defined).",
     )
 
 

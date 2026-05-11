@@ -1,0 +1,84 @@
+{
+  "_doc": "Van Gogh canonical events (v3 Persona transition). Arles → Gauguin arrival → ear incident.",
+  "_scenario": "vangogh_arles",
+  "_note": "Events use generic event_ids. 특정 canonical 서사 tick 1-30 압축.",
+
+  "events": [
+    {
+      "tick": 3,
+      "event_id": "creative_surge",
+      "description": "집중 작업 연속",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 6,
+      "event_id": "ally_arrival",
+      "description": "Gauguin 도착 (동료 예술가)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 10,
+      "event_id": "creative_conflict",
+      "description": "미학적 차이로 갈등",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 14,
+      "event_id": "betrayal_witnessed",
+      "description": "Gauguin이 VG를 비난하는 편지 발견",
+      "canonical_level": "B"
+    },
+    {
+      "tick": 17,
+      "event_id": "ally_departure",
+      "description": "Gauguin 떠날 의사 표명",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 19,
+      "event_id": "public_accusation",
+      "description": "Gauguin의 공개 비난",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 21,
+      "event_id": "self_harm_impulse",
+      "description": "극도 절망 (귀 사건 직전)",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 24,
+      "event_id": "forgiveness_offered",
+      "description": "Theo의 편지 도착",
+      "canonical_level": "A"
+    },
+    {
+      "tick": 28,
+      "event_id": "restoration_moment",
+      "description": "작업 복귀 (다시 붓 잡음)",
+      "canonical_level": "A"
+    }
+  ],
+
+  "primitive_defaults": {
+    "location": "arles",
+    "time_of_day": "morning",
+    "crowd_density": 0.1,
+    "ally_proximity": 0.3,
+    "group_cohesion": 0.2,
+    "authority_presence": 0.0,
+    "roman_presence": 0.0,
+    "religious_context": 0.0,
+    "primary_figure_presence": 0.3,
+    "primary_figure_visible": false,
+    "information_gap": 0.6,
+    "decision_stakes": 0.4,
+    "public_visibility": 0.1,
+    "time_pressure": 0.2,
+    "prior_failure_salience": 0.3,
+    "accusation_visibility": 0.0,
+    "volatility": 0.3,
+    "decision_criticality": 0.2,
+    "proximity_of_suffering": 0.0
+  }
+}

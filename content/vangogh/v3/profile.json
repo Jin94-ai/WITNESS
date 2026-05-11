@@ -1,0 +1,79 @@
+{
+  "_doc": "Van Gogh persona profile. 3rd scenario — persona engine universality test.",
+  "_scenario": "vangogh_arles",
+  "_date": "2026-04-24",
+  "_role_cluster": "spiritual_wanderer + family_anchor 혼합",
+  "_note": "VG는 고립적 창작자. primary_focus=Theo(형제), 높은 grief tail, 낮은 social_threat 반응(고립되어 있어서), 강한 creative motif.",
+
+  "name": "vangogh_arles",
+  "description": "Van Gogh at Arles period. Isolated artist with intense family bond (primary_focus=Theo). High awe/grief, low peer dependence, high self-shame.",
+
+  "pressure_sensitivity": {
+    "social_threat": 0.7,
+    "shame_exposure": 1.1,
+    "loyalty_pull": 1.4,
+    "uncertainty": 1.3,
+    "urgency": 0.9,
+    "isolation_pressure": 1.3,
+    "sacred_salience": 1.5,
+    "physical_threat": 1.0
+  },
+
+  "motif_tendency": {
+    "conceal": 1.0,
+    "confess": 1.2,
+    "withdraw": 1.4,
+    "remain_present": 0.7,
+    "confront": 0.6,
+    "grieve": 1.4,
+    "seek_repair": 1.2,
+    "observe_wait": 1.1
+  },
+
+  "recovery_bias": {
+    "fear_recovery_rate": 0.8,
+    "guilt_decay_rate": 0.6,
+    "grief_tail_strength": 1.5,
+    "confusion_decay_rate": 0.9,
+    "trust_restoration_bias": 0.9
+  },
+
+  "relation_bias": {
+    "primary_focus_attachment_strength": 1.5,
+    "peer_dependence": 0.5,
+    "authority_reactivity": 0.6,
+    "public_exposure_sensitivity": 1.2
+  },
+
+  "motif_action_priors": {
+    "conceal": {
+      "stay_hiding": 0.40, "withdraw_in_fear": 0.35,
+      "follow_at_distance": 0.25
+    },
+    "confess": {
+      "confess": 0.40, "weep": 0.40, "discuss_with_disciples": 0.20
+    },
+    "withdraw": {
+      "stay_hiding": 0.40, "withdraw_in_fear": 0.30,
+      "follow_at_distance": 0.20, "fall_asleep": 0.10
+    },
+    "remain_present": {
+      "follow_closely": 0.40, "discuss_with_disciples": 0.30,
+      "stay_awake": 0.30
+    },
+    "confront": {
+      "flee": 0.50, "draw_sword": 0.20, "assert_loyalty": 0.30
+    },
+    "grieve": {
+      "weep": 0.50, "withdraw_in_fear": 0.30, "pray": 0.20
+    },
+    "seek_repair": {
+      "confess": 0.40, "assert_loyalty": 0.30,
+      "follow_closely": 0.30
+    },
+    "observe_wait": {
+      "watch_quietly": 0.40, "stay_awake": 0.30,
+      "discuss_with_disciples": 0.30
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_doc": "Van Gogh initial ActiveState (v3 Persona Engine 전환). Arles period peak output 직전.",
+  "_scenario": "vangogh_arles",
+  "_date": "2026-04-24",
+  "_note": "VG는 고립적 예술가. primary_focus는 형제(Theo)로 설정. sacred_salience는 창작 자체에.",
+
+  "scalar": {
+    "fear": 3.5,
+    "hope": 6.0,
+    "grief": 3.0,
+    "confusion": 4.0,
+    "joy": 5.0,
+    "anger": 2.5,
+    "awe": 7.0,
+    "fatigue": 4.0,
+    "hunger": 3.0,
+    "vitality": 6.0,
+    "doubt": 4.5,
+    "resolve": 7.5,
+    "trauma": 2.0
+  },
+
+  "target_aware": {
+    "love": {
+      "primary_focus": 9.0,
+      "peer_group": 3.0,
+      "family": 8.0
+    },
+    "loyalty": {
+      "primary_focus": 8.5,
+      "peer_group": 3.5
+    },
+    "trust": {
+      "primary_focus": 9.0,
+      "peer_group": 4.0
+    },
+    "belonging": {
+      "peer_group": 2.5,
+      "public_group": 1.5
+    },
+    "guilt": {
+      "primary_focus": 4.0,
+      "self": 5.0
+    },
+    "shame": {
+      "public_group": 3.0,
+      "peer_group": 4.0,
+      "self": 4.0
+    }
+  }
+}

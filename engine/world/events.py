@@ -140,6 +140,27 @@ EVENT_REGISTRY_DRAFT: list[Event] = [
                            "prior_failure_salience": 0.3},
     ),
 
+    # --- Creative / isolated-context scenarios (generic) ---
+    Event(
+        event_id="creative_surge",
+        description="집중 창작 연속 (예술가/작업자 맥락)",
+        primitive_updates={"religious_context": 0.3,
+                           "decision_stakes": 0.2},
+    ),
+    Event(
+        event_id="creative_conflict",
+        description="작업/관점 갈등 (동료와)",
+        primitive_updates={"volatility": 0.3, "ally_proximity": -0.2,
+                           "decision_criticality": 0.3},
+    ),
+    Event(
+        event_id="self_harm_impulse",
+        description="극도 절망 / 자기 파괴 충동",
+        primitive_updates={"decision_criticality": 0.5,
+                           "volatility": 0.5,
+                           "proximity_of_suffering": 0.5},
+    ),
+
     # --- Action-caused events (v2 §5 폐루프) ---
     Event(
         event_id="public_denial",

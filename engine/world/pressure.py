@@ -18,7 +18,7 @@ Step 2.5 특별: sacred_salience는 hope 의존성 제거.
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 from engine.person.state_v3 import ActiveState
 from engine.world.primitives import PrimitiveState

@@ -45,11 +45,15 @@ def test_target_aware_metadata_has_default_targets() -> None:
 
 
 def test_target_aware_metadata_examples() -> None:
-    """Verify the core relational variables have appropriate target seeds."""
+    """Verify the core relational variables have appropriate target seeds.
+
+    Step D migration: target names use generic roles (primary_focus, peer_group,
+    public_group) instead of scenario-specific (primary_figure, peers, crowd).
+    """
     by_name = {m.name: m for m in ACTIVE_VARIABLES_META}
-    # love targets primary_figure + peers + family
-    assert "primary_figure" in by_name["love"].default_targets
-    # guilt targets self and primary_figure
+    # love targets primary_focus + peer_group + family (generic roles)
+    assert "primary_focus" in by_name["love"].default_targets
+    # guilt targets self and primary_focus
     assert "self" in by_name["guilt"].default_targets
     # belonging targets groups
     assert len(by_name["belonging"].default_targets) >= 2

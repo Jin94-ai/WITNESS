@@ -12,7 +12,7 @@ from pathlib import Path
 CONTENT_DIR = Path(__file__).resolve().parent.parent.parent / "content"
 
 
-_NON_AGENT_DIRS = {"shared", "worlds", "interventions"}
+_NON_AGENT_DIRS = {"shared", "worlds", "interventions", "anchors", "universal", "genres"}
 
 
 def _list_agent_packs() -> list[Path]:

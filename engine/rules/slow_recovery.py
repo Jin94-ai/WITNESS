@@ -1,5 +1,35 @@
 """Field-specific slow state recovery (v1.2 Iter 23).
 
+STATUS (Iter 89 freeze audit + Iter 162 PYHASH re-audit + Iter 179
+Step B2 formalization):
+    UNWIRED. This rule class is defined but NOT imported anywhere
+    in the engine or tests. MicroWorld does NOT use RuleEngine; this
+    rule applies only to v1.0 simulation infrastructure or future
+    v1.2 wiring.
+
+    Default constructor (all rates = 0.0) is a zero-effect sentinel.
+    Activating requires content config to pass non-zero rates AND
+    wiring into a RuleEngine pipeline that consumes RuleContext.
+
+    Classification: RESERVE (slow-recovery-infra).
+    Cross-pipeline status: defined for trust_scar + event_trauma update,
+    also handles moral_injury + identity_shift.
+
+    Iter 162 PYHASH N=15 ablation confirmed all 4 target fields
+    (moral_injury, identity_shift, trust_scar, event_trauma) produce
+    Δ shame = 0.00 in MicroWorld → no current dynamics impact.
+    Activation will change that.
+
+    Canonical references:
+    - docs/b_direction/STATE_FIELD_STATUS.md (per-field status)
+    - docs/b_direction/COMPONENT_LEDGER.md §11 (Iter 179 RESERVE formalization)
+    - docs/b_direction/INERT_RESERVE_AUDIT.md §4.1 (Iter 89 audit)
+    - docs/b_direction/ITER_162_INERT_REAUDIT.md (PYHASH re-audit)
+
+    Test invariant: any future test that wires this rule into MicroWorld
+    or imports it for non-zero application MUST update STATE_FIELD_STATUS
+    and COMPONENT_LEDGER classification away from "unwired".
+
 reviewer 피드백 대응:
     "moral_injury / event_trauma는 단조 증가만 — 50일 scenario에 맞춤.
     3년 '소명-회복-재실패' 반복을 표현하려면 field-specific 회복 필요.
