@@ -11,7 +11,6 @@ Audit: t=3 vs t=50 with per-agent peak/final classification.
 
 from __future__ import annotations
 
-import json
 import os
 import sys
 from collections import defaultdict
@@ -22,6 +21,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -29,11 +29,13 @@ N_TICKS = 500
 
 
 def build_world(seed, accusation_tick):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -86,7 +88,7 @@ def audit(label, accusation_tick):
 
 
 def main() -> int:
-    print(f"[Iter 150] Audit Iter 134 timing finding")
+    print("[Iter 150] Audit Iter 134 timing finding")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 
@@ -114,10 +116,10 @@ def main() -> int:
         print()
 
     print("=== Iter 134 timing finding audit verdict ===")
-    print(f"  If V0 (t=3) and V1 (t=50) both have agents reaching peak >=1.5,")
-    print(f"  then timing finding is real recovery vs different recovery.")
-    print(f"  If V1 has fewer/no real recovery agents, the 'lower recovery rate'")
-    print(f"  is masked by no-shame artifacts at later tick.")
+    print("  If V0 (t=3) and V1 (t=50) both have agents reaching peak >=1.5,")
+    print("  then timing finding is real recovery vs different recovery.")
+    print("  If V1 has fewer/no real recovery agents, the 'lower recovery rate'")
+    print("  is masked by no-shame artifacts at later tick.")
 
     return 0
 

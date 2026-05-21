@@ -7,21 +7,18 @@ from pathlib import Path
 import pytest
 
 from engine.observer.identity_resolver import IdentityResolver
-from engine.observer.moment import Moment
 from engine.observer.moment_extractor import extract_moments
-from engine.observer.story_candidate import StoryCandidate, TurningPoint
+from engine.observer.story_candidate import TurningPoint
 from engine.observer.story_candidate_builder import (
     TurningPointThresholds,
     build_adaptation_hooks,
     build_arc_summary,
     build_premise,
     build_relationship_dynamics,
-    build_story_candidate,
     build_story_candidates,
     select_turning_points,
     serialize_candidates,
 )
-from engine.observer.thread import StoryThread
 from engine.observer.thread_builder import build_story_threads, link_moments
 
 ROOT = Path(__file__).resolve().parents[2]

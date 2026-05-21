@@ -9,14 +9,14 @@ import pytest
 from engine.observer.identity_resolver import IdentityResolver
 from engine.observer.moment_extractor import extract_moments
 from engine.observer.scene_brief import (
-    SceneBrief, build_scene_brief,
+    build_scene_brief,
 )
 from engine.observer.story_audit import audit_pair
-from engine.observer.story_candidate import StoryCandidate, TurningPoint
+from engine.observer.story_candidate import StoryCandidate
 from engine.observer.story_candidate_builder import build_story_candidates
 from engine.observer.story_viability import score_candidate
 from engine.observer.thread_builder import build_story_threads, link_moments
-from engine.observer.treatment import Treatment, build_treatment
+from engine.observer.treatment import build_treatment
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "data" / "visual" / "dot_observer_data.json"

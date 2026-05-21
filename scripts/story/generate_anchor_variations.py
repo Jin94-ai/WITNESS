@@ -20,13 +20,14 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
-from scripts.story.selector import get_curated_anchors, get_variations
 from scripts.b_direction.generate_readability_probes import N_TICKS, anonymize_role
-from scripts.story.extract_story_features import parse_probe
 from scripts.story.build_narrative_ir import build_ir
-from scripts.story.render_story_ko import render_summary, render_narrative
+from scripts.story.extract_story_features import parse_probe
+from scripts.story.render_story_ko import render_narrative, render_summary
+from scripts.story.selector import get_curated_anchors, get_variations
 
 
 # Reuse annotated probe formatting from generate_scarcity_depth_variations etc.

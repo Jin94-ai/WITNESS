@@ -6,19 +6,17 @@ import json
 import sys
 from pathlib import Path
 
-import pytest
-
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from engine.observer.moment import Moment  # noqa: E402
 from engine.observer.moment_extractor import extract_moments  # noqa: E402
+from engine.observer.narrative_opportunity import (  # noqa: E402
+    from_thread,
+)
 from engine.observer.thread import StoryThread  # noqa: E402
 from engine.observer.thread_builder import (  # noqa: E402
-    build_story_threads, link_moments,
-)
-from engine.observer.narrative_opportunity import (  # noqa: E402
-    NarrativeOpportunity, from_thread,
+    build_story_threads,
+    link_moments,
 )
 
 

@@ -6,7 +6,6 @@ import random
 
 import pytest
 
-from engine.persona.profile import DEFAULT_PROFILE
 from engine.population import (
     apply_role_transition,
     blend_profile_toward_role,

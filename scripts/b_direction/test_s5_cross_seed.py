@@ -19,13 +19,13 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 from scripts.b_direction.generate_placement_variations import (
-    SCENARIO_BUILDERS, ACCUSATION_PLACEMENTS, SCARCITY_PLACEMENTS, SACRED_PLACEMENTS,
+    SCENARIO_BUILDERS,
 )
 from scripts.b_direction.test_d_prime_generalization import measure
-from scripts.b_direction.generate_readability_probes import N_TICKS
 
 
 def main():
@@ -72,7 +72,7 @@ def main():
 
     print()
     print(f"Cross-seed S5 sensitivity: {flip_total}/{cell_total} = {flip_total/cell_total*100:.1f}%")
-    print(f"(Compare to seed=0-only LOOP 59 result: 6/9 = 67%)")
+    print("(Compare to seed=0-only LOOP 59 result: 6/9 = 67%)")
 
     # Within-cell variance summary
     print()

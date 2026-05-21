@@ -49,13 +49,10 @@ _ensure_utf8_stdout()
 
 from scripts.data.synopsis_schema import (  # noqa: E402
     EpisodeSynopsis,
-    episode_path,
-    load_episode,
+    now_iso_utc,
     validate_episode_dict,
     write_episode,
-    now_iso_utc,
 )
-
 
 # ---------------------------------------------------------------------------
 # Subcommands

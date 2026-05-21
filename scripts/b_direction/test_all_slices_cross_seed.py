@@ -17,23 +17,25 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
-enforce_pyhash()
 
-from scripts.b_direction.test_d_prime_generalization import measure
-from scripts.b_direction.generate_readability_probes import N_TICKS
+enforce_pyhash()
 
 # S4 cast composition
 from scripts.b_direction.generate_cast_variations import (
-    build_world_with_cast, CAST_DROP_RULES,
+    build_world_with_cast,
 )
+
 # S3 event density
 from scripts.b_direction.generate_event_density_variations import (
-    build_sacred_density_world, MIRACLE_TIMINGS,
+    MIRACLE_TIMINGS,
+    build_sacred_density_world,
 )
+
 # S2 scarcity depth
 from scripts.b_direction.generate_scarcity_depth_variations import (
-    build_scarcity_depth_world, EVENT_COUNTS, CROWD_DENSITIES,
+    build_scarcity_depth_world,
 )
+from scripts.b_direction.test_d_prime_generalization import measure
 
 
 def run_s4_cell(scenario, variant, seed):
@@ -140,7 +142,7 @@ def main():
         "",
         "| Slice | Cells | Cross-seed flips | Cross-seed ratio | Seed=0 ratio | Delta |",
         "|---|---:|---:|---:|---:|---:|",
-        f"| S5 placement | 9 | 4 | 44.4% | 67% | -22.6pp |",
+        "| S5 placement | 9 | 4 | 44.4% | 67% | -22.6pp |",
     ]
     for slice_name in ["S4", "S3", "S2"]:
         leg = legacy[slice_name]
@@ -165,7 +167,7 @@ def main():
         "",
     ])
     s5_unan = 2  # from LOOP 75
-    lines.append(f"S5: 2/9 cells unanimous (LOOP 75)")
+    lines.append("S5: 2/9 cells unanimous (LOOP 75)")
     for slice_name in ["S4", "S3", "S2"]:
         results = all_results[slice_name]
         unanimous = sum(1 for outs in results.values() if len(set(outs)) == 1)

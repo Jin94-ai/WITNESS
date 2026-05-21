@@ -24,13 +24,14 @@ import os
 import sys
 from collections import defaultdict
 from pathlib import Path
-from statistics import mean, stdev
+from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 15
@@ -38,8 +39,8 @@ N_TICKS = 500
 
 
 def build_cast_with_n_outsiders(n_outsiders):
-    from scripts.b_direction.run_accusation_scene import build_accusation_cast
     from engine.population import ROLE_CLUSTERS
+    from scripts.b_direction.run_accusation_scene import build_accusation_cast
     base = build_accusation_cast()
     reassign_candidates = ["agent_07", "agent_08", "agent_06"]
     n_to_reassign = n_outsiders - 1
@@ -56,11 +57,12 @@ def build_cast_with_n_outsiders(n_outsiders):
 
 
 def build_world(seed, *, n_outsiders, include_rumor):
-    from scripts.b_direction.run_accusation_scene import (
-        build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_cast_with_n_outsiders(n_outsiders)
     aids = [a.agent_id for a in agents]
@@ -135,7 +137,7 @@ def run_variant(label, *, n_outsiders, include_rumor):
 
 
 def main() -> int:
-    print(f"[Iter 148] Cast over-representation curve (n=4)")
+    print("[Iter 148] Cast over-representation curve (n=4)")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 

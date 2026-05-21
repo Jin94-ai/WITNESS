@@ -28,14 +28,14 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from engine.observer.cross_seed_pattern import (  # noqa: E402
-    SeedRecord, build_cross_seed_report,
+    SeedRecord,
+    build_cross_seed_report,
 )
 from engine.observer.identity_resolver import IdentityResolver  # noqa: E402
 from engine.observer.moment_extractor import extract_moments  # noqa: E402
@@ -43,7 +43,8 @@ from engine.observer.story_candidate_builder import (  # noqa: E402
     build_story_candidates,
 )
 from engine.observer.thread_builder import (  # noqa: E402
-    build_story_threads, link_moments,
+    build_story_threads,
+    link_moments,
 )
 
 

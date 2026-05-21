@@ -252,9 +252,9 @@ def main() -> int:
     n_ticks = int(sys.argv[2]) if len(sys.argv) > 2 else 30
     print(f"[Phase 5 Micro-World 2] scarcity_scene | seed={seed} ticks={n_ticks}")
     world = build_micro_world(seed=seed)
-    print(f"  Cast: 12 mixed-role agents, 3 locations")
-    print(f"  Setup: food scarcity baseline (hunger high). 'hoarding' rumor vs merchant.")
-    print(f"  Seed events: public_accusation @ tick 5, guard_approaches @ tick 15")
+    print("  Cast: 12 mixed-role agents, 3 locations")
+    print("  Setup: food scarcity baseline (hunger high). 'hoarding' rumor vs merchant.")
+    print("  Seed events: public_accusation @ tick 5, guard_approaches @ tick 15")
     print()
 
     for _ in range(n_ticks):

@@ -22,14 +22,14 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
-from scripts.story.selector import get_anchor_by_id, get_variations
-from scripts.story.extract_story_features import parse_probe
 from scripts.story.build_narrative_ir import build_ir
-from scripts.story.render_story_ko import render_summary, render_narrative
+from scripts.story.extract_story_features import parse_probe
 from scripts.story.generate_anchor_variations import world_to_annotated_text
-
+from scripts.story.render_story_ko import render_narrative, render_summary
+from scripts.story.selector import get_anchor_by_id, get_variations
 
 TRILOGY_ANCHORS = [
     (
@@ -206,7 +206,7 @@ def main():
     print(f"  -> {full_path}")
 
     print("\nDone.")
-    print(f"\nFiles:")
+    print("\nFiles:")
     print(f"  Modal view (3 acts): {modal_path}")
     print(f"  Full view (15 stories): {full_path}")
 

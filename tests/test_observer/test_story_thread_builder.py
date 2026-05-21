@@ -10,7 +10,6 @@ from engine.observer.moment import Moment
 from engine.observer.moment_extractor import extract_moments
 from engine.observer.thread import StoryThread
 from engine.observer.thread_builder import (
-    DEFAULT_THREAD_THRESHOLDS,
     ThreadThresholds,
     build_story_threads,
     link_moments,

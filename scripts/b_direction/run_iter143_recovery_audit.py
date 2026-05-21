@@ -19,13 +19,13 @@ import os
 import sys
 from collections import defaultdict
 from pathlib import Path
-from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 3  # small N for detailed audit
@@ -33,11 +33,13 @@ N_TICKS = 500
 
 
 def build_world(seed):
-    from scripts.b_direction.run_scarcity_scene import (
-        build_scarcity_cast, build_locations, build_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_scarcity_scene import (
+        build_locations,
+        build_network,
+        build_scarcity_cast,
+    )
 
     agents = build_scarcity_cast()
     aid_to_role = {a.agent_id: a.role_id for a in agents}
@@ -68,7 +70,7 @@ def build_world(seed):
 
 
 def main() -> int:
-    print(f"[Iter 143] Audit Iter 142 V1 -- recovery vs no-shame")
+    print("[Iter 143] Audit Iter 142 V1 -- recovery vs no-shame")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 
@@ -114,15 +116,15 @@ def main() -> int:
     print(f"  Saturated/other: {total - no_shame_count - real_recovery_count}")
     print()
     if no_shame_count == total:
-        print(f"  CAVEAT CONFIRMED: ALL agents at poor_quarter never experienced shame")
-        print(f"  Iter 142 'rescue' was no-shame, not recovery")
-        print(f"  Location placement prevents shame accumulation; doesn't enable recovery from it")
+        print("  CAVEAT CONFIRMED: ALL agents at poor_quarter never experienced shame")
+        print("  Iter 142 'rescue' was no-shame, not recovery")
+        print("  Location placement prevents shame accumulation; doesn't enable recovery from it")
     elif real_recovery_count > total / 2:
-        print(f"  RECOVERY GENUINE: most agents had peak shame > 1.5 then recovered")
-        print(f"  Iter 142 finding stands as recovery, not no-shame")
+        print("  RECOVERY GENUINE: most agents had peak shame > 1.5 then recovered")
+        print("  Iter 142 finding stands as recovery, not no-shame")
     else:
-        print(f"  MIXED: some no-shame, some genuine recovery")
-        print(f"  Iter 142 finding is partially real")
+        print("  MIXED: some no-shame, some genuine recovery")
+        print("  Iter 142 finding is partially real")
 
     out_path = (
         ROOT / "docs" / "b_direction" / "probe_runs"

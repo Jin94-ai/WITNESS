@@ -129,7 +129,7 @@ def fmt_stats(s: dict) -> str:
 def write_report(analysis: dict, thresholds: dict, out_path: Path) -> None:
     lines: list[str] = []
     lines.append("# V3 Reference Distribution Report (Phase G Step G3)\n")
-    lines.append(f"**Generated:** 2026-04-23\n")
+    lines.append("**Generated:** 2026-04-23\n")
     lines.append("**Source:** `data/reference/evaluation_results.json` (45 trajectories)\n")
     lines.append("")
     lines.append("**Current evaluator thresholds:**")
@@ -248,7 +248,7 @@ def write_report(analysis: dict, thresholds: dict, out_path: Path) -> None:
     target_rep = percentile(can_drift, 90)
     target_noi = percentile(noi_drift, 10)
     target_char = percentile(alt_cc, 25)
-    lines.append(f"**Computed targets (preview):**")
+    lines.append("**Computed targets (preview):**")
     lines.append(f"- reproduction_threshold ← canonical.drift P90 = **{target_rep:.2f}**")
     lines.append(f"- noise_threshold        ← obvious_noise.drift P10 = **{target_noi:.2f}**")
     lines.append(f"- character_min_composite ← alt.character P25 = **{target_char:.3f}**")

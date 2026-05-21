@@ -29,6 +29,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 15
@@ -41,10 +42,10 @@ def build_augmented_cast():
     Same total 10 agents, but: agents 07, 08 reassigned from
     crowd_participant to outsider; agent_10 stays outsider.
     """
+    from engine.population import ROLE_CLUSTERS
     from scripts.b_direction.run_accusation_scene import (
         build_accusation_cast,
     )
-    from engine.population import ROLE_CLUSTERS
 
     base = build_accusation_cast()
     aug = []
@@ -60,11 +61,13 @@ def build_augmented_cast():
 
 
 def build_world(seed, *, augmented_cast, accusations):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     if augmented_cast:
         agents = build_augmented_cast()
@@ -133,7 +136,7 @@ def run_variant(label, *, augmented_cast, accusations):
 
 
 def main() -> int:
-    print(f"[Iter 118] Cast augmentation rescue test")
+    print("[Iter 118] Cast augmentation rescue test")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 
@@ -175,9 +178,9 @@ def main() -> int:
     print()
     if v3 > v1 + 15:
         print(f"  DELTA = +{v3 - v1}% -- conjunctive model PREDICTION CONFIRMED")
-        print(f"    Adding outsider agents raises P(timely outsider confess)")
-        print(f"    -> P(both forgiveness rumors fire) increases")
-        print(f"    -> recovery rate rises substantially")
+        print("    Adding outsider agents raises P(timely outsider confess)")
+        print("    -> P(both forgiveness rumors fire) increases")
+        print("    -> recovery rate rises substantially")
     elif v3 > v1:
         print(f"  DELTA = +{v3 - v1}% -- modest support; could be noise")
     else:

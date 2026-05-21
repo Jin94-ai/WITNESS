@@ -22,17 +22,24 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
+from engine.world.crowd_dynamics import CrowdState
+from engine.world.micro_world import MicroWorld, MicroWorldConfig
 from scripts.b_direction.generate_readability_probes import (
-    N_TICKS, anonymize_role,
+    N_TICKS,
+    anonymize_role,
 )
 from scripts.b_direction.run_scarcity_scene import (
-    build_scarcity_cast, build_locations as sc_locs, build_network as sc_net,
+    build_locations as sc_locs,
 )
-from engine.world.crowd_dynamics import CrowdState
-from engine.world.micro_world import MicroWorldConfig, MicroWorld
-
+from scripts.b_direction.run_scarcity_scene import (
+    build_network as sc_net,
+)
+from scripts.b_direction.run_scarcity_scene import (
+    build_scarcity_cast,
+)
 
 # ============================================================
 # Variants: 3 event counts x 3 crowd densities = 9 probes

@@ -15,10 +15,9 @@ Plan §6 allowed:
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
-from engine.observer.story_candidate import StoryCandidate, TurningPoint
-
+from engine.observer.story_candidate import StoryCandidate
 
 # Pressure family → external vs internal classification
 _EXTERNAL_PRESSURES = {

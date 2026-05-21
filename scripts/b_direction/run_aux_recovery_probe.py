@@ -24,12 +24,12 @@ from collections import defaultdict
 from pathlib import Path
 from statistics import mean
 
-
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -39,11 +39,13 @@ AWE_VALUE = 8.0
 
 
 def build_world(seed, *, awe_inject=False, aux_on=True, p2a_on=True):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     if awe_inject:
@@ -178,32 +180,32 @@ def main() -> int:
     c = results["C_awe_inject_aux_OFF_p2a_on"]
     d = results["D_awe_inject_aux_on_p2a_OFF"]
 
-    print(f"\n  Test 1: aux recovery active vs disabled (B vs C)")
-    print(f"    Injected agents:")
+    print("\n  Test 1: aux recovery active vs disabled (B vs C)")
+    print("    Injected agents:")
     print(f"      B (aux on):  rev={b['rev_inj']} final={b['final_inj']}")
     print(f"      C (aux off): rev={c['rev_inj']} final={c['final_inj']}")
     bc_delta_final = c["final_inj"] - b["final_inj"]
     print(f"    Δ final shame (C - B) = {bc_delta_final:+.3f}  "
           f"(positive = aux recovery actually reduces shame)")
 
-    print(f"\n  Test 2: aux recovery alone (no Phase 2a) - D")
+    print("\n  Test 2: aux recovery alone (no Phase 2a) - D")
     print(f"    Injected: rev={d['rev_inj']} final={d['final_inj']}")
     print(f"    Others:   rev={d['rev_oth']} final={d['final_oth']}")
     if d["rev_inj"] > 0.5:
         d_verdict = (
-            f"YES - aux recovery alone produces cycling in injected cohort. "
-            f"True auxiliary channel. Scale-4 = 2."
+            "YES - aux recovery alone produces cycling in injected cohort. "
+            "True auxiliary channel. Scale-4 = 2."
         )
     elif d["final_inj"] < 8.0:
         d_verdict = (
-            f"PARTIAL - aux alone reduces final shame but doesn't produce "
-            f"cycles. Scale-4 = 1.5."
+            "PARTIAL - aux alone reduces final shame but doesn't produce "
+            "cycles. Scale-4 = 1.5."
         )
     else:
         d_verdict = (
-            f"NO - aux recovery alone insufficient to produce cycles. "
-            f"Scale-4 stays at 1. Magnitude needs tuning OR Phase 2a "
-            f"dominance still complete."
+            "NO - aux recovery alone insufficient to produce cycles. "
+            "Scale-4 stays at 1. Magnitude needs tuning OR Phase 2a "
+            "dominance still complete."
         )
     print(f"    Verdict: {d_verdict}")
 

@@ -34,12 +34,12 @@ from collections import defaultdict
 from pathlib import Path
 from statistics import mean
 
-
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 3
@@ -58,11 +58,13 @@ FIELDS_TO_TEST = [
 
 def build_world(seed, field_injection=None):
     """Build accusation world, optionally inject field_injection tuple."""
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
 
@@ -171,7 +173,7 @@ def run_condition(field_injection=None):
 
 
 def main() -> int:
-    print(f"[Step D] Empirical inert-field audit")
+    print("[Step D] Empirical inert-field audit")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} "
           f"N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()

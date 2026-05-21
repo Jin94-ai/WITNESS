@@ -19,15 +19,15 @@ from __future__ import annotations
 import json
 import os
 import sys
-from collections import defaultdict
 from pathlib import Path
-from statistics import mean, stdev
+from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -51,11 +51,13 @@ def correlation(xs, ys):
 
 
 def build_world(seed):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -113,9 +115,9 @@ def trace_meso(seed):
 
 
 def main() -> int:
-    print(f"[Iter 165] Meso field cross-coupling probe")
+    print("[Iter 165] Meso field cross-coupling probe")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
-    print(f"  Location: priest_courtyard")
+    print("  Location: priest_courtyard")
     print()
 
     fields = ["shame_climate", "public_susp", "blame_total", "alignment", "density"]
@@ -151,20 +153,20 @@ def main() -> int:
                 if c == c and abs(c) > 0.3:  # > 0.3 absolute = meaningful
                     high_couplings.append((f1, f2, c))
     if high_couplings:
-        print(f"  Notable cross-couplings (|r| > 0.3):")
+        print("  Notable cross-couplings (|r| > 0.3):")
         for f1, f2, c in sorted(high_couplings, key=lambda x: -abs(x[2])):
             print(f"    {f1} ↔ {f2}: r={c:+.3f}")
     else:
-        print(f"  No notable cross-couplings (|r| < 0.3 across all pairs)")
-        print(f"  Meso fields are EFFECTIVELY DECOUPLED")
+        print("  No notable cross-couplings (|r| < 0.3 across all pairs)")
+        print("  Meso fields are EFFECTIVELY DECOUPLED")
     print()
-    print(f"  Per directive §6 improvement 4 (meso-scale 강화):")
+    print("  Per directive §6 improvement 4 (meso-scale 강화):")
     if len(high_couplings) >= 3:
         print(f"  -> Already richly coupled ({len(high_couplings)} pairs); 'strengthening' could mean exposing this in probes")
     elif len(high_couplings) >= 1:
         print(f"  -> Partial coupling ({len(high_couplings)} pairs); strengthening would add direct couplings")
     else:
-        print(f"  -> Decoupled processes; strengthening means adding direct cross-field rules")
+        print("  -> Decoupled processes; strengthening means adding direct cross-field rules")
 
     out_path = (
         ROOT / "docs" / "b_direction" / "probe_runs"

@@ -14,7 +14,6 @@ to ensure same scenarios as original blind eval.
 
 from __future__ import annotations
 
-import os
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -24,12 +23,15 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 # Import the same build_world + ground truth from main probe generator
 from scripts.b_direction.generate_readability_probes import (
-    PROBES_GROUND_TRUTH, N_TICKS, build_world,
-    ANONYMIZED_ROLE_MAP, anonymize_role,
+    N_TICKS,
+    PROBES_GROUND_TRUTH,
+    anonymize_role,
+    build_world,
 )
 
 OUT_DIR = ROOT / "docs" / "b_direction" / "readability_probes"
@@ -317,7 +319,7 @@ def make_annotated_probe(probe_id, scenario, seed, variant, config):
 
 
 def main() -> int:
-    print(f"[Iter 166] Generating 12 annotated probes")
+    print("[Iter 166] Generating 12 annotated probes")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     # Use same probe order as main generator (deterministic shuffle)

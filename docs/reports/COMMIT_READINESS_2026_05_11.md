@@ -251,14 +251,14 @@ Before any commit:
 Per directive §10, before pilot start:
 
 1. ☐ This commit readiness report reviewed by Lee
-2. ☐ Commit split executed (4-6 commits per §7)
+2. ☑ Commit split executed (4-6 commits per §7) — *cycle 79 완료* (7 commits + `git status` clean / 2,648 fast pass / 0 regression; 상세 §12)
 3. ☑ Phase 3.0 Actual Pilot Boundary doc created ([PHASE_3_0_ACTUAL_PILOT_BOUNDARY.md](../plans/PHASE_3_0_ACTUAL_PILOT_BOUNDARY.md)) — *cycle 70 완료*
 4. ☐ All 12 approval items checked off in [PHASE_3_0_APPROVAL_CHECKLIST.md](../plans/PHASE_3_0_APPROVAL_CHECKLIST.md)
 5. ☐ 10 real synopses provided by Lee (private path under `data/external_private/`)
 6. ☐ ToS / robots.txt review complete for any source candidates
 7. ☑ Rubric portfolio HTML banner added (fixture stress-test disclaimer, §6 of this doc) — *cycle 71 완료* ([demo_rubric/README.md](../portfolio/demo_rubric/README.md) top + [ensemble_visualization.html](../portfolio/demo_rubric/ensemble_visualization.html) Non-Claims 위)
 
-Until items 1, 2, 4 (Lee-action items) are done, **no Phase 3.0 actual work proceeds**. Items 5-6 are Phase 3.0 pilot 진입 직전 별도 단계.
+Until items 1, 4 (Lee-action items) are done, **no Phase 3.0 actual work proceeds**. Items 5-6 are Phase 3.0 pilot 진입 직전 별도 단계. *Push to origin/main은 Lee 별도 결정 (`git push` 미실행).*
 
 ---
 
@@ -337,3 +337,40 @@ WITNESS 프로젝트는 **구조 개발 단계를 넘어섰다**. Phase 3.05 정
 다음 단계는 **추가 구현이 아니라 commit freeze → Phase 3.0 Actual Mini Pilot 진입**.
 
 이 보고서가 Phase 3.0 진입 전 *마지막 audit 단계*다.
+
+---
+
+## 12.1 Commit Split Execution Record (cycle 79, 2026-05-11)
+
+Lee 명시 승인 후 7 commits 실행 (`git log --oneline -7`):
+
+```
+ede3677  chore: remove obsolete person v3 / world spike / session-prompt docs
+cfa25cb  docs(meta): L82-L88 lessons + plan / directive docs + .gitignore safety
+d4baa80  docs: phase 3.05/3.1 doc-currency sync + portfolio + reference docs
+3082e21  feat(engine): persona / population / world extras + v3 dynamics + examples + scripts
+3bae241  feat(phase-3.1): Target A/B/C baselines + Genre Adapter + supporting infra
+bca24eb  feat(rubric): CLI runner + ensemble HTML + 14 fixtures + 22+ portfolio reports
+246bee3  feat(rubric): 4-Axis Discovery Candidate Classifier engine + 124+ tests
+```
+
+| Commit | 변경 규모 | 종류 | 비고 |
+|---|---|---|---|
+| 1 | 16 files / +4274 -258 | rubric engine + 124+ tests | §7 Commit 1 |
+| 2 | 55 files | rubric CLI + 14 fixtures + 22+ portfolio reports | §7 Commit 2 |
+| 3 | 168 files | Phase 3.1 Target A/B/C + Genre Adapter + engine/observer/ + scripts/{narrative,annotation,data,skeleton}/ + content/{anchors,genres,universal}/ + portfolio demos | §7 Commit 3 |
+| 4 | 145 files | engine {anchor,persona,population,world/*}/ + content/{peter,judas,vangogh}/v3/ + examples + scripts {observer,story,report,b_direction,visual,v3_measurement}/ + tests {persona,population,report,story,visual,world_process}/ | §7 미정의 — 보강 commit |
+| 5 | 633 files | doc-currency (CLAUDE.md / DESIGN.md / README.md / docs/INDEX.md / portfolio package 20+ + reference + spec + layer docs + docs/archive/) | §7 Commit 4 |
+| 6 | 71 files | lessons L82-L88 + plan/directive docs + .gitignore safety (models/+visual/) + tests/fixtures/annotation_public_safe/ + archive/README.md | §7 Commit 5+6 통합 |
+| 7 | 23 deletes | obsolete person v3 / world spike / session-prompts | §7 Optional Commit 7 |
+
+검증:
+- ✅ `git status`: working tree clean (commit 직후)
+- ✅ `git log --oneline`: 7 commits ahead of origin/main
+- ✅ `pytest -m "not slow and not archived" -q --tb=no`: **2,648 passed / 14 skipped / 0 regression** (166s)
+- ✅ models/, visual/, archive/*, data/external_private/*, data/llm_keys/, data/llm_call_logs/ → 미커밋 확인
+- ✅ raw synopsis text 노출 0 / LLM API key 노출 0 / 작품명 익명화 (title_a/title_b) 유지
+
+**Note**: §7 권장 6 commits는 *narrow* 분류였으나 실제 174 top-level 변경 외 engine/observer/, content/, scripts/, tests/ 등의 broader infrastructure도 untracked였음 — Commit 4 (engine misc + content + scripts misc)로 추가 분리. Lee directive *"4-6 commit"* 정신 유지 (7 = 6 + optional delete).
+
+Push to origin/main은 **Lee 별도 결정**. Claude 자동 push 0.

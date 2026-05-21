@@ -168,7 +168,8 @@ def test_e2e_skeleton_output_roundtrips_through_renderer():
     d = json.loads(p.read_text(encoding="utf-8"))
 
     from engine.anchor import (
-        AnchorRegistry, render_universal_seed_to_korean,
+        AnchorRegistry,
+        render_universal_seed_to_korean,
     )
     from engine.observer.universal_story_seed import UniversalStorySeed
 

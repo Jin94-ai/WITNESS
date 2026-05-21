@@ -193,6 +193,44 @@
 
 ---
 
+## 6.5 End-to-End Pipeline (시뮬레이션 + ML 통합, 2026-05-15 신규)
+
+> 결정론적 시뮬레이션과 KoBART fine-tuning을 *하나의 파이프라인*으로 연결한 작업. 두 기술 통합 경험 강조용.
+
+### 핵심 한 줄 (사용자 제시 안)
+
+- **결정론적 시뮬레이션 기반 narrative 생성과 KoBART fine-tuning을 결합한 end-to-end pipeline 설계 및 구현** — 5단계 chain (시뮬레이션 → 한국어 합성 → Summary 정렬 → KoBART 추론 → 드라마 풍 출력) 한 명령 실행, 20초/run.
+
+### 한국어 — 짧은 버전 (3 bullet)
+
+- **End-to-end pipeline 설계**: 결정론적 multi-agent 시뮬레이션과 KoBART (한국어 BART, 32K 페어 fine-tune) 추론을 5단계 chain으로 통합. 한 명령 실행 시 시뮬레이션부터 드라마 풍 장면 생성까지 ~20초.
+- **두 도메인 연결 설계**: 시뮬레이션 출력의 한국어 narrative를 KoBART 학습 형식(`<genre> Summary:` 171자 ±)으로 정렬하는 어댑터 작성. 결정론(seed 동일 → 결과 동일) + ML 추론 결합 가능성 검증.
+- **정직성 시각화**: portfolio용 single-HTML (60KB, 외부 의존 0) — 5단계 다이어그램 + 6 sample runs + ✅/⚠️/📌 disclosure 섹션으로 *작동한 부분*과 *MVP 한계* (도메인 mismatch, 반복 loop) 분리 명시.
+
+### 한국어 — 긴 버전 (5 bullet)
+
+- **End-to-end pipeline 설계 및 구현** — 5단계 chain: (1) `PhasedSimulationWorld` 결정론적 시뮬레이션, (2) `life_arc_narrative` 한국어 timeline 합성, (3) Summary 어댑터로 KoBART 학습 형식(171자, control token) 정렬, (4) KoBART (Stage 2, 32K 페어 fine-tune, val_loss 2.95) fp16 GPU 추론, (5) 드라마 풍 장면 출력. 한 명령 실행 ~20초.
+- **두 도메인 연결 문제 해결** — 결정론적 시뮬레이션 출력과 ML 학습 입력 사이의 schema gap을 어댑터 layer로 흡수. seed/genre를 CLI argument로 노출 → 매 실행 변인 분리 검증 가능.
+- **MVP 한계의 정직한 disclosure** — 학습 도메인(한국 가족극) ≠ 입력 도메인(정경) → 반복 loop + 일부 hallucination. portfolio HTML에 ✅ 검증/⚠️ 한계/📌 claim 경계 3 섹션 분리. *"학습 완성"이 아닌 "MVP chain 검증"* 명시.
+- **재현 가능 + 결정론 보장** — `random/numpy/torch/cuda` seed 4중 고정, 6 sample runs (seed 0~3 × fm/fs_drama) 사전 생성, JSON + MD 두 포맷 산출.
+- **시각화 설계 — L46-L55 lessons 적용** — visual track 교훈 (어휘 patch ≠ 구성 fix / data-first vs UI-first / provenance gap) 명시적 인용, 데이터 두 column (Universal 입력 vs KoBART 출력) side-by-side로 변환 가시화.
+
+### English — short (3 bullet)
+
+- **End-to-end pipeline integrating deterministic simulation and ML fine-tuned inference** — 5-step chain: PhasedSimulationWorld → Korean narrative synthesis → Summary adapter → KoBART (Stage 2, 32K-pair fine-tune) → drama-style scene. Single command, ~20s/run.
+- **Schema gap adapter** — bridged deterministic simulation output and ML training input format (`<genre> Summary: ...`, ~171 chars). Seed/genre exposed as CLI args for per-run variable isolation.
+- **Honest MVP disclosure visualization** — single-HTML portfolio asset (60KB, zero external deps): 5-step diagram + 6 sample runs + ✅/⚠️/📌 sections separating *verified*, *known limitations* (domain mismatch, repetition loops), and *claim boundaries*.
+
+### English — long (5 bullet)
+
+- **Designed and implemented end-to-end pipeline integrating deterministic multi-agent simulation and KoBART (Korean BART) fine-tuned inference** — 5-step chain executable via single CLI command in ~20 seconds, generating drama-style scene from anchor + seed.
+- **Resolved cross-domain schema gap** — built an adapter mapping deterministic simulation narrative to ML training format (171-char Korean summary with control tokens), exposing seed and genre as CLI parameters for ablation.
+- **Maintained reproducibility** — 4-way seed lock (random/numpy/torch/cuda), 6 pre-built sample runs (seed 0–3 × fm/fs_drama), dual-format output (Markdown + JSON).
+- **Honest portfolio surface** — 60KB self-contained HTML with three-section disclosure: validated chain operation, known limitations (domain mismatch between training data and inputs), and explicit claim boundaries (*"MVP chain verification, not trained drama generation"*).
+- **Applied visual design lessons (L46–L55) from frozen visual track** — composition-first over vocabulary patches, data-first IR over UI-first cutscenes, side-by-side input/output columns making transformation auditable.
+
+---
+
 ## 7. Common bullet (모든 직무 공통, 1-2개 추가 가능)
 
 ### Korean

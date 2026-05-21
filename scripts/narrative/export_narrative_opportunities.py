@@ -26,11 +26,11 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from engine.observer.moment import Moment  # noqa: E402
-from engine.observer.thread import StoryThread  # noqa: E402
 from engine.observer.narrative_opportunity import (  # noqa: E402
-    from_thread,
     NarrativeOpportunity,
+    from_thread,
 )
+from engine.observer.thread import StoryThread  # noqa: E402
 
 
 def _load_threads(path: Path) -> tuple[str, list[StoryThread]]:

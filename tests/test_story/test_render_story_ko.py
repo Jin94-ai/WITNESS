@@ -1,8 +1,9 @@
 """Smoke tests for Korean renderer (render_story_ko.py)."""
 
 import pytest
+
 from scripts.story.build_narrative_ir import process as build_ir
-from scripts.story.render_story_ko import render_summary, render_narrative, process
+from scripts.story.render_story_ko import process, render_narrative, render_summary
 
 
 class TestRenderSmoke:
@@ -49,8 +50,8 @@ class TestForbiddenPhrases:
         # peak X.YY, t=N, agent_NN 같은 raw 수치 0건
         import re
         bad_pattern = re.compile(r"(peak|final|t=)\s*[\d.]+", re.IGNORECASE)
-        assert not bad_pattern.search(s), f"summary leaks raw number"
-        assert not bad_pattern.search(n), f"narrative leaks raw number"
+        assert not bad_pattern.search(s), "summary leaks raw number"
+        assert not bad_pattern.search(n), "narrative leaks raw number"
 
 
 class TestOutcomeToneDifferentiation:

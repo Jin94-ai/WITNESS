@@ -1,9 +1,13 @@
 """Test Narrative IR builder (build_narrative_ir.py)."""
 
 import pytest
+
 from scripts.story.build_narrative_ir import (
-    build_ir, build_pressure_arc, build_world_aftereffect,
-    build_initial_tension, build_group_response,
+    build_group_response,
+    build_initial_tension,
+    build_ir,
+    build_pressure_arc,
+    build_world_aftereffect,
 )
 
 

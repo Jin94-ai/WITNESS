@@ -16,7 +16,6 @@ from typing import Iterable
 from engine.observer.moment import Moment
 from engine.observer.thread import ArcDirection, MomentLink, StoryThread
 
-
 # ---------------------------------------------------------------------------
 # Linking thresholds
 # ---------------------------------------------------------------------------

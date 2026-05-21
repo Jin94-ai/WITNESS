@@ -1,8 +1,8 @@
 """Test annotated probe parsing (extract_story_features.py)."""
 
 import pytest
-from scripts.story.extract_story_features import parse_probe, process_probe
 
+from scripts.story.extract_story_features import parse_probe, process_probe
 
 # Representative annotated probe text snippets for unit testing
 SAMPLE_PROBE = """=== PROBE P6_ANNOTATED (annotated supplement, v4) ===

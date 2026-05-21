@@ -7,9 +7,13 @@ from pathlib import Path
 import pytest
 
 from engine.observer.episode_outline import (
-    EpisodeAct, EpisodeOutline, SupportingArc,
-    build_episode_outline, render_episode_outline_md,
-    resolve_korean_josa, _has_final_consonant, pick_postposition,
+    EpisodeAct,
+    SupportingArc,
+    _has_final_consonant,
+    build_episode_outline,
+    pick_postposition,
+    render_episode_outline_md,
+    resolve_korean_josa,
 )
 from engine.observer.identity_resolver import IdentityResolver
 from engine.observer.moment_extractor import extract_moments
@@ -331,7 +335,6 @@ def test_episode_outline_supporting_evidence_changes_one_lines():
 
 def test_seed_card_with_evidence_changes_premise():
     """build_seed_card에 evidence를 주면 plain_premise가 수치 인용으로 바뀐다."""
-    from engine.observer.data_narrative import extract_narrative_evidence
     cands, seeds_lookup, pressure, ev = _evidence_for_seed(0)
     if not ev:
         pytest.skip("no evidence")

@@ -13,11 +13,8 @@ Per `WITNESS_PORTFOLIO_DEMO_PIPELINE_PLAN` 후속 directive (Story Assembly).
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
-from engine.observer.pressure_summary import PressureSummary
-from engine.observer.story_candidate import StoryCandidate
-from engine.observer.story_seed_card import StorySeedCard
 from engine.observer.data_narrative import (
     NarrativeEvidence,
     evidence_to_act_summary,
@@ -28,7 +25,9 @@ from engine.observer.data_narrative import (
     evidence_to_what_pressures_story,
     evidence_to_why,
 )
-
+from engine.observer.pressure_summary import PressureSummary
+from engine.observer.story_candidate import StoryCandidate
+from engine.observer.story_seed_card import StorySeedCard
 
 # ---------------------------------------------------------------------------
 # Supporting arc role inference (data-driven, not hardcoded per character)

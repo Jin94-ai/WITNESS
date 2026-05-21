@@ -27,25 +27,25 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from engine.world.micro_world import MicroWorld  # noqa: E402
 from scripts.b_direction.run_loop_iter1_transition import (  # noqa: E402
-    build_micro_world as build_iter1_world,
-    summarize_run,
     flow_type_verdict,
     score_6_axes,
-    divergence_score,
+    summarize_run,
 )
-from engine.world.micro_world import MicroWorld  # noqa: E402
 
 
 def build_distant_transition_world(seed: int = 0, enable_transition: bool = True) -> MicroWorld:
     """Clone of Iter 1 scenario, but with fisher -> elite_strategist."""
     # We can't monkey-patch build_iter1_world cleanly, so replicate the
     # scenario setup with the role swap.
-    from scripts.b_direction.run_loop_iter1_transition import (
-        build_cast, build_locations, build_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
     from engine.world.micro_world import MicroWorldConfig
+    from scripts.b_direction.run_loop_iter1_transition import (
+        build_cast,
+        build_locations,
+        build_network,
+    )
 
     agents = build_cast()
     locations = build_locations()

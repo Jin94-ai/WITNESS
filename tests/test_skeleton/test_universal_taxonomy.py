@@ -107,7 +107,7 @@ def test_universal_seed_is_anchor_clean():
 def test_skeleton_output_has_required_fields():
     """**FROZEN CONTRACT**. 변경 시 RFC 필수."""
     from engine.observer.skeleton_output import (
-        SkeletonOutput, EvidenceLedger, AuditTrail,
+        SkeletonOutput,
     )
     out = SkeletonOutput()
     # required field presence
@@ -212,7 +212,8 @@ def _build_existing_inputs():
 def test_adapter_produces_universal_seed_with_no_raw_names():
     cands, cards = _build_existing_inputs()
     from engine.observer.universal_seed_adapter import (
-        candidate_to_universal_seed, DEFAULT_ARCHETYPE_BY_SEED,
+        DEFAULT_ARCHETYPE_BY_SEED,
+        candidate_to_universal_seed,
     )
     archetype = DEFAULT_ARCHETYPE_BY_SEED.get(cards[0].seed_id, "loyal_under_pressure")
     seed = candidate_to_universal_seed(cands[0], cards[0], archetype=archetype)
@@ -290,7 +291,8 @@ def test_raw_data_dirs_have_selection_log_skeletons():
 def test_desire_taxonomy_split_collisions_into_desires_and_pressures():
     """Phase 2.5 §B.1: natural_collisions → colliding_desires + colliding_pressures."""
     from engine.observer.universal_story_seed import (
-        load_desire_taxonomy, load_pressure_taxonomy,
+        load_desire_taxonomy,
+        load_pressure_taxonomy,
     )
     desires = load_desire_taxonomy()
     pressures = load_pressure_taxonomy()
@@ -454,10 +456,11 @@ def test_adapter_requires_archetype():
 def test_adapter_no_supporting_placeholder():
     """Phase 2.5 §D.2.3: supporting_roles에 'supporting_1'/'supporting_2'
     같은 numeric placeholder 금지. 'supporting_actor'는 legitimate role."""
+    import re
+
     from engine.observer.universal_seed_adapter import (
         assemble_skeleton_output,
     )
-    import re
     cands, cards = _build_existing_inputs()
     out = assemble_skeleton_output(cands, cards, anchor_id="peter_scarcity_baseline")
     placeholder_re = re.compile(r"^supporting_\d+$")
@@ -531,7 +534,8 @@ def test_adapter_unmapped_phrase_audited():
 def test_adapter_supporting_archetypes_populated():
     """Phase 2.5 §D.2.3: supporting_archetypes도 채워져야 (v1.1 신규 필드)."""
     from engine.observer.universal_seed_adapter import (
-        assemble_skeleton_output, DEFAULT_SUPPORTING_ARCHETYPES_BY_SEED,
+        DEFAULT_SUPPORTING_ARCHETYPES_BY_SEED,
+        assemble_skeleton_output,
     )
     cands, cards = _build_existing_inputs()
     out = assemble_skeleton_output(cands, cards, anchor_id="peter_scarcity_baseline")
@@ -545,7 +549,7 @@ def test_adapter_audit_records_unmapped_phrases():
     """Phase 2.5 §D.4: assemble_skeleton_output가 unmapped phrase를 AuditTrail에
     기록해야."""
     from engine.observer.universal_seed_adapter import (
-        assemble_skeleton_output, DEFAULT_ARCHETYPE_BY_SEED,
+        assemble_skeleton_output,
     )
     cands, cards = _build_existing_inputs()
     # 첫 candidate의 phrases를 모두 unmappable로 교체
@@ -616,7 +620,8 @@ def test_skeleton_flow_can_be_disabled():
 def test_skeleton_semantic_validator_passes_default_assembly():
     """기본 assemble로 만든 SkeletonOutput은 strict 통과해야 (Phase 3 Go)."""
     from engine.observer.universal_seed_adapter import (
-        assemble_skeleton_output, validate_skeleton_semantic,
+        assemble_skeleton_output,
+        validate_skeleton_semantic,
     )
     cands, cards = _build_existing_inputs()
     out = assemble_skeleton_output(cands, cards, anchor_id="peter_scarcity_baseline")
@@ -627,7 +632,8 @@ def test_skeleton_semantic_validator_passes_default_assembly():
 def test_skeleton_phase3_ready_helper():
     """is_skeleton_phase3_ready는 (True, []) 반환해야 한다."""
     from engine.observer.universal_seed_adapter import (
-        assemble_skeleton_output, is_skeleton_phase3_ready,
+        assemble_skeleton_output,
+        is_skeleton_phase3_ready,
     )
     cands, cards = _build_existing_inputs()
     out = assemble_skeleton_output(cands, cards, anchor_id="peter_scarcity_baseline")
@@ -637,9 +643,9 @@ def test_skeleton_phase3_ready_helper():
 
 def test_semantic_validator_catches_main_role_placeholder():
     """main_role == 'main' 누수 catch."""
-    from engine.observer.universal_story_seed import UniversalStorySeed
-    from engine.observer.skeleton_output import SkeletonOutput, LifeStoryFlow
+    from engine.observer.skeleton_output import LifeStoryFlow, SkeletonOutput
     from engine.observer.universal_seed_adapter import validate_skeleton_semantic
+    from engine.observer.universal_story_seed import UniversalStorySeed
 
     bad = UniversalStorySeed(
         seed_id="S99", conflict_axis_id="loyalty_vs_survival",
@@ -657,9 +663,9 @@ def test_semantic_validator_catches_main_role_placeholder():
 
 def test_semantic_validator_catches_silent_empty_pressures():
     """dominant_pressures 빈 채로 audit 기록 없으면 fail."""
-    from engine.observer.universal_story_seed import UniversalStorySeed
-    from engine.observer.skeleton_output import SkeletonOutput, LifeStoryFlow
+    from engine.observer.skeleton_output import LifeStoryFlow, SkeletonOutput
     from engine.observer.universal_seed_adapter import validate_skeleton_semantic
+    from engine.observer.universal_story_seed import UniversalStorySeed
 
     bad = UniversalStorySeed(
         seed_id="S99", conflict_axis_id="loyalty_vs_survival",
@@ -676,9 +682,9 @@ def test_semantic_validator_catches_silent_empty_pressures():
 
 def test_semantic_validator_catches_unknown_axis_strict():
     """unknown axis on normal seed → strict fail."""
-    from engine.observer.universal_story_seed import UniversalStorySeed
-    from engine.observer.skeleton_output import SkeletonOutput, LifeStoryFlow
+    from engine.observer.skeleton_output import LifeStoryFlow, SkeletonOutput
     from engine.observer.universal_seed_adapter import validate_skeleton_semantic
+    from engine.observer.universal_story_seed import UniversalStorySeed
 
     bad = UniversalStorySeed(
         seed_id="S99", conflict_axis_id="unknown",
@@ -698,9 +704,9 @@ def test_semantic_validator_catches_unknown_axis_strict():
 
 def test_semantic_validator_catches_missing_flow():
     """flow=None은 fail."""
-    from engine.observer.universal_story_seed import UniversalStorySeed
     from engine.observer.skeleton_output import SkeletonOutput
     from engine.observer.universal_seed_adapter import validate_skeleton_semantic
+    from engine.observer.universal_story_seed import UniversalStorySeed
 
     seed = UniversalStorySeed(
         seed_id="S99", conflict_axis_id="loyalty_vs_survival",
@@ -714,9 +720,9 @@ def test_semantic_validator_catches_missing_flow():
 
 def test_semantic_validator_catches_flow_roles_missing_seed():
     """flow_roles가 어떤 seed를 빠뜨리면 fail."""
-    from engine.observer.universal_story_seed import UniversalStorySeed
-    from engine.observer.skeleton_output import SkeletonOutput, LifeStoryFlow
+    from engine.observer.skeleton_output import LifeStoryFlow, SkeletonOutput
     from engine.observer.universal_seed_adapter import validate_skeleton_semantic
+    from engine.observer.universal_story_seed import UniversalStorySeed
 
     s1 = UniversalStorySeed(
         seed_id="S01", conflict_axis_id="loyalty_vs_survival",

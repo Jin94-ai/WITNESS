@@ -21,7 +21,6 @@ from __future__ import annotations
 import json
 import os
 import sys
-from collections import defaultdict
 from pathlib import Path
 from statistics import mean
 
@@ -30,6 +29,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -37,11 +37,13 @@ N_TICKS = 200
 
 
 def build_world(seed, *, with_events=True, with_rumor=True):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -133,7 +135,7 @@ def measure_world_activity(label, *, with_events, with_rumor):
 
 
 def main() -> int:
-    print(f"[Iter 164] World-side autonomy probe")
+    print("[Iter 164] World-side autonomy probe")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 
@@ -158,7 +160,7 @@ def main() -> int:
     print()
     print("=== World-side autonomy verdict ===")
     v1 = results["V1_no_events_no_rumor"]
-    print(f"  V1 (no events, no rumor) shows world activity?")
+    print("  V1 (no events, no rumor) shows world activity?")
     print(f"    shame_climate_peak: {v1['shame_climate_peak']} (was 0 → autonomous if > 0)")
     print(f"    public_susp_peak: {v1['public_susp_peak']}")
     print(f"    blame_total_peak: {v1['blame_total_peak']}")
@@ -167,16 +169,16 @@ def main() -> int:
     autonomy_level = 0
     if v1["spawned_events_total"] > 0:
         autonomy_level += 1
-        print(f"  -> Agents spawn events autonomously (no seed events needed)")
+        print("  -> Agents spawn events autonomously (no seed events needed)")
     if v1["shame_climate_peak"] > 0.1:
         autonomy_level += 1
-        print(f"  -> shame_climate accumulates without seed events")
+        print("  -> shame_climate accumulates without seed events")
     if v1["blame_total_peak"] > 0.1:
         autonomy_level += 1
-        print(f"  -> blame_concentration accumulates without seed events")
+        print("  -> blame_concentration accumulates without seed events")
     if v1["rumor_count_peak"] > 0:
         autonomy_level += 1
-        print(f"  -> Rumors spawn without seed rumors (forgiveness from confessions)")
+        print("  -> Rumors spawn without seed rumors (forgiveness from confessions)")
     print()
     print(f"  Autonomy signals: {autonomy_level}/4")
 

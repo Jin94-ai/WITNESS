@@ -26,15 +26,14 @@ if str(ROOT) not in sys.path:
 
 from engine.world.event_registry import (  # noqa: E402
     AGENT_ACTION_EVENTS,
-    SEED_EVENTS,
     CONSUMED_EVENTS,
     LEGACY_V3_EVENTS,
+    SEED_EVENTS,
     audit,
     dead_emissions,
     legacy_dormant_consumers,
     orphan_consumers,
 )
-
 
 ENGINE_DIR = ROOT / "engine"
 SCRIPTS_DIR = ROOT / "scripts"
@@ -197,8 +196,8 @@ def main() -> int:
 
     print()
     if violations == 0:
-        print(f"LINT OK -- registry matches code. Orphans/dead are DESIGN "
-              f"concerns, not violations.")
+        print("LINT OK -- registry matches code. Orphans/dead are DESIGN "
+              "concerns, not violations.")
         if r["orphan_consumers"]:
             print(f"  NOTE: {len(r['orphan_consumers'])} orphan consumers "
                   f"detected. Consider wiring producers OR removing "

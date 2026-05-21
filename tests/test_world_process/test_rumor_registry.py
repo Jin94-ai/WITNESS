@@ -6,7 +6,7 @@ import random
 import re
 from pathlib import Path
 
-from engine.world.information import Rumor, RumorRegistry
+from engine.world.information import RumorRegistry
 
 
 def _small_network() -> dict[str, set[str]]:

@@ -24,10 +24,7 @@ if str(ROOT) not in sys.path:
 
 from engine.persona.profile import (  # noqa: E402
     DEFAULT_PROFILE,
-    MotifTendency,
     PersonaProfile,
-    PressureSensitivity,
-    RelationBias,
 )
 from engine.population import ROLE_CLUSTERS  # noqa: E402
 from engine.world.crowd_dynamics import CrowdState  # noqa: E402
@@ -37,7 +34,6 @@ from engine.world.micro_world import (  # noqa: E402
     MicroWorldConfig,
 )
 from engine.world.spatial import Location  # noqa: E402
-
 
 # =============================================================================
 # Agent construction (10 agents from role clusters)
@@ -267,10 +263,10 @@ def main() -> int:
     print(f"[Phase 5 Micro-World 1] accusation_scene | seed={seed} ticks={n_ticks}")
     world = build_micro_world(seed=seed)
 
-    print(f"\n  Cast: 10 agents across 3 locations")
-    print(f"  Crowds: priest_courtyard (0.4), city_street (0.6)")
-    print(f"  Seed events: public_accusation @ tick 3/7, guard_approaches @ tick 12")
-    print(f"  Seed rumor: threat_to_authority → disciple_follower")
+    print("\n  Cast: 10 agents across 3 locations")
+    print("  Crowds: priest_courtyard (0.4), city_street (0.6)")
+    print("  Seed events: public_accusation @ tick 3/7, guard_approaches @ tick 12")
+    print("  Seed rumor: threat_to_authority → disciple_follower")
 
     print("\n  tick | scene | key actions | motifs | rumors | crowd phases")
     print("  " + "-" * 100)

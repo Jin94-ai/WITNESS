@@ -27,7 +27,6 @@ from typing import Any, Iterable
 
 from engine.observer.moment import Moment
 
-
 # ---------------------------------------------------------------------------
 # Threshold configuration
 # ---------------------------------------------------------------------------

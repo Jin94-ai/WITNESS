@@ -19,13 +19,13 @@ import os
 import sys
 from collections import defaultdict
 from pathlib import Path
-from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -33,11 +33,13 @@ N_TICKS = 500
 
 
 def build_world(seed, *, location_overrides):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -94,7 +96,7 @@ def audit(label, overrides):
 
 
 def main() -> int:
-    print(f"[Iter 145] Audit Iter 133 V2 (low authority_reach)")
+    print("[Iter 145] Audit Iter 133 V2 (low authority_reach)")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 
@@ -136,11 +138,11 @@ def main() -> int:
     print(f"  V0 default: {v0_real} agents had real recovery (peak>1.5, final<4)")
     print(f"  V2 low authority: {v2_real} agents had real recovery")
     if v2_real > v0_real:
-        print(f"  Iter 133 finding holds: low_auth genuinely improves agent recovery")
+        print("  Iter 133 finding holds: low_auth genuinely improves agent recovery")
     elif v2_real == v0_real:
-        print(f"  No change in real recovery agents -- Iter 133's +13% was per-seed-mean shift")
+        print("  No change in real recovery agents -- Iter 133's +13% was per-seed-mean shift")
     else:
-        print(f"  V2 has FEWER real recovery agents -- Iter 133 finding may be artifact")
+        print("  V2 has FEWER real recovery agents -- Iter 133 finding may be artifact")
 
     out_path = (
         ROOT / "docs" / "b_direction" / "probe_runs"

@@ -10,7 +10,7 @@ Per §7: 의미 단위 비교, 완전 일치 X.
 """
 
 import pytest
-from scripts.story.build_narrative_ir import process as build_ir
+
 from scripts.story.render_story_ko import process as render
 
 
@@ -37,7 +37,7 @@ class TestP9_SaturationScarcity:
         last_para = self.text.split("\n\n")[-2:]  # 마지막 2 문단
         last_text = "\n".join(last_para)
         assert not any(e in last_text for e in recovery_endings), \
-            f"P9 (SATURATION) leaked recovery tone in ending"
+            "P9 (SATURATION) leaked recovery tone in ending"
 
 
 class TestP4_RecoverySacred:

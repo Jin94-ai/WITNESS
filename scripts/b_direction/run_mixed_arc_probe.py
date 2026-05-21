@@ -51,14 +51,14 @@ import os
 import sys
 from collections import defaultdict
 from pathlib import Path
-from statistics import mean, stdev
-
+from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -77,11 +77,13 @@ def build_accusation_sacred_mix(seed, *, mix=False, phase2a=True):
         this mixing mostly tests whether ANY sacred overlay changes
         cycling under accusation's kernel machinery.
     """
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     if mix:
@@ -133,11 +135,13 @@ def build_scarcity_grief_mix(seed, *, mix=False, phase2a=True):
       - Inject guilt.self=6.0, guilt.primary_focus=4.2, grief=3.0
         on agent_03 + agent_04 + agent_05 (fisher_laborer cohort)
     """
-    from scripts.b_direction.run_scarcity_scene import (
-        build_scarcity_cast, build_locations, build_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_scarcity_scene import (
+        build_locations,
+        build_network,
+        build_scarcity_cast,
+    )
 
     agents = build_scarcity_cast()
     if mix:
@@ -275,7 +279,7 @@ def analyze_probe(label, results, inject_desc):
     b = results["B_mixed"]
     c = results["C_mixed_p2a_off"]
 
-    print(f"\n  Mixing effect (B vs A):")
+    print("\n  Mixing effect (B vs A):")
     print(f"    rev_all:  {a['rev_all']:<6} -> {b['rev_all']:<6} "
           f"(Δ{b['rev_all'] - a['rev_all']:+.2f})")
     print(f"    final:    {a['final_shame']:<6} -> {b['final_shame']:<6} "
@@ -283,7 +287,7 @@ def analyze_probe(label, results, inject_desc):
     print(f"    grieve:   {a['grieve_per_seed']:<6} -> {b['grieve_per_seed']:<6} "
           f"(Δ{b['grieve_per_seed'] - a['grieve_per_seed']:+.1f})")
 
-    print(f"\n  Ablation under mixing (B vs C):")
+    print("\n  Ablation under mixing (B vs C):")
     print(f"    rev_all:  {b['rev_all']:<6} -> {c['rev_all']:<6} "
           f"(cycles collapse if →0: {c['rev_all'] < 0.5})")
     print(f"    final:    {b['final_shame']:<6} -> {c['final_shame']:<6} "
@@ -299,14 +303,14 @@ def analyze_probe(label, results, inject_desc):
     )
     p1_holds = c['rev_all'] < 0.5
 
-    print(f"\n  Diagnostics:")
+    print("\n  Diagnostics:")
     print(f"    Mixing visible (vs A): {not collapse}")
     print(f"    Cohort separation (inj vs oth): {cohort_separation}")
     print(f"    P1 holds under mixing: {p1_holds}")
 
 
 def main() -> int:
-    print(f"[Step E] Mixed-arc minimal probe")
+    print("[Step E] Mixed-arc minimal probe")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} "
           f"N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
 

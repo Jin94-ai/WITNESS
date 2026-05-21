@@ -32,6 +32,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 15
@@ -39,11 +40,13 @@ N_TICKS = 500
 
 
 def build_world(seed, *, inject_field=None, inject_value=0.0):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -117,7 +120,7 @@ def run_baseline_or_injected(label, *, inject_field=None, inject_value=0.0):
 
 
 def main() -> int:
-    print(f"[Iter 162] INERT field re-audit (post Iter 105 PYHASH + N=15)")
+    print("[Iter 162] INERT field re-audit (post Iter 105 PYHASH + N=15)")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 
@@ -149,7 +152,7 @@ def main() -> int:
     print()
     print("=== INERT field re-audit verdict ===")
     print(f"  Baseline: {baseline['overall_mean']:.2f} ± {baseline['overall_stdev']:.2f}")
-    print(f"  Pre-PYHASH-fix audit (Iter 89): all 6 fields INERT")
+    print("  Pre-PYHASH-fix audit (Iter 89): all 6 fields INERT")
     print()
     inert_count = 0
     for name, _, _ in inject_tests:

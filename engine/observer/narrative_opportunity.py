@@ -14,7 +14,6 @@ from typing import Literal
 
 from engine.observer.thread import StoryThread
 
-
 OpportunityRank = Literal["strong", "usable", "weak", "hold"]
 
 

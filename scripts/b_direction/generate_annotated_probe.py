@@ -17,7 +17,6 @@ Output: `docs/b_direction/readability_probes/P_ANNOTATED_DEMO.txt`
 
 from __future__ import annotations
 
-import os
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -27,6 +26,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_TICKS = 200
@@ -34,11 +34,13 @@ N_TICKS = 200
 
 def build_world(seed):
     """Accusation baseline scenario (P10 in current 12-probe set)."""
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -217,7 +219,7 @@ def make_annotated_probe(seed=0):
 
 
 def main():
-    print(f"[Iter 163] Generating annotated probe prototype")
+    print("[Iter 163] Generating annotated probe prototype")
     annotated = make_annotated_probe(seed=0)
     out_path = (
         ROOT / "docs" / "b_direction" / "readability_probes"

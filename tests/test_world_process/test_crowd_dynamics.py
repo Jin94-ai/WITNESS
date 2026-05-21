@@ -16,7 +16,6 @@ from engine.world.crowd_dynamics.state import (
     set_dominant_emotion,
 )
 
-
 # -----------------------------------------------------------------
 # Phase classification
 # -----------------------------------------------------------------

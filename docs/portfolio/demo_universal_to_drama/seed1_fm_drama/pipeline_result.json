@@ -1,0 +1,39 @@
+{
+  "schema_version": "universal_to_drama_v1",
+  "seed": 1,
+  "doc_type": "fm_drama",
+  "with_passion": false,
+  "anchor": "peter_scarcity_baseline",
+  "total_days": 101.16666666666667,
+  "windows": [
+    {
+      "phase_label": "",
+      "summary_input": "발화된 정경 사건 4건: - 약 0.2일째 — 예수께서 시몬의 배에 오르사 무리를 가르치심 (눅 5:3) - 시뮬레이션 베드로의 선택: 그물 손질 계속 (밤새 허탕) (`wash_nets`) - 약 0.7일째 — '깊은 데로 가서 그물을 내려 고기를 잡으라' — 어부 전문성에 반하는 지시 (눅 5:4) -…",
+      "summary_input_len": 172,
+      "drama_output": "해설]정경사건 4건(발화) - 약 0.7일째 – 예수께서 시몬의 배에 오르사 무리를 가르치신다 (눅 5:3).\n시뮬레이션 베드로, 그물 손질 계속 (밤새 허탕) (`white back - love he lash cut - #1.어부 전문성에 반하는 지시 (눅5:4).\n어부](소리) 어머님! 어머님, 어머님이시죠? 어머님께서 어머님께 말씀하시면, 어머님은 어머님의 배에 오신다!\n어머님]예수님!\n해설] (시간 경과)\n시뮬레이터 베드로, 그물손질 계속하고 있다. (밤마다 허탕)\n<시간 경과> (밤에 허탕 치는 베드로와 어부. <which he cut cut he shut – lovely he was he handshut - he.was handhat he life - #4.깊은 데로 가서 그물을 내려 고기 잡으라!\n어부전문성에 반하고 어부전문성에도 반하는 지시가 내려온다) (눅1:1 – 07 – 1 – 2 – 3 – 4 – 5 – 6 – 7 – 8 – 9 – 11 – 10 – 12 – 13 – 14 – 15 – 16 – 17 – 18 – 21 – 23 – 24 – 25 – 26 – 31 – 28 – 29 – 33 – 30 – 27 – 34 – 32 – 37 – 39 – 41 – 51 – 48 – 53 – 49 – 40 – 47 – 50 – 45 – 56 – 52 – 55 – 100 – 110 – 75 – 99 – 78 – 80 – 87 – 90 – 72 – 84 – 70 – 88 – 86 – 97 – 82 – 96 – 120 – 119 – 200 – 79 – 95 – 69 – 60 – 62 – 67 – 57 – 20 – 58 – 61 – 22 – (밤 ",
+      "drama_output_len": 822
+    },
+    {
+      "phase_label": "",
+      "summary_input": "이 구간에서 시뮬레이션 베드로이(가) 응답한 정경 사건은 0건이다 (trigger 조건 미일치). 정의된 정경 사건은 2건. 미발화 정경 사건 2건 (JSON 정의되었으나 시뮬레이션 trigger 미일치): - 약 21.0일째 — 가버나움 회당 이후 베드로 장모의 열병 치유 (막 1:29-31) (막 1:31) - 약 52.0일째 — 산상수훈 경청 (마 5-7).",
+      "summary_input_len": 204,
+      "drama_output": "해설]산상수훈 경청 사무실 (낮).\n (일하는 경청. 시뮬레이션 베드로이(가) 응답한 정경사건은 0건이다) (시뮬레이션 조건 미일치)\n해설]JSON 정의된 정경 사건 2건. 미발화정경 사건 1건. (JS ON 정의되었으나 시뮬레이션을 위한 조건미일치) - 약 52.2일째 – 가버나움 회당 이후 베드로 장모님의 열병 치유 (막 1:29) (막 2:31) (막 3:32) - 약 31.2일 – 산상수훈의 경청 (마지막)\n경청](마지막으로)...\n산상 수훈](경청에게)...\n경청(E)](의미심장하게)... (경청 보며)...(경감에게)...경감님...\n경감]... (의미 심장 떨리는 것 느끼며)...그렇죠? (경감한테)...예...예...\n산 상수훈](E)...제대로 된 정경 사건은 2건입니다..\n경청E]...미발화 정경 사건으로 정의된 건 2건입니다.\n경감 E](일동 웃으며)...미안합니다! (경감으로)...저희들... (일동 웃고).\n경청 E]...(일어서며)...\n일동](놀라며)...네!\n경감E](기막혀서)...아줌마! (일어서고)...잠깐만요! (간다).\n경감(E) ](일어나며) (일어나고)\n경감 ](잠시 망설이다)...일동. (잠시 생각하다가)...이제야 생각난다...잠깐...잠시...잠간 생각하다가...(간다)...(Flash cut - 5부 #34.경감실)...정경사건 2건.\n경감(F)]정경사건을 정의한 건 1건입니다...그리고 정경사건은 2건으로 정의되었습니다...제대로 정의된 사건입니다...정경 사건을 정리한 건 2건으로 정해졌습니다...(잠깐 생각하다)..(일어난다)...\n강경](그런 경감...)...\n최경위]...그런데...그리고...그건...그게...",
+      "drama_output_len": 832
+    },
+    {
+      "phase_label": "",
+      "summary_input": "발화된 정경 사건 2건: - 약 68.5일째 — '너희는 나를 누구라 하느냐' → 베드로 '주는 그리스도시요 살아계신 하나님의 아들이시니이다' (마 16:16). 신학적 최고점. jesus_understanding: teacher → messiah_political (정치적 메시아 기대 포함된 고백).",
+      "summary_input_len": 169,
+      "drama_output": "해설]정경 사무실 (낮).\n (발화된 정경 사건 2건. 약 68.5일째).\nE]노크소리.\n해설]E]통화 연결음.\nE]전화 연결음. (끊고)\nE]소리. (통화 중) \n해설. (시간 경과).\nE.\n통화 중. (마지막으로 끊는다) \nE.\n여기저기 – 베드로, '주는 그리스도요, 살아계신 하나님의 아들이시니이다' (마 16:16). \nE]거실. (밤).\nE.R.G.P.D.G.\nE.L.E.T.L.\nE.\nE – – I – Flash cut - #1.정경사무실.(낮).\n(E) – E.R.\nE ] – B.C.P.\n(E) E.L – P.G – Number – Marine – D.G - D.L - Degree – God – degroup – marine - Discussh back - Daum – T.G)\nE.G]Disguish – C.G, Disput - Destruction - Distructure- Dissus – Life - disrupture - Digital - Deput - E.G) Disspectually - Deterruit - Dynamic - Death - Dought - Duty - distractuate - Descript - Data- Distription - Directuat - Duituated Disrush - Druguestuate- Destriatuature. Disengut - destriptituitie - Dictatuate- Detum - Denught- Deutsh Future –Distribute- dissisatuise-Dissute -Districtuatrievised Destroyee -",
+      "drama_output_len": 806
+    },
+    {
+      "phase_label": "",
+      "summary_input": "이 구간에서 시뮬레이션 베드로이(가) 응답한 정경 사건은 0건이다 (trigger 조건 미일치). 정의된 정경 사건은 2건. 미발화 정경 사건 2건 (JSON 정의되었으나 시뮬레이션 trigger 미일치): - 약 74.2일째 — '누가 크냐' 논쟁. 예수께서 어린아이를 세우시고 '섬기는 자가 큰 자' 가…",
+      "summary_input_len": 172,
+      "drama_output": "해설]JSON구간 (낮).\n (시뮬레이션 베드로이(가) 응답한 정경사건은 0건이다) (Flash cut - 5부 #4.정경사건의 조건 미일치)\nJS ON 구간의 미발화 정경 사건 2건. (F.O.JON 정의되었으나 시뮬레이션은 F.O가 응답한 0건. F. O가 응답하는 0건) F.\nF.\n(F.O의 조건미일치) F/O의 기준미일치, F.\n(F/O가 대답한 0건, F/ O의 조건에 미일치가 있는 정경 사건은 2건)\nF/O(현재 -JSO)N 정의된 정경 사건이 0건인 경우, F.\n(F. O의 기준 미일치로) F](F/ O) F, F.\n해설](F. O, F) F - (F/ O에서 미발화된 정경 사건으로 정의된 것) F (F.\nF) F) 정경 사건의 조건은 F.\nE](F) F: F.\n미발화정경 사건 1건 (F)\nF.\n(시뮬레이션 베드로이가 응답한 미일치의 정경 사건을 F.\n F) E](F, F)\nF](F), F.\n(E) F'(F)(F)F)F, F' (F)(F, E)F'(F)이(F) E) F((F)) F)이(F(F)](F)이 F)F(F) f) F(F)/ F)(F)\n(F)E]F)5부 #1.\n(F)미발화의 정경사건을 F) 정의된 것으로 보는 E.F.I.J.J.\nF.J]F.G, F.I.\n(F,F) E.J, F,F.(F)J,F,F...(F) ‘F.F’(F)‘(F)’(F),F.E) F.J와 F,(F) 각각 F.G와 F.T.F,(F.F) ‘(F.J) F’(F)\nF.T]F,J.\n(F),(F)정경 사건의 조건을 F.F로 보는 E.\nF]FFF F.R.F.\n(E,F에서 F로 보는) FFF(F로 보는)\n(F(FF",
+      "drama_output_len": 785
+    }
+  ],
+  "elapsed_sec": 21.4
+}

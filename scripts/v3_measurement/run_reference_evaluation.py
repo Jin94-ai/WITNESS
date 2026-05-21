@@ -36,7 +36,6 @@ from engine.rubric.reference_loader import (  # noqa: E402
     load_reference_set,
 )
 
-
 # =============================================================================
 # Adapter: reference tick → rubric record shape
 # =============================================================================

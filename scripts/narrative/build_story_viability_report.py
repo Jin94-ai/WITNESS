@@ -29,14 +29,16 @@ if str(ROOT) not in sys.path:
 
 from engine.observer.scene_brief import SceneBrief, build_scene_brief  # noqa: E402
 from engine.observer.story_audit import (  # noqa: E402
-    AuditResult, audit_pair, load_anchor_blocklist,
+    AuditResult,
+    audit_pair,
+    load_anchor_blocklist,
 )
 from engine.observer.story_candidate import StoryCandidate, TurningPoint  # noqa: E402
 from engine.observer.story_viability import (  # noqa: E402
-    ViabilityScore, score_candidate,
+    ViabilityScore,
+    score_candidate,
 )
 from engine.observer.treatment import Treatment, build_treatment  # noqa: E402
-
 
 # ---------------------------------------------------------------------------
 # Loading

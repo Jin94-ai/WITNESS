@@ -12,7 +12,7 @@ turning-point summaries, adaptation hooks, creative-use suggestions.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass(frozen=True)

@@ -10,10 +10,8 @@ skeleton engine 내부에 의존하지 않는다.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any
 
 from engine.observer.universal_story_seed import UniversalStorySeed
-
 
 # ---------------------------------------------------------------------------
 # Sub-structures

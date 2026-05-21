@@ -14,18 +14,16 @@ Usage:
 
 from __future__ import annotations
 
-import json
-import os
 import random
 import sys
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 OUT_DIR = ROOT / "docs" / "b_direction" / "readability_probes"
@@ -54,11 +52,15 @@ SNAPSHOT_TICKS = [0, 50, 100, 150, 200]
 
 
 def build_world(scenario, seed, p2a, sham_mul):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations as acc_locs, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_social_network,
+    )
+    from scripts.b_direction.run_accusation_scene import (
+        build_locations as acc_locs,
+    )
 
     if scenario == "accusation":
         agents = build_accusation_cast()
@@ -98,7 +100,11 @@ def build_world(scenario, seed, p2a, sham_mul):
 
     if scenario == "scarcity":
         from scripts.b_direction.run_scarcity_scene import (
-            build_scarcity_cast, build_locations as sc_locs, build_network,
+            build_locations as sc_locs,
+        )
+        from scripts.b_direction.run_scarcity_scene import (
+            build_network,
+            build_scarcity_cast,
         )
         agents = build_scarcity_cast()
         aids = [a.agent_id for a in agents]
@@ -135,7 +141,11 @@ def build_world(scenario, seed, p2a, sham_mul):
 
     if scenario == "sacred":
         from scripts.b_direction.run_sacred_gathering import (
-            build_cast, build_locations as sa_locs, build_network,
+            build_cast,
+            build_network,
+        )
+        from scripts.b_direction.run_sacred_gathering import (
+            build_locations as sa_locs,
         )
         agents = build_cast()
         aids = [a.agent_id for a in agents]

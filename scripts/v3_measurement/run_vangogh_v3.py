@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from engine.person.loop import PersonV3Loop, TrajectoryRecord  # noqa: E402
+from engine.person.loop import PersonV3Loop  # noqa: E402
 from engine.persona import load_profile  # noqa: E402
 
 CONTENT = ROOT / "content" / "vangogh" / "v3"

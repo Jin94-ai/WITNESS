@@ -6,8 +6,12 @@ import time
 from pathlib import Path
 
 from engine.observer.run_log import (
-    PIPELINE_STEP_LABELS, PipelineStep, RunLog, StepTimer,
-    make_pipeline_steps, render_run_log_md,
+    PIPELINE_STEP_LABELS,
+    PipelineStep,
+    RunLog,
+    StepTimer,
+    make_pipeline_steps,
+    render_run_log_md,
 )
 
 ROOT = Path(__file__).resolve().parents[2]

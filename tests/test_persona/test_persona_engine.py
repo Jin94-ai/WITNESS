@@ -12,13 +12,10 @@ from engine.persona import (
     MOTIF_NAMES,
     MotifTendency,
     PersonaProfile,
-    PressureSensitivity,
     activate_motifs,
     load_profile,
     select_action,
 )
-from engine.persona.motif import MotifActivation
-
 
 # -----------------------------------------------------------------
 # Profile basics

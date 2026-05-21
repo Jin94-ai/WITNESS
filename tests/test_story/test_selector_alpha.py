@@ -1,11 +1,16 @@
 """Test selector (scripts/story/selector.py) — J-Alpha + J-Beta query API."""
 
 import pytest
+
 from scripts.story.selector import (
-    AnchorBundle, get_variations, get_curated_anchors,
+    AnchorBundle,
+    get_anchor_by_id,
+    get_curated_anchors,
+    get_top_arcs,
+    get_variations,
+    get_variations_by_anchor_id,
     pick_most_readable_anchor,
-    get_anchor_by_id, get_variations_by_anchor_id,
-    query_anchors, get_top_arcs,
+    query_anchors,
 )
 
 

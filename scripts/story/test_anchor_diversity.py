@@ -12,7 +12,7 @@ Anchor 후보:
 from __future__ import annotations
 
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
@@ -20,16 +20,22 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
-from scripts.b_direction.generate_readability_probes import N_TICKS
-from scripts.b_direction.test_d_prime_generalization import measure
-from scripts.b_direction.run_accusation_scene import (
-    build_accusation_cast, build_locations as acc_locs, build_social_network as acc_net,
-)
-from scripts.b_direction.generate_scarcity_depth_variations import build_scarcity_depth_world
 from engine.world.crowd_dynamics import CrowdState
-from engine.world.micro_world import MicroWorldConfig, MicroWorld
+from engine.world.micro_world import MicroWorld, MicroWorldConfig
+from scripts.b_direction.generate_scarcity_depth_variations import build_scarcity_depth_world
+from scripts.b_direction.run_accusation_scene import (
+    build_accusation_cast,
+)
+from scripts.b_direction.run_accusation_scene import (
+    build_locations as acc_locs,
+)
+from scripts.b_direction.run_accusation_scene import (
+    build_social_network as acc_net,
+)
+from scripts.b_direction.test_d_prime_generalization import measure
 
 
 def build_accusation_baseline(seed: int):
@@ -96,7 +102,7 @@ def main():
         if n_distinct >= 3:
             print(f"  [READY] J-Alpha anchor: {n_distinct} distinct outcomes (>=3, like Peter scarcity)")
         elif n_distinct == 2:
-            print(f"  [MARGINAL] 2 distinct - possible but less variation")
+            print("  [MARGINAL] 2 distinct - possible but less variation")
         else:
             print(f"  [FAIL] {n_distinct} distinct - too uniform like VG sacred substitute")
 

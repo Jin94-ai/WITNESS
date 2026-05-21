@@ -15,12 +15,11 @@ Forbidden expressions (plan §9.1) 유지 — story_audit 활용 가능.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
-from engine.observer.story_candidate import StoryCandidate
 from engine.observer.scene_brief import SceneBrief
+from engine.observer.story_candidate import StoryCandidate
 from engine.observer.story_viability import ViabilityScore
-
 
 # ---------------------------------------------------------------------------
 # Plain-language lookups (plan §6.X + §9.2)

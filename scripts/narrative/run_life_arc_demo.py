@@ -30,15 +30,13 @@ if str(ROOT) not in sys.path:
 
 # Reuse the existing phase config + rule engine. demo_phased.py wraps stdout
 # at import time on Windows; do not double-wrap here.
-from examples.demo_phased import _build_config, _rules  # noqa: E402
-
 from engine.observer.life_arc_narrative import (  # noqa: E402
     build_life_arc_narrative,
     render_life_arc_html,
     render_life_arc_md,
 )
 from engine.simulation.phased_world import PhasedSimulationWorld  # noqa: E402
-
+from examples.demo_phased import _build_config, _rules  # noqa: E402
 
 # Content-layer human-readable Korean labels for the standard 5-phase
 # arc. Lives in the orchestrator (not engine) so the engine module stays

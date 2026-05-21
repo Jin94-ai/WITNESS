@@ -10,8 +10,6 @@ from engine.observer.moment import Moment
 from engine.observer.moment_extractor import extract_moments
 from engine.observer.thread import MomentLink
 from engine.observer.thread_builder import (
-    DEFAULT_LINK_THRESHOLDS,
-    LinkThresholds,
     link_moments,
     serialize_links,
 )

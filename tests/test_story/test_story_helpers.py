@@ -1,8 +1,11 @@
 """Story renderer helper tests (josa, role plural, variant_pick)."""
 
-import pytest
 from scripts.story.render_story_ko import (
-    josa, role_ko, role_plural_ko, variant_pick, _has_batchim,
+    _has_batchim,
+    josa,
+    role_ko,
+    role_plural_ko,
+    variant_pick,
 )
 
 

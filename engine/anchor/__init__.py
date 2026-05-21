@@ -5,13 +5,13 @@ representations (display names, role labels, scripture refs, etc.) live
 here, separate from the universal taxonomy.
 """
 from engine.anchor.anchor_registry import (
-    AnchorRegistry,
     AnchorBinding,
+    AnchorRegistry,
     load_anchor_binding,
 )
 from engine.anchor.universal_seed_renderer import (
-    render_universal_seed_to_korean,
     render_universal_seed_to_dict,
+    render_universal_seed_to_korean,
 )
 
 __all__ = [

@@ -15,8 +15,6 @@ import pytest
 
 from engine.observer.data_narrative import (
     NarrativeEvidence,
-    PressurePeak,
-    StateTransition,
     evidence_to_act_summary,
     evidence_to_logline,
     evidence_to_premise,

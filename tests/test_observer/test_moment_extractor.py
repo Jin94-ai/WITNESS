@@ -8,7 +8,6 @@ import pytest
 
 from engine.observer.moment import Moment
 from engine.observer.moment_extractor import (
-    DEFAULT_THRESHOLDS,
     MomentThresholds,
     extract_moments,
     serialize_moments,

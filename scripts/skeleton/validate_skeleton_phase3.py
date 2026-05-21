@@ -44,7 +44,11 @@ def _force_utf8_stdout() -> None:
             pass
 
 from engine.observer.skeleton_output import (  # noqa: E402
-    AnchorMetadata, AuditTrail, EvidenceLedger, LifeStoryFlow, SkeletonOutput,
+    AnchorMetadata,
+    AuditTrail,
+    EvidenceLedger,
+    LifeStoryFlow,
+    SkeletonOutput,
 )
 from engine.observer.universal_seed_adapter import (  # noqa: E402
     validate_skeleton_semantic,

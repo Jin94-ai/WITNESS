@@ -22,7 +22,6 @@ import math
 import sys
 from collections import Counter
 from pathlib import Path
-from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
@@ -32,7 +31,9 @@ from engine.persona.profile import DEFAULT_PROFILE, PersonaProfile  # noqa: E402
 from engine.population import ROLE_CLUSTERS  # noqa: E402
 from engine.world.crowd_dynamics import CrowdState  # noqa: E402
 from engine.world.micro_world import (  # noqa: E402
-    AgentHandle, MicroWorld, MicroWorldConfig,
+    AgentHandle,
+    MicroWorld,
+    MicroWorldConfig,
 )
 from engine.world.spatial import Location  # noqa: E402
 
@@ -261,7 +262,7 @@ def main() -> int:
         threshold = min(emergent)
         print(f"  Arc D emerges at guilt >= {threshold}")
     else:
-        print(f"  Arc D did not emerge at tested levels")
+        print("  Arc D did not emerge at tested levels")
 
     out_path = (
         ROOT / "docs" / "b_direction" / "probe_runs"

@@ -29,6 +29,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 15
@@ -37,11 +38,13 @@ N_TICKS = 500
 
 def build_sacred(seed, *, include_late_miracle=True,
                  include_early_miracle=True, include_accusation=True):
-    from scripts.b_direction.run_sacred_gathering import (
-        build_cast, build_locations, build_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_sacred_gathering import (
+        build_cast,
+        build_locations,
+        build_network,
+    )
 
     agents = build_cast()
     aids = [a.agent_id for a in agents]
@@ -112,7 +115,7 @@ def run_variant(label, **kwargs):
 
 
 def main() -> int:
-    print(f"[Iter 113] Sacred ablation -- causal test")
+    print("[Iter 113] Sacred ablation -- causal test")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 

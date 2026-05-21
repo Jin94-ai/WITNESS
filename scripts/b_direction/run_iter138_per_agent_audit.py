@@ -24,13 +24,14 @@ import os
 import sys
 from collections import defaultdict
 from pathlib import Path
-from statistics import mean, stdev
+from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5  # smaller for per-agent detail
@@ -38,8 +39,8 @@ N_TICKS = 500
 
 
 def build_augmented_cast():
-    from scripts.b_direction.run_accusation_scene import build_accusation_cast
     from engine.population import ROLE_CLUSTERS
+    from scripts.b_direction.run_accusation_scene import build_accusation_cast
     base = build_accusation_cast()
     aug = []
     for a in base:
@@ -53,11 +54,12 @@ def build_augmented_cast():
 
 
 def build_world(seed):
-    from scripts.b_direction.run_accusation_scene import (
-        build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_augmented_cast()
     aids = [a.agent_id for a in agents]
@@ -93,7 +95,7 @@ def build_world(seed):
 
 
 def main() -> int:
-    print(f"[Iter 138] Per-agent audit of Iter 118 V3")
+    print("[Iter 138] Per-agent audit of Iter 118 V3")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
 
@@ -149,13 +151,13 @@ def main() -> int:
           f"recover rate (<4.0)={outsider_recover_rate*100:.0f}%")
     if "outsider" in confessor_role_count and confessor_role_count["outsider"] > 0:
         print(f"  Outsiders DID confess ({confessor_role_count['outsider']} times)")
-        print(f"  -> Outsiders not strictly bound by affordance_pack? Investigate further")
+        print("  -> Outsiders not strictly bound by affordance_pack? Investigate further")
     else:
-        print(f"  Outsiders did NOT confess")
+        print("  Outsiders did NOT confess")
         if outsider_recover_rate > 0.5:
-            print(f"  -> Outsiders recover via OTHER mechanism (likely crowd-layer climate)")
+            print("  -> Outsiders recover via OTHER mechanism (likely crowd-layer climate)")
         else:
-            print(f"  -> Outsiders DON'T recover; Iter 118 mean was misleading")
+            print("  -> Outsiders DON'T recover; Iter 118 mean was misleading")
 
     out_path = (
         ROOT / "docs" / "b_direction" / "probe_runs"

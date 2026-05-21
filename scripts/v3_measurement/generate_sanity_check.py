@@ -140,9 +140,9 @@ def make_summary(
 
     lines = [
         f"### Trajectory: **{t.trajectory_id}**",
-        f"",
+        "",
         f"- **Category:** {t.category}{noise_lv_str}",
-        f"- **Rubric scores:**",
+        "- **Rubric scores:**",
         *score_lines,
         "",
         "- **Action summary at key ticks:**",
@@ -155,7 +155,7 @@ def make_summary(
         f"{state_trajectory_signal(t)}",
         "  ```",
         "",
-        f"- **Trajectory-level reading:**",
+        "- **Trajectory-level reading:**",
         f"  {trajectory_arc_reading(t)}",
         "",
     ]
@@ -235,10 +235,10 @@ def main() -> int:
     lines.append("  - **Character composite가 backwards**: canonical=0.67 (최저), alt=0.88, noise=0.81")
     lines.append("")
     lines.append("- **Step G4:** Percentile-based calibration:")
-    lines.append(f"  - reproduction_threshold = canonical.drift P90 = **28.30**")
-    lines.append(f"  - noise_threshold = noise.drift P10 = **29.00**")
-    lines.append(f"  - character_min = alt.character P25 = **0.843**")
-    lines.append(f"  - copy_threshold = canonical.novelty_drift P10 = **23.50**")
+    lines.append("  - reproduction_threshold = canonical.drift P90 = **28.30**")
+    lines.append("  - noise_threshold = noise.drift P10 = **29.00**")
+    lines.append("  - character_min = alt.character P25 = **0.843**")
+    lines.append("  - copy_threshold = canonical.novelty_drift P10 = **23.50**")
     lines.append("")
     lines.append("  Confusion matrix (target in parens):")
     lines.append("  | actual | canonical% | alternative% | noise% |")

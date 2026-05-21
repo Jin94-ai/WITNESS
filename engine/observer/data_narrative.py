@@ -18,7 +18,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any
 
-
 # ---------------------------------------------------------------------------
 # Plain-language pressure / event dictionaries
 # ---------------------------------------------------------------------------
@@ -612,8 +611,8 @@ def evidence_to_why(ev: NarrativeEvidence) -> str:
 
     body = "; ".join(bits)
     closer = (
-        f". 이 흐름은 한 사건이 아니라 여러 신호가 같은 시간대에 겹쳐서 만들어진 "
-        f"것이다. 그 점이 단편적인 인상을 *하나의 이야기*로 묶는다."
+        ". 이 흐름은 한 사건이 아니라 여러 신호가 같은 시간대에 겹쳐서 만들어진 "
+        "것이다. 그 점이 단편적인 인상을 *하나의 이야기*로 묶는다."
     )
     return body + closer
 
@@ -637,7 +636,7 @@ def evidence_to_premise(ev: NarrativeEvidence) -> str:
     if ev.main_agent_action_count_late < ev.main_agent_action_count_early and \
        ev.main_agent_action_count_early > 0:
         sentences.append(
-            f"같은 사람이 두드러지게 보이는 단계는 후반으로 갈수록 줄어든다"
+            "같은 사람이 두드러지게 보이는 단계는 후반으로 갈수록 줄어든다"
         )
     elif ev.main_agent_state_transitions:
         last = ev.main_agent_state_transitions[-1]

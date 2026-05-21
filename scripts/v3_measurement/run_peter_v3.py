@@ -23,7 +23,6 @@ from engine.rubric import (  # noqa: E402
     CanonCritic,
     CausalCritic,
     CharacterCritic,
-    DiscoveryClass,
     NoveltyCritic,
     RubricEvaluator,
 )
@@ -156,8 +155,8 @@ def main() -> int:
     summary = summarize(records)
     print(f"\n  action distribution: {summary['action_counts']}")
     # faith_stage is Derived now (Dynamics Step 1). Compute via state_derived.
-    from engine.person.state_v3 import ActiveState
     from engine.person.state_derived import faith_stage_tag
+    from engine.person.state_v3 import ActiveState
     final_active = ActiveState(**{
         k: v for k, v in summary["final_state"].items()
         if k in {"fear", "hope", "grief", "confusion", "joy", "anger", "awe",

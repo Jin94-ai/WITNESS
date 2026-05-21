@@ -26,18 +26,30 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
+from engine.world.crowd_dynamics import CrowdState
+from engine.world.micro_world import MicroWorld, MicroWorldConfig
 from scripts.b_direction.generate_readability_probes import N_TICKS
 from scripts.b_direction.run_accusation_scene import (
-    build_accusation_cast, build_locations as acc_locs, build_social_network as acc_net,
+    build_accusation_cast,
+)
+from scripts.b_direction.run_accusation_scene import (
+    build_locations as acc_locs,
+)
+from scripts.b_direction.run_accusation_scene import (
+    build_social_network as acc_net,
 )
 from scripts.b_direction.run_sacred_gathering import (
-    build_cast as sacred_cast, build_locations as sa_locs, build_network as sa_net,
+    build_cast as sacred_cast,
 )
-from engine.world.crowd_dynamics import CrowdState
-from engine.world.micro_world import MicroWorldConfig, MicroWorld
-
+from scripts.b_direction.run_sacred_gathering import (
+    build_locations as sa_locs,
+)
+from scripts.b_direction.run_sacred_gathering import (
+    build_network as sa_net,
+)
 
 SPACING_VARIANTS = {
     "spread":         [5, 40, 100],

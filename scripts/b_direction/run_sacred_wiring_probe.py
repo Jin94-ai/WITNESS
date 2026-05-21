@@ -22,12 +22,12 @@ from collections import defaultdict
 from pathlib import Path
 from statistics import mean
 
-
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -35,11 +35,13 @@ N_TICKS = 200
 
 
 def build_sacred(seed, *, include_sacred_events=True, aux_on=True):
-    from scripts.b_direction.run_sacred_gathering import (
-        build_cast, build_locations, build_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_sacred_gathering import (
+        build_cast,
+        build_locations,
+        build_network,
+    )
 
     agents = build_cast()
     aids = [a.agent_id for a in agents]
@@ -84,11 +86,13 @@ def build_sacred(seed, *, include_sacred_events=True, aux_on=True):
 
 
 def build_accusation(seed):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -173,7 +177,7 @@ def run_cell(builder, **kwargs):
 
 
 def main() -> int:
-    print(f"[Iter 95] Sacred wiring probe")
+    print("[Iter 95] Sacred wiring probe")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} "
           f"N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print()
@@ -209,7 +213,7 @@ def main() -> int:
     # Test 1: A vs B -- does adding events change dynamics?
     delta_rev_ab = a["rev_mean"] - b["rev_mean"]
     delta_final_ab = a["final_mean"] - b["final_mean"]
-    print(f"\n  Test 1 (A vs B): events present?")
+    print("\n  Test 1 (A vs B): events present?")
     print(f"    A rev={a['rev_mean']}  B rev={b['rev_mean']}  Δrev={delta_rev_ab:+.2f}")
     print(f"    A final={a['final_mean']}  B final={b['final_mean']}  "
           f"Δfinal={delta_final_ab:+.2f}")
@@ -218,7 +222,7 @@ def main() -> int:
     # Test 2: A vs C -- does aux recovery activate?
     delta_rev_ac = a["rev_mean"] - c["rev_mean"]
     delta_final_ac = a["final_mean"] - c["final_mean"]
-    print(f"\n  Test 2 (A vs C): aux recovery contributes?")
+    print("\n  Test 2 (A vs C): aux recovery contributes?")
     print(f"    A rev={a['rev_mean']}  C rev={c['rev_mean']}  Δrev={delta_rev_ac:+.2f}")
     print(f"    A final={a['final_mean']}  C final={c['final_mean']}  "
           f"Δfinal={delta_final_ac:+.2f}")
@@ -227,7 +231,7 @@ def main() -> int:
     # Test 3: A vs D -- does sacred differ from accusation now?
     delta_rev_ad = a["rev_mean"] - d["rev_mean"]
     delta_final_ad = a["final_mean"] - d["final_mean"]
-    print(f"\n  Test 3 (A vs D): sacred vs accusation differentiation?")
+    print("\n  Test 3 (A vs D): sacred vs accusation differentiation?")
     print(f"    A sacred rev={a['rev_mean']} final={a['final_mean']}")
     print(f"    D acc rev={d['rev_mean']} final={d['final_mean']}")
     print(f"    Δrev={delta_rev_ad:+.2f}  Δfinal={delta_final_ad:+.2f}")
@@ -235,14 +239,14 @@ def main() -> int:
     print()
     print("=== Verdict ===")
     if a_b_differ:
-        print(f"  Iter 77 regression: events PRODUCE measurable effect now (was null)")
+        print("  Iter 77 regression: events PRODUCE measurable effect now (was null)")
     else:
-        print(f"  Iter 77 regression: events still produce no measurable effect")
+        print("  Iter 77 regression: events still produce no measurable effect")
 
     if a_c_differ:
-        print(f"  Aux recovery is ACTIVE in sacred scenario")
+        print("  Aux recovery is ACTIVE in sacred scenario")
     else:
-        print(f"  Aux recovery effect not measurable")
+        print("  Aux recovery effect not measurable")
 
     out_path = (
         ROOT / "docs" / "b_direction" / "probe_runs"

@@ -8,9 +8,9 @@ from pathlib import Path
 import pytest
 
 from engine.population import (
-    AgentConfig,
     HISTORY_TAG_DELTAS,
     ROLE_CLUSTERS,
+    AgentConfig,
     RoleCluster,
     apply_recent_history,
     generate_population,
@@ -18,7 +18,6 @@ from engine.population import (
     instantiate_agent,
 )
 from engine.population.role_cluster import RelationTemplate
-
 
 # -----------------------------------------------------------------
 # RoleCluster registry

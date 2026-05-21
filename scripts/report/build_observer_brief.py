@@ -40,7 +40,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-
 # Field-level provenance classification (used by both this builder and the
 # Phase 12 provenance table generator).
 SOURCE_DERIVED_TICK_FIELDS = (

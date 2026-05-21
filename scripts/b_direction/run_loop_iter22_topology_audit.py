@@ -35,7 +35,7 @@ from __future__ import annotations
 import json
 import math
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 from statistics import mean
 
@@ -183,8 +183,8 @@ def normalized_cosine(a: dict, b: dict) -> float:
 
 
 def main() -> int:
-    print(f"[LOOP Iter 22] Step 3 -- Scenario Diversity Structural Audit")
-    print(f"  Scenarios: calling, accusation, scarcity")
+    print("[LOOP Iter 22] Step 3 -- Scenario Diversity Structural Audit")
+    print("  Scenarios: calling, accusation, scarcity")
     print(f"  Seeds/scenario: {N_SEEDS}  Ticks: {N_TICKS}")
     print()
 
@@ -245,7 +245,7 @@ def main() -> int:
                          Counter(fingerprints[b][key]))
                 row.append(f"{js:.3f}")
             print(f"    {a:<12}: " + " ".join(f"{v:>6}" for v in row))
-        print(f"              " + " ".join(f"{s:>6}" for s in scns))
+        print("              " + " ".join(f"{s:>6}" for s in scns))
 
     js_matrix("F1_motifs", "F1 motif distributions")
     js_matrix("F2_actions", "F2 action distributions")

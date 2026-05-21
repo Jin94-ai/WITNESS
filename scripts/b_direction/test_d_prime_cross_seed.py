@@ -33,13 +33,13 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 from scripts.b_direction.test_d_prime_generalization import (
-    SPACING_VARIANTS, run_accusation_variant, run_sacred_variant, measure,
+    SPACING_VARIANTS,
+    measure,
 )
-from scripts.b_direction.generate_scarcity_depth_variations import build_scarcity_depth_world
-from scripts.b_direction.generate_readability_probes import N_TICKS
 
 
 def run_scarcity_variant(spacing_label, seed):
@@ -52,11 +52,17 @@ def run_scarcity_variant(spacing_label, seed):
         ec = "triple"
     # build_scarcity_depth_world uses fixed event_count -> need custom build for spacing variants
     # Reuse hypothesis D test logic (build directly with custom ticks)
-    from scripts.b_direction.run_scarcity_scene import (
-        build_scarcity_cast, build_locations as sc_locs, build_network as sc_net,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_scarcity_scene import (
+        build_locations as sc_locs,
+    )
+    from scripts.b_direction.run_scarcity_scene import (
+        build_network as sc_net,
+    )
+    from scripts.b_direction.run_scarcity_scene import (
+        build_scarcity_cast,
+    )
     agents = build_scarcity_cast()
     aids = [a.agent_id for a in agents]
     seed_events = [
@@ -105,14 +111,26 @@ def main():
 
     # Need run_*_variant_with_seed - existing functions hardcode seed=0
     # Inline override
+    from engine.world.crowd_dynamics import CrowdState
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
     from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations as acc_locs, build_social_network as acc_net,
+        build_accusation_cast,
+    )
+    from scripts.b_direction.run_accusation_scene import (
+        build_locations as acc_locs,
+    )
+    from scripts.b_direction.run_accusation_scene import (
+        build_social_network as acc_net,
     )
     from scripts.b_direction.run_sacred_gathering import (
-        build_cast as sacred_cast, build_locations as sa_locs, build_network as sa_net,
+        build_cast as sacred_cast,
     )
-    from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from scripts.b_direction.run_sacred_gathering import (
+        build_locations as sa_locs,
+    )
+    from scripts.b_direction.run_sacred_gathering import (
+        build_network as sa_net,
+    )
 
     def acc_seeded(spacing_label, seed):
         ticks = SPACING_VARIANTS[spacing_label]

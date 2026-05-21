@@ -433,7 +433,7 @@ def main(argv: list[str] | None = None) -> int:
     }
 
     # Pretty print
-    print(f"Phase 3.1 §29 Acceptance Verification:")
+    print("Phase 3.1 §29 Acceptance Verification:")
     print(f"  AUTO PASS:      {auto_pass}")
     print(f"  AUTO FAIL:      {auto_fail}")
     print(f"  PENDING:        {pending}")

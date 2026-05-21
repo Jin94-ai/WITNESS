@@ -11,12 +11,11 @@ mapped to 4 grades:
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 from engine.observer.scene_brief import SceneBrief
 from engine.observer.story_candidate import StoryCandidate
 from engine.observer.treatment import Treatment
-
 
 # Weights (plan §8.2 verbatim)
 W_CHARACTER         = 20

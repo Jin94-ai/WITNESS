@@ -32,7 +32,7 @@ if str(ROOT) not in sys.path:
 
 from engine.persona.profile import DEFAULT_PROFILE, PersonaProfile  # noqa: E402
 from engine.population import ROLE_CLUSTERS  # noqa: E402
-from engine.world.crowd_dynamics import CrowdState, compute_phase  # noqa: E402
+from engine.world.crowd_dynamics import CrowdState  # noqa: E402
 from engine.world.micro_world import (  # noqa: E402
     AgentHandle,
     MicroWorld,

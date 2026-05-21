@@ -12,7 +12,7 @@ Per `docs/WITNESS_PORTFOLIO_DEMO_PIPELINE_PLAN.md` §3.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any
 
 

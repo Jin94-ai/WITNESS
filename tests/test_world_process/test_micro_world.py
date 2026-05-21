@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 from engine.persona import DEFAULT_PROFILE
-from engine.persona.profile import MotifTendency, PersonaProfile
+from engine.persona.profile import PersonaProfile
 from engine.world.crowd_dynamics import CrowdState
 from engine.world.micro_world import AgentHandle, MicroWorld, MicroWorldConfig
 from engine.world.spatial import Location

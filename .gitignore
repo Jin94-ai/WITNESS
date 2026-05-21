@@ -130,3 +130,33 @@ models/
 # Visual track — frozen 2026-05-06 (per CLAUDE.md). Local HTML demos만 보존.
 # (frozen sub-tracks: pixel_event_playback / world_flow_observer / dot_observer_* 등)
 visual/
+
+# Phase 3 Manual Pivot — raw synopsis (cycle 85, witness_selected_works.md)
+# 자기 표현 요약본이지만 작품명 익명화 + 라이선스 안전성 위해 private 유지.
+# 예외: collection_log.jsonl + _title_mapping.json은 별도 결정 (현재 private).
+data/raw/
+
+# ============================================
+# WITNESS Drama Mining (Track A, 2026-05-12+)
+# ============================================
+# AI-Hub 023 방송 콘텐츠 대본 요약 데이터 — raw 절대 commit 금지 (재배포 금지).
+# 학습 모델 / checkpoint / 전처리 산출 / split 메타 모두 local-only.
+# 예외: docs/data_card.md, docs/model_cards/, docs/results/ 만 tracked.
+data/aihub_023/
+data/023.방송 콘텐츠 대본 요약 데이터/
+data/processed/
+data/splits/
+
+# Model artifacts (binary, large)
+*.pt
+*.safetensors
+*.bin
+*.ckpt
+checkpoints/
+
+# Jupyter notebook output cache + cluster lock files
+.ipynb_checkpoints/
+
+# === 2026-05-15: AI-Hub 023 raw passage 보호 (라이선스: 재배포 금지) ===
+docs/results/
+tests/fixtures/aihub_023_sample.zip

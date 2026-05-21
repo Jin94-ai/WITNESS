@@ -21,7 +21,6 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
@@ -29,10 +28,11 @@ if str(ROOT) not in sys.path:
 
 from engine.observer.identity_resolver import IdentityResolver  # noqa: E402
 from engine.observer.moment import Moment  # noqa: E402
-from engine.observer.story_candidate_builder import (  # noqa: E402
-    build_story_candidates, serialize_candidates,
-)
 from engine.observer.story_candidate import StoryCandidate  # noqa: E402
+from engine.observer.story_candidate_builder import (  # noqa: E402
+    build_story_candidates,
+    serialize_candidates,
+)
 from engine.observer.thread import StoryThread  # noqa: E402
 
 
@@ -171,7 +171,7 @@ def _render_brief(
     body = "\n\n---\n\n".join(_render_candidate_card(c) for c in candidates) \
         if candidates else "_(no story candidates exceeded the threshold)_"
 
-    tail = f"""
+    tail = """
 
 ---
 

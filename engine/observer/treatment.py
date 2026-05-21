@@ -67,8 +67,8 @@ def _act_2_pressure_build(c: StoryCandidate, brief: SceneBrief) -> str:
 def _act_3_turn_consequence(c: StoryCandidate, brief: SceneBrief) -> str:
     if not c.key_turning_points:
         return (
-            f"No categorized turning point in the source data; "
-            f"act 3 is the unresolved tension itself rather than a discrete shift."
+            "No categorized turning point in the source data; "
+            "act 3 is the unresolved tension itself rather than a discrete shift."
         )
     # Pick strongest turning point (already prioritized in scene brief)
     return (

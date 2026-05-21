@@ -22,14 +22,12 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from engine.observer.identity_resolver import (
-    AgentIdentity,
     IdentityResolver,
     translate_pressure,
 )
 from engine.observer.moment import Moment
 from engine.observer.story_candidate import StoryCandidate, TurningPoint
 from engine.observer.thread import StoryThread
-
 
 # ---------------------------------------------------------------------------
 # Phase C — Turning Point selector
@@ -522,7 +520,6 @@ def serialize_candidates(
     run_label: str,
     schema_version: str = "story_candidates_v1",
 ) -> dict:
-    by_rank: dict[str, int] = {}
     return {
         "run_label": run_label,
         "schema_version": schema_version,

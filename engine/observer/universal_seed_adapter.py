@@ -22,12 +22,6 @@ from __future__ import annotations
 
 from typing import Any
 
-from engine.observer.universal_story_seed import (
-    UniversalStorySeed,
-    load_conflict_axes,
-    load_desire_taxonomy,
-    load_pressure_taxonomy,
-)
 from engine.observer.skeleton_output import (
     AnchorMetadata,
     AuditTrail,
@@ -35,7 +29,10 @@ from engine.observer.skeleton_output import (
     LifeStoryFlow,
     SkeletonOutput,
 )
-
+from engine.observer.universal_story_seed import (
+    UniversalStorySeed,
+    load_conflict_axes,
+)
 
 # ---------------------------------------------------------------------------
 # Phase 2.5 §D.2: Default archetype / role / flow maps (Peter baseline MVP)
@@ -484,7 +481,6 @@ def assemble_skeleton_output(
 # ---------------------------------------------------------------------------
 
 import re as _re_validator
-
 
 _SUPPORTING_PLACEHOLDER = _re_validator.compile(r"^supporting_\d+$")
 

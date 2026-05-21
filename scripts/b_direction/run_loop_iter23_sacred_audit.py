@@ -14,7 +14,6 @@ Verdict rules:
 from __future__ import annotations
 
 import json
-import math
 import sys
 from collections import Counter
 from pathlib import Path
@@ -119,7 +118,7 @@ def compute_sacred_fingerprint():
 
 
 def main() -> int:
-    print(f"[LOOP Iter 23] Sacred-gathering topology audit")
+    print("[LOOP Iter 23] Sacred-gathering topology audit")
     print(f"  Seeds/scenario: {N_SEEDS}  Ticks: {N_TICKS}")
     print()
 

@@ -31,13 +31,13 @@ import os
 import sys
 from collections import defaultdict
 from pathlib import Path
-from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.b_direction._pyhash_guard import enforce_pyhash
+
 enforce_pyhash()
 
 N_SEEDS = 5
@@ -46,11 +46,13 @@ RELOCATE_TICK = 80
 
 
 def build_world(seed):
-    from scripts.b_direction.run_accusation_scene import (
-        build_accusation_cast, build_locations, build_social_network,
-    )
     from engine.world.crowd_dynamics import CrowdState
-    from engine.world.micro_world import MicroWorldConfig, MicroWorld
+    from engine.world.micro_world import MicroWorld, MicroWorldConfig
+    from scripts.b_direction.run_accusation_scene import (
+        build_accusation_cast,
+        build_locations,
+        build_social_network,
+    )
 
     agents = build_accusation_cast()
     aids = [a.agent_id for a in agents]
@@ -124,7 +126,7 @@ def run_variant(label, relocate):
 
 
 def main() -> int:
-    print(f"[Iter 161] Spatial disengagement recovery experiment")
+    print("[Iter 161] Spatial disengagement recovery experiment")
     print(f"  PYHASH={os.environ.get('PYTHONHASHSEED')} N_SEEDS={N_SEEDS} N_TICKS={N_TICKS}")
     print(f"  RELOCATE_TICK={RELOCATE_TICK}")
     print()
@@ -143,7 +145,7 @@ def main() -> int:
         print()
 
     print("=== Spatial disengagement verdict ===")
-    print(f"  V0 (no relocate): control -- expect saturation")
+    print("  V0 (no relocate): control -- expect saturation")
     print(f"  V1 (relocate at t={RELOCATE_TICK}): if real recovery > 0, spatial disengagement is a real recovery family")
 
     out_path = (

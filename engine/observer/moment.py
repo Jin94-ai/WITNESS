@@ -16,7 +16,6 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Literal
 
-
 MomentType = Literal[
     "agent_state_shift",      # 인물 상태 변화 (fear/hope/dominant_state)
     "relationship_drift",     # 관계 변화 (engine doesn't yet emit, reserved)
